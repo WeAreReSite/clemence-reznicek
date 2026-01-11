@@ -43,6 +43,15 @@ export default function MentionsLegalesPage() {
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              Conception et développement du site
+            </h2>
+            <p>
+              Le site web a été conçu et développé par <strong>WeAreReSite</strong> pour le compte de Sylvie Lebordais EI.<br />
+              WeAreReSite<br />
+              Site web : <a href="https://www.weareresite.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://www.weareresite.com</a>
+            </p>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
               Directeur de publication
             </h2>
             <p>

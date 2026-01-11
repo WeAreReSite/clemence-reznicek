@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     default: "Syl'Vie Bien-Etre | Réflexologie & Drainage Lymphatique à Pipriac",
     template: "%s | Syl'Vie Bien-Etre",
   },
-  description:
-    "Sylvie Lebordais vous accueille à Pipriac (35550) pour des soins de réflexologie plantaire, drainage lymphatique manuel, amma assis et beauté des mains. Cabinet bien-être en Bretagne.",
   keywords: [
     // Tier 1 - PRIMARY target keywords
     "drainage lymphatique Redon",
@@ -74,7 +72,7 @@ export const metadata: Metadata = {
       "Cabinet de réflexologie et bien-être à Pipriac (Bretagne). Réflexologie plantaire, drainage lymphatique manuel, amma assis et beauté des mains par Sylvie Lebordais.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/logo.png",
         width: 1200,
         height: 630,
         alt: "Syl'Vie Bien-Etre - Cabinet de Réflexologie à Pipriac",
@@ -86,7 +84,7 @@ export const metadata: Metadata = {
     title: "Syl'Vie Bien-Etre | Réflexologie & Drainage Lymphatique à Pipriac",
     description:
       "Cabinet de réflexologie et bien-être à Pipriac (Bretagne). Réflexologie plantaire, drainage lymphatique manuel, amma assis et beauté des mains.",
-    images: ["/og-image.jpg"],
+    images: ["/images/logo.png"],
   },
   robots: {
     index: true,
@@ -112,6 +110,8 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${cormorant.variable} ${manrope.variable}`} data-scroll-behavior="smooth">
       <head>
+        <meta name="description" content="Cabinet de réflexologie et bien-être à Pipriac (35550). Sylvie Lebordais, praticienne certifiée, vous propose drainage lymphatique, réflexologie plantaire et beauté des mains près de Redon." />
+        <link rel="canonical" href="https://www.sylviebienetre.fr/" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
@@ -135,7 +135,6 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "HealthAndBeautyBusiness",
               name: "Syl'Vie Bien-Etre",
-              image: "https://www.sylviebienetre.fr/og-image.jpg",
               "@id": "https://www.sylviebienetre.fr",
               url: "https://www.sylviebienetre.fr",
               telephone: "+33613648705",

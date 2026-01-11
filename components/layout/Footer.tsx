@@ -25,6 +25,7 @@ const footerLinks = {
 }
 
 export function Footer() {
+  // Force Vercel deployment with updated footer
   return (
     <footer className="bg-foreground text-white/90 overflow-hidden">
       {/* Main Footer */}

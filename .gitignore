@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude and development tools
+.claude/
+.mcp.json
+.playwright-mcp/
+
+# client documentation and reports
+client-specs/
+reports/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo

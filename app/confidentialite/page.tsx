@@ -3,7 +3,10 @@ import { spaInfo } from "@/lib/data"
 
 export const metadata: Metadata = {
   title: "Politique de Confidentialité",
-  description: "Politique de confidentialité de L'Éther Spa - Protection de vos données personnelles conformément au RGPD.",
+  description: "Politique de confidentialité de Syl'Vie Bien-Etre à Pipriac - Protection de vos données personnelles conformément au RGPD.",
+  alternates: {
+    canonical: "https://www.sylviebienetre.fr/confidentialite",
+  },
 }
 
 export default function ConfidentialitePage() {
@@ -17,7 +20,7 @@ export default function ConfidentialitePage() {
 
           <div className="prose prose-lg max-w-none text-muted-foreground">
             <p className="lead">
-              Chez L&apos;Éther Spa, nous accordons une importance primordiale à la protection
+              Chez {spaInfo.name}, nous accordons une importance primordiale à la protection
               de vos données personnelles. Cette politique de confidentialité explique comment
               nous collectons, utilisons et protégeons vos informations.
             </p>
@@ -27,7 +30,7 @@ export default function ConfidentialitePage() {
             </h2>
             <p>
               Le responsable du traitement des données est :<br />
-              <strong>L&apos;Éther Spa</strong><br />
+              <strong>{spaInfo.name}</strong><br />
               {spaInfo.address.street}<br />
               {spaInfo.address.postalCode} {spaInfo.address.city}<br />
               Email : {spaInfo.email}

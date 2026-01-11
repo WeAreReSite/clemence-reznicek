@@ -1,0 +1,26 @@
+{
+  "name": "Syl'Vie Bien-Etre",
+  "short_name": "Syl'Vie",
+  "description": "Découvrez un espace dédié à votre bien-être, où chaque soin est pensé pour vous apporter détente, relaxation, massage et sérénité.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f7",
+  "theme_color": "#1a1a1a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "fr",
+  "categories": ["health", "wellness", "lifestyle"]
+}

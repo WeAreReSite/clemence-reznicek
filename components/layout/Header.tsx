@@ -2,18 +2,16 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Menu, Phone, Gift, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle } from "@/components/ui/sheet"
+import { Phone } from "lucide-react"
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import { spaInfo } from "@/lib/data"
 
 const navigation = [
-  { name: "Accueil", href: "/" },
-  { name: "Nos Soins", href: "/soins" },
+  { name: "Soins", href: "/soins" },
   { name: "À Propos", href: "/a-propos" },
-  { name: "Bons Cadeaux", href: "/bons-cadeaux" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -22,12 +20,22 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
 
+  // Client-only rendering for Sheet to avoid hydration mismatch
+  const [isMounted, setIsMounted] = useState(false)
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
+
+    // Set mounted after first render (deferred to avoid ESLint warning)
+    const timer = setTimeout(() => setIsMounted(true), 0)
+
     window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   const isHomepage = pathname === "/"
@@ -37,103 +45,123 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled || !isHomepage
-          ? "bg-card/95 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-5"
+          ? "bg-card/95 backdrop-blur-md shadow-sm py-4"
+          : "bg-transparent py-6"
       )}
     >
       <div className="container-spa">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="relative z-10">
-            <h1 className={cn(
-              "font-serif text-2xl md:text-3xl font-medium transition-colors duration-300",
+          <Link href="/" className="relative z-10 flex items-center gap-3">
+            <div className="relative w-10 h-10 md:w-12 md:h-12">
+              <Image
+                src="/images/logo.png"
+                alt=""
+                fill
+                sizes="48px"
+                className="object-contain"
+                priority
+                aria-hidden="true"
+              />
+            </div>
+            <span className={cn(
+              "font-serif text-xl md:text-2xl tracking-wide transition-colors duration-300",
               isScrolled || !isHomepage ? "text-foreground" : "text-white"
             )}>
-              L&apos;Éther
-            </h1>
-            <span className={cn(
-              "text-xs tracking-[0.3em] uppercase transition-colors duration-300",
-              isScrolled || !isHomepage ? "text-accent" : "text-white/80"
-            )}>
-              Spa & Bien-être
+              {spaInfo.name}
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden lg:flex items-center gap-12">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "text-sm font-medium transition-colors duration-300 relative group",
+                  "text-[13px] tracking-[0.2em] uppercase transition-colors duration-300",
                   isScrolled || !isHomepage
-                    ? "text-foreground hover:text-primary"
-                    : "text-white/90 hover:text-white",
-                  pathname === item.href && (isScrolled || !isHomepage ? "text-primary" : "text-white")
+                    ? "text-muted-foreground hover:text-foreground"
+                    : "text-white/80 hover:text-white",
+                  pathname === item.href && (isScrolled || !isHomepage ? "text-foreground" : "text-white")
                 )}
               >
                 {item.name}
-                <span className={cn(
-                  "absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full",
-                  isScrolled || !isHomepage ? "bg-primary" : "bg-white"
-                )} />
               </Link>
             ))}
           </div>
 
           {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Button
-              variant={isScrolled || !isHomepage ? "outline" : "glass"}
-              size="sm"
-              asChild
+          <div className="hidden lg:flex items-center gap-6">
+            <Link
+              href="/contact"
+              className={cn(
+                "text-[13px] tracking-[0.15em] uppercase px-6 py-2.5 border transition-all duration-300",
+                isScrolled || !isHomepage
+                  ? "border-foreground text-foreground hover:bg-foreground hover:text-white"
+                  : "border-white text-white hover:bg-white hover:text-foreground"
+              )}
             >
-              <Link href="/bons-cadeaux">
-                <Gift className="w-4 h-4 mr-2" />
-                Offrir
-              </Link>
-            </Button>
-            <Button
-              variant="default"
-              size="default"
-              asChild
+              Réserver
+            </Link>
+
+            {/* Hamburger for tablet/smaller desktop */}
+            <button
+              onClick={() => setIsOpen(true)}
+              className={cn(
+                "hidden md:flex lg:hidden flex-col gap-1.5 p-2",
+                isScrolled || !isHomepage ? "text-foreground" : "text-white"
+              )}
             >
-              <Link href="/reserver">
-                Réserver
-              </Link>
-            </Button>
+              <span className="w-6 h-0.5 bg-current" />
+              <span className="w-6 h-0.5 bg-current" />
+            </button>
           </div>
 
-          {/* Mobile Menu */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button
-                variant="ghost"
-                size="icon"
-                className={cn(
-                  isScrolled || !isHomepage ? "text-foreground" : "text-white"
-                )}
-              >
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:max-w-md bg-card">
-              <SheetHeader className="mb-8">
-                <SheetTitle className="font-serif text-2xl">L&apos;Éther</SheetTitle>
+          {/* Mobile Menu Button */}
+          {!isMounted ? (
+            <button
+              className={cn(
+                "lg:hidden flex flex-col gap-1.5 p-2",
+                isScrolled || !isHomepage ? "text-foreground" : "text-white"
+              )}
+              aria-label="Menu"
+            >
+              <span className="w-6 h-0.5 bg-current" />
+              <span className="w-6 h-0.5 bg-current" />
+            </button>
+          ) : (
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild className="lg:hidden">
+                <button
+                  className={cn(
+                    "flex flex-col gap-1.5 p-2",
+                    isScrolled || !isHomepage ? "text-foreground" : "text-white"
+                  )}
+                >
+                  <span className="w-6 h-0.5 bg-current" />
+                  <span className="w-6 h-0.5 bg-current" />
+                  <span className="sr-only">Menu</span>
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-full sm:max-w-md bg-card">
+              <SheetHeader className="mb-12">
+                <SheetTitle className="font-serif text-2xl tracking-wide">{spaInfo.name}</SheetTitle>
+                <SheetDescription className="sr-only">
+                  Menu de navigation principal avec liens vers les pages du site
+                </SheetDescription>
               </SheetHeader>
 
-              <nav className="flex flex-col gap-1">
-                {navigation.map((item) => (
+              <nav className="flex flex-col gap-6">
+                {[{ name: "Accueil", href: "/" }, ...navigation].map((item) => (
                   <SheetClose asChild key={item.name}>
                     <Link
                       href={item.href}
                       className={cn(
-                        "py-3 px-4 text-lg font-medium rounded-lg transition-colors",
+                        "text-sm tracking-[0.2em] uppercase transition-colors",
                         pathname === item.href
-                          ? "bg-primary/10 text-primary"
-                          : "text-foreground hover:bg-muted"
+                          ? "text-foreground"
+                          : "text-muted-foreground hover:text-foreground"
                       )}
                     >
                       {item.name}
@@ -142,35 +170,29 @@ export function Header() {
                 ))}
               </nav>
 
-              <div className="mt-8 pt-8 border-t border-border space-y-4">
+              <div className="mt-12 pt-8 border-t border-border">
                 <SheetClose asChild>
-                  <Button className="w-full" size="lg" asChild>
-                    <Link href="/reserver">
-                      Réserver un soin
-                    </Link>
-                  </Button>
-                </SheetClose>
-                <SheetClose asChild>
-                  <Button variant="outline" className="w-full" size="lg" asChild>
-                    <Link href="/bons-cadeaux">
-                      <Gift className="w-5 h-5 mr-2" />
-                      Offrir un bon cadeau
-                    </Link>
-                  </Button>
+                  <Link
+                    href="/contact"
+                    className="block text-center text-sm tracking-[0.15em] uppercase px-6 py-3 border border-foreground text-foreground hover:bg-foreground hover:text-white transition-all"
+                  >
+                    Réserver un soin
+                  </Link>
                 </SheetClose>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-border">
+              <div className="mt-8">
                 <a
                   href={`tel:${spaInfo.phone}`}
-                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors text-sm tracking-wide"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-4 h-4" />
                   <span>{spaInfo.phone}</span>
                 </a>
               </div>
             </SheetContent>
           </Sheet>
+          )}
         </nav>
       </div>
     </header>

@@ -3,7 +3,10 @@ import { spaInfo } from "@/lib/data"
 
 export const metadata: Metadata = {
   title: "Mentions Légales",
-  description: "Mentions légales de L'Éther Spa - Informations juridiques et éditeur du site.",
+  description: "Mentions légales de Syl'Vie Bien-Etre à Pipriac - Informations juridiques et éditeur du site.",
+  alternates: {
+    canonical: "https://www.sylviebienetre.fr/mentions-legales",
+  },
 }
 
 export default function MentionsLegalesPage() {
@@ -20,7 +23,7 @@ export default function MentionsLegalesPage() {
               Éditeur du site
             </h2>
             <p>
-              <strong>L&apos;Éther Spa</strong><br />
+              <strong>{spaInfo.name}</strong><br />
               {spaInfo.address.street}<br />
               {spaInfo.address.postalCode} {spaInfo.address.city}<br />
               {spaInfo.address.country}
@@ -38,8 +41,8 @@ export default function MentionsLegalesPage() {
               Directeur de la publication
             </h2>
             <p>
-              Le directeur de la publication est M./Mme [Nom du responsable],
-              en qualité de gérant(e) de L&apos;Éther Spa.
+              Le directeur de la publication est Mme Sylvie Lebordais,
+              en qualité de gérante de {spaInfo.name}.
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
@@ -73,7 +76,7 @@ export default function MentionsLegalesPage() {
               Crédits photographiques
             </h2>
             <p>
-              Les photographies utilisées sur ce site sont la propriété de L&apos;Éther Spa
+              Les photographies utilisées sur ce site sont la propriété de {spaInfo.name}
               ou utilisées avec l&apos;autorisation de leurs auteurs respectifs.
               Certaines images proviennent de la banque d&apos;images Unsplash.
             </p>
@@ -87,7 +90,7 @@ export default function MentionsLegalesPage() {
               inexactitudes, des omissions ou des lacunes.
             </p>
             <p>
-              L&apos;Éther Spa ne pourra être tenu responsable des dommages directs et
+              {spaInfo.name} ne pourra être tenu responsable des dommages directs et
               indirects causés au matériel de l&apos;utilisateur, lors de l&apos;accès au site.
             </p>
 

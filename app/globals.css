@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
-/* ===== L'Éther Spa - Luxury Wellness Design System ===== */
+/* ===== Syl'Vie Bien-Etre - Zen & Cocooning Design System ===== */
 
-/* CSS Variables for the Luxury Palette */
+/* CSS Variables for the Wellness Palette */
 :root {
-  /* Core Colors - From Deep Research */
-  --background: #FDFCF8;          /* Warm Alabaster - reduces screen glare */
-  --foreground: #161313;          /* Midnight Charcoal - softer than pure black */
+  /* Core Colors - Zen, Apaisant, Cocooning */
+  --background: #FDFCFA;          /* Warm off-white - soft and inviting */
+  --foreground: #2D3A35;          /* Deep forest - softer than black */
 
-  /* Primary - Deep Sage (restoration, nature, balance) */
-  --primary: #2D5A4A;
+  /* Primary - Sage Green (nature, harmony, well-being) */
+  --primary: #5A7D6E;
   --primary-foreground: #FFFFFF;
-  --primary-hover: #234839;
+  --primary-hover: #4A6A5C;
 
-  /* Secondary - Warm Taupe (grounding, stability) */
-  --secondary: #A39384;
+  /* Secondary - Dusty Rose (softness, femininity, care) */
+  --secondary: #C4A5A0;
   --secondary-foreground: #FFFFFF;
-  --secondary-light: #C4B8AB;
+  --secondary-light: #DBC7C3;
 
-  /* Accent - Muted Gold (exclusivity, prestige) */
-  --accent: #C9A475;
-  --accent-foreground: #161313;
-  --accent-light: #DCBE93;
+  /* Accent - Soft Rose (warmth, tenderness) */
+  --accent: #B08080;              /* Darkened for WCAG AA contrast (4.5:1) */
+  --accent-foreground: #FFFFFF;   /* White text on accent backgrounds */
+  --accent-light: #D4A5A5;        /* Original soft rose for backgrounds */
 
   /* UI Colors */
   --muted: #F5F3EF;
-  --muted-foreground: #766667;
+  --muted-foreground: #5C5555;    /* Darkened for better contrast (7:1+) */
   --border: #E8E4DD;
-  --ring: #2D5A4A;
+  --ring: #5A7D6E;
 
   /* Card & Overlay */
   --card: #FFFFFF;
@@ -156,6 +156,23 @@
   50% { opacity: 0.7; }
 }
 
+/* ===== Lenis Smooth Scroll ===== */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 /* ===== Base Styles ===== */
 html {
   scroll-behavior: smooth;
@@ -249,9 +266,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .gradient-hero {
   background: linear-gradient(135deg,
-    rgba(45, 90, 74, 0.85) 0%,
-    rgba(45, 90, 74, 0.6) 50%,
-    rgba(163, 147, 132, 0.4) 100%
+    rgba(90, 125, 110, 0.85) 0%,
+    rgba(90, 125, 110, 0.6) 50%,
+    rgba(196, 165, 160, 0.4) 100%
   );
 }
 
@@ -343,18 +360,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Section Spacing */
 .section-padding {
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding: 6rem 0;
+    padding: 4rem 0;
   }
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding: 8rem 0;
+    padding: 5rem 0;
   }
 }
 
@@ -367,6 +384,27 @@ h1, h2, h3, h4, h5, h6 {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Perspective for 3D text effects */
+.perspective-500 {
+  perspective: 500px;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Clip-path utilities */
+.clip-inset-center {
+  clip-path: inset(0 50% 0 50%);
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {

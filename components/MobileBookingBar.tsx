@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Calendar, Gift, Phone } from "lucide-react"
+import { Calendar, Phone } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { spaInfo } from "@/lib/data"
 
 export function MobileBookingBar() {
   const [isVisible, setIsVisible] = useState(false)
@@ -40,7 +41,9 @@ export function MobileBookingBar() {
   if (isBookingPage) return null
 
   return (
-    <div
+    <aside
+      role="complementary"
+      aria-label="Actions rapides de réservation"
       className={cn(
         "fixed bottom-0 left-0 right-0 z-40 lg:hidden transition-transform duration-300",
         isVisible ? "translate-y-0" : "translate-y-full"
@@ -52,29 +55,20 @@ export function MobileBookingBar() {
           <div className="flex items-center gap-3">
             {/* Primary CTA - Book Now */}
             <Link
-              href="/reserver"
+              href="/contact"
               className="flex-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground py-3.5 px-4 rounded-lg font-medium text-sm transition-colors hover:bg-primary-hover"
             >
               <Calendar className="w-4 h-4" />
               Réserver
             </Link>
 
-            {/* Secondary CTA - Gift Card */}
-            <Link
-              href="/bons-cadeaux"
+            {/* Secondary CTA - Call */}
+            <a
+              href={`tel:${spaInfo.phone}`}
               className="flex items-center justify-center gap-2 bg-accent/10 text-accent py-3.5 px-4 rounded-lg font-medium text-sm transition-colors hover:bg-accent/20"
             >
-              <Gift className="w-4 h-4" />
-              Offrir
-            </Link>
-
-            {/* Tertiary CTA - Call */}
-            <a
-              href="tel:+33142000000"
-              className="flex items-center justify-center bg-muted text-foreground py-3.5 px-4 rounded-lg transition-colors hover:bg-muted/80"
-              aria-label="Appeler"
-            >
               <Phone className="w-4 h-4" />
+              Appeler
             </a>
           </div>
         </div>
@@ -82,6 +76,6 @@ export function MobileBookingBar() {
 
       {/* Safe area padding for iOS */}
       <div className="bg-card pb-[env(safe-area-inset-bottom)]" />
-    </div>
+    </aside>
   )
 }

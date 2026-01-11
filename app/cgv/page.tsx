@@ -3,7 +3,10 @@ import { spaInfo } from "@/lib/data"
 
 export const metadata: Metadata = {
   title: "Conditions Générales de Vente",
-  description: "Conditions générales de vente de L'Éther Spa - Réservations, annulations, tarifs et modalités de paiement.",
+  description: "Conditions générales de vente de Syl'Vie Bien-Etre à Pipriac - Réservations, annulations, tarifs et modalités de paiement.",
+  alternates: {
+    canonical: "https://www.sylviebienetre.fr/cgv",
+  },
 }
 
 export default function CGVPage() {
@@ -18,7 +21,7 @@ export default function CGVPage() {
           <div className="prose prose-lg max-w-none text-muted-foreground">
             <p className="lead">
               Les présentes Conditions Générales de Vente régissent les relations contractuelles
-              entre L&apos;Éther Spa et ses clients. Toute réservation implique l&apos;acceptation
+              entre {spaInfo.name} et ses clients. Toute réservation implique l&apos;acceptation
               sans réserve de ces conditions.
             </p>
 
@@ -27,7 +30,7 @@ export default function CGVPage() {
             </h2>
             <p>
               Les présentes CGV définissent les conditions de vente des prestations de soins
-              et massages bien-être proposés par L&apos;Éther Spa, ainsi que les conditions de
+              et massages bien-être proposés par {spaInfo.name}, ainsi que les conditions de
               vente des bons cadeaux.
             </p>
 
@@ -67,7 +70,7 @@ export default function CGVPage() {
               <li><strong>Non présentation</strong> : 100% du montant sera dû</li>
             </ul>
 
-            <h3 className="font-serif text-xl text-foreground mt-6 mb-3">3.2 Annulation par L&apos;Éther Spa</h3>
+            <h3 className="font-serif text-xl text-foreground mt-6 mb-3">3.2 Annulation par {spaInfo.name}</h3>
             <p>
               En cas d&apos;annulation de notre part (indisponibilité du praticien, cas de force majeure),
               nous vous proposerons un nouveau créneau ou le remboursement intégral de votre réservation.
@@ -88,7 +91,7 @@ export default function CGVPage() {
             <ul>
               <li>Carte bancaire (Visa, Mastercard)</li>
               <li>Espèces</li>
-              <li>Bon cadeau L&apos;Éther Spa</li>
+              <li>Bon cadeau {spaInfo.name}</li>
               <li>Apple Pay / Google Pay</li>
             </ul>
 
@@ -109,7 +112,7 @@ export default function CGVPage() {
 
             <h3 className="font-serif text-xl text-foreground mt-6 mb-3">5.2 Utilisation</h3>
             <p>
-              Les bons cadeaux sont utilisables pour tout soin proposé par L&apos;Éther Spa.
+              Les bons cadeaux sont utilisables pour tout soin proposé par {spaInfo.name}.
               Si le montant du soin est inférieur à la valeur du bon, la différence ne sera
               ni remboursée ni créditée. Si le montant est supérieur, le complément sera
               à régler sur place.
@@ -149,7 +152,7 @@ export default function CGVPage() {
               Article 7 - Responsabilité
             </h2>
             <p>
-              L&apos;Éther Spa décline toute responsabilité en cas de vol ou de perte d&apos;objets
+              {spaInfo.name} décline toute responsabilité en cas de vol ou de perte d&apos;objets
               personnels dans l&apos;établissement. Des casiers sont mis à votre disposition
               pour y déposer vos effets personnels.
             </p>
@@ -183,7 +186,7 @@ export default function CGVPage() {
             <p>
               Les présentes CGV sont soumises au droit français. Tout litige relatif à leur
               interprétation ou exécution relève de la compétence exclusive des tribunaux
-              de Paris.
+              de Rennes.
             </p>
 
             <p className="mt-8 text-sm">

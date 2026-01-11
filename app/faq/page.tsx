@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { faqs, spaInfo } from "@/lib/data"
+import { JsonLd } from "@/components/JsonLd"
 import {
   Accordion,
   AccordionContent,
@@ -13,12 +14,30 @@ import { ArrowRight } from "lucide-react"
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Trouvez les réponses à vos questions sur L'Éther Spa : réservation, annulation, déroulement des soins, produits utilisés.",
+    "Questions fréquentes sur Syl'Vie Bien-Etre à Pipriac : réservation, déroulement des soins de réflexologie, drainage lymphatique, qualifications de Sylvie Lebordais.",
+  alternates: {
+    canonical: "https://www.sylviebienetre.fr/faq",
+  },
 }
 
 export default function FAQPage() {
+  // FAQPage Schema for rich snippets
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  }
+
   return (
     <>
+      <JsonLd data={faqSchema} />
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-muted/30">
         <div className="container-spa">

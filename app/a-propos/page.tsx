@@ -1,14 +1,17 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { therapists, spaInfo } from "@/lib/data"
+import { therapists } from "@/lib/data"
 import { Button } from "@/components/ui/button"
-import { Award, Heart, Leaf, Users, ArrowRight, User } from "lucide-react"
+import { Award, Heart, Leaf, Users, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "À Propos",
   description:
-    "Découvrez l'histoire de L'Éther Spa, notre philosophie du bien-être et notre équipe de praticiens certifiés FFMBE. Un sanctuaire dédié à votre sérénité.",
+    "Rencontrez Sylvie Lebordais, praticienne en réflexologie et bien-être à Pipriac. Formée en réflexologie plantaire, drainage lymphatique et prothésie ongulaire. Cabinet en Bretagne.",
+  alternates: {
+    canonical: "https://www.sylviebienetre.fr/a-propos",
+  },
 }
 
 const values = [
@@ -16,35 +19,34 @@ const values = [
     icon: Heart,
     title: "Bienveillance",
     description:
-      "Chaque client est unique. Nous prenons le temps d'écouter vos besoins pour créer une expérience sur mesure.",
+      "Chaque client est unique. Je prends le temps d'écouter vos besoins pour créer une expérience sur mesure.",
   },
   {
     icon: Award,
     title: "Excellence",
     description:
-      "Nos praticiens sont certifiés FFMBE et se forment continuellement aux dernières techniques de bien-être.",
+      "Formée dans les meilleurs centres de Bretagne et en formation continue pour vous offrir des soins de qualité.",
   },
   {
     icon: Leaf,
     title: "Naturalité",
     description:
-      "Nous sélectionnons avec soin des produits biologiques et éco-responsables pour respecter votre corps et la planète.",
+      "Je sélectionne avec soin des produits de qualité professionnelle pour respecter votre corps.",
   },
   {
     icon: Users,
     title: "Authenticité",
     description:
-      "Nous cultivons des relations sincères avec nos clients, basées sur la confiance et le respect mutuel.",
+      "Je cultive des relations sincères avec mes clients, basées sur la confiance et le respect mutuel.",
   },
 ]
 
 const milestones = [
-  { year: "2012", title: "Fondation", description: "Ouverture de L'Éther dans le 2ème arrondissement de Paris." },
-  { year: "2015", title: "Certification FFMBE", description: "Reconnaissance de notre engagement qualité." },
-  { year: "2018", title: "Agrandissement", description: "Ouverture de notre espace détente et sauna." },
-  { year: "2020", title: "Innovation", description: "Lancement du Japanese Head Spa, une première à Paris." },
-  { year: "2023", title: "10 000 clients", description: "Un cap symbolique de confiance renouvelée." },
-  { year: "2024", title: "Excellence", description: "Élu meilleur spa bien-être de Paris." },
+  { year: "Formation", title: "Réflexologie Bretagne", description: "Formation en Réflexologie Plantaire, Palmaire, Pédiatrique et Bol Kansu à Pleugeuneuc." },
+  { year: "Formation", title: "Zensphère", description: "Formation en Drainage Lymphatique Manuel, Réflexologie Abdominale, Faciale et Crânienne, Amma Assis à Pacé." },
+  { year: "Formation", title: "Prothésie Ongulaire", description: "Formation auprès d'Anaïs Abaakil à Rennes." },
+  { year: "2024", title: "Syl'Vie Bien-Etre", description: "Ouverture du cabinet à Pipriac, un espace intimiste dédié au bien-être." },
+  { year: "2025", title: "Excellence", description: "5 étoiles sur Google avec 8 avis clients enthousiastes." },
 ]
 
 export default function AboutPage() {
@@ -60,30 +62,30 @@ export default function AboutPage() {
                 Notre Histoire
               </span>
               <h1 className="font-serif text-5xl md:text-6xl text-foreground mb-6">
-                Un sanctuaire né d&apos;une passion
+                Un espace né d&apos;une passion
               </h1>
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  L&apos;Éther est né en 2012 d&apos;une vision simple mais ambitieuse : créer
-                  un espace où le temps suspend son vol, où chaque soin devient un voyage
-                  vers soi-même.
+                  Bienvenue chez Syl&apos;Vie Bien-Etre. Je suis Sylvie, fondatrice de cet espace
+                  dédié à votre bien-être, spécialisée en Réflexologie, Drainage Lymphatique
+                  Manuel, Amma Assis et Prothésiste Ongulaire.
                 </p>
                 <p>
-                  Fondé par une équipe de passionnés du bien-être, notre spa s&apos;est
-                  construit autour d&apos;une conviction profonde : le bien-être authentique
-                  ne peut naître que de la rencontre entre expertise et bienveillance.
+                  J&apos;ai créé un espace intimiste et chaleureux pour vous offrir bien plus
+                  qu&apos;une simple prestation : l&apos;alliance du bien-être et de la beauté.
+                  Chaque rendez-vous est un moment unique.
                 </p>
                 <p>
-                  Aujourd&apos;hui, plus de 10 000 clients nous ont fait confiance, et chacun
-                  d&apos;entre eux a contribué à faire de L&apos;Éther ce qu&apos;il est :
-                  un lieu où l&apos;excellence rime avec humanité.
+                  Je prends le temps de vous écouter et de comprendre vos besoins et vos attentes.
+                  Accordez-vous cette parenthèse de sérénité, où écoute, bienveillance et
+                  expertise sont au cœur de chaque instant.
                 </p>
               </div>
             </div>
 
             {/* Images */}
             <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 pb-16 sm:pb-12 lg:pb-0">
                 <div className="space-y-4">
                   <div className="aspect-[3/4] rounded-2xl overflow-hidden">
                     <Image
@@ -121,17 +123,17 @@ export default function AboutPage() {
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-primary text-white p-6 rounded-xl shadow-lg">
                 <div className="flex items-center gap-8">
                   <div className="text-center">
-                    <div className="font-serif text-3xl text-accent">12</div>
-                    <div className="text-sm text-white/70">années</div>
+                    <div className="font-serif text-3xl text-accent">29</div>
+                    <div className="text-sm text-white/70">soins</div>
                   </div>
                   <div className="h-12 w-px bg-white/20" />
                   <div className="text-center">
-                    <div className="font-serif text-3xl">10k+</div>
-                    <div className="text-sm text-white/70">clients</div>
+                    <div className="font-serif text-3xl">8</div>
+                    <div className="text-sm text-white/70">avis</div>
                   </div>
                   <div className="h-12 w-px bg-white/20" />
                   <div className="text-center">
-                    <div className="font-serif text-3xl text-accent">4.9</div>
+                    <div className="font-serif text-3xl text-accent">5.0</div>
                     <div className="text-sm text-white/70">étoiles</div>
                   </div>
                 </div>
@@ -195,7 +197,7 @@ export default function AboutPage() {
 
             {milestones.map((milestone, index) => (
               <div
-                key={milestone.year}
+                key={`${milestone.year}-${milestone.title}`}
                 className={`relative flex items-center gap-8 mb-12 last:mb-0 ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
@@ -233,14 +235,14 @@ export default function AboutPage() {
         <div className="container-spa">
           <div className="text-center mb-16">
             <span className="inline-block text-accent font-medium tracking-widest uppercase text-sm mb-4">
-              Notre Équipe
+              Votre Praticienne
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-4">
               Des mains expertes à votre service
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Tous certifiés par la Fédération Française de Massages Bien-Être, nos praticiens
-              combinent expertise technique et sensibilité humaine.
+              Formée auprès des meilleurs centres de formation en Bretagne,
+              je combine expertise technique et sensibilité humaine.
             </p>
           </div>
 
@@ -251,8 +253,13 @@ export default function AboutPage() {
                 className="bg-card rounded-2xl overflow-hidden card-hover border border-border/50"
               >
                 {/* Image */}
-                <div className="relative h-72 bg-muted flex items-center justify-center">
-                  <User className="w-24 h-24 text-muted-foreground/30" />
+                <div className="relative h-72">
+                  <Image
+                    src={therapist.image}
+                    alt={therapist.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
                 {/* Content */}
@@ -283,33 +290,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* FFMBE Certification */}
+      {/* Formations Section */}
       <section className="section-padding bg-primary text-white">
         <div className="container-spa">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/10 rounded-full mb-6">
                 <Award className="w-5 h-5 text-accent" />
-                <span className="text-sm font-medium">Certification FFMBE</span>
+                <span className="text-sm font-medium">Formations certifiées</span>
               </div>
               <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">
-                Un gage de qualité et d&apos;éthique
+                Une expertise reconnue
               </h2>
               <div className="space-y-4 text-white/80 leading-relaxed">
                 <p>
-                  L&apos;Éther est fier d&apos;être membre de la Fédération Française de
-                  Massages Bien-Être. Cette certification garantit que tous nos praticiens
-                  ont suivi une formation rigoureuse de plus de 200 heures.
+                  Ma passion pour le bien-être m&apos;a amenée à me former auprès des meilleurs
+                  centres de formation en Bretagne. J&apos;ai obtenu mes certifications en
+                  Réflexologie, Drainage Lymphatique Manuel et Prothésie Ongulaire.
                 </p>
                 <p>
-                  Elle atteste également de notre engagement envers un code de déontologie
-                  strict, plaçant votre bien-être et votre sécurité au cœur de notre pratique.
+                  Chaque soin que je propose est le fruit d&apos;un apprentissage rigoureux
+                  et d&apos;une pratique attentive, toujours au service de votre bien-être.
                 </p>
               </div>
               <div className="mt-8">
                 <Button size="lg" variant="accent" className="w-full sm:w-auto" asChild>
                   <Link href="/soins">
-                    Découvrir nos soins
+                    Découvrir mes soins
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -318,20 +325,20 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/10 rounded-xl p-6 text-center">
-                <div className="font-serif text-4xl text-accent mb-2">200+</div>
-                <div className="text-white/70 text-sm">heures de formation</div>
+                <div className="font-serif text-4xl text-accent mb-2">3</div>
+                <div className="text-white/70 text-sm">centres de formation</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-6 text-center">
+                <div className="font-serif text-4xl mb-2">29</div>
+                <div className="text-white/70 text-sm">soins proposés</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-6 text-center">
+                <div className="font-serif text-4xl text-accent mb-2">5.0</div>
+                <div className="text-white/70 text-sm">étoiles Google</div>
               </div>
               <div className="bg-white/10 rounded-xl p-6 text-center">
                 <div className="font-serif text-4xl mb-2">100%</div>
-                <div className="text-white/70 text-sm">praticiens certifiés</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-6 text-center">
-                <div className="font-serif text-4xl text-accent mb-2">Bio</div>
-                <div className="text-white/70 text-sm">produits naturels</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-6 text-center">
-                <div className="font-serif text-4xl mb-2">12</div>
-                <div className="text-white/70 text-sm">ans d&apos;expertise</div>
+                <div className="text-white/70 text-sm">écoute et bienveillance</div>
               </div>
             </div>
           </div>
@@ -349,7 +356,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="w-full sm:w-auto" asChild>
-              <Link href="/reserver">
+              <Link href="/contact">
                 Réserver un soin
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>

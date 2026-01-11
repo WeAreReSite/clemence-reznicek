@@ -5,7 +5,10 @@ import { BookingWizard } from "@/components/forms/BookingWizard"
 export const metadata: Metadata = {
   title: "Réserver",
   description:
-    "Réservez votre soin bien-être en ligne. Choisissez votre massage, votre praticien et votre créneau horaire.",
+    "Réservez votre soin bien-être chez Syl'Vie Bien-Etre à Pipriac. Choisissez parmi réflexologie plantaire, drainage lymphatique, amma assis ou beauté des mains.",
+  alternates: {
+    canonical: "https://www.sylviebienetre.fr/reserver",
+  },
 }
 
 function BookingLoading() {

@@ -13,6 +13,7 @@ export interface Service {
   image: string
   benefits: string[]
   isPopular?: boolean
+  isAddon?: boolean
 }
 
 export interface Therapist {

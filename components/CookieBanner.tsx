@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { useCookieConsentStore } from "@/lib/store"
-import { X, Settings } from "lucide-react"
+import { Settings } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -14,7 +14,7 @@ import {
 import { cn } from "@/lib/utils"
 
 export function CookieBanner() {
-  const { hasConsented, preferences, setConsent, updatePreferences } = useCookieConsentStore()
+  const { hasConsented, preferences, setConsent } = useCookieConsentStore()
   const [showSettings, setShowSettings] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [localPreferences, setLocalPreferences] = useState(preferences)
@@ -53,7 +53,11 @@ export function CookieBanner() {
   return (
     <>
       {/* Main Banner */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 animate-slide-up">
+      <aside
+        role="region"
+        aria-label="Bandeau de consentement aux cookies"
+        className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 animate-slide-up"
+      >
         <div className="container-spa">
           <div className="bg-card border border-border rounded-2xl shadow-lg p-6 md:p-8">
             <div className="flex flex-col lg:flex-row gap-6 lg:items-center lg:justify-between">
@@ -70,20 +74,23 @@ export function CookieBanner() {
                   variant="outline"
                   onClick={() => setShowSettings(true)}
                   className="order-3 sm:order-1"
+                  aria-label="Personnaliser les préférences de cookies"
                 >
-                  <Settings className="w-4 h-4 mr-2" />
+                  <Settings className="w-4 h-4 mr-2" aria-hidden="true" />
                   Personnaliser
                 </Button>
                 <Button
                   variant="outline"
                   onClick={handleRejectAll}
                   className="order-2"
+                  aria-label="Refuser tous les cookies non essentiels"
                 >
                   Tout refuser
                 </Button>
                 <Button
                   onClick={handleAcceptAll}
                   className="order-1 sm:order-3"
+                  aria-label="Accepter tous les cookies"
                 >
                   Tout accepter
                 </Button>
@@ -91,7 +98,7 @@ export function CookieBanner() {
             </div>
           </div>
         </div>
-      </div>
+      </aside>
 
       {/* Settings Dialog */}
       <Dialog open={showSettings} onOpenChange={setShowSettings}>
@@ -139,6 +146,9 @@ export function CookieBanner() {
                   "ml-4 w-12 h-6 rounded-full flex items-center px-1 transition-colors",
                   localPreferences.analytics ? "bg-primary justify-end" : "bg-secondary-light justify-start"
                 )}
+                role="switch"
+                aria-checked={localPreferences.analytics}
+                aria-label="Activer les cookies analytiques"
               >
                 <div className="w-4 h-4 bg-white rounded-full shadow" />
               </button>
@@ -163,6 +173,9 @@ export function CookieBanner() {
                   "ml-4 w-12 h-6 rounded-full flex items-center px-1 transition-colors",
                   localPreferences.marketing ? "bg-primary justify-end" : "bg-secondary-light justify-start"
                 )}
+                role="switch"
+                aria-checked={localPreferences.marketing}
+                aria-label="Activer les cookies marketing"
               >
                 <div className="w-4 h-4 bg-white rounded-full shadow" />
               </button>

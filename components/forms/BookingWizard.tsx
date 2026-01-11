@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 import Image from "next/image"
+import Link from "next/link"
 import { services, therapists, timeSlots } from "@/lib/data"
 import { formatPrice, formatDuration, cn } from "@/lib/utils"
 import { useBookingStore } from "@/lib/store"
@@ -25,7 +26,6 @@ import {
   Sparkles,
   User,
   Calendar as CalendarIcon,
-  CreditCard,
   CheckCircle2,
 } from "lucide-react"
 import { format, addDays } from "date-fns"
@@ -47,14 +47,12 @@ export function BookingWizard() {
     therapistId,
     date,
     timeSlot,
-    clientInfo,
     step,
     setService,
     setTherapist,
     setDate,
     setTimeSlot,
     setClientInfo,
-    setStep,
     nextStep,
     prevStep,
     reset,
@@ -167,7 +165,7 @@ export function BookingWizard() {
               Nouvelle réservation
             </Button>
             <Button className="flex-1" asChild>
-              <a href="/">Retour à l&apos;accueil</a>
+              <Link href="/">Retour à l&apos;accueil</Link>
             </Button>
           </div>
         </div>
@@ -294,7 +292,7 @@ export function BookingWizard() {
               <div>
                 <h3 className="font-medium text-foreground mb-4">Horaire</h3>
                 {date ? (
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                     {timeSlots.map((slot) => (
                       <button
                         key={slot}

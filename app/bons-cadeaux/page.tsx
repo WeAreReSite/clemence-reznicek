@@ -8,7 +8,10 @@ import { Gift, Mail, Truck, Clock, Sparkles, Shield, Heart } from "lucide-react"
 export const metadata: Metadata = {
   title: "Bons Cadeaux",
   description:
-    "Offrez un moment de bien-être avec nos bons cadeaux. Livraison instantanée par email ou dans un écrin élégant. Validité 12 mois.",
+    "Offrez un moment de bien-être avec les bons cadeaux Syl'Vie Bien-Etre. Réflexologie plantaire, drainage lymphatique ou beauté des mains à Pipriac. Validité 12 mois.",
+  alternates: {
+    canonical: "https://www.sylviebienetre.fr/bons-cadeaux",
+  },
 }
 
 const giftOptions = [

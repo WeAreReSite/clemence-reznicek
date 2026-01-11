@@ -109,12 +109,89 @@ export default function MentionsLegalesPage() {
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
-              Droit applicable
+              Cookies et données personnelles
             </h2>
             <p>
-              Tout litige en relation avec l'utilisation du site est soumis au droit
-              français. L'utilisateur reconnaît la compétence exclusive des tribunaux
-              français.
+              Ce site utilise des cookies pour améliorer l'expérience utilisateur. Pour plus d'informations sur l'utilisation
+              des cookies et le traitement des données personnelles, veuillez consulter notre{" "}
+              <a href="/confidentialite" className="text-primary hover:underline">
+                Politique de Confidentialité
+              </a>.
+            </p>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              Disponibilité et maintenance du site
+            </h2>
+            <p>
+              Nous nous efforçons de maintenir l'accessibilité du site 24h/24 et 7j/7. Cependant, nous ne pouvons garantir une disponibilité absolue et nous nous réservons le droit d'interrompre l'accès temporairement pour maintenance, mise à jour ou toute autre raison technique.
+            </p>
+            <p>
+              WeAreReSite et Sylvie Lebordais EI ne sauraient être tenus responsables des dommages de quelque nature que ce soit résultant de l'indisponibilité temporaire du site.
+            </p>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              Liens externes
+            </h2>
+            <p>
+              Ce site peut contenir des liens vers des sites externes. Nous ne sommes pas responsables du contenu, des politiques de confidentialité ou des pratiques de ces sites tiers. L'accès aux liens externes se fait aux risques et périls de l'utilisateur.
+            </p>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              Conditions d'utilisation
+            </h2>
+            <p>
+              L'utilisation de ce site implique l'acceptation pleine et entière des conditions générales d'utilisation ci-après décrites. Ces conditions peuvent être modifiées à tout moment sans préavis.
+            </p>
+            <p>
+              Il est interdit de :
+            </p>
+            <ul className="list-disc list-inside ml-4 mt-2 space-y-1">
+              <li>Utiliser le site à des fins illégales ou non autorisées</li>
+              <li>Tenter d'accéder à des zones protégées du site</li>
+              <li>Propager des virus ou autres codes malveillants</li>
+              <li>Collecter des données personnelles sans autorisation</li>
+              <li>Reproduire, distribuer ou modifier le contenu sans autorisation expresse</li>
+            </ul>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              Limitation de garantie et de responsabilité
+            </h2>
+            <p>
+              Les informations diffusées sur ce site sont présentées à titre indicatif et général sans valeur contractuelle. Malgré des mises à jour régulières, WeAreReSite et Sylvie Lebordais EI ne peuvent garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition.
+            </p>
+            <p>
+              En conséquence, WeAreReSite et Sylvie Lebordais EI déclinent toute responsabilité pour :
+            </p>
+            <ul className="list-disc list-inside ml-4 mt-2 space-y-1">
+              <li>Les erreurs ou omissions dans le contenu du site</li>
+              <li>Les dommages directs ou indirects résultant de l'utilisation du site</li>
+              <li>Les dysfonctionnements techniques ou les interruptions de service</li>
+              <li>Les dommages causés par des virus ou autres éléments nuisibles</li>
+              <li>L'utilisation des informations à des fins commerciales ou professionnelles</li>
+            </ul>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              Force majeure
+            </h2>
+            <p>
+              WeAreReSite et Sylvie Lebordais EI ne sauraient être tenus responsables de tout retard ou inexécution consécutifs à la survenance d'un cas de force majeure habituellement reconnu par la jurisprudence française.
+            </p>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              Modification des mentions légales
+            </h2>
+            <p>
+              WeAreReSite et Sylvie Lebordais EI se réservent le droit de modifier les présentes mentions légales à tout moment. Les utilisateurs sont invités à les consulter régulièrement.
+            </p>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              Droit applicable et juridiction compétente
+            </h2>
+            <p>
+              Les présentes mentions légales sont soumises au droit français. Tout litige relatif à l'utilisation du site sera de la compétence exclusive des tribunaux français, et plus particulièrement du tribunal de Rennes.
+            </p>
+            <p>
+              En cas de différend, une solution amiable sera recherchée avant toute action judiciaire. À défaut d'accord amiable, le litige sera porté devant les tribunaux compétents.
             </p>
 
             <p className="mt-8 text-sm text-center border-t pt-6">

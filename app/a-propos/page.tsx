@@ -46,7 +46,7 @@ const milestones = [
   { year: "Formation", title: "Zensphère", description: "Formation en Drainage Lymphatique Manuel, Réflexologie Abdominale, Faciale et Crânienne, Amma Assis à Pacé." },
   { year: "Formation", title: "Prothésie Ongulaire", description: "Formation auprès d'Anaïs Abaakil à Rennes." },
   { year: "2024", title: "Syl'Vie Bien-Etre", description: "Ouverture du cabinet à Pipriac, un espace intimiste dédié au bien-être." },
-  { year: "2025", title: "Excellence", description: "5 étoiles sur Google avec 8 avis clients enthousiastes." },
+  { year: "2026", title: "Excellence", description: "5 étoiles sur Google avec 8 avis clients enthousiastes." },
 ]
 
 export default function AboutPage() {

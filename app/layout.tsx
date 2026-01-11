@@ -110,6 +110,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${cormorant.variable} ${manrope.variable}`} data-scroll-behavior="smooth">
       <head>
+        <meta charSet="utf-8" />
         <meta name="description" content="Cabinet de réflexologie et bien-être à Pipriac (35550). Sylvie Lebordais, praticienne certifiée, vous propose drainage lymphatique, réflexologie plantaire et beauté des mains près de Redon." />
         <link rel="canonical" href="https://www.sylviebienetre.fr/" />
         <link rel="icon" href="/images/logo.png" sizes="any" />

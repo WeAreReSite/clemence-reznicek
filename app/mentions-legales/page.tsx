@@ -19,14 +19,14 @@ export default function MentionsLegalesPage() {
 
           <div className="prose prose-lg max-w-none text-muted-foreground">
             <p className="text-lg">
-              Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site les informations relatives à l'éditeur et aux intervenants dans le cadre de sa réalisation et de son suivi.
+              Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l&apos;économie numérique, il est précisé aux utilisateurs du site les informations relatives à l&apos;éditeur et aux intervenants dans le cadre de sa réalisation et de son suivi.
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
               Éditeur et propriétaire du site
             </h2>
             <p>
-              Le présent site web, accessible à l'URL www.sylviebienetre.fr (le « Site »), est édité et détenu par :
+              Le présent site web, accessible à l&apos;URL www.sylviebienetre.fr (le « Site »), est édité et détenu par :
             </p>
             <p>
               <strong>WeAreReSite</strong><br />
@@ -38,7 +38,7 @@ export default function MentionsLegalesPage() {
               Client représenté
             </h2>
             <p>
-              Le contenu et les services présentés sur ce site représentent l'activité de :
+              Le contenu et les services présentés sur ce site représentent l&apos;activité de :
             </p>
             <p>
               <strong>Sylvie Lebordais</strong><br />
@@ -65,14 +65,14 @@ export default function MentionsLegalesPage() {
               Directeur de publication
             </h2>
             <p>
-              Le directeur de la publication du Site est <strong>WeAreReSite</strong>, en qualité d'éditeur et propriétaire du site web.
+              Le directeur de la publication du Site est <strong>WeAreReSite</strong>, en qualité d&apos;éditeur et propriétaire du site web.
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
               Responsabilité du contenu
             </h2>
             <p>
-              <strong>WeAreReSite</strong> est responsable de la gestion technique, de l'hébergement et de la maintenance du site web.
+              <strong>WeAreReSite</strong> est responsable de la gestion technique, de l&apos;hébergement et de la maintenance du site web.
             </p>
             <p>
               <strong>Sylvie Lebordais</strong> est responsable de la véracité et de la conformité légale des informations relatives à son activité professionnelle présentées sur le site.
@@ -82,7 +82,7 @@ export default function MentionsLegalesPage() {
               Propriété intellectuelle
             </h2>
             <p>
-              L'architecture, la structure et le design du site sont la propriété de <strong>WeAreReSite</strong>.
+              L&apos;architecture, la structure et le design du site sont la propriété de <strong>WeAreReSite</strong>.
             </p>
             <p>
               Le contenu textuel, les photographies et les informations relatives aux services de bien-être sont la propriété de <strong>Sylvie Lebordais</strong> ou utilisés avec son autorisation.
@@ -98,7 +98,7 @@ export default function MentionsLegalesPage() {
               Le traitement des données personnelles est sous la responsabilité de <strong>WeAreReSite</strong> pour les aspects techniques et de <strong>Sylvie Lebordais</strong> pour les données clients relatives à son activité.
             </p>
             <p>
-              Pour plus d'informations sur l'utilisation des cookies et le traitement des données personnelles, veuillez consulter notre{" "}
+              Pour plus d&apos;informations sur l&apos;utilisation des cookies et le traitement des données personnelles, veuillez consulter notre{" "}
               <a href="/confidentialite" className="text-primary hover:underline">
                 Politique de Confidentialité
               </a>.
@@ -108,7 +108,7 @@ export default function MentionsLegalesPage() {
               Limitation de responsabilité
             </h2>
             <p>
-              <strong>WeAreReSite</strong> met tout en œuvre pour offrir aux utilisateurs des informations et/ou des outils disponibles et vérifiés, mais ne saurait être tenu responsable des erreurs, d'une absence de disponibilité des informations et/ou de la présence de virus sur son site.
+              <strong>WeAreReSite</strong> met tout en œuvre pour offrir aux utilisateurs des informations et/ou des outils disponibles et vérifiés, mais ne saurait être tenu responsable des erreurs, d&apos;une absence de disponibilité des informations et/ou de la présence de virus sur son site.
             </p>
             <p>
               <strong>Sylvie Lebordais</strong> est seule responsable des informations relatives à ses qualifications, ses services et les conseils prodigués dans le cadre de son activité professionnelle.
@@ -118,24 +118,24 @@ export default function MentionsLegalesPage() {
             </p>
             <ul className="list-disc list-inside ml-4 mt-2 space-y-1">
               <li>Les erreurs ou omissions dans le contenu du site</li>
-              <li>Les dommages directs ou indirects résultant de l'utilisation du site</li>
+              <li>Les dommages directs ou indirects résultant de l&apos;utilisation du site</li>
               <li>Les dysfonctionnements techniques ou les interruptions de service</li>
               <li>Les dommages causés par des virus ou autres éléments nuisibles</li>
-              <li>L'utilisation des informations à des fins commerciales ou professionnelles</li>
+              <li>L&apos;utilisation des informations à des fins commerciales ou professionnelles</li>
             </ul>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
-              Conditions d'utilisation
+              Conditions d&apos;utilisation
             </h2>
             <p>
-              L'utilisation de ce site implique l'acceptation pleine et entière des conditions générales d'utilisation. Ces conditions peuvent être modifiées à tout moment sans préavis par <strong>WeAreReSite</strong>.
+              L&apos;utilisation de ce site implique l&apos;acceptation pleine et entière des conditions générales d&apos;utilisation. Ces conditions peuvent être modifiées à tout moment sans préavis par <strong>WeAreReSite</strong>.
             </p>
             <p>
               Il est strictement interdit de :
             </p>
             <ul className="list-disc list-inside ml-4 mt-2 space-y-1">
               <li>Utiliser le site à des fins illégales ou non autorisées</li>
-              <li>Tenter d'accéder à des zones protégées du site</li>
+              <li>Tenter d&apos;accéder à des zones protégées du site</li>
               <li>Propager des virus ou autres codes malveillants</li>
               <li>Collecter des données personnelles sans autorisation</li>
               <li>Reproduire, distribuer ou modifier le contenu sans autorisation expresse</li>
@@ -152,7 +152,7 @@ export default function MentionsLegalesPage() {
               Force majeure
             </h2>
             <p>
-              <strong>WeAreReSite</strong> ne saurait être tenu responsable de tout retard ou inexécution consécutifs à la survenance d'un cas de force majeure habituellement reconnu par la jurisprudence française.
+              <strong>WeAreReSite</strong> ne saurait être tenu responsable de tout retard ou inexécution consécutifs à la survenance d&apos;un cas de force majeure habituellement reconnu par la jurisprudence française.
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
@@ -166,10 +166,10 @@ export default function MentionsLegalesPage() {
               Droit applicable et juridiction compétente
             </h2>
             <p>
-              Les présentes mentions légales sont soumises au droit français. Tout litige relatif à l'utilisation du site sera de la compétence exclusive des tribunaux français.
+              Les présentes mentions légales sont soumises au droit français. Tout litige relatif à l&apos;utilisation du site sera de la compétence exclusive des tribunaux français.
             </p>
             <p>
-              En cas de différend, une solution amiable sera recherchée avant toute action judiciaire. À défaut d'accord amiable, le litige sera porté devant les tribunaux compétents.
+              En cas de différend, une solution amiable sera recherchée avant toute action judiciaire. À défaut d&apos;accord amiable, le litige sera porté devant les tribunaux compétents.
             </p>
 
             <p className="mt-8 text-sm text-center border-t pt-6">

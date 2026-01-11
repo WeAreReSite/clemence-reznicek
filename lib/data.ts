@@ -139,14 +139,14 @@ export const services: Service[] = [
     name: 'Réflexologie Pédiatrique',
     slug: 'reflexologie-pediatrique',
     category: 'reflexologie',
-    description: 'Le principe est de vous montrer comment soulager les maux quotidiens de vos enfants : les reflux, les coliques, les otites, les rhinopharyngites, les douleurs dentaires mais aussi l\'hyperactivité et les troubles du sommeil. Un nouveau-né peut être massé dès les premiers jours de sa naissance. Le massage permet de créer un moment privilégié avec son bébé et de consolider le lien parents-bébé.',
-    shortDescription: 'Apprenez à soulager les maux de vos enfants par le massage.',
+    description: 'Je vous apprends des gestes de massage adaptés aux bébés et enfants pour favoriser leur détente et leur bien-être au quotidien. Un nouveau-né peut être massé dès les premiers jours de sa naissance. Le massage permet de créer un moment privilégié avec son bébé et de consolider le lien parents-bébé. Une approche douce et bienveillante pour accompagner le bien-être de vos enfants.',
+    shortDescription: 'Apprenez des gestes de massage pour le bien-être de vos enfants.',
     duration: 60,
     price: 65,
     image: '/images/reflexologie-pediatrique.jpeg',
     benefits: [
-      'Soulagement des coliques',
-      'Apaisement troubles du sommeil',
+      'Moment de détente pour bébé',
+      'Favorise le calme et l\'apaisement',
       'Renforcement lien parent-enfant',
       'Bien-être des nouveaux-nés'
     ]

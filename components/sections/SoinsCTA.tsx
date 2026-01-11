@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Button } from "@/components/ui/button"
-import { Phone, Calendar } from "lucide-react"
+import { Phone, Calendar, Info } from "lucide-react"
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger)
@@ -104,6 +104,17 @@ export function SoinsCTA() {
                 Me contacter
               </Link>
             </Button>
+          </div>
+
+          {/* Medical Disclaimer */}
+          <div className="mt-10 pt-8 border-t border-white/20">
+            <div className="flex items-start justify-center gap-3 max-w-xl mx-auto">
+              <Info className="w-4 h-4 text-white/60 shrink-0 mt-0.5" />
+              <p className="text-xs text-white/60 leading-relaxed text-center">
+                Je tiens à préciser que toutes les prestations proposées ne peuvent en
+                aucun cas se substituer à une consultation médicale ou à un traitement.
+              </p>
+            </div>
           </div>
         </div>
       </div>

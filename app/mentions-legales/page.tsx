@@ -48,8 +48,7 @@ export default function MentionsLegalesPage() {
               Email : <a href="mailto:sylviebienetre35@gmail.com" className="text-primary hover:underline">sylviebienetre35@gmail.com</a>
             </p>
             <p>
-              <strong>SIRET :</strong> 94176866500015<br />
-              <strong>TVA :</strong> Non applicable, article 293B du CGI
+              <strong>SIRET :</strong> 94176866500015
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">

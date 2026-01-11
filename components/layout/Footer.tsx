@@ -187,9 +187,22 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="w-full max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/50 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} {spaInfo.name}. Tous droits réservés.
-            </p>
+            <div className="flex flex-col items-center md:items-start gap-1">
+              <p className="text-white/50 text-sm text-center md:text-left">
+                © {new Date().getFullYear()} {spaInfo.name}. Tous droits réservés.
+              </p>
+              <p className="text-white/40 text-xs text-center md:text-left">
+                Site web créé par{' '}
+                <a
+                  href="https://www.weareresite.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/60 hover:text-accent transition-colors underline"
+                >
+                  weareresite
+                </a>
+              </p>
+            </div>
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
               {footerLinks.legal.map((link) => (
                 <Link

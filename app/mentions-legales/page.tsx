@@ -1,5 +1,4 @@
 import { Metadata } from "next"
-import { spaInfo } from "@/lib/data"
 
 export const metadata: Metadata = {
   title: "Mentions Légales",
@@ -19,66 +18,72 @@ export default function MentionsLegalesPage() {
           </h1>
 
           <div className="prose prose-lg max-w-none text-muted-foreground">
-            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
-              Éditeur du site
-            </h2>
-            <p>
-              <strong>{spaInfo.name}</strong><br />
-              {spaInfo.address.street}<br />
-              {spaInfo.address.postalCode} {spaInfo.address.city}<br />
-              {spaInfo.address.country}
-            </p>
-            <p>
-              Téléphone : {spaInfo.phone}<br />
-              Email : {spaInfo.email}
-            </p>
-            <p>
-              SIRET : 123 456 789 00012<br />
-              Numéro TVA intracommunautaire : FR12 123456789
+            <p className="text-lg">
+              Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site Sylvie Lebordais EI l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
-              Directeur de la publication
+              Edition du site
             </h2>
             <p>
-              Le directeur de la publication est Mme Sylvie Lebordais,
-              en qualité de gérante de {spaInfo.name}.
+              Le présent site, accessible à l'URL www.sylviebienetre.fr (le « Site »), est édité par :
+            </p>
+            <p>
+              <strong>Sylvie Lebordais EI</strong>, résidant 2 rue Saint Barthélémy 35550 Pipriac de nationalité Française (France), né(e) le 08/02/1983
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
               Hébergement
             </h2>
             <p>
-              Ce site est hébergé par :<br />
-              Vercel Inc.<br />
+              Le Site est hébergé par la société <strong>Vercel Inc.</strong><br />
               340 S Lemon Ave #4133<br />
               Walnut, CA 91789, États-Unis<br />
-              <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                https://vercel.com
-              </a>
+              Site web : <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://vercel.com</a>
+            </p>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              Directeur de publication
+            </h2>
+            <p>
+              Le Directeur de la publication du Site est <strong>Sylvie Lebordais EI</strong>.
+            </p>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              Nous contacter
+            </h2>
+            <p>
+              Par téléphone : <a href="tel:+33613648705" className="text-primary hover:underline">+33613648705</a><br />
+              Par email : <a href="mailto:sylviebienetre35@gmail.com" className="text-primary hover:underline">sylviebienetre35@gmail.com</a><br />
+              Par courrier : 1B rue du Général de Gaulle 35550 Pipriac
+            </p>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              Numéro d'identification de l'entreprise
+            </h2>
+            <p>
+              <strong>SIRET :</strong> 94176866500015
+            </p>
+
+            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
+              N° de TVA
+            </h2>
+            <p>
+              TVA non applicable, article 293B du CGI.
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
               Propriété intellectuelle
             </h2>
             <p>
-              L&apos;ensemble de ce site relève de la législation française et internationale
-              sur le droit d&apos;auteur et la propriété intellectuelle. Tous les droits de
+              L'ensemble de ce site relève de la législation française et internationale
+              sur le droit d'auteur et la propriété intellectuelle. Tous les droits de
               reproduction sont réservés, y compris pour les documents téléchargeables et
               les représentations iconographiques et photographiques.
             </p>
             <p>
               La reproduction de tout ou partie de ce site sur quelque support que ce soit
               est formellement interdite sauf autorisation expresse du directeur de la publication.
-            </p>
-
-            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
-              Crédits photographiques
-            </h2>
-            <p>
-              Les photographies utilisées sur ce site sont la propriété de {spaInfo.name}
-              ou utilisées avec l&apos;autorisation de leurs auteurs respectifs.
-              Certaines images proviennent de la banque d&apos;images Unsplash.
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
@@ -90,31 +95,21 @@ export default function MentionsLegalesPage() {
               inexactitudes, des omissions ou des lacunes.
             </p>
             <p>
-              {spaInfo.name} ne pourra être tenu responsable des dommages directs et
-              indirects causés au matériel de l&apos;utilisateur, lors de l&apos;accès au site.
-            </p>
-
-            <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
-              Cookies
-            </h2>
-            <p>
-              Ce site utilise des cookies. Pour plus d&apos;informations sur l&apos;utilisation
-              des cookies, veuillez consulter notre{" "}
-              <a href="/confidentialite" className="text-primary hover:underline">
-                Politique de Confidentialité
-              </a>.
+              Syl'Vie Bien-Etre ne pourra être tenu responsable des dommages directs et
+              indirects causés au matériel de l'utilisateur, lors de l'accès au site.
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">
               Droit applicable
             </h2>
             <p>
-              Tout litige en relation avec l&apos;utilisation du site est soumis au droit
-              français. L&apos;utilisateur reconnaît la compétence exclusive des tribunaux
+              Tout litige en relation avec l'utilisation du site est soumis au droit
+              français. L'utilisateur reconnaît la compétence exclusive des tribunaux
               français.
             </p>
 
-            <p className="mt-8 text-sm">
+            <p className="mt-8 text-sm text-center border-t pt-6">
+              <em>Génération des mentions légales par Legalstart.</em><br />
               Dernière mise à jour : {new Date().toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
             </p>
           </div>

@@ -28,16 +28,16 @@ export const services: Service[] = [
     name: 'Réflexologie Plantaire',
     slug: 'reflexologie-plantaire',
     category: 'reflexologie',
-    description: 'La réflexologie plantaire est un massage des pieds d\'origine chinoise. Selon la médecine traditionnelle chinoise, chaque zone réflexe correspondrait à un organe, une glande ou une partie du corps qui se projetterait sur la plante des pieds. Le pied serait donc un « miroir » miniature du corps humain. La réflexologie plantaire permet de retrouver un état d\'équilibre, d\'autorégulation du corps, de bien-être, de relaxation et peut avoir des bienfaits sur l\'ensemble des systèmes du corps.',
-    shortDescription: 'Le massage plantaire ancestral pour rééquilibrer votre corps.',
+    description: 'La réflexologie plantaire est un massage des pieds d\'origine chinoise. Basée sur les principes de la médecine traditionnelle chinoise, elle considère que chaque zone réflexe du pied correspond à une partie du corps. Cette technique de bien-être est pratiquée pour favoriser la détente, la relaxation et une sensation générale de bien-être.',
+    shortDescription: 'Le massage plantaire ancestral pour votre bien-être.',
     duration: 60,
     price: 65,
     image: '/images/reflexologie-plantaire.jpeg',
     benefits: [
-      'Équilibre du corps',
+      'Sensation de détente',
       'Relaxation profonde',
       'Bien-être général',
-      'Action sur les systèmes digestif, urinaire, locomoteur'
+      'Moment de relaxation complet'
     ],
     isPopular: true
   },
@@ -48,16 +48,16 @@ export const services: Service[] = [
     name: 'Réflexologie Palmaire',
     slug: 'reflexologie-palmaire',
     category: 'reflexologie',
-    description: 'La réflexologie palmaire consiste à exercer des points de pression et des massages au niveau des mains. Elle permet une autorégulation du corps et soulage différents maux comme le stress, la constipation, les maux de tête, atténue la sciatique, renforce la circulation sanguine et lymphatique.',
-    shortDescription: 'Les bienfaits de la réflexologie par les mains.',
+    description: 'La réflexologie palmaire consiste à exercer des points de pression et des massages au niveau des mains. Cette technique de bien-être est basée sur les principes de la réflexologie et favorise la détente et la relaxation.',
+    shortDescription: 'La réflexologie par les mains pour votre détente.',
     duration: 30,
     price: 40,
     image: '/images/reflexologie-palmaire.jpeg',
     benefits: [
-      'Soulagement du stress',
-      'Atténuation des maux de tête',
-      'Amélioration circulation sanguine',
-      'Réduction des tensions'
+      'Détente et relaxation',
+      'Apaisement des tensions',
+      'Bien-être des mains',
+      'Sensation de calme'
     ]
   },
 
@@ -67,15 +67,15 @@ export const services: Service[] = [
     name: 'Réflexologie Abdominale',
     slug: 'reflexologie-abdominale',
     category: 'reflexologie',
-    description: 'Le Qi Nei Tsang est une technique de massage issue de la tradition taoïste chinoise signifiant « travailler l\'énergie des organes internes ». Ce massage vise à débloquer les points de tension sur la région abdominale appelée aussi « le second cerveau » car c\'est par là que se trouve de nombreux organes vitaux où les tensions profondes, les émotions et notre vitalité s\'accumulent. À l\'aide de pressions douces, de gestes circulaires et d\'étirements spécifiques, ce massage vise à libérer les tensions accumulées dans les organes internes (foie, intestins, estomac, rate...) à favoriser la circulation de l\'énergie (QI) et à rétablir un meilleur équilibre global. Ce massage est bénéfique pour divers problèmes de santé, notamment les troubles digestifs, le stress, l\'anxiété, les douleurs abdominales et les déséquilibres énergétiques. En résumé : soulager les tensions abdominales (ballonnements, maux de ventre fonctionnels, inconfort digestif...), améliorer la digestion et l\'élimination, libérer les émotions stockées dans le ventre (stress, anxiété, fatigue émotionnelle, surcharge mentale), stimuler la circulation énergétique et lymphatique, améliorer la respiration et la détente profonde, harmonisation du corps et de l\'esprit.',
-    shortDescription: 'Libérez les tensions de votre « second cerveau ».',
+    description: 'Le Qi Nei Tsang est une technique de massage issue de la tradition taoïste chinoise. Ce massage doux se concentre sur la région abdominale et favorise la relaxation et le bien-être général en utilisant des pressions légères et des gestes circulaires.',
+    shortDescription: 'Un massage traditionnel pour le bien-être abdominal.',
     duration: 30,
     price: 40,
     image: '/images/reflexologie-abdominale.jpeg',
     benefits: [
-      'Soulagement tensions abdominales',
-      'Amélioration digestion',
-      'Libération émotions stockées',
+      'Relaxation abdominale',
+      'Apaisement des tensions',
+      'Sensation de bien-être',
       'Détente profonde'
     ]
   },
@@ -234,16 +234,16 @@ export const services: Service[] = [
     name: 'Drainage Lymphatique Corps',
     slug: 'drainage-corps',
     category: 'drainage',
-    description: 'Le drainage lymphatique est un massage du corps, doux et dynamique à la fois (il n\'y a pas besoin d\'avoir mal pour que cela fonctionne). Issue de la méthode Vodder et Leduc, il consiste à réaliser des pressions sur vos ganglions lymphatiques pour mieux relancer la circulation de la lymphe. C\'est un massage qui permet d\'éliminer les déchets de l\'organisme, l\'élimination de la cellulite et des amas graisseux. En cure, il favorise l\'amincissement, stimule le système immunitaire, élimine les toxines de l\'organisme, soulage les jambes lourdes et les douleurs causées par les varices, accélère la cicatrisation. Il atténue les douleurs inflammatoires, réduit fatigue et anxiété, soulage les problèmes intestinaux et intervient également dans l\'atténuation des symptômes et douleurs de la ménopause, règles douloureuses et endométriose.',
-    shortDescription: 'Le drainage complet pour éliminer toxines et retrouver légèreté.',
+    description: 'Le drainage lymphatique est un massage du corps, doux et rythmé. Basé sur les méthodes Vodder et Leduc, il consiste à réaliser des pressions légères pour favoriser la circulation lymphatique. C\'est un massage de bien-être qui favorise la détente et la relaxation profonde.',
+    shortDescription: 'Un massage pour favoriser votre bien-être et votre détente.',
     duration: 60,
     price: 70,
     image: '/images/drainage-lymphatique-manuel.jpeg',
     benefits: [
-      'Élimination des toxines',
-      'Jambes légères',
-      'Stimulation système immunitaire',
-      'Réduction cellulite'
+      'Détente profonde',
+      'Sensation de légèreté',
+      'Relaxation du corps',
+      'Bien-être général'
     ],
     isPopular: true
   },
@@ -832,10 +832,6 @@ export const faqs = [
     question: 'Quels sont vos horaires d\'ouverture ?',
     answer: 'Je vous accueille du lundi au vendredi de 9h à 20h et le samedi de 9h à 13h. Le dimanche est fermé. N\'hésitez pas à me contacter pour prendre rendez-vous.'
   },
-  {
-    question: 'Puis-je offrir un soin en cadeau ?',
-    answer: 'Absolument ! Les bons cadeaux sont une excellente idée pour offrir un moment de détente et de bien-être à vos proches. Contactez-moi par téléphone ou email pour organiser votre bon cadeau personnalisé.'
-  }
 ]
 
 // Featured services to highlight on homepage (client's main specialties)

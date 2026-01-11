@@ -179,8 +179,8 @@ export function ServicesPreview() {
               className="service-card group relative bg-card rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform-gpu"
               style={{ perspective: "1000px" }}
             >
-              {/* Image Container */}
-              <div className="relative h-64 md:h-72 overflow-hidden">
+              {/* Image Container - Height capped for short viewports */}
+              <div className="relative h-[min(16rem,40vh)] md:h-[min(18rem,35vh)] overflow-hidden">
                 <div className="card-image absolute inset-0">
                   <Image
                     src={service.image}

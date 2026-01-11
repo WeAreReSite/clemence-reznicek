@@ -182,12 +182,12 @@ export function HeroSection() {
       <div className="absolute bottom-40 left-16 w-3 h-3 rounded-full bg-white/20 hidden md:block" />
       <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 rounded-full bg-accent/50 hidden md:block" />
 
-      <div className="relative z-10 min-h-screen flex flex-col">
-        {/* TOP SPACER - Reserved space for navbar */}
-        <div className="h-[100px] md:h-[120px] shrink-0" aria-hidden="true" />
+      <div className="relative z-10 min-h-svh flex flex-col">
+        {/* TOP SPACER - Reserved space for navbar (reduced on short viewports) */}
+        <div className="h-[80px] md:h-[100px] lg:h-[120px] shrink-0" aria-hidden="true" />
 
         {/* MAIN CONTENT - Grows to fill available space, centered */}
-        <div className="flex-1 flex items-center justify-center px-4 py-8">
+        <div className="flex-1 flex items-center justify-center px-4 py-4 md:py-8">
           <div className="container-spa text-center text-white">
             <div ref={contentRef} className="max-w-4xl mx-auto">
               {/* Tagline */}
@@ -266,10 +266,10 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* BOTTOM SPACER - Scroll indicator */}
+        {/* BOTTOM SPACER - Scroll indicator (compact on short viewports) */}
         <div
           ref={scrollIndicatorRef}
-          className="h-[80px] shrink-0 flex items-center justify-center"
+          className="h-[60px] md:h-[80px] shrink-0 flex items-center justify-center"
         >
           <div className="flex flex-col items-center gap-2 text-white/60" aria-hidden="true">
             <span className="text-xs tracking-widest uppercase hidden sm:block">Découvrir</span>

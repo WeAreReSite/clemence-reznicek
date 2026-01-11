@@ -370,7 +370,7 @@ function RegularCategorySection({
   const imageElement = (
     <div
       ref={imageRef}
-      className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden opacity-0 shadow-2xl"
+      className="relative h-[min(400px,65vh)] md:h-[min(500px,60vh)] lg:h-[min(600px,55vh)] rounded-3xl overflow-hidden opacity-0 shadow-2xl"
     >
       {category.image && (
         <Image
@@ -567,15 +567,15 @@ function BeauteMainsSection({
           </p>
         </div>
 
-        {/* 3-Image Parallax Gallery */}
+        {/* 3-Image Parallax Gallery - Height capped for short viewports */}
         <div
           ref={galleryRef}
-          className="relative h-auto md:h-[600px] lg:h-[700px] mb-16 flex flex-col md:block gap-4 md:gap-0"
+          className="relative h-auto md:h-[min(600px,65vh)] lg:h-[min(700px,60vh)] mb-16 flex flex-col md:block gap-4 md:gap-0"
         >
           {/* Image 1 */}
           <div
             ref={image1Ref}
-            className="relative md:absolute left-0 top-0 w-full md:w-[45%] h-[250px] sm:h-[300px] md:h-[70%] rounded-2xl overflow-hidden shadow-2xl opacity-0 z-10"
+            className="relative md:absolute left-0 top-0 w-full md:w-[45%] h-[min(250px,35vh)] sm:h-[min(300px,40vh)] md:h-[70%] rounded-2xl overflow-hidden shadow-2xl opacity-0 z-10"
           >
             {images[0] && (
               <Image
@@ -592,7 +592,7 @@ function BeauteMainsSection({
           {/* Image 2 */}
           <div
             ref={image2Ref}
-            className="relative md:absolute right-0 top-0 md:top-[5%] w-full md:w-[40%] h-[200px] sm:h-[250px] md:h-[55%] rounded-2xl overflow-hidden shadow-xl opacity-0 z-10"
+            className="relative md:absolute right-0 top-0 md:top-[5%] w-full md:w-[40%] h-[min(200px,30vh)] sm:h-[min(250px,35vh)] md:h-[55%] rounded-2xl overflow-hidden shadow-xl opacity-0 z-10"
           >
             {images[1] && (
               <Image
@@ -609,7 +609,7 @@ function BeauteMainsSection({
           {/* Image 3 */}
           <div
             ref={image3Ref}
-            className="relative md:absolute left-0 md:left-1/2 md:-translate-x-1/2 bottom-0 w-full md:w-[35%] h-[200px] sm:h-[250px] md:h-[50%] rounded-2xl overflow-hidden shadow-xl opacity-0 z-20"
+            className="relative md:absolute left-0 md:left-1/2 md:-translate-x-1/2 bottom-0 w-full md:w-[35%] h-[min(200px,30vh)] sm:h-[min(250px,35vh)] md:h-[50%] rounded-2xl overflow-hidden shadow-xl opacity-0 z-20"
           >
             {images[2] && (
               <Image

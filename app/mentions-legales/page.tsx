@@ -95,13 +95,13 @@ export default function MentionsLegalesPage() {
               Données personnelles et cookies
             </h2>
             <p>
-              Le traitement des données personnelles est sous la responsabilité de <strong>WeAreReSite</strong> pour les aspects techniques et de <strong>Sylvie Lebordais</strong> pour les données clients relatives à son activité.
+              Ce site web ne collecte aucune donnée personnelle. Nous n&apos;utilisons aucun cookie de tracking, d&apos;analyse ou publicitaire.
             </p>
             <p>
-              Pour plus d&apos;informations sur l&apos;utilisation des cookies et le traitement des données personnelles, veuillez consulter notre{" "}
-              <a href="/confidentialite" className="text-primary hover:underline">
-                Politique de Confidentialité
-              </a>.
+              Les seuls cookies utilisés sont des cookies techniques essentiels au bon fonctionnement du site (sécurité, navigation de base).
+            </p>
+            <p>
+              Pour la prise de rendez-vous, nous utilisons Calendly, un service tiers qui dispose de sa propre politique de confidentialité consultable sur leur site web.
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">

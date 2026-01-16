@@ -20,13 +20,13 @@ function seededRandom(seed: number): () => number {
   }
 }
 
-// Pre-generated petal data outside of component for stability
+// Pre-generated petal data outside of component for stability - Warmer tones
 const PETAL_COLORS = [
-  "rgba(212, 165, 165, 0.6)",  // Blush pink
-  "rgba(232, 196, 196, 0.5)",  // Light blush
-  "rgba(192, 139, 139, 0.4)",  // Dusty rose
-  "rgba(255, 228, 225, 0.5)",  // Misty rose
-  "rgba(201, 168, 154, 0.4)",  // Rose gold
+  "rgba(196, 145, 143, 0.6)",  // Rich dusty rose
+  "rgba(221, 188, 186, 0.55)", // Warm blush
+  "rgba(168, 117, 115, 0.45)", // Deep rose
+  "rgba(212, 187, 168, 0.5)",  // Warm sand/rose gold
+  "rgba(184, 144, 122, 0.45)", // Terracotta rose
 ]
 
 function generatePetals(): Petal[] {

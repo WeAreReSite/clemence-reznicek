@@ -5,38 +5,38 @@
 
 /* CSS Variables for the Wellness Palette */
 :root {
-  /* Core Colors - Soft, Feminine, Cocooning, Nature-Inspired */
-  --background: #FAF7F5;          /* Warm cream with subtle pink undertones */
-  --foreground: #4A4A4A;          /* Soft charcoal for elegance */
+  /* Core Colors - Warm, Feminine, Cocooning, Nature-Inspired */
+  --background: #F8F3EF;          /* Warm peachy cream */
+  --foreground: #3D3535;          /* Warm dark brown for depth */
 
-  /* Primary - Sage Green (calming, natural, harmonious) */
-  --primary: #7D8B6F;             /* Soft sage green - 4.8:1 contrast ✓ */
+  /* Primary - Deep Sage Green (rich, grounding, natural) */
+  --primary: #5E7052;             /* Rich forest sage - deeper and warmer */
   --primary-foreground: #FFFFFF;
-  --primary-hover: #6A7A5C;       /* Deeper sage for hover states */
-  --primary-light: #A8B89A;       /* Light sage for backgrounds */
+  --primary-hover: #4A5A40;       /* Deep moss green */
+  --primary-light: #8A9E7A;       /* Warm sage for backgrounds */
 
-  /* Secondary - Blush Pink (feminine, romantic, cocooning) */
-  --secondary: #D4A5A5;           /* Dusty rose/blush - soft and feminine */
-  --secondary-foreground: #4A4A4A;
-  --secondary-light: #E8C4C4;     /* Light blush for accents */
-  --secondary-dark: #C08B8B;      /* Deeper rose for hover */
+  /* Secondary - Warm Dusty Rose (feminine, cocooning, inviting) */
+  --secondary: #C4918F;           /* Rich dusty rose - more saturated */
+  --secondary-foreground: #FFFFFF;
+  --secondary-light: #DDBCBA;     /* Warm blush for accents */
+  --secondary-dark: #A87573;      /* Deep rose for hover */
 
-  /* Accent - Rose Gold (sophisticated warmth) */
-  --accent: #C9A89A;              /* Rose gold/dusty pink */
-  --accent-foreground: #4A4A4A;
-  --accent-light: #E4D4CC;        /* Very soft rose gold */
+  /* Accent - Warm Terracotta Rose (sophisticated warmth) */
+  --accent: #B8907A;              /* Warm terracotta/rose gold */
+  --accent-foreground: #FFFFFF;
+  --accent-light: #D4BBA8;        /* Soft warm sand */
 
   /* UI Colors */
-  --muted: #F5EEEB;               /* Soft pink-cream background */
-  --muted-foreground: #6B5B5B;    /* Warm muted text */
-  --border: #E8DDD8;              /* Soft pink-tinted border */
-  --ring: #7D8B6F;                /* Match sage primary */
+  --muted: #F0E6E0;               /* Warm peachy-pink background */
+  --muted-foreground: #5C4A4A;    /* Warm brown text */
+  --border: #E0D0C8;              /* Warm rose-tinted border */
+  --ring: #5E7052;                /* Match rich sage primary */
 
   /* Card & Overlay */
-  --card: #FFFFFF;
-  --card-foreground: #4A4A4A;     /* Soft charcoal for readability */
-  --popover: #FFFFFF;
-  --popover-foreground: #4A4A4A;
+  --card: #FFFCFA;                /* Warm off-white */
+  --card-foreground: #3D3535;     /* Warm dark brown for readability */
+  --popover: #FFFCFA;
+  --popover-foreground: #3D3535;
 
   /* Destructive */
   --destructive: #DC2626;
@@ -254,17 +254,17 @@ html::-webkit-scrollbar {
 /* Gradient Overlays */
 .gradient-overlay {
   background: linear-gradient(180deg,
-    rgba(250, 247, 245, 0) 0%,
-    rgba(250, 247, 245, 0.8) 50%,
-    rgba(250, 247, 245, 1) 100%
+    rgba(248, 243, 239, 0) 0%,
+    rgba(248, 243, 239, 0.8) 50%,
+    rgba(248, 243, 239, 1) 100%
   );
 }
 
 .gradient-hero {
   background: linear-gradient(135deg,
-    rgba(125, 139, 111, 0.85) 0%,
-    rgba(125, 139, 111, 0.6) 50%,
-    rgba(212, 165, 165, 0.4) 100%
+    rgba(94, 112, 82, 0.85) 0%,
+    rgba(94, 112, 82, 0.6) 50%,
+    rgba(196, 145, 143, 0.5) 100%
   );
 }
 

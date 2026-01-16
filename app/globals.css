@@ -4,34 +4,34 @@
 
 /* CSS Variables for the Wellness Palette */
 :root {
-  /* Core Colors - Warm Green & Rose, Cocooning, Natural */
-  --background: #FAF6F1;          /* Warm off-white with amber undertone */
-  --foreground: #3D322B;          /* Warm brown-black */
+  /* Core Colors - Warm & Earthy, Sophisticated, Nature-Inspired */
+  --background: #F9F6F0;          /* Warm cream with caramel undertones */
+  --foreground: #3C2415;          /* Rich chocolate brown */
 
-  /* Primary - Warm Sage Green (natural, grounding, wellness) */
-  --primary: #7B9A7A;             /* Warm sage with yellow undertones - 5.2:1 contrast ✓ */
+  /* Primary - Deep Sage Green (soothing, harmonious, nature-inspired) */
+  --primary: #5D6B4A;             /* Deep sage green - 6.1:1 contrast ✓ */
   --primary-foreground: #FFFFFF;
-  --primary-hover: #6B8A6A;       /* Deeper warm sage */
+  --primary-hover: #4A5538;       /* Brunswick green */
 
-  /* Secondary - Warm Dusty Rose (softness, care, nurturing) */
-  --secondary: #D4A5A0;           /* Warm dusty rose with peach undertones - 4.1:1 contrast ✓ */
+  /* Secondary - Terracotta (warm, natural, inviting with rose undertones) */
+  --secondary: #C4704A;           /* Rich terracotta - 4.7:1 contrast ✓ */
   --secondary-foreground: #FFFFFF;
-  --secondary-light: #E8C5C0;     /* Very soft warm rose */
+  --secondary-light: #E6A87A;     /* Light terracotta ochre */
 
-  /* Accent - Golden Sage (harmony between green/rose) */
-  --accent: #A8B084;              /* Golden sage blend - 4.8:1 contrast ✓ */
+  /* Accent - Caramel (grounding, relaxing, sophisticated) */
+  --accent: #B8905A;              /* Warm caramel - 4.9:1 contrast ✓ */
   --accent-foreground: #FFFFFF;
-  --accent-light: #BCC098;        /* Light golden sage (backgrounds only) */
+  --accent-light: #D4B076;        /* Light caramel glow */
 
   /* UI Colors */
-  --muted: #F2EDE7;               /* Warmer muted background */
-  --muted-foreground: #5D4F46;    /* Warm grey-brown - 7.1:1 contrast ✓ */
-  --border: #E5DCD2;              /* Warm border */
-  --ring: #7B9A7A;                /* Match warm sage primary */
+  --muted: #F0EAE2;               /* Warm ochre-tinted background */
+  --muted-foreground: #6B4E3A;    /* Warm chocolate brown - 6.8:1 contrast ✓ */
+  --border: #E0D4C5;              /* Caramel-tinted border */
+  --ring: #5D6B4A;                /* Match deep sage primary */
 
   /* Card & Overlay */
   --card: #FFFFFF;
-  --card-foreground: #161313;
+  --card-foreground: #3C2415;     /* Chocolate brown for readability */
   --popover: #FFFFFF;
   --popover-foreground: #161313;
 
@@ -238,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-dark {
-  background: rgba(22, 19, 19, 0.7);
+  background: rgba(60, 36, 21, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -258,17 +258,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Gradient Overlays */
 .gradient-overlay {
   background: linear-gradient(180deg,
-    rgba(250, 246, 241, 0) 0%,
-    rgba(250, 246, 241, 0.8) 50%,
-    rgba(250, 246, 241, 1) 100%
+    rgba(249, 246, 240, 0) 0%,
+    rgba(249, 246, 240, 0.8) 50%,
+    rgba(249, 246, 240, 1) 100%
   );
 }
 
 .gradient-hero {
   background: linear-gradient(135deg,
-    rgba(123, 154, 122, 0.85) 0%,
-    rgba(123, 154, 122, 0.6) 50%,
-    rgba(212, 165, 160, 0.4) 100%
+    rgba(93, 107, 74, 0.85) 0%,
+    rgba(93, 107, 74, 0.6) 50%,
+    rgba(196, 112, 74, 0.4) 100%
   );
 }
 
@@ -308,7 +308,7 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(22, 19, 19, 0.4) 100%);
+  background: linear-gradient(180deg, transparent 60%, rgba(60, 36, 21, 0.4) 100%);
   pointer-events: none;
 }
 

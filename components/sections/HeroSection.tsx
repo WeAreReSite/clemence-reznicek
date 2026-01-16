@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import gsap from "gsap"
 import { spaInfo } from "@/lib/data"
+import { FloatingPetals } from "@/components/ui/floating-petals"
 
 export function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null)
@@ -181,6 +182,9 @@ export function HeroSection() {
       <div className="absolute top-20 right-20 w-2 h-2 rounded-full bg-accent/40 hidden md:block" />
       <div className="absolute bottom-40 left-16 w-3 h-3 rounded-full bg-white/20 hidden md:block" />
       <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 rounded-full bg-accent/50 hidden md:block" />
+
+      {/* Floating Flower Petals - Zen & Cocooning aesthetic */}
+      <FloatingPetals />
 
       <div className="relative z-10 min-h-svh flex flex-col">
         {/* TOP SPACER - Reserved space for navbar (reduced on short viewports) */}

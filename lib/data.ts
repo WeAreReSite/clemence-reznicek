@@ -330,7 +330,7 @@ export const services: Service[] = [
     shortDescription: 'Massage japonais sur chaise pour une relaxation express.',
     duration: 30,
     price: 40,
-    image: '/images/amma-assis.jpeg',
+    image: '/images/amma-assis-new.jpeg',
     benefits: [
       'Relaxation rapide',
       'Diminution du stress',
@@ -701,7 +701,7 @@ export const categories = [
     id: 'amma',
     name: 'Amma Assis',
     description: 'Relaxation rapide sur chaise ergonomique',
-    image: '/images/amma-assis.jpeg'
+    image: '/images/amma-assis-new.jpeg'
   },
   {
     id: 'massages-mixtes',
@@ -861,7 +861,7 @@ export const featuredServices = [
     title: 'Amma Assis',
     subtitle: 'Relaxation Express',
     description: 'Technique japonaise sur chaise ergonomique. En 30 minutes, libérez les tensions du haut du corps et retrouvez votre énergie.',
-    image: '/images/amma-assis.jpeg',
+    image: '/images/amma-assis-new.jpeg',
     href: '/soins#amma',
     highlights: ['Relaxation rapide', 'Regain d\'énergie', 'Anti-stress'],
     accent: 'from-violet-500/20 to-indigo-500/20'
@@ -873,7 +873,7 @@ export const spaInfo = {
   tagline: 'Chouchoutez votre corps, Sublimez vos mains',
   // TODO: Replace with actual Calendly URL
   calendlyUrl: 'https://calendly.com/sylviebienetre',
-  description: 'Syl\'Vie Bien-Etre est le cabinet de référence pour le drainage lymphatique manuel et la réflexologie plantaire à Pipriac, Ille-et-Vilaine. Sylvie Lebordais, praticienne formée aux méthodes Vodder et Leduc, vous accueille dans un espace intimiste dédié à votre bien-être et à votre sérénité.',
+  description: 'Cabinet de drainage lymphatique et réflexologie à Pipriac (35). Un espace cocooning dédié à votre bien-être et sérénité.',
   welcomeText: 'Bienvenue, Je suis Sylvie, fondatrice de Syl\'Vie Bien-Etre, spécialisée en Réflexologie, Drainage Lymphatique Manuel, Amma Assis et Prothésiste Ongulaire. J\'ai créé un espace intimiste et chaleureux pour vous offrir bien plus qu\'une simple prestation : l\'alliance du bien-être et de la beauté. Chaque rendez-vous est un moment unique, je prends le temps de vous écouter et de comprendre vos besoins et vos attentes. Accordez-vous cette parenthèse de sérénité, où écoute, bienveillance et expertise sont au cœur de chaque instant.',
   address: {
     street: '1B Rue du Général de Gaulle',

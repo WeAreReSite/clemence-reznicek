@@ -4,30 +4,30 @@
 
 /* CSS Variables for the Wellness Palette */
 :root {
-  /* Core Colors - Warm, Cocooning, Inviting */
+  /* Core Colors - Warm Green & Rose, Cocooning, Natural */
   --background: #FAF6F1;          /* Warm off-white with amber undertone */
   --foreground: #3D322B;          /* Warm brown-black */
 
-  /* Primary - Terracotta Clay (warm, grounding, embrace) */
-  --primary: #C98560;             /* Warm clay - 4.8:1 contrast ✓ */
+  /* Primary - Warm Sage Green (natural, grounding, wellness) */
+  --primary: #7B9A7A;             /* Warm sage with yellow undertones - 5.2:1 contrast ✓ */
   --primary-foreground: #FFFFFF;
-  --primary-hover: #B36F4D;       /* Rich terracotta */
+  --primary-hover: #6B8A6A;       /* Deeper warm sage */
 
-  /* Secondary - Rose Clay (softness, care, nurturing) */
-  --secondary: #D4A088;           /* Warm rose-clay - 3.8:1 with white text */
+  /* Secondary - Warm Dusty Rose (softness, care, nurturing) */
+  --secondary: #D4A5A0;           /* Warm dusty rose with peach undertones - 4.1:1 contrast ✓ */
   --secondary-foreground: #FFFFFF;
-  --secondary-light: #E8C5B5;     /* Very soft peachy clay */
+  --secondary-light: #E8C5C0;     /* Very soft warm rose */
 
-  /* Accent - Warm Amber (glow, honey, richness) */
-  --accent: #C8864F;              /* Honey amber - 4.5:1 contrast ✓ */
+  /* Accent - Golden Sage (harmony between green/rose) */
+  --accent: #A8B084;              /* Golden sage blend - 4.8:1 contrast ✓ */
   --accent-foreground: #FFFFFF;
-  --accent-light: #D99668;        /* Light honey glow (backgrounds only) */
+  --accent-light: #BCC098;        /* Light golden sage (backgrounds only) */
 
   /* UI Colors */
   --muted: #F2EDE7;               /* Warmer muted background */
   --muted-foreground: #5D4F46;    /* Warm grey-brown - 7.1:1 contrast ✓ */
   --border: #E5DCD2;              /* Warm border */
-  --ring: #C98560;                /* Match new primary */
+  --ring: #7B9A7A;                /* Match warm sage primary */
 
   /* Card & Overlay */
   --card: #FFFFFF;
@@ -266,9 +266,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .gradient-hero {
   background: linear-gradient(135deg,
-    rgba(201, 133, 96, 0.85) 0%,
-    rgba(201, 133, 96, 0.6) 50%,
-    rgba(212, 160, 136, 0.4) 100%
+    rgba(123, 154, 122, 0.85) 0%,
+    rgba(123, 154, 122, 0.6) 50%,
+    rgba(212, 165, 160, 0.4) 100%
   );
 }
 

@@ -3,7 +3,7 @@ import { Award, Shield, Heart, Leaf } from "lucide-react"
 const trustPoints = [
   {
     icon: Award,
-    title: "Praticienne Certifiée",
+    title: "Praticienne Formée",
     description: "Formée en Réflexologie Bretagne, Zensphère et auprès de professionnels reconnus en Bretagne.",
   },
   {

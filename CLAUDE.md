@@ -124,3 +124,50 @@ See `.claude/FRONTEND-TOOLS.md` for complete documentation.
 4. Use `seo-specialist` to adapt SEO to their business
 5. Use `content-writer` to generate French content
 6. Use `qa-reviewer` to verify no hardcoded content
+
+---
+
+# Client Feedback Autopilot
+
+## Multi-Agent System
+This project uses autonomous agents for feedback implementation:
+- **feedback-orchestrator**: Parses feedback, manages dependencies
+- **visual-engineer**: Tailwind/Shadcn theming only
+- **content-strategist**: Copy editing + fact verification (has web search)
+- **react-architect**: Component structure only
+
+### Shared State
+- `.claude/memory/state/task_ledger.json` - Master task registry
+- `.claude/memory/outputs/` - Agent output files
+
+## Validation Workflow
+**CRITICAL**: Run validation after EVERY file change:
+```bash
+npx tsc --noEmit && npm run lint && npm run build
+```
+
+## Tech Stack Rules
+### React/Next.js
+- Use 'use client' directive for client components
+- Hooks MUST be at top level (never conditional)
+- Use dynamic import with `ssr: false` for browser-only code
+- Avoid direct window/document access in component body
+
+### TailwindCSS v4
+- Theme variables in globals.css @theme block
+- Use CSS variables for all themeable values
+- Prefer oklch() color space for better interpolation
+
+### ShadcnUI
+- Extend via composition, don't modify /ui/ base files
+- Use CVA for custom variants
+- CSS variables for theming (--primary, --secondary, etc.)
+
+## Git Workflow
+- Create feature branch before changes
+- Small, atomic commits with clear messages
+- Run validation before every commit
+- Never force push to main
+
+## Custom Commands
+- `/project:implement-feedback` - Trigger autonomous feedback implementation workflow

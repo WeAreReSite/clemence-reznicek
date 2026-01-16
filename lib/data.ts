@@ -28,16 +28,16 @@ export const services: Service[] = [
     name: 'Réflexologie Plantaire',
     slug: 'reflexologie-plantaire',
     category: 'reflexologie',
-    description: 'La réflexologie plantaire est un massage des pieds d\'origine chinoise. Basée sur les principes de la médecine traditionnelle chinoise, elle considère que chaque zone réflexe du pied correspond à une partie du corps. Cette technique de bien-être est pratiquée pour favoriser la détente, la relaxation et une sensation générale de bien-être.',
+    description: 'La réflexologie plantaire est une technique de bien-être millénaire issue de la médecine traditionnelle chinoise. Elle repose sur un principe fondamental : chaque zone du pied est le reflet d\'un organe, d\'une glande ou d\'une partie du corps. En stimulant ces zones réflexes par des pressions douces et précises, le praticien favorise la détente profonde et l\'équilibre naturel de l\'organisme. Cette séance d\'une heure complète permet de travailler l\'ensemble des systèmes du corps (digestif, respiratoire, nerveux, circulatoire, hormonal) pour une harmonisation globale. Un moment de relaxation absolue où votre corps retrouve son équilibre intérieur.',
     shortDescription: 'Le massage plantaire ancestral pour votre bien-être.',
     duration: 60,
     price: 65,
     image: '/images/reflexologie-plantaire.jpeg',
     benefits: [
-      'Sensation de détente',
-      'Relaxation profonde',
-      'Bien-être général',
-      'Moment de relaxation complet'
+      'Sensation de détente profonde',
+      'Relaxation du système nerveux',
+      'Harmonisation globale du corps',
+      'Moment de reconnexion à soi'
     ],
     isPopular: true
   },
@@ -67,16 +67,16 @@ export const services: Service[] = [
     name: 'Réflexologie Abdominale',
     slug: 'reflexologie-abdominale',
     category: 'reflexologie',
-    description: 'Le Qi Nei Tsang est une technique de massage issue de la tradition taoïste chinoise. Ce massage doux se concentre sur la région abdominale et favorise la relaxation et le bien-être général en utilisant des pressions légères et des gestes circulaires.',
+    description: 'Le Qi Nei Tsang (Chi Nei Tsang) est une technique ancestrale de massage abdominal issue de la tradition taoïste chinoise. Son nom signifie littéralement "travailler l\'énergie des organes internes". Cette approche de bien-être considère le ventre comme notre "deuxième cerveau", siège des émotions et de la vitalité. Par des pressions légères, des massages circulaires et des mouvements enveloppants sur la région abdominale, cette technique favorise la libération des tensions émotionnelles logées dans le ventre, la relaxation du système digestif et l\'équilibre énergétique global. Une séance profondément apaisante pour retrouver confort digestif et sérénité intérieure.',
     shortDescription: 'Un massage traditionnel pour le bien-être abdominal.',
     duration: 30,
     price: 40,
     image: '/images/reflexologie-abdominale.jpeg',
     benefits: [
-      'Relaxation abdominale',
-      'Apaisement des tensions',
-      'Sensation de bien-être',
-      'Détente profonde'
+      'Relaxation abdominale profonde',
+      'Apaisement des tensions digestives',
+      'Libération émotionnelle',
+      'Équilibre du centre énergétique'
     ]
   },
 
@@ -191,7 +191,7 @@ export const services: Service[] = [
   },
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // DRAINAGE LYMPHATIQUE - Stimuler la circulation et éliminer les toxines
+  // DRAINAGE LYMPHATIQUE MANUEL - Stimuler la circulation et éliminer les toxines
   // ═══════════════════════════════════════════════════════════════════════════
 
   // --- Soins unitaires (du plus court au plus long) ---
@@ -231,11 +231,11 @@ export const services: Service[] = [
   },
   {
     id: 'drainage-corps',
-    name: 'Drainage Lymphatique Corps',
+    name: 'Drainage Lymphatique Manuel Corps',
     slug: 'drainage-corps',
     category: 'drainage',
-    description: 'Le drainage lymphatique est un massage du corps, doux et rythmé. Basé sur les méthodes Vodder et Leduc, il consiste à réaliser des pressions légères pour favoriser la circulation lymphatique. C\'est un massage de bien-être qui favorise la détente et la relaxation profonde.',
-    shortDescription: 'Un massage pour favoriser votre bien-être et votre détente.',
+    description: 'Le drainage lymphatique manuel est un massage du corps, doux et rythmé. Basé sur les méthodes Vodder et Leduc, il consiste à réaliser des pressions légères pour favoriser la circulation lymphatique. C\'est un massage de bien-être qui favorise la détente et la relaxation profonde.',
+    shortDescription: 'Un massage manuel pour favoriser votre bien-être et votre détente.',
     duration: 60,
     price: 70,
     image: '/images/drainage-lymphatique-manuel.jpeg',
@@ -249,11 +249,11 @@ export const services: Service[] = [
   },
   {
     id: 'drainage-corps-dos',
-    name: 'Drainage Lymphatique Corps + Dos',
+    name: 'Drainage Lymphatique Manuel Corps + Dos',
     slug: 'drainage-corps-dos',
     category: 'drainage',
-    description: 'Un drainage lymphatique complet du corps enrichi d\'un massage du dos. Cette séance de 1h15 combine les bienfaits détoxifiants du drainage avec la détente musculaire procurée par le massage du dos. Un moment de bien-être global pour votre corps.',
-    shortDescription: 'Drainage complet + massage du dos pour un bien-être total.',
+    description: 'Un drainage lymphatique manuel complet du corps enrichi d\'un massage du dos. Cette séance de 1h15 combine les bienfaits détoxifiants du drainage avec la détente musculaire procurée par le massage du dos. Un moment de bien-être global pour votre corps.',
+    shortDescription: 'Drainage manuel complet + massage du dos pour un bien-être total.',
     duration: 75,
     price: 80,
     image: '/images/drainage-lymphatique-manuel.jpeg',
@@ -266,11 +266,11 @@ export const services: Service[] = [
   },
   {
     id: 'drainage-corps-dos-visage',
-    name: 'Drainage Lymphatique Corps + Dos + Visage',
+    name: 'Drainage Lymphatique Manuel Corps + Dos + Visage',
     slug: 'drainage-corps-dos-visage',
     category: 'drainage',
-    description: 'Le soin le plus complet de drainage lymphatique. En 1h30, bénéficiez d\'un drainage de tout le corps, d\'un massage relaxant du dos et d\'un drainage du visage pour un teint éclatant. Une expérience globale de détoxification et de détente absolue.',
-    shortDescription: 'Le soin le plus complet : corps, dos et visage drainés.',
+    description: 'Le soin le plus complet de drainage lymphatique manuel. En 1h30, bénéficiez d\'un drainage de tout le corps, d\'un massage relaxant du dos et d\'un drainage du visage pour un teint éclatant. Une expérience globale de détoxification et de détente absolue.',
+    shortDescription: 'Le soin le plus complet : corps, dos et visage drainés manuellement.',
     duration: 90,
     price: 100,
     image: '/images/drainage-lymphatique-manuel.jpeg',
@@ -288,7 +288,7 @@ export const services: Service[] = [
     name: 'Cure Détox',
     slug: 'cure-detox',
     category: 'drainage',
-    description: 'Une cure de 5 séances de drainage lymphatique pour une détoxification en profondeur de votre organisme. Idéale pour relancer votre métabolisme, éliminer les toxines accumulées et retrouver vitalité et légèreté. Comprend une séance de 30 minutes de réflexologie plantaire offerte pour optimiser les résultats.',
+    description: 'Une cure de 5 séances de drainage lymphatique manuel pour une détoxification en profondeur de votre organisme. Idéale pour relancer votre métabolisme, éliminer les toxines accumulées et retrouver vitalité et légèreté. Comprend une séance de 30 minutes de réflexologie plantaire offerte pour optimiser les résultats.',
     shortDescription: 'Cure de 5 séances avec réflexologie offerte pour détoxifier en profondeur.',
     duration: 60,
     price: 350,
@@ -305,7 +305,7 @@ export const services: Service[] = [
     name: 'Cure Amincissement',
     slug: 'cure-amincissement',
     category: 'drainage',
-    description: 'Une cure complète de 10 séances de drainage lymphatique spécialement conçue pour accompagner votre objectif d\'amincissement. Cette cure permet de réduire la cellulite, affiner la silhouette et retrouver des jambes légères. Comprend 1 heure de soin offerte (réflexologie plantaire ou drainage) pour maximiser vos résultats.',
+    description: 'Une cure complète de 10 séances de drainage lymphatique manuel spécialement conçue pour accompagner votre objectif d\'amincissement. Cette cure permet de réduire la cellulite, affiner la silhouette et retrouver des jambes légères. Comprend 1 heure de soin offerte (réflexologie plantaire ou drainage) pour maximiser vos résultats.',
     shortDescription: 'Cure de 10 séances avec 1h offerte pour sculpter votre silhouette.',
     duration: 60,
     price: 700,
@@ -330,7 +330,7 @@ export const services: Service[] = [
     shortDescription: 'Massage japonais sur chaise pour une relaxation express.',
     duration: 30,
     price: 40,
-    image: '/images/amma-assis.jpeg',
+    image: '/images/amma-assis-new.jpeg',
     benefits: [
       'Relaxation rapide',
       'Diminution du stress',
@@ -361,10 +361,10 @@ export const services: Service[] = [
   },
   {
     id: 'combo-drainage-reflex-90',
-    name: 'Drainage Lymphatique Corps + Réflexologie Plantaire 1h30',
+    name: 'Drainage Lymphatique Manuel Corps + Réflexologie Plantaire 1h30',
     slug: 'drainage-reflexologie-90min',
     category: 'massages-mixtes',
-    description: 'Une séance de 1h30 combinant un drainage lymphatique complet du corps et une réflexologie plantaire. Cette alliance permet de détoxifier l\'organisme tout en rééquilibrant vos systèmes internes. Un moment de bien-être global pour retrouver légèreté et harmonie.',
+    description: 'Une séance de 1h30 combinant un drainage lymphatique manuel complet du corps et une réflexologie plantaire. Cette alliance permet de détoxifier l\'organisme tout en rééquilibrant vos systèmes internes. Un moment de bien-être global pour retrouver légèreté et harmonie.',
     shortDescription: 'Détox et rééquilibrage en 1h30 de pure détente.',
     duration: 90,
     price: 100,
@@ -378,10 +378,10 @@ export const services: Service[] = [
   },
   {
     id: 'combo-drainage-reflex-120',
-    name: 'Drainage Lymphatique Corps + Réflexologie Plantaire 2h',
+    name: 'Drainage Lymphatique Manuel Corps + Réflexologie Plantaire 2h',
     slug: 'drainage-reflexologie-120min',
     category: 'massages-mixtes',
-    description: 'Le soin le plus complet : 2 heures dédiées à votre bien-être profond. Un drainage lymphatique intégral suivi d\'une réflexologie plantaire approfondie. Cette séance exceptionnelle vous offre une détoxification maximale, un rééquilibrage complet et une relaxation absolue. Un véritable voyage vers le bien-être.',
+    description: 'Le soin le plus complet : 2 heures dédiées à votre bien-être profond. Un drainage lymphatique manuel intégral suivi d\'une réflexologie plantaire approfondie. Cette séance exceptionnelle vous offre une détoxification maximale, un rééquilibrage complet et une relaxation absolue. Un véritable voyage vers le bien-être.',
     shortDescription: 'Le soin ultime : 2h de détox et rééquilibrage profond.',
     duration: 120,
     price: 120,
@@ -693,7 +693,7 @@ export const categories = [
   },
   {
     id: 'drainage',
-    name: 'Drainage Lymphatique',
+    name: 'Drainage Lymphatique Manuel',
     description: 'Stimuler la circulation et éliminer les toxines',
     image: '/images/drainage-lymphatique-manuel.jpeg'
   },
@@ -701,13 +701,13 @@ export const categories = [
     id: 'amma',
     name: 'Amma Assis',
     description: 'Relaxation rapide sur chaise ergonomique',
-    image: '/images/amma-assis.jpeg'
+    image: '/images/amma-assis-new.jpeg'
   },
   {
     id: 'massages-mixtes',
     name: 'Massages Combinés',
     description: 'Combinaisons de soins pour un bien-être complet',
-    image: '/images/bol-kansu.jpeg'
+    image: '/images/drainage-lymphatique-manuel.jpeg'
   },
   {
     id: 'beaute-mains',
@@ -848,7 +848,7 @@ export const featuredServices = [
   },
   {
     id: 'drainage',
-    title: 'Drainage Lymphatique',
+    title: 'Drainage Lymphatique Manuel',
     subtitle: 'Méthode Vodder & Leduc',
     description: 'Un massage doux et dynamique pour stimuler la circulation lymphatique, éliminer les toxines et retrouver des jambes légères.',
     image: '/images/drainage-lymphatique-manuel.jpeg',
@@ -861,7 +861,7 @@ export const featuredServices = [
     title: 'Amma Assis',
     subtitle: 'Relaxation Express',
     description: 'Technique japonaise sur chaise ergonomique. En 30 minutes, libérez les tensions du haut du corps et retrouvez votre énergie.',
-    image: '/images/amma-assis.jpeg',
+    image: '/images/amma-assis-new.jpeg',
     href: '/soins#amma',
     highlights: ['Relaxation rapide', 'Regain d\'énergie', 'Anti-stress'],
     accent: 'from-violet-500/20 to-indigo-500/20'
@@ -873,7 +873,7 @@ export const spaInfo = {
   tagline: 'Chouchoutez votre corps, Sublimez vos mains',
   // TODO: Replace with actual Calendly URL
   calendlyUrl: 'https://calendly.com/sylviebienetre',
-  description: 'Syl\'Vie Bien-Etre est le cabinet de référence pour le drainage lymphatique manuel et la réflexologie plantaire à Pipriac, Ille-et-Vilaine. Sylvie Lebordais, praticienne certifiée méthodes Vodder et Leduc, vous accueille dans un espace intimiste dédié à votre bien-être et à votre sérénité.',
+  description: 'Cabinet de drainage lymphatique et réflexologie à Pipriac (35). Un espace cocooning dédié à votre bien-être et sérénité.',
   welcomeText: 'Bienvenue, Je suis Sylvie, fondatrice de Syl\'Vie Bien-Etre, spécialisée en Réflexologie, Drainage Lymphatique Manuel, Amma Assis et Prothésiste Ongulaire. J\'ai créé un espace intimiste et chaleureux pour vous offrir bien plus qu\'une simple prestation : l\'alliance du bien-être et de la beauté. Chaque rendez-vous est un moment unique, je prends le temps de vous écouter et de comprendre vos besoins et vos attentes. Accordez-vous cette parenthèse de sérénité, où écoute, bienveillance et expertise sont au cœur de chaque instant.',
   address: {
     street: '1B Rue du Général de Gaulle',
@@ -910,3 +910,26 @@ export const timeSlots = [
   '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
   '18:00', '18:30', '19:00', '19:30', '20:00'
 ]
+
+export const giftCardData = {
+  title: 'Offrez un Moment de Bien-Être',
+  subtitle: 'La carte cadeau parfaite',
+  description: 'Offrez bien plus qu\'un simple cadeau : offrez une pause, un moment de détente absolue, une parenthèse de bien-être. Les cartes cadeaux Syl\'Vie Bien-Etre sont valables sur l\'ensemble de nos soins (réflexologie, drainage lymphatique, massages, beauté des mains) et s\'adaptent à tous vos besoins.',
+  features: [
+    'Valable sur tous les soins',
+    'Validité 1 an',
+    'Au montant de votre choix',
+    'Retrait au cabinet'
+  ],
+  ctaText: 'Commander une carte cadeau',
+  ctaHref: '/contact',
+  // Additional detailed information
+  details: {
+    validity: '12 mois à compter de la date d\'achat',
+    denominations: 'Montant libre ou montant d\'un soin spécifique',
+    format: 'Carte physique à retirer au cabinet',
+    personalization: 'Message personnalisé sur demande',
+    usage: 'Présenter la carte lors de la prise de rendez-vous par téléphone ou sur place',
+    purchase: 'Contactez-nous par téléphone (06 13 64 87 05) ou email pour commander votre carte cadeau'
+  }
+}

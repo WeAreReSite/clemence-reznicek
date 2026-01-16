@@ -113,7 +113,7 @@ export function CTASection() {
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
             Réservez dès maintenant et laissez-vous transporter dans un univers de détente et de sérénité.
-            Notre équipe est impatiente de vous accueillir.
+            Je suis impatiente de vous accueillir.
           </p>
 
           {/* CTAs */}
@@ -127,7 +127,7 @@ export function CTASection() {
             <Button variant="outline" size="xl" className="group w-full sm:w-auto sm:min-w-[220px]" asChild>
               <a href={`tel:${spaInfo.phone}`}>
                 <Phone className="w-5 h-5 mr-2 transition-transform duration-300 group-hover:scale-110" />
-                Nous appeler
+                M&apos;appeler
               </a>
             </Button>
           </div>

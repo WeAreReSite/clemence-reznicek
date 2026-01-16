@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import gsap from "gsap"
 import { spaInfo } from "@/lib/data"
+import { FloatingPetals } from "@/components/ui/floating-petals"
 
 export function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null)
@@ -182,6 +183,9 @@ export function HeroSection() {
       <div className="absolute bottom-40 left-16 w-3 h-3 rounded-full bg-white/20 hidden md:block" />
       <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 rounded-full bg-accent/50 hidden md:block" />
 
+      {/* Floating Flower Petals - Zen & Cocooning aesthetic */}
+      <FloatingPetals />
+
       <div className="relative z-10 min-h-svh flex flex-col">
         {/* TOP SPACER - Reserved space for navbar (reduced on short viewports) */}
         <div className="h-[80px] md:h-[100px] lg:h-[120px] shrink-0" aria-hidden="true" />
@@ -202,7 +206,7 @@ export function HeroSection() {
               {/* Main Heading */}
               <h1
                 ref={headingRef}
-                className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium mb-6 leading-tight"
+                className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium mb-6 leading-[1.0]"
               >
                 {spaInfo.tagline}
               </h1>

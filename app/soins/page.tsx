@@ -1,9 +1,10 @@
 import { Metadata } from "next"
 import { Suspense } from "react"
-import { services, categories } from "@/lib/data"
+import { services, categories, giftCardData } from "@/lib/data"
 import { SoinsHero } from "@/components/sections/SoinsHero"
 import { CategoryNav } from "@/components/sections/CategoryNav"
 import { AnimatedCategorySection } from "@/components/sections/AnimatedCategorySection"
+import { GiftCards } from "@/components/sections/GiftCards"
 import { SoinsCTA } from "@/components/sections/SoinsCTA"
 import { ScrollToAnchor } from "@/components/ScrollToAnchor"
 
@@ -46,6 +47,9 @@ export default function SoinsPage() {
           />
         )
       })}
+
+      {/* Gift Cards Section */}
+      <GiftCards data={giftCardData} />
 
       {/* Call to Action */}
       <SoinsCTA />

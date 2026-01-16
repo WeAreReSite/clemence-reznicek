@@ -30,32 +30,32 @@ interface AnimatedCategorySectionProps {
   index: number
 }
 
-// Category accent colors for expanded cards
+// Category accent colors for expanded cards - Warm, cocooning, feminine palette
 const categoryAccents: Record<string, { bg: string; text: string; gradient: string }> = {
   reflexologie: {
-    bg: "bg-emerald-500",
-    text: "text-emerald-600",
-    gradient: "from-emerald-400/20 via-teal-300/15 to-cyan-400/20",
+    bg: "bg-primary",
+    text: "text-primary",
+    gradient: "from-primary/15 via-primary/10 to-secondary-light/20",
   },
   drainage: {
-    bg: "bg-sky-500",
-    text: "text-sky-600",
-    gradient: "from-sky-400/20 via-blue-300/15 to-indigo-400/20",
+    bg: "bg-primary",
+    text: "text-primary",
+    gradient: "from-primary/15 via-secondary-light/15 to-accent-light/20",
   },
   amma: {
-    bg: "bg-violet-500",
-    text: "text-violet-600",
-    gradient: "from-violet-400/20 via-purple-300/15 to-fuchsia-400/20",
+    bg: "bg-secondary",
+    text: "text-secondary-dark",
+    gradient: "from-secondary/15 via-secondary-light/15 to-primary/10",
   },
   "massages-mixtes": {
-    bg: "bg-amber-500",
-    text: "text-amber-600",
-    gradient: "from-amber-400/20 via-orange-300/15 to-rose-400/20",
+    bg: "bg-accent",
+    text: "text-accent",
+    gradient: "from-accent/15 via-secondary-light/15 to-primary/10",
   },
   "beaute-mains": {
-    bg: "bg-rose-500",
-    text: "text-rose-600",
-    gradient: "from-rose-400/20 via-pink-300/15 to-fuchsia-400/20",
+    bg: "bg-secondary",
+    text: "text-secondary-dark",
+    gradient: "from-secondary/20 via-secondary-light/15 to-accent-light/15",
   },
 }
 
@@ -291,10 +291,10 @@ function RegularCategorySection({
   // Image on right for even index (0, 2, 4), left for odd index (1, 3)
   const imageOnRight = index % 2 === 0
 
-  // Alternate backgrounds
+  // Alternate backgrounds - Warm, cocooning feel
   const bgClass = index % 2 === 0
-    ? "bg-gradient-to-br from-primary/5 via-background to-background"
-    : "bg-gradient-to-br from-secondary/8 via-background to-background"
+    ? "bg-gradient-to-br from-primary-light/15 via-muted/30 to-background"
+    : "bg-gradient-to-br from-secondary-light/20 via-accent-light/10 to-muted/20"
 
   useGSAP(() => {
     if (!sectionRef.current) return
@@ -551,7 +551,7 @@ function BeauteMainsSection({
     <section
       ref={sectionRef}
       id={category.id}
-      className="section-padding scroll-mt-40 bg-gradient-to-b from-secondary/10 via-background to-background overflow-hidden"
+      className="section-padding scroll-mt-40 bg-gradient-to-b from-secondary-light/25 via-accent-light/15 to-muted/20 overflow-hidden"
     >
       <div className="container-spa">
         {/* Header */}
@@ -572,55 +572,55 @@ function BeauteMainsSection({
           ref={galleryRef}
           className="relative h-auto md:h-[min(600px,65vh)] lg:h-[min(700px,60vh)] mb-16 flex flex-col md:block gap-4 md:gap-0"
         >
-          {/* Image 1 */}
+          {/* Image 1 - Full picture visible */}
           <div
             ref={image1Ref}
-            className="relative md:absolute left-0 top-0 w-full md:w-[45%] h-[min(250px,35vh)] sm:h-[min(300px,40vh)] md:h-[70%] rounded-2xl overflow-hidden shadow-2xl opacity-0 z-10"
+            className="relative md:absolute left-0 top-0 w-full md:w-[45%] h-[min(300px,40vh)] sm:h-[min(350px,45vh)] md:h-[70%] rounded-2xl overflow-hidden shadow-2xl opacity-0 z-10 bg-secondary-light/30"
           >
             {images[0] && (
               <Image
                 src={images[0]}
                 alt={`${category.name} - Image 1`}
                 fill
-                className="object-cover"
+                className="object-contain p-2"
                 sizes="(max-width: 768px) 100vw, 45vw"
               />
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary-light/20 via-transparent to-transparent pointer-events-none" />
           </div>
 
-          {/* Image 2 */}
+          {/* Image 2 - Full picture visible */}
           <div
             ref={image2Ref}
-            className="relative md:absolute right-0 top-0 md:top-[5%] w-full md:w-[40%] h-[min(200px,30vh)] sm:h-[min(250px,35vh)] md:h-[55%] rounded-2xl overflow-hidden shadow-xl opacity-0 z-10"
+            className="relative md:absolute right-0 top-0 md:top-[5%] w-full md:w-[40%] h-[min(250px,35vh)] sm:h-[min(300px,40vh)] md:h-[55%] rounded-2xl overflow-hidden shadow-xl opacity-0 z-10 bg-accent-light/30"
           >
             {images[1] && (
               <Image
                 src={images[1]}
                 alt={`${category.name} - Image 2`}
                 fill
-                className="object-cover"
+                className="object-contain p-2"
                 sizes="(max-width: 768px) 100vw, 40vw"
               />
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-accent-light/20 via-transparent to-transparent pointer-events-none" />
           </div>
 
-          {/* Image 3 */}
+          {/* Image 3 - Full picture visible */}
           <div
             ref={image3Ref}
-            className="relative md:absolute left-0 md:left-1/2 md:-translate-x-1/2 bottom-0 w-full md:w-[35%] h-[min(200px,30vh)] sm:h-[min(250px,35vh)] md:h-[50%] rounded-2xl overflow-hidden shadow-xl opacity-0 z-20"
+            className="relative md:absolute left-0 md:left-1/2 md:-translate-x-1/2 bottom-0 w-full md:w-[35%] h-[min(250px,35vh)] sm:h-[min(300px,40vh)] md:h-[50%] rounded-2xl overflow-hidden shadow-xl opacity-0 z-20 bg-primary-light/30"
           >
             {images[2] && (
               <Image
                 src={images[2]}
                 alt={`${category.name} - Image 3`}
                 fill
-                className="object-cover"
+                className="object-contain p-2"
                 sizes="(max-width: 768px) 100vw, 35vw"
               />
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-light/20 via-transparent to-transparent pointer-events-none" />
           </div>
         </div>
 

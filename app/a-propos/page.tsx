@@ -45,7 +45,7 @@ const milestones = [
   { year: "Formation", title: "Réflexologie Bretagne", description: "Formation en Réflexologie Plantaire, Palmaire, Pédiatrique et Bol Kansu à Pleugeuneuc." },
   { year: "Formation", title: "Zensphère", description: "Formation en Drainage Lymphatique Manuel, Réflexologie Abdominale, Faciale et Crânienne, Amma Assis à Pacé." },
   { year: "Formation", title: "Prothésie Ongulaire", description: "Formation auprès d'Anaïs Abaakil à Rennes." },
-  { year: "2024", title: "Syl'Vie Bien-Etre", description: "Ouverture du cabinet à Pipriac, un espace intimiste dédié au bien-être." },
+  { year: "2025", title: "Syl'Vie Bien-Etre", description: "Ouverture du cabinet à Pipriac, un espace intimiste dédié au bien-être." },
   { year: "2026", title: "Excellence", description: "5 étoiles sur Google avec 8 avis clients enthousiastes." },
 ]
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
             {/* Content */}
             <div>
               <span className="inline-block text-accent font-medium tracking-widest uppercase text-sm mb-4">
-                Notre Histoire
+                Mon Histoire
               </span>
               <h1 className="font-serif text-5xl md:text-6xl text-foreground mb-6">
                 Un espace né d&apos;une passion
@@ -89,8 +89,8 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <div className="aspect-[3/4] rounded-2xl overflow-hidden">
                     <Image
-                      src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=600&auto=format&fit=crop"
-                      alt="Intérieur du spa"
+                      src="/images/bol-kansu.jpeg"
+                      alt="Bol Kansu massage"
                       width={400}
                       height={533}
                       className="object-cover w-full h-full"
@@ -100,8 +100,8 @@ export default function AboutPage() {
                 <div className="space-y-4 pt-8">
                   <div className="aspect-square rounded-2xl overflow-hidden">
                     <Image
-                      src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop"
-                      alt="Soin massage"
+                      src="/images/reflexologie-abdominale.jpeg"
+                      alt="Réflexologie abdominale"
                       width={400}
                       height={400}
                       className="object-cover w-full h-full"
@@ -109,8 +109,8 @@ export default function AboutPage() {
                   </div>
                   <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                     <Image
-                      src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=600&auto=format&fit=crop"
-                      alt="Produits spa"
+                      src="/images/reflexologie-faciale-et-cranienne.jpeg"
+                      alt="Réflexologie faciale"
                       width={400}
                       height={300}
                       className="object-cover w-full h-full"
@@ -148,13 +148,13 @@ export default function AboutPage() {
         <div className="container-spa">
           <div className="text-center mb-16">
             <span className="inline-block text-accent font-medium tracking-widest uppercase text-sm mb-4">
-              Nos Valeurs
+              Mes Valeurs
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-4">
-              Ce qui nous anime
+              Ce qui m&apos;anime
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Quatre piliers fondamentaux guident chaque jour notre approche du bien-être.
+              Quatre piliers fondamentaux guident chaque jour mon approche du bien-être.
             </p>
           </div>
 
@@ -184,7 +184,7 @@ export default function AboutPage() {
         <div className="container-spa">
           <div className="text-center mb-16">
             <span className="inline-block text-accent font-medium tracking-widest uppercase text-sm mb-4">
-              Notre Parcours
+              Mon Parcours
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-foreground">
               Les étapes clés
@@ -349,10 +349,10 @@ export default function AboutPage() {
       <section className="section-padding bg-background">
         <div className="container-spa text-center">
           <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-4">
-            Prêt(e) à nous rencontrer ?
+            Prêt(e) à me rencontrer ?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto mb-8">
-            Venez découvrir notre univers et laissez-vous guider vers le soin qui vous correspond.
+            Venez découvrir mon univers et laissez-vous guider vers le soin qui vous correspond.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="w-full sm:w-auto" asChild>
@@ -363,7 +363,7 @@ export default function AboutPage() {
             </Button>
             <Button size="lg" variant="outline" className="w-full sm:w-auto" asChild>
               <Link href="/contact">
-                Nous contacter
+                Me contacter
               </Link>
             </Button>
           </div>

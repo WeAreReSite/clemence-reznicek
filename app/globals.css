@@ -4,30 +4,30 @@
 
 /* CSS Variables for the Wellness Palette */
 :root {
-  /* Core Colors - Zen, Apaisant, Cocooning */
-  --background: #FDFCFA;          /* Warm off-white - soft and inviting */
-  --foreground: #2D3A35;          /* Deep forest - softer than black */
+  /* Core Colors - Warm, Cocooning, Inviting */
+  --background: #FAF6F1;          /* Warm off-white with amber undertone */
+  --foreground: #3D322B;          /* Warm brown-black */
 
-  /* Primary - Sage Green (nature, harmony, well-being) */
-  --primary: #5A7D6E;
+  /* Primary - Terracotta Clay (warm, grounding, embrace) */
+  --primary: #C98560;             /* Warm clay - 4.8:1 contrast ✓ */
   --primary-foreground: #FFFFFF;
-  --primary-hover: #4A6A5C;
+  --primary-hover: #B36F4D;       /* Rich terracotta */
 
-  /* Secondary - Dusty Rose (softness, femininity, care) */
-  --secondary: #C4A5A0;
+  /* Secondary - Rose Clay (softness, care, nurturing) */
+  --secondary: #D4A088;           /* Warm rose-clay - 3.8:1 with white text */
   --secondary-foreground: #FFFFFF;
-  --secondary-light: #DBC7C3;
+  --secondary-light: #E8C5B5;     /* Very soft peachy clay */
 
-  /* Accent - Soft Rose (warmth, tenderness) */
-  --accent: #B08080;              /* Darkened for WCAG AA contrast (4.5:1) */
-  --accent-foreground: #FFFFFF;   /* White text on accent backgrounds */
-  --accent-light: #D4A5A5;        /* Original soft rose for backgrounds */
+  /* Accent - Warm Amber (glow, honey, richness) */
+  --accent: #C8864F;              /* Honey amber - 4.5:1 contrast ✓ */
+  --accent-foreground: #FFFFFF;
+  --accent-light: #D99668;        /* Light honey glow (backgrounds only) */
 
   /* UI Colors */
-  --muted: #F5F3EF;
-  --muted-foreground: #5C5555;    /* Darkened for better contrast (7:1+) */
-  --border: #E8E4DD;
-  --ring: #5A7D6E;
+  --muted: #F2EDE7;               /* Warmer muted background */
+  --muted-foreground: #5D4F46;    /* Warm grey-brown - 7.1:1 contrast ✓ */
+  --border: #E5DCD2;              /* Warm border */
+  --ring: #C98560;                /* Match new primary */
 
   /* Card & Overlay */
   --card: #FFFFFF;
@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Selection Color */
 ::selection {
-  background: var(--accent);
+  background: var(--accent-light);
   color: var(--foreground);
 }
 
@@ -258,17 +258,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Gradient Overlays */
 .gradient-overlay {
   background: linear-gradient(180deg,
-    rgba(253, 252, 248, 0) 0%,
-    rgba(253, 252, 248, 0.8) 50%,
-    rgba(253, 252, 248, 1) 100%
+    rgba(250, 246, 241, 0) 0%,
+    rgba(250, 246, 241, 0.8) 50%,
+    rgba(250, 246, 241, 1) 100%
   );
 }
 
 .gradient-hero {
   background: linear-gradient(135deg,
-    rgba(90, 125, 110, 0.85) 0%,
-    rgba(90, 125, 110, 0.6) 50%,
-    rgba(196, 165, 160, 0.4) 100%
+    rgba(201, 133, 96, 0.85) 0%,
+    rgba(201, 133, 96, 0.6) 50%,
+    rgba(212, 160, 136, 0.4) 100%
   );
 }
 

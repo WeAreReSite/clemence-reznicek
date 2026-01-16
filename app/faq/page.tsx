@@ -49,8 +49,8 @@ export default function FAQPage() {
               Questions fréquentes
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Retrouvez les réponses aux questions les plus courantes sur nos soins,
-              nos pratiques et notre fonctionnement.
+              Retrouvez les réponses aux questions les plus courantes sur mes soins,
+              mes pratiques et mon fonctionnement.
             </p>
           </div>
         </div>
@@ -84,13 +84,13 @@ export default function FAQPage() {
               Vous n&apos;avez pas trouvé votre réponse ?
             </h2>
             <p className="text-muted-foreground mb-8">
-              Notre équipe est disponible pour répondre à toutes vos questions.
-              N&apos;hésitez pas à nous contacter.
+              Je suis disponible pour répondre à toutes vos questions.
+              N&apos;hésitez pas à me contacter.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="w-full sm:w-auto" asChild>
                 <Link href="/contact">
-                  Nous contacter
+                  Me contacter
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>

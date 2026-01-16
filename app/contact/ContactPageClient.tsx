@@ -177,14 +177,14 @@ export function ContactPageClient() {
                   Parlons de
                   <span className="block text-gradient">votre bien-</span>
                   <span className="block">
-                    <span className="text-gradient">etre</span>
+                    <span className="text-gradient">être</span>
                   </span>
                 </h1>
 
                 {/* Subtext */}
                 <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 opacity-0">
-                  Je suis {therapist.name}, praticienne passionnee. Chaque rencontre est
-                  unique, chaque soin est personnalise pour vous accompagner vers le bien-etre.
+                  Je suis {therapist.name}, praticienne passionnée. Chaque rencontre est
+                  unique, chaque soin est personnalisé pour vous accompagner vers le bien-être.
                 </p>
 
                 {/* Quick Action Link */}
@@ -213,7 +213,7 @@ export function ContactPageClient() {
                     </div>
                     <div>
                       <h3 className="font-serif text-xl text-foreground">Prendre rendez-vous</h3>
-                      <p className="text-sm text-muted-foreground">Selectionnez votre creneau prefere</p>
+                      <p className="text-sm text-muted-foreground">Sélectionnez votre créneau préféré</p>
                     </div>
                   </div>
 
@@ -255,11 +255,11 @@ export function ContactPageClient() {
                   <Phone className="w-7 h-7" />
                 </div>
                 <div className="mb-4">
-                  <p className="text-white/70 text-sm mb-1">Telephone</p>
+                  <p className="text-white/70 text-sm mb-1">Téléphone</p>
                   <p className="text-2xl font-serif">{spaInfo.phone}</p>
                 </div>
                 <p className="text-white/60 text-sm">
-                  Appel direct pour reserver ou poser vos questions
+                  Appel direct pour réserver ou poser vos questions
                 </p>
               </div>
             </a>
@@ -357,7 +357,7 @@ export function ContactPageClient() {
             {/* Header */}
             <div className="text-center mb-16">
               <span className="inline-block text-accent font-medium tracking-widest uppercase text-xs mb-4">
-                Questions frequentes
+                Questions fréquentes
               </span>
               <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-4">
                 Tout savoir avant
@@ -393,7 +393,7 @@ export function ContactPageClient() {
                 <Button size="lg" asChild>
                   <a href={`mailto:${spaInfo.email}`}>
                     <Mail className="w-5 h-5 mr-2" />
-                    Ecrivez-moi
+                    Écrivez-moi
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>

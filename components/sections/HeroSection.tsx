@@ -206,7 +206,7 @@ export function HeroSection() {
               {/* Main Heading */}
               <h1
                 ref={headingRef}
-                className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium mb-6 leading-[1.1]"
+                className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium mb-6 leading-[1.0]"
               >
                 {spaInfo.tagline}
               </h1>

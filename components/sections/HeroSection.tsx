@@ -46,7 +46,7 @@ export function HeroSection() {
         // Use the original tagline from data to avoid reading corrupted DOM text on re-navigation
         const words = spaInfo.tagline.split(" ")
         headingRef.current.innerHTML = words
-          .map((word) => `<span class="inline-block overflow-hidden mr-[0.18em]"><span class="word-span inline-block">${word}</span></span>`)
+          .map((word) => `<span class="inline-block overflow-hidden mr-[0.1em]"><span class="word-span inline-block">${word}</span></span>`)
           .join("")
 
         const wordSpans = headingRef.current.querySelectorAll(".word-span")

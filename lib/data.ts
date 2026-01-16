@@ -28,16 +28,16 @@ export const services: Service[] = [
     name: 'Réflexologie Plantaire',
     slug: 'reflexologie-plantaire',
     category: 'reflexologie',
-    description: 'La réflexologie plantaire est une technique de bien-être millénaire issue de la médecine traditionnelle chinoise. Elle repose sur un principe fondamental : chaque zone du pied est le reflet d\'un organe, d\'une glande ou d\'une partie du corps. En stimulant ces zones réflexes par des pressions douces et précises, le praticien favorise la détente profonde et l\'équilibre naturel de l\'organisme. Cette séance d\'une heure complète permet de travailler l\'ensemble des systèmes du corps (digestif, respiratoire, nerveux, circulatoire, hormonal) pour une harmonisation globale. Un moment de relaxation absolue où votre corps retrouve son équilibre intérieur.',
+    description: 'La réflexologie plantaire est un massage des pieds d\'origine chinoise. Selon la médecine traditionnelle chinoise, chaque zone réflexe correspondrait à un organe, une glande ou une partie du corps qui se projetterait sur la plante des pieds. Le pied serait donc un "miroir" miniature du corps humain. La réflexologie plantaire permet de retrouver un état d\'équilibre, d\'autorégulation du corps, de bien-être, de relaxation et peut avoir des bienfaits sur l\'ensemble des systèmes du corps (digestif, urinaire, reproducteur, locomoteur, ORL, etc.). La réflexologie plantaire consiste à exercer des points de pression et des massages au niveau des pieds. Un temps d\'échange est nécessaire avant et après chaque séance, prévoir 20 minutes supplémentaires. Prévoir une tenue que l\'on peut remonter à mi-mollet.',
     shortDescription: 'Le massage plantaire ancestral pour votre bien-être.',
     duration: 60,
     price: 65,
     image: '/images/reflexologie-plantaire.jpeg',
     benefits: [
-      'Sensation de détente profonde',
-      'Relaxation du système nerveux',
-      'Harmonisation globale du corps',
-      'Moment de reconnexion à soi'
+      'Équilibre et autorégulation du corps',
+      'Bienfaits sur les systèmes digestif, urinaire, reproducteur, locomoteur, ORL',
+      'Relaxation et bien-être',
+      'Temps d\'échange personnalisé'
     ],
     isPopular: true
   },
@@ -67,16 +67,16 @@ export const services: Service[] = [
     name: 'Réflexologie Abdominale',
     slug: 'reflexologie-abdominale',
     category: 'reflexologie',
-    description: 'Le Qi Nei Tsang (Chi Nei Tsang) est une technique ancestrale de massage abdominal issue de la tradition taoïste chinoise. Son nom signifie littéralement "travailler l\'énergie des organes internes". Cette approche de bien-être considère le ventre comme notre "deuxième cerveau", siège des émotions et de la vitalité. Par des pressions légères, des massages circulaires et des mouvements enveloppants sur la région abdominale, cette technique favorise la libération des tensions émotionnelles logées dans le ventre, la relaxation du système digestif et l\'équilibre énergétique global. Une séance profondément apaisante pour retrouver confort digestif et sérénité intérieure.',
+    description: 'Le Qi Nei Tsang est une technique de massage issue de la tradition taoïste chinoise. Qi Nei Tsang veut littéralement dire "travailler l\'énergie des organes internes". Ce massage vise à débloquer les points de tension principalement sur la région abdominale appelée aussi "le second cerveau" car c\'est par là que se trouvent de nombreux organes vitaux où les tensions profondes, les émotions et notre vitalité s\'accumulent. À l\'aide de pressions douces, de gestes circulaires et d\'étirements spécifiques, ce massage vise à libérer les tensions accumulées dans les organes internes (foie, intestins, estomac, rate...) à favoriser la circulation de l\'énergie (Qi) et à rétablir un meilleur équilibre global. Ce massage est bénéfique pour divers problèmes de santé, notamment les troubles digestifs, le stress, l\'anxiété, les douleurs abdominales et les déséquilibres énergétiques. En résumé : soulager les tensions abdominales (ballonnements, maux de ventre fonctionnels, inconfort digestif), améliorer la digestion et l\'élimination, libérer les émotions stockées dans le ventre (stress, anxiété, fatigue émotionnelle, surcharge mentale), stimuler la circulation énergétique et lymphatique, améliorer la respiration et la détente profonde, harmonisation du corps et de l\'esprit.',
     shortDescription: 'Un massage traditionnel pour le bien-être abdominal.',
     duration: 30,
     price: 40,
     image: '/images/reflexologie-abdominale.jpeg',
     benefits: [
-      'Relaxation abdominale profonde',
-      'Apaisement des tensions digestives',
-      'Libération émotionnelle',
-      'Équilibre du centre énergétique'
+      'Soulager les tensions abdominales',
+      'Améliorer la digestion et l\'élimination',
+      'Libérer les émotions stockées dans le ventre',
+      'Stimuler la circulation énergétique et lymphatique'
     ]
   },
 

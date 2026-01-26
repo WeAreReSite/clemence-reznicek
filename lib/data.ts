@@ -343,6 +343,23 @@ export const services: Service[] = [
   // MASSAGES COMBINÉS - Combinaisons de soins pour un bien-être complet
   // ═══════════════════════════════════════════════════════════════════════════
   {
+    id: 'combo-amma-reflex-plantaire',
+    name: 'Amma Assis + Réflexologie Plantaire',
+    slug: 'amma-assis-reflexologie-plantaire',
+    category: 'massages-mixtes',
+    description: 'Une combinaison énergisante associant le massage Amma Assis et la réflexologie plantaire. Commencez par une relaxation du haut du corps sur chaise ergonomique, puis prolongez avec une séance de réflexologie plantaire pour un rééquilibrage complet. Un soin d\'1h30 pour libérer les tensions et retrouver votre vitalité.',
+    shortDescription: 'Relaxation du haut du corps et rééquilibrage par les pieds.',
+    duration: 90,
+    price: 100,
+    image: '/images/amma-assis-new.jpeg',
+    benefits: [
+      'Relaxation complète haut et bas du corps',
+      'Libération des tensions',
+      'Rééquilibrage énergétique',
+      'Regain de vitalité'
+    ]
+  },
+  {
     id: 'combo-reflex-jambes',
     name: 'Réflexologie Plantaire + Jambes Légères',
     slug: 'reflexologie-jambes-legeres',

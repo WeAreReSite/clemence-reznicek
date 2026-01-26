@@ -149,7 +149,7 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <div className="hero-bg-image absolute inset-0 scale-110">
           <Image
-            src="/images/hero-image.png"
+            src="/images/hero-background.jpeg"
             alt={`Espace bien-être ${spaInfo.name}`}
             fill
             priority

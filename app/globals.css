@@ -262,9 +262,9 @@ html::-webkit-scrollbar {
 
 .gradient-hero {
   background: linear-gradient(135deg,
-    rgba(94, 112, 82, 0.85) 0%,
-    rgba(94, 112, 82, 0.6) 50%,
-    rgba(196, 145, 143, 0.5) 100%
+    rgba(94, 112, 82, 0.4) 0%,
+    rgba(94, 112, 82, 0.25) 50%,
+    rgba(196, 145, 143, 0.3) 100%
   );
 }
 

@@ -170,7 +170,7 @@ export function AboutPreview() {
               <div ref={imageRef} className="absolute inset-0 scale-105">
                 <Image
                   src={sylvie.image}
-                  alt={`${sylvie.title} certifiée en réflexologie plantaire`}
+                  alt="Sylvie praticienne en réflexologie plantaire et drainage lymphatique à Pipriac - Syl'Vie Bien-Etre"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

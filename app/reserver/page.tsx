@@ -1,13 +1,14 @@
 import { Metadata } from "next"
 import { Suspense } from "react"
 import { BookingWizard } from "@/components/forms/BookingWizard"
+import { spaInfo } from "@/lib/data"
+import { getCanonicalUrl } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Réserver",
-  description:
-    "Réservez votre soin bien-être chez Syl'Vie Bien-Etre à Pipriac. Choisissez parmi réflexologie plantaire, drainage lymphatique, amma assis ou beauté des mains.",
+  description: `Réservez votre soin bien-être chez ${spaInfo.name} à ${spaInfo.address.city}. Choisissez parmi réflexologie plantaire, drainage lymphatique, amma assis ou beauté des mains.`,
   alternates: {
-    canonical: "https://www.sylviebienetre.fr/reserver",
+    canonical: getCanonicalUrl('/reserver'),
   },
 }
 

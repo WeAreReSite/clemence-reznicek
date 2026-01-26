@@ -15,16 +15,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/cgv`, lastModified: new Date(), changeFrequency: 'yearly' as const, priority: 0.3 },
   ]
 
-  // Location-specific landing pages (GEO optimization)
-  const locationPages = [
-    // Tier 1 - PRIMARY GEO pages (Redon + Departmental)
-    { url: `${baseUrl}/drainage-lymphatique-redon`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.90 },
-    { url: `${baseUrl}/reflexologie-redon`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.85 },
-    { url: `${baseUrl}/drainage-lymphatique-ille-et-vilaine`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.85 },
-    // Tier 2 - EXPANSION GEO pages (Guipry-Messac, Bain-de-Bretagne)
-    { url: `${baseUrl}/drainage-lymphatique-guipry-messac`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.80 },
-    { url: `${baseUrl}/reflexologie-bain-de-bretagne`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.80 },
-  ]
-
-  return [...staticPages, ...locationPages]
+  return staticPages
 }

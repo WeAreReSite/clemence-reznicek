@@ -1,16 +1,16 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { therapists } from "@/lib/data"
+import { therapists, spaInfo } from "@/lib/data"
+import { getCanonicalUrl } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Award, Heart, Leaf, Users, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "À Propos",
-  description:
-    "Rencontrez Sylvie Lebordais, praticienne en réflexologie et bien-être à Pipriac. Formée en réflexologie plantaire, drainage lymphatique et prothésie ongulaire. Cabinet en Bretagne.",
+  description: `Rencontrez ${therapists[0].name}, ${therapists[0].title} à ${spaInfo.address.city}. Formée en réflexologie plantaire, drainage lymphatique et prothésie ongulaire. Cabinet en Bretagne.`,
   alternates: {
-    canonical: "https://www.sylviebienetre.fr/a-propos",
+    canonical: getCanonicalUrl('/a-propos'),
   },
 }
 
@@ -53,18 +53,18 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pb-32 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 lg:pb-32 overflow-hidden">
         <div className="container-spa">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
             {/* Content */}
             <div>
-              <span className="inline-block text-accent font-medium tracking-widest uppercase text-sm mb-4">
+              <span className="inline-block text-accent font-medium tracking-widest uppercase text-xs sm:text-sm mb-3 sm:mb-4">
                 Mon Histoire
               </span>
-              <h1 className="font-serif text-5xl md:text-6xl text-foreground mb-6">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 sm:mb-6">
                 Un espace né d&apos;une passion
               </h1>
-              <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+              <div className="space-y-3 sm:space-y-4 text-muted-foreground text-sm sm:text-base lg:text-lg leading-relaxed">
                 <p>
                   Bienvenue chez Syl&apos;Vie Bien-Etre. Je suis Sylvie, fondatrice de cet espace
                   dédié à votre bien-être, spécialisée en Réflexologie, Drainage Lymphatique
@@ -85,32 +85,32 @@ export default function AboutPage() {
 
             {/* Images */}
             <div className="relative">
-              <div className="grid grid-cols-2 gap-4 pb-16 sm:pb-12 lg:pb-0">
-                <div className="space-y-4">
-                  <div className="aspect-[3/4] rounded-2xl overflow-hidden">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:pb-0">
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden">
                     <Image
                       src="/images/bol-kansu.jpeg"
-                      alt="Bol Kansu massage"
+                      alt="Massage Bol Kansu ayurvédique à Pipriac - Syl'Vie Bien-Etre"
                       width={400}
                       height={533}
                       className="object-cover w-full h-full"
                     />
                   </div>
                 </div>
-                <div className="space-y-4 pt-8">
-                  <div className="aspect-square rounded-2xl overflow-hidden">
+                <div className="space-y-3 sm:space-y-4 pt-6 sm:pt-8">
+                  <div className="aspect-square rounded-xl sm:rounded-2xl overflow-hidden">
                     <Image
                       src="/images/reflexologie-abdominale.jpeg"
-                      alt="Réflexologie abdominale"
+                      alt="Réflexologie abdominale Qi Nei Tsang près de Redon"
                       width={400}
                       height={400}
                       className="object-cover w-full h-full"
                     />
                   </div>
-                  <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                  <div className="aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden">
                     <Image
                       src="/images/reflexologie-faciale-et-cranienne.jpeg"
-                      alt="Réflexologie faciale"
+                      alt="Soin réflexologie faciale et crânienne à Pipriac"
                       width={400}
                       height={300}
                       className="object-cover w-full h-full"
@@ -119,23 +119,44 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Stats Card */}
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-primary text-white p-6 rounded-xl shadow-lg">
-                <div className="flex items-center gap-8">
+              {/* Stats Card - Desktop: Overlapping, Mobile: Below images */}
+              {/* Desktop version - absolutely positioned */}
+              <div className="hidden sm:block absolute -bottom-8 left-1/2 -translate-x-1/2 bg-primary text-white p-5 sm:p-6 rounded-xl shadow-lg">
+                <div className="flex items-center gap-6 sm:gap-8">
                   <div className="text-center">
-                    <div className="font-serif text-3xl text-accent">29</div>
-                    <div className="text-sm text-white/70">soins</div>
+                    <div className="font-serif text-2xl sm:text-3xl text-accent">29</div>
+                    <div className="text-xs sm:text-sm text-white/70">soins</div>
                   </div>
-                  <div className="h-12 w-px bg-white/20" />
+                  <div className="h-10 sm:h-12 w-px bg-white/20" />
                   <div className="text-center">
-                    <div className="font-serif text-3xl">8</div>
-                    <div className="text-sm text-white/70">avis</div>
+                    <div className="font-serif text-2xl sm:text-3xl">8</div>
+                    <div className="text-xs sm:text-sm text-white/70">avis</div>
                   </div>
-                  <div className="h-12 w-px bg-white/20" />
+                  <div className="h-10 sm:h-12 w-px bg-white/20" />
                   <div className="text-center">
-                    <div className="font-serif text-3xl text-accent">5.0</div>
-                    <div className="text-sm text-white/70">étoiles</div>
+                    <div className="font-serif text-2xl sm:text-3xl text-accent">5.0</div>
+                    <div className="text-xs sm:text-sm text-white/70">étoiles</div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Stats Card - Mobile: Full width below images */}
+            <div className="sm:hidden mt-6 bg-primary text-white p-4 rounded-xl shadow-lg">
+              <div className="flex items-center justify-around">
+                <div className="text-center">
+                  <div className="font-serif text-2xl text-accent">29</div>
+                  <div className="text-xs text-white/70">soins</div>
+                </div>
+                <div className="h-10 w-px bg-white/20" />
+                <div className="text-center">
+                  <div className="font-serif text-2xl">8</div>
+                  <div className="text-xs text-white/70">avis</div>
+                </div>
+                <div className="h-10 w-px bg-white/20" />
+                <div className="text-center">
+                  <div className="font-serif text-2xl text-accent">5.0</div>
+                  <div className="text-xs text-white/70">étoiles</div>
                 </div>
               </div>
             </div>
@@ -256,8 +277,9 @@ export default function AboutPage() {
                 <div className="relative h-72">
                   <Image
                     src={therapist.image}
-                    alt={therapist.name}
+                    alt="Sylvie praticienne certifiée en réflexologie et drainage lymphatique à Pipriac - Syl'Vie Bien-Etre"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>

@@ -1,10 +1,12 @@
 import { Metadata } from "next"
+import { spaInfo } from "@/lib/data"
+import { getCanonicalUrl } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Mentions Légales",
-  description: "Mentions légales de Syl'Vie Bien-Etre à Pipriac - Informations juridiques et éditeur du site.",
+  description: `Mentions légales de ${spaInfo.name} à ${spaInfo.address.city} - Informations juridiques et éditeur du site.`,
   alternates: {
-    canonical: "https://www.sylviebienetre.fr/mentions-legales",
+    canonical: getCanonicalUrl('/mentions-legales'),
   },
 }
 

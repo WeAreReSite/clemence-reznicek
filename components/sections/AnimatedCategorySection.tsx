@@ -72,8 +72,6 @@ function ExpandableServiceItem({
   onToggle: () => void
 }) {
   const itemRef = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
-  const benefitsRef = useRef<HTMLUListElement>(null)
 
   const accent = categoryAccents[service.category] || categoryAccents.reflexologie
 
@@ -98,24 +96,6 @@ function ExpandableServiceItem({
     )
   }, { scope: itemRef })
 
-  // Animate benefits when expanded
-  useGSAP(() => {
-    if (isExpanded && benefitsRef.current) {
-      const items = benefitsRef.current.children
-      gsap.fromTo(
-        items,
-        { opacity: 0, x: -15 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 0.4,
-          stagger: 0.06,
-          ease: "power3.out",
-          delay: 0.15,
-        }
-      )
-    }
-  }, [isExpanded])
 
   // Get related services
   const relatedServices = allServices
@@ -137,92 +117,104 @@ function ExpandableServiceItem({
       <button
         onClick={onToggle}
         className={`
-          w-full flex items-center justify-between py-4 px-4 text-left
+          w-full py-3 px-3 sm:px-4 text-left
           ${isExpanded ? "" : ""}
         `}
       >
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1">
-            <div className={`w-1 h-5 rounded-full ${accent.bg}`} />
-            <h4 className={`font-medium transition-colors ${isExpanded ? "text-primary" : "text-foreground"}`}>
-              {service.name}
-            </h4>
-            {service.isPopular && (
-              <span className="flex items-center gap-1 px-2 py-0.5 bg-accent/20 text-accent text-xs rounded-full shrink-0">
-                <Sparkles className="w-3 h-3" />
-                Populaire
-              </span>
+        {/* Mobile: Stack layout, Desktop: Flex layout */}
+        <div className="flex items-start justify-between gap-2">
+          <div className="flex-1 min-w-0">
+            <div className="flex items-start gap-2 mb-1">
+              <div className={`w-1 h-5 rounded-full ${accent.bg} shrink-0 mt-0.5`} />
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <h4 className={`font-medium transition-colors text-sm sm:text-base break-words ${isExpanded ? "text-primary" : "text-foreground"}`}>
+                    {service.name}
+                  </h4>
+                  {service.isPopular && (
+                    <span className="flex items-center gap-1 px-1.5 py-0.5 bg-accent/20 text-accent text-[10px] sm:text-xs rounded-full whitespace-nowrap">
+                      <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                      Populaire
+                    </span>
+                  )}
+                </div>
+                {/* Price and duration on mobile - inline with title area */}
+                <div className="flex items-center gap-2 mt-1 sm:hidden text-xs">
+                  <span className="text-muted-foreground flex items-center gap-1">
+                    <Clock className="w-3 h-3" />
+                    {formatDuration(service.duration)}
+                  </span>
+                  <span className="font-semibold text-primary">
+                    {formatPrice(service.price)}
+                  </span>
+                </div>
+              </div>
+            </div>
+            {!isExpanded && (
+              <p className="text-xs sm:text-sm text-muted-foreground line-clamp-2 sm:line-clamp-1 ml-3">
+                {service.shortDescription}
+              </p>
             )}
           </div>
-          {!isExpanded && (
-            <p className="text-sm text-muted-foreground line-clamp-1 ml-3">
-              {service.shortDescription}
-            </p>
-          )}
-        </div>
 
-        <div className="flex items-center gap-4 ml-4 shrink-0">
-          <div className="text-right hidden sm:block">
-            <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-0.5">
-              <Clock className="w-3 h-3" />
-              {formatDuration(service.duration)}
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
+            {/* Price and duration - desktop only */}
+            <div className="text-right hidden sm:block">
+              <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-0.5">
+                <Clock className="w-3 h-3" />
+                {formatDuration(service.duration)}
+              </div>
+              <div className="font-semibold text-primary">
+                {formatPrice(service.price)}
+              </div>
             </div>
-            <div className="font-semibold text-primary">
-              {formatPrice(service.price)}
+            <div
+              className={`
+                p-1.5 sm:p-2 rounded-full transition-all duration-300
+                ${isExpanded
+                  ? "bg-primary text-white rotate-180"
+                  : "bg-primary/10 text-primary hover:bg-primary/20"
+                }
+              `}
+            >
+              {isExpanded ? (
+                <X className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              ) : (
+                <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              )}
             </div>
-          </div>
-          <div
-            className={`
-              p-2 rounded-full transition-all duration-300
-              ${isExpanded
-                ? "bg-primary text-white rotate-180"
-                : "bg-primary/10 text-primary hover:bg-primary/20"
-              }
-            `}
-          >
-            {isExpanded ? (
-              <X className="w-4 h-4" />
-            ) : (
-              <ChevronDown className="w-4 h-4" />
-            )}
           </div>
         </div>
       </button>
 
       {/* Expanded Content */}
-      <div
-        ref={contentRef}
-        className={`
-          overflow-hidden transition-all duration-500 ease-out
-          ${isExpanded ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}
-        `}
-      >
-        <div className="px-4 pb-6 space-y-6">
+      {isExpanded && (
+        <div className="px-3 sm:px-4 pb-4 sm:pb-6 space-y-4 sm:space-y-6 animate-in fade-in slide-in-from-top-2 duration-200">
           {/* Gradient Divider */}
           <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
 
           {/* Abstract Background for Expanded Content */}
-          <div className={`relative rounded-xl p-6 bg-gradient-to-br ${accent.gradient} overflow-hidden`}>
+          <div className={`relative rounded-xl p-4 sm:p-6 bg-gradient-to-br ${accent.gradient} overflow-hidden`}>
             {/* Decorative circles */}
             <div className="absolute top-0 right-0 w-24 h-24 bg-white/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-20 h-20 bg-white/10 rounded-full blur-xl translate-y-1/2 -translate-x-1/2" />
 
             <div className="relative z-10">
               {/* Full Description */}
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
                 {service.description}
               </p>
 
               {/* Benefits */}
               <div>
-                <h5 className="font-medium text-foreground mb-3">Bienfaits</h5>
-                <ul ref={benefitsRef} className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <h5 className="font-medium text-foreground mb-2 sm:mb-3 text-sm sm:text-base">Bienfaits</h5>
+                <ul className="grid grid-cols-1 gap-2">
                   {service.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-start gap-2 opacity-0">
-                      <div className={`w-5 h-5 rounded-full ${accent.bg}/20 flex items-center justify-center shrink-0 mt-0.5`}>
-                        <Check className={`w-3 h-3 ${accent.text}`} />
+                    <li key={i} className="flex items-start gap-2">
+                      <div className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full ${accent.bg}/20 flex items-center justify-center shrink-0 mt-0.5`}>
+                        <Check className={`w-2.5 h-2.5 sm:w-3 sm:h-3 ${accent.text}`} />
                       </div>
-                      <span className="text-sm text-muted-foreground">{benefit}</span>
+                      <span className="text-xs sm:text-sm text-muted-foreground">{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -232,19 +224,19 @@ function ExpandableServiceItem({
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-3">
-            <Button className="flex-1 sm:flex-none" asChild>
+            <Button className="w-full sm:w-auto text-sm" asChild>
               <Link href="/contact">
                 <Calendar className="w-4 h-4 mr-2" />
-                Reserver ce soin
+                Réserver ce soin
               </Link>
             </Button>
           </div>
 
           {/* Related Suggestions */}
           {relatedServices.length > 0 && (
-            <div className="pt-4 border-t border-border/50">
-              <h5 className="font-medium text-foreground mb-3 text-sm">Vous pourriez aussi aimer</h5>
-              <div className="flex flex-wrap gap-2">
+            <div className="pt-3 sm:pt-4 border-t border-border/50">
+              <h5 className="font-medium text-foreground mb-2 sm:mb-3 text-xs sm:text-sm">Vous pourriez aussi aimer</h5>
+              <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2">
                 {relatedServices.map((related) => (
                   <button
                     key={related.id}
@@ -261,18 +253,20 @@ function ExpandableServiceItem({
                         }, 500)
                       }
                     }}
-                    className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-muted/50 hover:bg-primary/10 border border-transparent hover:border-primary/20 transition-all text-sm"
+                    className="flex items-center justify-between sm:inline-flex sm:justify-start gap-2 px-3 py-2 rounded-lg bg-muted/50 hover:bg-primary/10 border border-transparent hover:border-primary/20 transition-all text-xs sm:text-sm w-full sm:w-auto"
                   >
-                    <span className="text-foreground">{related.name}</span>
-                    <span className="text-primary font-medium">{formatPrice(related.price)}</span>
-                    <ArrowRight className="w-3 h-3 text-muted-foreground" />
+                    <span className="text-foreground truncate">{related.name}</span>
+                    <span className="flex items-center gap-1 shrink-0">
+                      <span className="text-primary font-medium">{formatPrice(related.price)}</span>
+                      <ArrowRight className="w-3 h-3 text-muted-foreground" />
+                    </span>
                   </button>
                 ))}
               </div>
             </div>
           )}
         </div>
-      </div>
+      )}
     </div>
   )
 }
@@ -375,7 +369,7 @@ function RegularCategorySection({
       {category.image && (
         <Image
           src={category.image}
-          alt={category.name}
+          alt={`${category.name} à Pipriac près de Redon - Syl'Vie Bien-Etre`}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 50vw"
@@ -389,14 +383,14 @@ function RegularCategorySection({
   const contentElement = (
     <div ref={contentRef} className="opacity-0">
       {/* Category Header */}
-      <div className="mb-8">
-        <span className="inline-block text-accent font-medium tracking-widest uppercase text-xs mb-3">
+      <div className="mb-6 sm:mb-8">
+        <span className="inline-block text-accent font-medium tracking-widest uppercase text-[10px] sm:text-xs mb-2 sm:mb-3">
           {String(index + 1).padStart(2, "0")} — {category.name}
         </span>
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-foreground mb-3 sm:mb-4">
           {category.name}
         </h2>
-        <p className="text-muted-foreground text-lg leading-relaxed">
+        <p className="text-muted-foreground text-sm sm:text-base lg:text-lg leading-relaxed">
           {category.description}
         </p>
       </div>
@@ -555,14 +549,14 @@ function BeauteMainsSection({
     >
       <div className="container-spa">
         {/* Header */}
-        <div ref={contentRef} className="text-center mb-16 opacity-0">
-          <span className="inline-block text-accent font-medium tracking-widest uppercase text-xs mb-3">
+        <div ref={contentRef} className="text-center mb-8 sm:mb-12 lg:mb-16 opacity-0 px-2">
+          <span className="inline-block text-accent font-medium tracking-widest uppercase text-[10px] sm:text-xs mb-2 sm:mb-3">
             {String(index + 1).padStart(2, "0")} — {category.name}
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-foreground mb-3 sm:mb-4">
             {category.name}
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">
             {category.description}
           </p>
         </div>
@@ -570,17 +564,17 @@ function BeauteMainsSection({
         {/* 3-Image Parallax Gallery - Height capped for short viewports */}
         <div
           ref={galleryRef}
-          className="relative h-auto md:h-[min(600px,65vh)] lg:h-[min(700px,60vh)] mb-16 flex flex-col md:block gap-4 md:gap-0"
+          className="relative h-auto md:h-[min(600px,65vh)] lg:h-[min(700px,60vh)] mb-8 sm:mb-12 lg:mb-16 flex flex-col md:block gap-3 sm:gap-4 md:gap-0"
         >
           {/* Image 1 - Full picture visible */}
           <div
             ref={image1Ref}
-            className="relative md:absolute left-0 top-0 w-full md:w-[45%] h-[min(300px,40vh)] sm:h-[min(350px,45vh)] md:h-[70%] rounded-2xl overflow-hidden shadow-2xl opacity-0 z-10 bg-secondary-light/30"
+            className="relative md:absolute left-0 top-0 w-full md:w-[45%] h-[200px] sm:h-[min(300px,40vh)] md:h-[70%] rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl opacity-0 z-10 bg-secondary-light/30"
           >
             {images[0] && (
               <Image
                 src={images[0]}
-                alt={`${category.name} - Image 1`}
+                alt={`Prothésie ongulaire et beauté des mains à Pipriac - Syl'Vie Bien-Etre`}
                 fill
                 className="object-contain p-2"
                 sizes="(max-width: 768px) 100vw, 45vw"
@@ -592,12 +586,12 @@ function BeauteMainsSection({
           {/* Image 2 - Full picture visible */}
           <div
             ref={image2Ref}
-            className="relative md:absolute right-0 top-0 md:top-[5%] w-full md:w-[40%] h-[min(250px,35vh)] sm:h-[min(300px,40vh)] md:h-[55%] rounded-2xl overflow-hidden shadow-xl opacity-0 z-10 bg-accent-light/30"
+            className="relative md:absolute right-0 top-0 md:top-[5%] w-full md:w-[40%] h-[180px] sm:h-[min(250px,35vh)] md:h-[55%] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl opacity-0 z-10 bg-accent-light/30"
           >
             {images[1] && (
               <Image
                 src={images[1]}
-                alt={`${category.name} - Image 2`}
+                alt={`Pose d'ongles en gel et nail art près de Redon - Syl'Vie Bien-Etre`}
                 fill
                 className="object-contain p-2"
                 sizes="(max-width: 768px) 100vw, 40vw"
@@ -609,12 +603,12 @@ function BeauteMainsSection({
           {/* Image 3 - Full picture visible */}
           <div
             ref={image3Ref}
-            className="relative md:absolute left-0 md:left-1/2 md:-translate-x-1/2 bottom-0 w-full md:w-[35%] h-[min(250px,35vh)] sm:h-[min(300px,40vh)] md:h-[50%] rounded-2xl overflow-hidden shadow-xl opacity-0 z-20 bg-primary-light/30"
+            className="relative md:absolute left-0 md:left-1/2 md:-translate-x-1/2 bottom-0 w-full md:w-[35%] h-[180px] sm:h-[min(250px,35vh)] md:h-[50%] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-xl opacity-0 z-20 bg-primary-light/30"
           >
             {images[2] && (
               <Image
                 src={images[2]}
-                alt={`${category.name} - Image 3`}
+                alt={`Manucure et soins des ongles à Pipriac - Cabinet Syl'Vie Bien-Etre`}
                 fill
                 className="object-contain p-2"
                 sizes="(max-width: 768px) 100vw, 35vw"
@@ -625,11 +619,11 @@ function BeauteMainsSection({
         </div>
 
         {/* Services in two columns: Main services + Addons */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Main Services */}
           <div>
-            <h3 className="font-serif text-2xl text-foreground mb-6">Nos prestations</h3>
-            <div className="divide-y divide-border/50 bg-card/50 rounded-2xl p-4">
+            <h3 className="font-serif text-xl sm:text-2xl text-foreground mb-4 sm:mb-6">Nos prestations</h3>
+            <div className="divide-y divide-border/50 bg-card/50 rounded-2xl p-2 sm:p-4">
               {mainServices.map((service, serviceIndex) => (
                 <div key={service.id} id={`service-${service.id}`}>
                   <ExpandableServiceItem
@@ -646,24 +640,24 @@ function BeauteMainsSection({
           {/* Addon Services */}
           {addonServices.length > 0 && (
             <div>
-              <h3 className="font-serif text-2xl text-foreground mb-6">Options & supplements</h3>
-              <div className="grid grid-cols-1 gap-3">
+              <h3 className="font-serif text-xl sm:text-2xl text-foreground mb-4 sm:mb-6">Options & supplements</h3>
+              <div className="grid grid-cols-1 gap-2 sm:gap-3">
                 {addonServices.map((service) => (
                   <div
                     key={service.id}
-                    className="p-4 rounded-xl bg-card/60 border border-border/50 hover:border-primary/20 transition-all duration-300"
+                    className="p-3 sm:p-4 rounded-xl bg-card/60 border border-border/50 hover:border-primary/20 transition-all duration-300"
                   >
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <h4 className="font-medium text-foreground text-sm mb-1">
+                    <div className="flex items-start justify-between gap-2 sm:gap-3">
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-medium text-foreground text-xs sm:text-sm mb-1">
                           {service.name}
                         </h4>
-                        <p className="text-muted-foreground text-xs line-clamp-2">
+                        <p className="text-muted-foreground text-[10px] sm:text-xs line-clamp-2">
                           {service.shortDescription}
                         </p>
                       </div>
-                      <span className="text-primary font-semibold text-sm whitespace-nowrap">
-                        +{service.price < 1 ? `${service.price * 100}c` : `${service.price}€`}
+                      <span className="text-primary font-semibold text-xs sm:text-sm whitespace-nowrap shrink-0">
+                        +{service.price < 1 ? `${Math.round(service.price * 100)}c` : `${service.price}€`}
                       </span>
                     </div>
                   </div>

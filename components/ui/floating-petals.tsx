@@ -57,6 +57,9 @@ export function FloatingPetals() {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     if (prefersReducedMotion) return
 
+    // Track if component is still mounted
+    let isMounted = true
+
     const ctx = gsap.context(() => {
       petalsRef.current.forEach((petal, index) => {
         if (!petal) return
@@ -74,6 +77,8 @@ export function FloatingPetals() {
           ease: "none",
           repeat: -1,
           onRepeat: function() {
+            // Only reset if component is still mounted
+            if (!isMounted || !petal.isConnected) return
             // Reset position for infinite loop
             gsap.set(petal, {
               y: "-10vh",
@@ -103,7 +108,10 @@ export function FloatingPetals() {
       })
     }, containerRef)
 
-    return () => ctx.revert()
+    return () => {
+      isMounted = false
+      ctx.revert()
+    }
   }, [])
 
   return (

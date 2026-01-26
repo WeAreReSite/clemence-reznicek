@@ -238,7 +238,7 @@ export function BookingWizard() {
                 >
                   <div className="w-20 h-20 rounded-lg bg-muted shrink-0 overflow-hidden">
                     <Image
-                      src={`https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=200&auto=format&fit=crop&${service.id}`}
+                      src={service.image}
                       alt={service.name}
                       width={80}
                       height={80}

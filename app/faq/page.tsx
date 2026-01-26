@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { faqs, spaInfo } from "@/lib/data"
+import { getCanonicalUrl } from "@/lib/utils"
 import { JsonLd } from "@/components/JsonLd"
 import {
   Accordion,
@@ -13,10 +14,9 @@ import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "FAQ",
-  description:
-    "Questions fréquentes sur Syl'Vie Bien-Etre à Pipriac : réservation, déroulement des soins de réflexologie, drainage lymphatique, qualifications de Sylvie Lebordais.",
+  description: `Questions fréquentes sur ${spaInfo.name} à ${spaInfo.address.city} : réservation, déroulement des soins de réflexologie, drainage lymphatique, qualifications de Sylvie Lebordais.`,
   alternates: {
-    canonical: "https://www.sylviebienetre.fr/faq",
+    canonical: getCanonicalUrl('/faq'),
   },
 }
 

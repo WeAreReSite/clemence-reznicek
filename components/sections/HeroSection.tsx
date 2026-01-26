@@ -150,7 +150,7 @@ export function HeroSection() {
         <div className="hero-bg-image absolute inset-0 scale-110">
           <Image
             src="/images/hero-background.jpeg"
-            alt={`Espace bien-être ${spaInfo.name}`}
+            alt="Cabinet de bien-être et réflexologie à Pipriac - Syl'Vie Bien-Etre près de Redon"
             fill
             priority
             className="object-cover"

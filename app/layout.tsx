@@ -7,6 +7,7 @@ import { CookieBanner } from "@/components/CookieBanner"
 import { MobileBookingBar } from "@/components/MobileBookingBar"
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider"
 import { spaInfo } from "@/lib/data"
+import { getCanonicalUrl } from "@/lib/utils"
 import "./globals.css"
 
 const cormorant = Cormorant_Garamond({
@@ -24,7 +25,7 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.sylviebienetre.fr"),
+  metadataBase: new URL(getCanonicalUrl('')),
   title: {
     default: "Syl'Vie Bien-Etre | Réflexologie & Drainage Lymphatique à Pipriac",
     template: "%s | Syl'Vie Bien-Etre",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://www.sylviebienetre.fr",
+    url: getCanonicalUrl(''),
     siteName: "Syl'Vie Bien-Etre",
     title: "Syl'Vie Bien-Etre | Réflexologie & Drainage Lymphatique à Pipriac",
     description:
@@ -98,7 +99,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "verification_token",
+    google: "googleae408526a8d46ed6",
   },
 }
 
@@ -112,13 +113,12 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="description" content="Cabinet de réflexologie et bien-être à Pipriac (35550). Sylvie Lebordais, praticienne certifiée, vous propose drainage lymphatique, réflexologie plantaire et beauté des mains près de Redon." />
-        <link rel="canonical" href="https://www.sylviebienetre.fr/" />
         <link rel="icon" href="/images/logo.png" sizes="any" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#2D5A4A" />
       </head>
-      <body className="font-sans antialiased bg-background text-foreground">
+      <body className="font-sans antialiased bg-background text-foreground overflow-x-clip">
         <SmoothScrollProvider>
           <Header />
           <main className="min-h-screen">{children}</main>
@@ -136,8 +136,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "HealthAndBeautyBusiness",
               name: "Syl'Vie Bien-Etre",
-              "@id": "https://www.sylviebienetre.fr",
-              url: "https://www.sylviebienetre.fr",
+              "@id": getCanonicalUrl(''),
+              url: getCanonicalUrl(''),
               telephone: "+33613648705",
               email: "sylviebienetre35@gmail.com",
               priceRange: "€€",
@@ -232,7 +232,7 @@ export default function RootLayout({
               },
               founder: {
                 "@type": "Person",
-                "@id": "https://www.sylviebienetre.fr/#sylvie-lebordais",
+                "@id": getCanonicalUrl('/#sylvie-lebordais'),
                 name: "Sylvie Lebordais",
                 jobTitle: "Praticienne en Réflexologie et Bien-Être",
               },
@@ -298,7 +298,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "@id": "https://www.sylviebienetre.fr/#sylvie-lebordais",
+              "@id": getCanonicalUrl('/#sylvie-lebordais'),
               name: "Sylvie Lebordais",
               givenName: "Sylvie",
               familyName: "Lebordais",
@@ -307,7 +307,7 @@ export default function RootLayout({
               jobTitle: "Praticienne en Réflexologie et Drainage Lymphatique",
               worksFor: {
                 "@type": "HealthAndBeautyBusiness",
-                "@id": "https://www.sylviebienetre.fr",
+                "@id": getCanonicalUrl(''),
                 name: "Syl'Vie Bien-Etre"
               },
               address: {
@@ -401,7 +401,7 @@ export default function RootLayout({
                   }
                 }
               ],
-              url: "https://www.sylviebienetre.fr/a-propos",
+              url: getCanonicalUrl('/a-propos'),
               sameAs: [
                 spaInfo.social.instagram,
                 spaInfo.social.facebook

@@ -184,7 +184,7 @@ export function ServicesPreview() {
                 <div className="card-image absolute inset-0">
                   <Image
                     src={service.image}
-                    alt={`Soin de ${service.title.toLowerCase()} - ${service.subtitle}`}
+                    alt={`Soin de ${service.title.toLowerCase()} à Pipriac près de Redon - ${service.subtitle} - Syl'Vie Bien-Etre`}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

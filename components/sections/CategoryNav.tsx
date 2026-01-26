@@ -160,7 +160,7 @@ export function CategoryNav({ categories }: CategoryNavProps) {
       )}
     >
       <div className="container-spa">
-        <div className="relative flex justify-center gap-2 overflow-x-auto no-scrollbar pb-1">
+        <div className="relative flex justify-start sm:justify-center gap-2 overflow-x-scroll sm:overflow-x-visible no-scrollbar pb-1 -mx-4 px-4 sm:mx-0 sm:px-0" style={{ WebkitOverflowScrolling: 'touch' }}>
           {/* Active Indicator */}
           <div
             ref={indicatorRef}

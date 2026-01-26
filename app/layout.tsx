@@ -61,8 +61,10 @@ export const metadata: Metadata = {
     "réflexologie Redon",
     "bien-être Redon",
   ],
+  description: "Cabinet de réflexologie et bien-être à Pipriac (35550). Sylvie Lebordais, praticienne certifiée, vous propose drainage lymphatique, réflexologie plantaire et beauté des mains près de Redon.",
   authors: [{ name: "Sylvie Lebordais - Syl'Vie Bien-Etre" }],
   creator: "Syl'Vie Bien-Etre",
+  publisher: "Syl'Vie Bien-Etre",
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -73,7 +75,7 @@ export const metadata: Metadata = {
       "Cabinet de réflexologie et bien-être à Pipriac (Bretagne). Réflexologie plantaire, drainage lymphatique manuel, amma assis et beauté des mains par Sylvie Lebordais.",
     images: [
       {
-        url: "/images/logo.png",
+        url: getCanonicalUrl('/images/logo.png'),
         width: 1200,
         height: 630,
         alt: "Syl'Vie Bien-Etre - Cabinet de Réflexologie à Pipriac",
@@ -85,7 +87,7 @@ export const metadata: Metadata = {
     title: "Syl'Vie Bien-Etre | Réflexologie & Drainage Lymphatique à Pipriac",
     description:
       "Cabinet de réflexologie et bien-être à Pipriac (Bretagne). Réflexologie plantaire, drainage lymphatique manuel, amma assis et beauté des mains.",
-    images: ["/images/logo.png"],
+    images: [getCanonicalUrl('/images/logo.png')],
   },
   robots: {
     index: true,
@@ -112,11 +114,15 @@ export default function RootLayout({
     <html lang="fr" className={`${cormorant.variable} ${manrope.variable}`} data-scroll-behavior="smooth">
       <head>
         <meta charSet="utf-8" />
-        <meta name="description" content="Cabinet de réflexologie et bien-être à Pipriac (35550). Sylvie Lebordais, praticienne certifiée, vous propose drainage lymphatique, réflexologie plantaire et beauté des mains près de Redon." />
         <link rel="icon" href="/images/logo.png" sizes="any" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#2D5A4A" />
+        {/* Geo meta tags for local SEO */}
+        <meta name="geo.region" content="FR-35" />
+        <meta name="geo.placename" content="Pipriac, Bretagne" />
+        <meta name="geo.position" content="47.7656;-1.9494" />
+        <meta name="ICBM" content="47.7656, -1.9494" />
       </head>
       <body className="font-sans antialiased bg-background text-foreground overflow-x-clip">
         <SmoothScrollProvider>
@@ -287,6 +293,33 @@ export default function RootLayout({
                 "Amma assis",
                 "détoxification"
               ],
+            }).replace(/</g, '\\u003c'),
+          }}
+        />
+
+        {/* JSON-LD Structured Data - WebSite Schema for Search Actions */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": getCanonicalUrl('/#website'),
+              url: getCanonicalUrl(''),
+              name: "Syl'Vie Bien-Etre",
+              description: "Cabinet de réflexologie et bien-être à Pipriac, Bretagne. Réflexologie plantaire, drainage lymphatique manuel, amma assis et beauté des mains.",
+              publisher: {
+                "@id": getCanonicalUrl('')
+              },
+              inLanguage: "fr-FR",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: getCanonicalUrl('/soins?search={search_term_string}')
+                },
+                "query-input": "required name=search_term_string"
+              }
             }).replace(/</g, '\\u003c'),
           }}
         />

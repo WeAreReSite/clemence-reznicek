@@ -3,6 +3,7 @@ import Link from "next/link"
 import { faqs, spaInfo } from "@/lib/data"
 import { getCanonicalUrl } from "@/lib/utils"
 import { JsonLd } from "@/components/JsonLd"
+import { Breadcrumbs } from "@/components/Breadcrumbs"
 import {
   Accordion,
   AccordionContent,
@@ -13,10 +14,24 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "FAQ - Questions Fréquentes",
   description: `Questions fréquentes sur ${spaInfo.name} à ${spaInfo.address.city} : réservation, déroulement des soins de réflexologie, drainage lymphatique, qualifications de Sylvie Lebordais.`,
   alternates: {
     canonical: getCanonicalUrl('/faq'),
+  },
+  openGraph: {
+    title: `FAQ - Questions Fréquentes | ${spaInfo.name}`,
+    description: `Trouvez les réponses à vos questions sur les soins de réflexologie et drainage lymphatique à ${spaInfo.address.city}. Réservation, tarifs, qualifications.`,
+    url: getCanonicalUrl('/faq'),
+    type: "website",
+    images: [
+      {
+        url: getCanonicalUrl('/images/reflexologie-plantaire.jpeg'),
+        width: 1200,
+        height: 630,
+        alt: `FAQ - ${spaInfo.name}`,
+      },
+    ],
   },
 }
 
@@ -35,11 +50,20 @@ export default function FAQPage() {
     })),
   }
 
+  const breadcrumbs = [
+    { name: "Accueil", href: "/" },
+    { name: "FAQ", href: "/faq" }
+  ]
+
   return (
     <>
       <JsonLd data={faqSchema} />
+      {/* Breadcrumbs for SEO */}
+      <div className="container-spa pt-24 pb-4">
+        <Breadcrumbs items={breadcrumbs} />
+      </div>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-muted/30">
+      <section className="pt-8 pb-16 bg-muted/30">
         <div className="container-spa">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block text-accent font-medium tracking-widest uppercase text-sm mb-4">

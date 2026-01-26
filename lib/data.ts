@@ -934,7 +934,7 @@ export const giftCardData = {
   description: 'Offrez bien plus qu\'un simple cadeau : offrez une pause, un moment de détente absolue, une parenthèse de bien-être. Les cartes cadeaux Syl\'Vie Bien-Etre sont valables sur l\'ensemble de nos soins (réflexologie, drainage lymphatique, massages, beauté des mains) et s\'adaptent à tous vos besoins.',
   features: [
     'Valable sur tous les soins',
-    'Validité 1 an',
+    'Validité 6 mois',
     'Au montant de votre choix',
     'Retrait au cabinet'
   ],
@@ -942,7 +942,7 @@ export const giftCardData = {
   ctaHref: '/contact',
   // Additional detailed information
   details: {
-    validity: '12 mois à compter de la date d\'achat',
+    validity: '6 mois à compter de la date d\'achat',
     denominations: 'Montant libre ou montant d\'un soin spécifique',
     format: 'Carte physique à retirer au cabinet',
     personalization: 'Message personnalisé sur demande',

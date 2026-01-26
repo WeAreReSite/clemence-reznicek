@@ -3,12 +3,34 @@ import { Suspense } from "react"
 import { BookingWizard } from "@/components/forms/BookingWizard"
 import { spaInfo } from "@/lib/data"
 import { getCanonicalUrl } from "@/lib/utils"
+import { JsonLd } from "@/components/JsonLd"
+import { Breadcrumbs } from "@/components/Breadcrumbs"
 
 export const metadata: Metadata = {
   title: "Réserver",
   description: `Réservez votre soin bien-être chez ${spaInfo.name} à ${spaInfo.address.city}. Choisissez parmi réflexologie plantaire, drainage lymphatique, amma assis ou beauté des mains.`,
   alternates: {
     canonical: getCanonicalUrl('/reserver'),
+  },
+  openGraph: {
+    title: `Réserver | ${spaInfo.name}`,
+    description: `Réservez en ligne votre séance de réflexologie, drainage lymphatique ou beauté des mains à ${spaInfo.address.city}. Prise de rendez-vous simple et rapide.`,
+    url: getCanonicalUrl('/reserver'),
+    type: "website",
+    images: [
+      {
+        url: getCanonicalUrl('/images/reflexologie-plantaire.jpeg'),
+        width: 1200,
+        height: 630,
+        alt: `Réserver un soin - ${spaInfo.name} à ${spaInfo.address.city}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Réserver | ${spaInfo.name}`,
+    description: `Réservez en ligne votre séance de réflexologie ou drainage lymphatique à ${spaInfo.address.city}.`,
+    images: [getCanonicalUrl('/images/reflexologie-plantaire.jpeg')],
   },
 }
 
@@ -28,26 +50,67 @@ function BookingLoading() {
 }
 
 export default function ReserverPage() {
-  return (
-    <div className="min-h-screen bg-muted/30 pt-24 pb-32">
-      <div className="container-spa">
-        <div className="text-center mb-12">
-          <span className="inline-block text-accent font-medium tracking-widest uppercase text-sm mb-4">
-            Réservation
-          </span>
-          <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-4">
-            Réservez votre moment
-          </h1>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Sélectionnez votre soin, choisissez votre créneau et préparez-vous à vivre
-            une expérience de détente inoubliable.
-          </p>
-        </div>
+  const reservationSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `Réserver - ${spaInfo.name}`,
+    description: `Page de réservation pour ${spaInfo.name}. Réservez votre séance de réflexologie, drainage lymphatique ou beauté des mains.`,
+    url: getCanonicalUrl('/reserver'),
+    isPartOf: {
+      "@id": getCanonicalUrl('/#website')
+    },
+    about: {
+      "@id": getCanonicalUrl('')
+    },
+    potentialAction: {
+      "@type": "ReserveAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: getCanonicalUrl('/reserver'),
+        actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+      },
+      result: {
+        "@type": "Reservation",
+        provider: {
+          "@id": getCanonicalUrl('')
+        }
+      }
+    }
+  }
 
-        <Suspense fallback={<BookingLoading />}>
-          <BookingWizard />
-        </Suspense>
+  const breadcrumbs = [
+    { name: "Accueil", href: "/" },
+    { name: "Réserver", href: "/reserver" }
+  ]
+
+  return (
+    <>
+      <JsonLd data={reservationSchema} />
+      <div className="min-h-screen bg-muted/30 pt-24 pb-32">
+        <div className="container-spa">
+          {/* Breadcrumbs for SEO */}
+          <div className="pb-4">
+            <Breadcrumbs items={breadcrumbs} />
+          </div>
+
+          <div className="text-center mb-12">
+            <span className="inline-block text-accent font-medium tracking-widest uppercase text-sm mb-4">
+              Réservation
+            </span>
+            <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-4">
+              Réservez votre moment
+            </h1>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Sélectionnez votre soin, choisissez votre créneau et préparez-vous à vivre
+              une expérience de détente inoubliable.
+            </p>
+          </div>
+
+          <Suspense fallback={<BookingLoading />}>
+            <BookingWizard />
+          </Suspense>
+        </div>
       </div>
-    </div>
+    </>
   )
 }

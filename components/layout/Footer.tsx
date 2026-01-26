@@ -35,11 +35,10 @@ export function Footer() {
               <div className="relative w-14 h-14">
                 <Image
                   src="/images/logo.png"
-                  alt=""
+                  alt="Syl'Vie Bien-Etre - Cabinet de réflexologie à Pipriac"
                   fill
                   sizes="56px"
                   className="object-contain"
-                  aria-hidden="true"
                 />
               </div>
               <div>

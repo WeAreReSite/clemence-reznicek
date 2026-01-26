@@ -3,6 +3,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { therapists, spaInfo } from "@/lib/data"
 import { getCanonicalUrl } from "@/lib/utils"
+import { Breadcrumbs } from "@/components/Breadcrumbs"
+import { JsonLd } from "@/components/JsonLd"
 import { Button } from "@/components/ui/button"
 import { Award, Heart, Leaf, Users, ArrowRight } from "lucide-react"
 
@@ -11,6 +13,20 @@ export const metadata: Metadata = {
   description: `Rencontrez ${therapists[0].name}, ${therapists[0].title} à ${spaInfo.address.city}. Formée en réflexologie plantaire, drainage lymphatique et prothésie ongulaire. Cabinet en Bretagne.`,
   alternates: {
     canonical: getCanonicalUrl('/a-propos'),
+  },
+  openGraph: {
+    title: `À Propos | ${spaInfo.name}`,
+    description: `Découvrez ${therapists[0].name}, praticienne certifiée en réflexologie et drainage lymphatique à ${spaInfo.address.city}. Formations, valeurs et parcours.`,
+    url: getCanonicalUrl('/a-propos'),
+    type: "profile",
+    images: [
+      {
+        url: getCanonicalUrl('/images/sylvie.jpg'),
+        width: 1200,
+        height: 630,
+        alt: `${therapists[0].name} - Praticienne en réflexologie`,
+      },
+    ],
   },
 }
 
@@ -50,10 +66,53 @@ const milestones = [
 ]
 
 export default function AboutPage() {
+  const breadcrumbs = [
+    { name: "Accueil", href: "/" },
+    { name: "À Propos", href: "/a-propos" }
+  ]
+
+  // AboutPage schema for SEO
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: `À Propos - ${spaInfo.name}`,
+    description: `Découvrez ${therapists[0].name}, praticienne certifiée en réflexologie et drainage lymphatique à ${spaInfo.address.city}. Formations, valeurs et parcours.`,
+    url: getCanonicalUrl('/a-propos'),
+    isPartOf: {
+      "@id": getCanonicalUrl('/#website')
+    },
+    about: {
+      "@id": getCanonicalUrl('/#sylvie-lebordais')
+    },
+    mainEntity: {
+      "@type": "Person",
+      "@id": getCanonicalUrl('/#sylvie-lebordais'),
+      name: therapists[0].name,
+      jobTitle: therapists[0].title,
+      description: therapists[0].bio,
+      worksFor: {
+        "@id": getCanonicalUrl('')
+      },
+      knowsAbout: [
+        "Réflexologie Plantaire",
+        "Drainage Lymphatique Manuel",
+        "Réflexologie Abdominale",
+        "Amma Assis",
+        "Prothésie Ongulaire"
+      ]
+    }
+  }
+
   return (
     <>
+      <JsonLd data={aboutPageSchema} />
+      {/* Breadcrumbs for SEO */}
+      <div className="container-spa pt-24 pb-4">
+        <Breadcrumbs items={breadcrumbs} />
+      </div>
+
       {/* Hero Section */}
-      <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-20 lg:pb-32 overflow-hidden">
+      <section className="relative pt-8 sm:pt-12 pb-12 sm:pb-20 lg:pb-32 overflow-hidden">
         <div className="container-spa">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
             {/* Content */}

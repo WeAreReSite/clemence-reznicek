@@ -144,16 +144,16 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section ref={heroRef} className="relative overflow-hidden">
+    <section ref={heroRef} className="relative overflow-hidden mt-[72px] md:mt-[88px]">
       {/* Background Image with Overlay - covers full viewport */}
       <div className="absolute inset-0">
-        <div className="hero-bg-image absolute inset-0 scale-110">
+        <div className="hero-bg-image absolute inset-0">
           <Image
-            src="/images/hero-background.jpeg"
+            src="/images/hero-bg-image.png"
             alt="Cabinet de bien-être et réflexologie à Pipriac - Syl'Vie Bien-Etre près de Redon"
             fill
             priority
-            className="object-cover"
+            className="object-cover object-top"
             sizes="100vw"
           />
         </div>
@@ -186,9 +186,7 @@ export function HeroSection() {
       {/* Floating Flower Petals - Zen & Cocooning aesthetic */}
       <FloatingPetals />
 
-      <div className="relative z-10 min-h-svh flex flex-col">
-        {/* TOP SPACER - Reserved space for navbar (reduced on short viewports) */}
-        <div className="h-[80px] md:h-[100px] lg:h-[120px] shrink-0" aria-hidden="true" />
+      <div className="relative z-10 min-h-[calc(100svh-72px)] md:min-h-[calc(100svh-88px)] flex flex-col">
 
         {/* MAIN CONTENT - Grows to fill available space, centered */}
         <div className="flex-1 flex items-center justify-center px-4 py-4 md:py-8">

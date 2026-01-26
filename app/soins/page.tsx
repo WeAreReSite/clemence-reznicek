@@ -2,6 +2,8 @@ import { Metadata } from "next"
 import { Suspense } from "react"
 import { services, categories, giftCardData, spaInfo } from "@/lib/data"
 import { getCanonicalUrl } from "@/lib/utils"
+import { JsonLd } from "@/components/JsonLd"
+import { Breadcrumbs } from "@/components/Breadcrumbs"
 import { SoinsHero } from "@/components/sections/SoinsHero"
 import { CategoryNav } from "@/components/sections/CategoryNav"
 import { AnimatedCategorySection } from "@/components/sections/AnimatedCategorySection"
@@ -15,6 +17,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: getCanonicalUrl('/soins'),
   },
+  openGraph: {
+    title: `Nos Soins | ${spaInfo.name}`,
+    description: `29 soins de bien-être à ${spaInfo.address.city} : réflexologie plantaire, drainage lymphatique manuel, amma assis, beauté des mains. Tarifs et réservation.`,
+    url: getCanonicalUrl('/soins'),
+    type: "website",
+    images: [
+      {
+        url: getCanonicalUrl('/images/reflexologie-plantaire.jpeg'),
+        width: 1200,
+        height: 630,
+        alt: `Soins de réflexologie et drainage lymphatique - ${spaInfo.name}`,
+      },
+    ],
+  },
 }
 
 export default function SoinsPage() {
@@ -23,11 +39,52 @@ export default function SoinsPage() {
     services.some((s) => s.category === category.id)
   )
 
+  // Generate ItemList schema for services (better for rich results)
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Soins de bien-être - Syl'Vie Bien-Etre",
+    description: "Liste complète des soins de réflexologie, drainage lymphatique et beauté des mains proposés par Syl'Vie Bien-Etre à Pipriac",
+    numberOfItems: services.length,
+    itemListElement: services.map((service, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Service",
+        "@id": getCanonicalUrl(`/soins#${service.slug}`),
+        name: service.name,
+        description: service.shortDescription,
+        provider: {
+          "@id": getCanonicalUrl('')
+        },
+        areaServed: ["Pipriac", "Redon", "Ille-et-Vilaine", "Bretagne"],
+        offers: {
+          "@type": "Offer",
+          price: service.price,
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          validFrom: "2026-01-01"
+        }
+      }
+    }))
+  }
+
+  const breadcrumbs = [
+    { name: "Accueil", href: "/" },
+    { name: "Nos Soins", href: "/soins" }
+  ]
+
   return (
     <main>
+      <JsonLd data={servicesSchema} />
       <Suspense fallback={null}>
         <ScrollToAnchor />
       </Suspense>
+
+      {/* Breadcrumbs for SEO */}
+      <div className="container-spa pt-24 pb-4">
+        <Breadcrumbs items={breadcrumbs} />
+      </div>
 
       {/* Animated Hero Section */}
       <SoinsHero />

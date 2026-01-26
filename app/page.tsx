@@ -15,6 +15,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: getCanonicalUrl(''),
   },
+  openGraph: {
+    title: `${spaInfo.name} | Réflexologie & Drainage Lymphatique à ${spaInfo.address.city}`,
+    description: `Cabinet de réflexologie et bien-être à ${spaInfo.address.city}. ${therapists[0].name}, praticienne certifiée, propose réflexologie plantaire, drainage lymphatique manuel, amma assis et beauté des mains.`,
+    url: getCanonicalUrl(''),
+    type: "website",
+    images: [
+      {
+        url: getCanonicalUrl('/images/logo.png'),
+        width: 1200,
+        height: 630,
+        alt: `${spaInfo.name} - Cabinet de Réflexologie à ${spaInfo.address.city}`,
+      },
+    ],
+  },
 }
 
 export default function HomePage() {

@@ -2,6 +2,41 @@
 
 > Chouchoutez votre corps, Sublimez vos mains - Cabinet de réflexologie et bien-être à Pipriac, Bretagne
 
+---
+**Version:** 2.0
+**Last Updated:** 2026-01-26
+**Language:** fr-FR
+**Content-Type:** Business Information / Wellness Services
+---
+
+## Documentation pour Systèmes IA
+
+Ce fichier fournit un résumé structuré pour les systèmes d'IA et moteurs de recherche génératifs (GEO optimisé).
+
+**Documentation complète disponible:** [llms-full.txt](https://www.sylviebienetre.fr/llms-full.txt)
+
+**Sitemap XML:** [sitemap.xml](https://www.sylviebienetre.fr/sitemap.xml)
+
+**Robots.txt:** [robots.txt](https://www.sylviebienetre.fr/robots.txt)
+
+---
+
+## Faits Clés (Citation-Friendly)
+
+- **Nom commercial:** Syl'Vie Bien-Etre
+- **Praticienne:** Sylvie Lebordais
+- **Adresse:** 1B Rue du Général de Gaulle, 35550 Pipriac, Bretagne, France
+- **Téléphone:** 06 13 64 87 05
+- **Email:** sylviebienetre35@gmail.com
+- **Site Web:** www.sylviebienetre.fr
+- **Note Google:** 5.0/5 étoiles (8 avis vérifiés)
+- **Nombre de soins:** 29 services disponibles
+- **Zone de service:** Rayon de 30km (Pipriac, Redon, Ille-et-Vilaine)
+- **Spécialités:** Drainage Lymphatique Manuel (Vodder & Leduc), Réflexologie Plantaire
+- **Horaires:** Lun-Ven 9h-20h, Sam 9h-13h
+
+---
+
 ## À Propos
 
 Syl'Vie Bien-Etre est un cabinet de bien-être situé à Pipriac (35550) en Ille-et-Vilaine, Bretagne. Fondé par Sylvie Lebordais, praticienne formée en réflexologie et bien-être, le cabinet offre un espace intimiste et chaleureux dédié à votre détente et votre sérénité.
@@ -100,7 +135,7 @@ Offrez un moment de bien-être avec les cartes cadeaux Syl'Vie Bien-Etre.
 
 **Caractéristiques :**
 - Valables sur tous les soins
-- Validité 1 an
+- Validité 6 mois
 - Montant libre ou montant d'un soin spécifique
 - Carte physique à retirer au cabinet
 - Message personnalisé sur demande
@@ -170,12 +205,12 @@ Oui, contactez Sylvie par téléphone ou email pour organiser une carte cadeau p
 
 ## Pages du Site
 
-- [Accueil](/) : Présentation du cabinet et services principaux
-- [Nos Services](/soins) : Catalogue complet des 29 soins disponibles
-- [Réserver](/reserver) : Prise de rendez-vous en ligne
-- [À Propos](/a-propos) : Présentation de Sylvie Lebordais et de son parcours
-- [Contact](/contact) : Formulaire de contact et informations
-- [FAQ](/faq) : Réponses aux questions fréquentes
+- [Accueil](https://www.sylviebienetre.fr/) : Présentation du cabinet et services principaux
+- [Nos Services](https://www.sylviebienetre.fr/soins) : Catalogue complet des 29 soins disponibles
+- [Réserver](https://www.sylviebienetre.fr/reserver) : Prise de rendez-vous en ligne
+- [À Propos](https://www.sylviebienetre.fr/a-propos) : Présentation de Sylvie Lebordais et de son parcours
+- [Contact](https://www.sylviebienetre.fr/contact) : Formulaire de contact et informations
+- [FAQ](https://www.sylviebienetre.fr/faq) : Réponses aux questions fréquentes
 
 ## À Propos des Techniques Pratiquées
 

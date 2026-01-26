@@ -43,10 +43,10 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-card/95 backdrop-blur-md",
         isScrolled || !isHomepage
-          ? "bg-card/95 backdrop-blur-md shadow-sm py-4"
-          : "bg-transparent py-6"
+          ? "shadow-sm py-4"
+          : "py-6"
       )}
     >
       <div className="container-spa">
@@ -56,18 +56,14 @@ export function Header() {
             <div className="relative w-10 h-10 md:w-12 md:h-12">
               <Image
                 src="/images/logo.png"
-                alt=""
+                alt="Syl'Vie Bien-Etre - Cabinet de réflexologie à Pipriac"
                 fill
                 sizes="48px"
                 className="object-contain"
                 priority
-                aria-hidden="true"
               />
             </div>
-            <span className={cn(
-              "font-serif text-xl md:text-2xl tracking-wide transition-colors duration-300",
-              isScrolled || !isHomepage ? "text-foreground" : "text-white"
-            )}>
+            <span className="font-serif text-xl md:text-2xl tracking-wide text-foreground">
               {spaInfo.name}
             </span>
           </Link>
@@ -79,11 +75,8 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "text-[13px] tracking-[0.2em] uppercase transition-colors duration-300",
-                  isScrolled || !isHomepage
-                    ? "text-muted-foreground hover:text-foreground"
-                    : "text-white/80 hover:text-white",
-                  pathname === item.href && (isScrolled || !isHomepage ? "text-foreground" : "text-white")
+                  "text-[13px] tracking-[0.2em] uppercase transition-colors duration-300 text-muted-foreground hover:text-foreground",
+                  pathname === item.href && "text-foreground"
                 )}
               >
                 {item.name}
@@ -95,12 +88,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-6">
             <Link
               href="/contact"
-              className={cn(
-                "text-[13px] tracking-[0.15em] uppercase px-6 py-2.5 border transition-all duration-300",
-                isScrolled || !isHomepage
-                  ? "border-foreground text-foreground hover:bg-foreground hover:text-white"
-                  : "border-white text-white hover:bg-white hover:text-foreground"
-              )}
+              className="text-[13px] tracking-[0.15em] uppercase px-6 py-2.5 border transition-all duration-300 border-foreground text-foreground hover:bg-foreground hover:text-white"
             >
               Réserver
             </Link>
@@ -108,10 +96,7 @@ export function Header() {
             {/* Hamburger for tablet/smaller desktop */}
             <button
               onClick={() => setIsOpen(true)}
-              className={cn(
-                "hidden md:flex lg:hidden flex-col gap-1.5 p-2",
-                isScrolled || !isHomepage ? "text-foreground" : "text-white"
-              )}
+              className="hidden md:flex lg:hidden flex-col gap-1.5 p-2 text-foreground"
             >
               <span className="w-6 h-0.5 bg-current" />
               <span className="w-6 h-0.5 bg-current" />
@@ -121,10 +106,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           {!isMounted ? (
             <button
-              className={cn(
-                "lg:hidden flex flex-col gap-1.5 p-2",
-                isScrolled || !isHomepage ? "text-foreground" : "text-white"
-              )}
+              className="lg:hidden flex flex-col gap-1.5 p-2 text-foreground"
               aria-label="Menu"
             >
               <span className="w-6 h-0.5 bg-current" />
@@ -134,10 +116,7 @@ export function Header() {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="lg:hidden">
                 <button
-                  className={cn(
-                    "flex flex-col gap-1.5 p-2",
-                    isScrolled || !isHomepage ? "text-foreground" : "text-white"
-                  )}
+                  className="flex flex-col gap-1.5 p-2 text-foreground"
                 >
                   <span className="w-6 h-0.5 bg-current" />
                   <span className="w-6 h-0.5 bg-current" />

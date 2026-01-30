@@ -126,48 +126,9 @@ export function TestimonialsSection() {
     return () => ctx.revert()
   }, [])
 
-  // Helper function to convert date format to ISO
-  const convertDateToISO = (date: string) => {
-    // Convert "2025-08" to "2025-08-01"
-    if (date.match(/^\d{4}-\d{2}$/)) {
-      return `${date}-01`
-    }
-    return date
-  }
-
-  // Review Schema - references main HealthAndBeautyBusiness from layout.tsx
-  // Uses @id reference to avoid duplicate LocalBusiness schema
-  const reviewsSchema = {
-    "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "@id": "https://syl-vie-bien-etre.fr/",
-    review: testimonials.map((testimonial) => ({
-      "@type": "Review",
-      "@id": `https://syl-vie-bien-etre.fr/#review-${testimonial.id}`,
-      author: {
-        "@type": "Person",
-        name: testimonial.name,
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: testimonial.rating.toString(),
-        bestRating: "5",
-        worstRating: "1",
-      },
-      reviewBody: testimonial.text,
-      datePublished: convertDateToISO(testimonial.date),
-    })),
-  }
-
   return (
     <section ref={sectionRef} className="section-padding bg-primary text-white relative overflow-hidden">
-      {/* Reviews Schema - references main business entity */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(reviewsSchema).replace(/</g, '\\u003c'),
-        }}
-      />
+      {/* Reviews schema is now included in the main HealthAndBeautyBusiness schema in layout.tsx */}
       {/* Background Pattern - Decorative circles */}
       <div
         ref={(el) => { decorativeRefs.current[0] = el }}

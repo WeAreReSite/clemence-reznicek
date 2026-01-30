@@ -756,7 +756,7 @@ export const testimonials = [
     rating: 5,
     text: 'Deux rendez-vous manucures avec Sylvie, le résultat est toujours impeccable et beau ! Sylvie est professionnelle et très consciencieuse. Je recommande sans hésiter.',
     service: 'Beauté des mains',
-    date: '2025-01'
+    date: '2025-12'
   },
   {
     id: '2',
@@ -803,6 +803,22 @@ export const testimonials = [
     name: 'Céline Kergosien',
     rating: 5,
     text: 'Merci beaucoup pour ce moment de détente. Sylvie est une belle personne et à l\'écoute. Je recommande +++',
+    service: 'Réflexologie',
+    date: '2025-04'
+  },
+  {
+    id: '8',
+    name: 'Christele Briere',
+    rating: 5,
+    text: 'Très bon moment de détente. Je recommande. Délais très courts pour réserver. Au top',
+    service: 'Réflexologie',
+    date: '2026-01'
+  },
+  {
+    id: '9',
+    name: 'CHRISTINE SIGALAT',
+    rating: 5,
+    text: 'Excellente expérience.',
     service: 'Réflexologie',
     date: '2025-04'
   }

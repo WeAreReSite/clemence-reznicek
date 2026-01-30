@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { CookieBanner } from "@/components/CookieBanner"
 import { MobileBookingBar } from "@/components/MobileBookingBar"
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider"
-import { spaInfo } from "@/lib/data"
+import { spaInfo, testimonials } from "@/lib/data"
 import { getCanonicalUrl } from "@/lib/utils"
 import "./globals.css"
 
@@ -119,7 +119,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#2D5A4A" />
         {/* Language declaration for French site */}
-        <link rel="alternate" hrefLang="fr-FR" href="https://syl-vie-bien-etre.fr/" />
+        <link rel="alternate" hrefLang="fr-FR" href={getCanonicalUrl('')} />
         {/* Preload hero LCP image for better performance */}
         <link rel="preload" as="image" href="/images/hero-bg.jpg" fetchPriority="high" />
         {/* Geo meta tags for local SEO */}
@@ -151,6 +151,7 @@ export default function RootLayout({
               telephone: "+33613648705",
               email: "sylviebienetre35@gmail.com",
               priceRange: "€€",
+              image: getCanonicalUrl('/images/logo.png'),
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "1B Rue du Général de Gaulle",
@@ -181,10 +182,23 @@ export default function RootLayout({
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "5.0",
-                reviewCount: "8",
+                reviewCount: testimonials.length.toString(),
                 bestRating: "5",
-                worstRating: "1",
               },
+              review: testimonials.map((t) => ({
+                "@type": "Review",
+                author: {
+                  "@type": "Person",
+                  name: t.name,
+                },
+                reviewRating: {
+                  "@type": "Rating",
+                  ratingValue: t.rating.toString(),
+                  bestRating: "5",
+                },
+                reviewBody: t.text,
+                datePublished: t.date.match(/^\d{4}-\d{2}$/) ? `${t.date}-01` : t.date,
+              })),
               sameAs: [
                 spaInfo.social.instagram,
                 spaInfo.social.facebook,

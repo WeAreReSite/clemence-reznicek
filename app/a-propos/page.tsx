@@ -28,6 +28,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: `À Propos | ${spaInfo.name}`,
+    description: `Découvrez ${therapists[0].name}, praticienne certifiée en réflexologie et drainage lymphatique à ${spaInfo.address.city}.`,
+    images: [getCanonicalUrl('/images/sylvie.jpg')],
+  },
 }
 
 const values = [

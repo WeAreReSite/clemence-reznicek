@@ -33,6 +33,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: `FAQ - Questions Fréquentes | ${spaInfo.name}`,
+    description: `Trouvez les réponses à vos questions sur les soins de réflexologie et drainage lymphatique à ${spaInfo.address.city}.`,
+    images: [getCanonicalUrl('/images/reflexologie-plantaire.jpeg')],
+  },
 }
 
 export default function FAQPage() {

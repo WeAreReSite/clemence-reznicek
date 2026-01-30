@@ -31,6 +31,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: `Nos Soins | ${spaInfo.name}`,
+    description: `29 soins de bien-être à ${spaInfo.address.city} : réflexologie plantaire, drainage lymphatique manuel, amma assis, beauté des mains.`,
+    images: [getCanonicalUrl('/images/reflexologie-plantaire.jpeg')],
+  },
 }
 
 export default function SoinsPage() {

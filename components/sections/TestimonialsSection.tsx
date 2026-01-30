@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef, useEffect } from "react"
-import { testimonials, spaInfo } from "@/lib/data"
+import { testimonials } from "@/lib/data"
 import {
   Carousel,
   CarouselContent,
@@ -126,9 +126,6 @@ export function TestimonialsSection() {
     return () => ctx.revert()
   }, [])
 
-  // Calculate aggregate rating
-  const averageRating = testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length
-
   // Helper function to convert date format to ISO
   const convertDateToISO = (date: string) => {
     // Convert "2025-08" to "2025-08-01"
@@ -138,27 +135,15 @@ export function TestimonialsSection() {
     return date
   }
 
-  // AggregateRating Schema for rich snippets
-  const aggregateRatingSchema = {
+  // Review Schema - references main HealthAndBeautyBusiness from layout.tsx
+  // Uses @id reference to avoid duplicate LocalBusiness schema
+  const reviewsSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://www.sylviebienetre.fr",
-    name: spaInfo.name,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: averageRating.toFixed(1),
-      bestRating: "5",
-      worstRating: "1",
-      ratingCount: testimonials.length.toString(),
-    },
+    "@type": "HealthAndBeautyBusiness",
+    "@id": "https://syl-vie-bien-etre.fr/",
     review: testimonials.map((testimonial) => ({
       "@type": "Review",
-      "@id": `https://www.sylviebienetre.fr/#review-${testimonial.id}`,
-      itemReviewed: {
-        "@type": "HealthAndBeautyBusiness",
-        "@id": "https://www.sylviebienetre.fr",
-        name: spaInfo.name
-      },
+      "@id": `https://syl-vie-bien-etre.fr/#review-${testimonial.id}`,
       author: {
         "@type": "Person",
         name: testimonial.name,
@@ -176,11 +161,11 @@ export function TestimonialsSection() {
 
   return (
     <section ref={sectionRef} className="section-padding bg-primary text-white relative overflow-hidden">
-      {/* AggregateRating Schema */}
+      {/* Reviews Schema - references main business entity */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(aggregateRatingSchema).replace(/</g, '\\u003c'),
+          __html: JSON.stringify(reviewsSchema).replace(/</g, '\\u003c'),
         }}
       />
       {/* Background Pattern - Decorative circles */}

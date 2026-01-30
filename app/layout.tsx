@@ -27,7 +27,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(getCanonicalUrl('')),
   title: {
-    default: "Syl'Vie Bien-Etre | Réflexologie & Drainage Lymphatique à Pipriac",
+    default: "Syl'Vie Bien-Etre | Reflexologie Pipriac",
     template: "%s | Syl'Vie Bien-Etre",
   },
   keywords: [
@@ -118,6 +118,10 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/images/logo.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#2D5A4A" />
+        {/* Language declaration for French site */}
+        <link rel="alternate" hrefLang="fr-FR" href="https://syl-vie-bien-etre.fr/" />
+        {/* Preload hero LCP image for better performance */}
+        <link rel="preload" as="image" href="/images/hero-bg.jpg" fetchPriority="high" />
         {/* Geo meta tags for local SEO */}
         <meta name="geo.region" content="FR-35" />
         <meta name="geo.placename" content="Pipriac, Bretagne" />

@@ -4,7 +4,7 @@
 
 ---
 **Version:** 2.0
-**Last Updated:** 2026-01-26
+**Last Updated:** 2026-01-29
 **Language:** fr-FR
 **Content-Type:** Business Information / Wellness Services
 ---

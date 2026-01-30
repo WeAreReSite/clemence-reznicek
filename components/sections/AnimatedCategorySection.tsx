@@ -80,10 +80,10 @@ function ExpandableServiceItem({
 
     gsap.fromTo(
       itemRef.current,
-      { opacity: 0, x: -20 },
+      { opacity: 0, y: 20 },
       {
         opacity: 1,
-        x: 0,
+        y: 0,
         duration: 0.6,
         ease: "power3.out",
         scrollTrigger: {
@@ -317,11 +317,11 @@ function RegularCategorySection({
         imageRef.current,
         {
           opacity: 0,
-          x: imageOnRight ? 60 : -60,
+          y: 40,
         },
         {
           opacity: 1,
-          x: 0,
+          y: 0,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {
@@ -339,11 +339,11 @@ function RegularCategorySection({
         contentRef.current,
         {
           opacity: 0,
-          x: imageOnRight ? -40 : 40,
+          y: 30,
         },
         {
           opacity: 1,
-          x: 0,
+          y: 0,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {

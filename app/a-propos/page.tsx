@@ -124,7 +124,7 @@ export default function AboutPage() {
             {/* Content */}
             <div>
               <span className="inline-block text-accent font-medium tracking-widest uppercase text-xs sm:text-sm mb-3 sm:mb-4">
-                Mon Histoire
+                Notre Philosophie
               </span>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 sm:mb-6">
                 Un espace né d&apos;une passion

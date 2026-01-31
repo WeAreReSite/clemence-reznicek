@@ -163,12 +163,11 @@ export function ContactPageClient() {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <div ref={heroContentRef}>
               {/* Eyebrow */}
-              <div className="flex items-center justify-center gap-3 mb-8 opacity-0">
+              <div className="flex justify-center mb-8 opacity-0">
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
                   <Sparkles className="w-4 h-4 text-primary" />
                   <span className="text-primary text-sm font-medium">Bienvenue</span>
                 </div>
-                <div className="h-px w-16 bg-gradient-to-r from-primary/50 to-transparent" />
               </div>
 
               {/* Main Heading - Artistic Typography */}
@@ -196,7 +195,7 @@ export function ContactPageClient() {
           </div>
 
           {/* Full Width Calendly Widget */}
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto pb-8">
             <div className="booking-card bg-card rounded-3xl p-5 sm:p-6 md:p-8 shadow-xl border border-border/50 relative overflow-hidden">
               {/* Decorative Corner */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/5 to-transparent" />

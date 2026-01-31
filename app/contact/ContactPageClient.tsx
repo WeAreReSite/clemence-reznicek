@@ -174,10 +174,7 @@ export function ContactPageClient() {
               {/* Main Heading - Artistic Typography */}
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground mb-6 leading-[0.95] tracking-tight opacity-0">
                 Parlons de
-                <span className="block text-gradient">votre bien-</span>
-                <span className="block">
-                  <span className="text-gradient">être</span>
-                </span>
+                <span className="block text-gradient">votre bien-être</span>
               </h1>
 
               {/* Subtext */}

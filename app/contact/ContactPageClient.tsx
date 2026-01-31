@@ -159,72 +159,69 @@ export function ContactPageClient() {
 
         {/* Content */}
         <div className="container-spa relative z-10 py-20">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start">
-            {/* Left Content */}
-            <div className="min-w-0 w-full max-w-2xl">
-              <div ref={heroContentRef}>
-                {/* Eyebrow */}
-                <div className="flex items-center gap-3 mb-8 opacity-0">
-                  <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-                    <Sparkles className="w-4 h-4 text-primary" />
-                    <span className="text-primary text-sm font-medium">Bienvenue</span>
-                  </div>
-                  <div className="h-px w-16 bg-gradient-to-r from-primary/50 to-transparent" />
+          {/* Header Content */}
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <div ref={heroContentRef}>
+              {/* Eyebrow */}
+              <div className="flex items-center justify-center gap-3 mb-8 opacity-0">
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+                  <Sparkles className="w-4 h-4 text-primary" />
+                  <span className="text-primary text-sm font-medium">Bienvenue</span>
                 </div>
+                <div className="h-px w-16 bg-gradient-to-r from-primary/50 to-transparent" />
+              </div>
 
-                {/* Main Heading - Artistic Typography */}
-                <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground mb-6 leading-[0.95] tracking-tight opacity-0">
-                  Parlons de
-                  <span className="block text-gradient">votre bien-</span>
-                  <span className="block">
-                    <span className="text-gradient">être</span>
-                  </span>
-                </h1>
+              {/* Main Heading - Artistic Typography */}
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground mb-6 leading-[0.95] tracking-tight opacity-0">
+                Parlons de
+                <span className="block text-gradient">votre bien-</span>
+                <span className="block">
+                  <span className="text-gradient">être</span>
+                </span>
+              </h1>
 
-                {/* Subtext */}
-                <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 opacity-0">
-                  Je suis {therapist.name}, praticienne passionnée. Chaque rencontre est
-                  unique, chaque soin est personnalisé pour vous accompagner vers le bien-être.
-                </p>
+              {/* Subtext */}
+              <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 opacity-0">
+                Je suis {therapist.name}, praticienne passionnée. Chaque rencontre est
+                unique, chaque soin est personnalisé pour vous accompagner vers le bien-être.
+              </p>
 
-                {/* Quick Action Link */}
-                <div ref={quickLinksRef} className="flex flex-wrap gap-4">
-                  <Button size="xl" variant="outline" className="group backdrop-blur-sm bg-background/50" asChild>
-                    <a href={`tel:${spaInfo.phone}`}>
-                      <Phone className="w-5 h-5 mr-2 transition-transform group-hover:rotate-12" />
-                      {spaInfo.phone}
-                    </a>
-                  </Button>
-                </div>
+              {/* Quick Action Link */}
+              <div ref={quickLinksRef} className="flex flex-wrap justify-center gap-4">
+                <Button size="xl" variant="outline" className="group backdrop-blur-sm bg-background/50" asChild>
+                  <a href={`tel:${spaInfo.phone}`}>
+                    <Phone className="w-5 h-5 mr-2 transition-transform group-hover:rotate-12" />
+                    {spaInfo.phone}
+                  </a>
+                </Button>
               </div>
             </div>
+          </div>
 
-            {/* Right Content - Calendly Widget */}
-            <div className="min-w-0 w-full">
-              <div className="booking-card bg-card rounded-3xl p-5 sm:p-6 md:p-8 shadow-xl border border-border/50 relative overflow-hidden">
-                {/* Decorative Corner */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/5 to-transparent" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-accent/5 to-transparent" />
+          {/* Full Width Calendly Widget */}
+          <div className="max-w-5xl mx-auto">
+            <div className="booking-card bg-card rounded-3xl p-5 sm:p-6 md:p-8 shadow-xl border border-border/50 relative overflow-hidden">
+              {/* Decorative Corner */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/5 to-transparent" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-accent/5 to-transparent" />
 
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Calendar className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-serif text-xl text-foreground">Prendre rendez-vous</h3>
-                      <p className="text-sm text-muted-foreground">Sélectionnez votre créneau préféré</p>
-                    </div>
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Calendar className="w-5 h-5 text-primary" />
                   </div>
-
-                  <CalendlyWidget
-                    url={spaInfo.calendlyUrl}
-                    backgroundColor="e8777c"
-                    primaryColor="ffffff"
-                    height={500}
-                    className="rounded-xl overflow-hidden"
-                  />
+                  <div>
+                    <h3 className="font-serif text-xl text-foreground">Prendre rendez-vous</h3>
+                    <p className="text-sm text-muted-foreground">Sélectionnez votre créneau préféré</p>
+                  </div>
                 </div>
+
+                <CalendlyWidget
+                  url={spaInfo.calendlyUrl}
+                  primaryColor="ec4d91"
+                  height={700}
+                  className="rounded-xl overflow-hidden"
+                />
               </div>
             </div>
           </div>

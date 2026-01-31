@@ -904,8 +904,7 @@ export const featuredServices = [
 export const spaInfo = {
   name: 'Syl\'Vie Bien-Etre',
   tagline: 'Chouchoutez votre corps, Sublimez vos mains',
-  // TODO: Replace with actual Calendly URL
-  calendlyUrl: 'https://calendly.com/sylviebienetre',
+  calendlyUrl: 'https://calendly.com/sylviebienetre35',
   description: 'Cabinet de drainage lymphatique et réflexologie à Pipriac (35). Un espace cocooning dédié à votre bien-être et sérénité.',
   welcomeText: 'Bienvenue, Je suis Sylvie, fondatrice de Syl\'Vie Bien-Etre, spécialisée en Réflexologie, Drainage Lymphatique Manuel, Amma Assis et Prothésiste Ongulaire. J\'ai créé un espace intimiste et chaleureux pour vous offrir bien plus qu\'une simple prestation : l\'alliance du bien-être et de la beauté. Chaque rendez-vous est un moment unique, je prends le temps de vous écouter et de comprendre vos besoins et vos attentes. Accordez-vous cette parenthèse de sérénité, où écoute, bienveillance et expertise sont au cœur de chaque instant.',
   address: {

@@ -11,6 +11,7 @@ declare global {
         parentElement: HTMLElement
         prefill?: Record<string, unknown>
         utm?: Record<string, unknown>
+        resize?: boolean
       }) => void
     }
   }
@@ -39,8 +40,8 @@ interface CalendlyWidgetProps {
  */
 export function CalendlyWidget({
   url,
-  backgroundColor = "e8777c",
-  primaryColor = "ffffff",
+  backgroundColor = "ffffff",
+  primaryColor = "ec4d91",
   height = 700,
   minWidth = 320,
   className = ""
@@ -76,6 +77,7 @@ export function CalendlyWidget({
         window.Calendly.initInlineWidget({
           url: buildCalendlyUrl(),
           parentElement: container,
+          resize: true, // Auto-resize based on content, prevents internal scrolling
         })
       }
     }
@@ -121,7 +123,7 @@ export function CalendlyWidget({
         ref={containerRef}
         style={{
           minWidth: minWidth ? `min(100%, ${minWidth}px)` : '100%',
-          height: `${height}px`
+          minHeight: `${height}px`, // Use minHeight since resize: true will adjust
         }}
       />
     </div>

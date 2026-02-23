@@ -109,7 +109,7 @@ export default function RootLayout({
         {/* Language declaration for French site */}
         <link rel="alternate" hrefLang="fr-FR" href={getCanonicalUrl('')} />
         {/* Preload hero LCP image for better performance */}
-        <link rel="preload" as="image" href="/images/hero-bg.jpg" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/hero-bg-image.png" fetchPriority="high" />
         {/* Geo meta tags for local SEO */}
         <meta name="geo.region" content="FR-17" />
         <meta name="geo.placename" content="Jonzac, Charente-Maritime" />

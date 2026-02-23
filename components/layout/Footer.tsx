@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react"
 import { spaInfo } from "@/lib/data"
 
@@ -31,22 +30,11 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand Column */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-3 mb-6">
-              <div className="relative w-14 h-14">
-                <Image
-                  src="/images/logo.png"
-                  alt={`${spaInfo.name} - Thérapeute Holistique à ${spaInfo.address.city}`}
-                  fill
-                  sizes="56px"
-                  className="object-contain"
-                />
-              </div>
-              <div>
-                <h2 className="font-serif text-2xl text-white">{spaInfo.name}</h2>
-                <span className="text-[10px] tracking-[0.2em] uppercase text-accent">
-                  {spaInfo.tagline}
-                </span>
-              </div>
+            <Link href="/" className="inline-block mb-6">
+              <h2 className="font-serif text-2xl text-white">{spaInfo.name}</h2>
+              <span className="text-[10px] tracking-[0.2em] uppercase text-accent">
+                {spaInfo.tagline}
+              </span>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-sm">
               {spaInfo.description}

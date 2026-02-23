@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: getCanonicalUrl('/images/hero-background.jpeg'),
+        url: getCanonicalUrl('/images/hero-bg-image.png'),
         width: 1200,
         height: 630,
         alt: `Contact - ${spaInfo.name} à ${spaInfo.address.city}`,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Contact | ${spaInfo.name}`,
     description: `Contactez ${spaInfo.name} à ${spaInfo.address.city}. Téléphone : ${spaInfo.phone}.`,
-    images: [getCanonicalUrl('/images/hero-background.jpeg')],
+    images: [getCanonicalUrl('/images/hero-bg-image.png')],
   },
 }
 

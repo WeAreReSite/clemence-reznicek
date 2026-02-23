@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Phone } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet"
@@ -52,17 +51,7 @@ export function Header() {
       <div className="container-spa">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="relative z-10 flex items-center gap-3">
-            <div className="relative w-10 h-10 md:w-12 md:h-12">
-              <Image
-                src="/images/logo.png"
-                alt={`${spaInfo.name} - Thérapeute Holistique à ${spaInfo.address.city}`}
-                fill
-                sizes="48px"
-                className="object-contain"
-                priority
-              />
-            </div>
+          <Link href="/" className="relative z-10">
             <span className="font-serif text-xl md:text-2xl tracking-wide text-foreground">
               {spaInfo.name}
             </span>

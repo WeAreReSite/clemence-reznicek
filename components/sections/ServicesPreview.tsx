@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Check, Sparkles } from "lucide-react"
-import { featuredServices } from "@/lib/data"
+import { featuredServices, spaInfo } from "@/lib/data"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -184,7 +184,7 @@ export function ServicesPreview() {
                 <div className="card-image absolute inset-0">
                   <Image
                     src={service.image}
-                    alt={`Soin de ${service.title.toLowerCase()} à Pipriac près de Redon - ${service.subtitle} - Syl'Vie Bien-Etre`}
+                    alt={`${service.title} à ${spaInfo.address.city} - ${service.subtitle} - ${spaInfo.name}`}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

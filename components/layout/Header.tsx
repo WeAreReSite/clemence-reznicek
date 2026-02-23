@@ -56,7 +56,7 @@ export function Header() {
             <div className="relative w-10 h-10 md:w-12 md:h-12">
               <Image
                 src="/images/logo.png"
-                alt="Syl'Vie Bien-Etre - Cabinet de réflexologie à Pipriac"
+                alt={`${spaInfo.name} - Thérapeute Holistique à ${spaInfo.address.city}`}
                 fill
                 sizes="48px"
                 className="object-contain"

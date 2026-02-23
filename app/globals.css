@@ -1,55 +1,55 @@
 @import "tailwindcss";
 
-/* ===== Syl'Vie Bien-Etre - Zen & Cocooning Design System ===== */
-/* Feminine, Cocooning, Wellness Palette: Sage Green + Blush Pink */
+/* ===== Clémence Reznicek - Spiritual & Holistic Design System ===== */
+/* Spiritual, Holistic, Warm Palette: Amethyst Purple + Warm Gold */
 
 /* CSS Variables for the Wellness Palette */
 :root {
-  /* Core Colors - Warm, Feminine, Cocooning, Nature-Inspired */
-  --background: #F8F3EF;          /* Warm peachy cream */
-  --foreground: #3D3535;          /* Warm dark brown for depth */
+  /* Core Colors - Spiritual, Holistic, Warm */
+  --background: #F7F3F0;          /* Warm cream with subtle warmth */
+  --foreground: #2E2440;          /* Deep purple-dark */
 
-  /* Primary - Deep Sage Green (rich, grounding, natural) */
-  --primary: #5E7052;             /* Rich forest sage - deeper and warmer */
+  /* Primary - Deep Amethyst Purple (spiritual, grounding) */
+  --primary: #5E4B8B;             /* Rich amethyst */
   --primary-foreground: #FFFFFF;
-  --primary-hover: #4A5A40;       /* Deep moss green */
-  --primary-light: #8A9E7A;       /* Warm sage for backgrounds */
+  --primary-hover: #4A3A70;       /* Deeper amethyst */
+  --primary-light: #8B7AAE;       /* Soft amethyst for backgrounds */
 
-  /* Secondary - Warm Dusty Rose (feminine, cocooning, inviting) */
-  --secondary: #C4918F;           /* Rich dusty rose - more saturated */
+  /* Secondary - Warm Gold (light, warmth, energy) */
+  --secondary: #C9A96E;           /* Rich warm gold */
   --secondary-foreground: #FFFFFF;
-  --secondary-light: #DDBCBA;     /* Warm blush for accents */
-  --secondary-dark: #A87573;      /* Deep rose for hover */
+  --secondary-light: #DEC99A;     /* Soft gold for accents */
+  --secondary-dark: #A88B4E;      /* Deep gold for hover */
 
-  /* Accent - Warm Terracotta Rose (sophisticated warmth) */
-  --accent: #B8907A;              /* Warm terracotta/rose gold */
+  /* Accent - Soft Lavender (ethereal, calming) */
+  --accent: #9B8EC4;              /* Soft lavender purple */
   --accent-foreground: #FFFFFF;
-  --accent-light: #D4BBA8;        /* Soft warm sand */
+  --accent-light: #C4B8D9;        /* Very soft lavender */
 
   /* UI Colors */
-  --muted: #F0E6E0;               /* Warm peachy-pink background */
-  --muted-foreground: #5C4A4A;    /* Warm brown text */
-  --border: #E0D0C8;              /* Warm rose-tinted border */
-  --ring: #5E7052;                /* Match rich sage primary */
+  --muted: #EDE6E0;               /* Warm neutral background */
+  --muted-foreground: #5C4A5E;    /* Purple-tinted muted text */
+  --border: #DDD2CC;              /* Warm neutral border */
+  --ring: #5E4B8B;                /* Match primary */
 
   /* Card & Overlay */
-  --card: #FFFCFA;                /* Warm off-white */
-  --card-foreground: #3D3535;     /* Warm dark brown for readability */
-  --popover: #FFFCFA;
-  --popover-foreground: #3D3535;
+  --card: #FFFBF8;                /* Warm off-white */
+  --card-foreground: #2E2440;     /* Deep purple-dark */
+  --popover: #FFFBF8;
+  --popover-foreground: #2E2440;
 
   /* Destructive */
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
 
   /* Radius */
-  --radius: 0.75rem;              /* Slightly more rounded for softness */
+  --radius: 0.75rem;
 
-  /* Shadows - Softer, pink-tinted */
-  --shadow-sm: 0 1px 2px 0 rgb(201 168 154 / 0.05);
-  --shadow: 0 1px 3px 0 rgb(201 168 154 / 0.08), 0 1px 2px -1px rgb(201 168 154 / 0.08);
-  --shadow-md: 0 4px 6px -1px rgb(201 168 154 / 0.08), 0 2px 4px -2px rgb(201 168 154 / 0.08);
-  --shadow-lg: 0 10px 15px -3px rgb(201 168 154 / 0.1), 0 4px 6px -4px rgb(201 168 154 / 0.1);
+  /* Shadows - Purple-tinted for cohesion */
+  --shadow-sm: 0 1px 2px 0 rgb(94 75 139 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(94 75 139 / 0.08), 0 1px 2px -1px rgb(94 75 139 / 0.08);
+  --shadow-md: 0 4px 6px -1px rgb(94 75 139 / 0.08), 0 2px 4px -2px rgb(94 75 139 / 0.08);
+  --shadow-lg: 0 10px 15px -3px rgb(94 75 139 / 0.1), 0 4px 6px -4px rgb(94 75 139 / 0.1);
 }
 
 /* Tailwind v4 Theme Configuration */
@@ -258,17 +258,17 @@ html::-webkit-scrollbar {
 /* Gradient Overlays */
 .gradient-overlay {
   background: linear-gradient(180deg,
-    rgba(248, 243, 239, 0) 0%,
-    rgba(248, 243, 239, 0.8) 50%,
-    rgba(248, 243, 239, 1) 100%
+    rgba(247, 243, 240, 0) 0%,
+    rgba(247, 243, 240, 0.8) 50%,
+    rgba(247, 243, 240, 1) 100%
   );
 }
 
 .gradient-hero {
   background: linear-gradient(135deg,
-    rgba(94, 112, 82, 0.4) 0%,
-    rgba(94, 112, 82, 0.25) 50%,
-    rgba(196, 145, 143, 0.3) 100%
+    rgba(94, 75, 139, 0.4) 0%,
+    rgba(94, 75, 139, 0.25) 50%,
+    rgba(201, 169, 110, 0.3) 100%
   );
 }
 

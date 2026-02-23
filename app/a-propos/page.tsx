@@ -10,29 +10,29 @@ import { Award, Heart, Leaf, Users, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "À Propos",
-  description: `Rencontrez ${therapists[0].name}, ${therapists[0].title} à ${spaInfo.address.city}. Formée en réflexologie plantaire, drainage lymphatique et prothésie ongulaire. Cabinet en Bretagne.`,
+  description: `Découvrez ${therapists[0].name}, thérapeute holistique et médium à ${spaInfo.address.city}, Charente-Maritime. Spécialités : soins énergétiques, constellations familiales, coaching, massages, décodage biologique.`,
   alternates: {
     canonical: getCanonicalUrl('/a-propos'),
   },
   openGraph: {
     title: `À Propos | ${spaInfo.name}`,
-    description: `Découvrez ${therapists[0].name}, praticienne certifiée en réflexologie et drainage lymphatique à ${spaInfo.address.city}. Formations, valeurs et parcours.`,
+    description: `Découvrez ${therapists[0].name}, thérapeute holistique et médium à ${spaInfo.address.city}. Soins énergétiques, constellations familiales, coaching, massages et décodage biologique.`,
     url: getCanonicalUrl('/a-propos'),
     type: "profile",
     images: [
       {
-        url: getCanonicalUrl('/images/sylvie.jpg'),
+        url: getCanonicalUrl('/images/clemence-reznicek.jpeg'),
         width: 1200,
         height: 630,
-        alt: `${therapists[0].name} - Praticienne en réflexologie`,
+        alt: `${therapists[0].name} - Thérapeute Holistique & Médium à ${spaInfo.address.city}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: `À Propos | ${spaInfo.name}`,
-    description: `Découvrez ${therapists[0].name}, praticienne certifiée en réflexologie et drainage lymphatique à ${spaInfo.address.city}.`,
-    images: [getCanonicalUrl('/images/sylvie.jpg')],
+    description: `Découvrez ${therapists[0].name}, thérapeute holistique et médium à ${spaInfo.address.city}. Soins énergétiques, constellations familiales, coaching et massages.`,
+    images: [getCanonicalUrl('/images/clemence-reznicek.jpeg')],
   },
 }
 
@@ -41,34 +41,35 @@ const values = [
     icon: Heart,
     title: "Bienveillance",
     description:
-      "Chaque client est unique. Je prends le temps d'écouter vos besoins pour créer une expérience sur mesure.",
+      "Chaque personne est unique. Je crée un espace de confiance et d\u2019écoute pour vous accompagner avec douceur et respect.",
   },
   {
     icon: Award,
-    title: "Excellence",
+    title: "Expertise",
     description:
-      "Formée dans les meilleurs centres de Bretagne et en formation continue pour vous offrir des soins de qualité.",
+      "Formée depuis 2010 en thérapies holistiques, je combine de multiples disciplines pour une approche globale et personnalisée.",
   },
   {
     icon: Leaf,
-    title: "Naturalité",
+    title: "Globalité",
     description:
-      "Je sélectionne avec soin des produits de qualité professionnelle pour respecter votre corps.",
+      "J\u2019aborde l\u2019être dans sa totalité : physique, émotionnel, mental et spirituel, pour une transformation durable.",
   },
   {
     icon: Users,
     title: "Authenticité",
     description:
-      "Je cultive des relations sincères avec mes clients, basées sur la confiance et le respect mutuel.",
+      "Je cultive des relations sincères, basées sur la transparence et l\u2019écoute profonde de ce qui se joue en vous.",
   },
 ]
 
 const milestones = [
-  { year: "Formation", title: "Réflexologie Bretagne", description: "Formation en Réflexologie Plantaire, Palmaire, Pédiatrique et Bol Kansu à Pleugeuneuc." },
-  { year: "Formation", title: "Zensphère", description: "Formation en Drainage Lymphatique Manuel, Réflexologie Abdominale, Faciale et Crânienne, Amma Assis à Pacé." },
-  { year: "Formation", title: "Prothésie Ongulaire", description: "Formation auprès d'Anaïs Abaakil à Rennes." },
-  { year: "2025", title: "Syl'Vie Bien-Etre", description: "Ouverture du cabinet à Pipriac, un espace intimiste dédié au bien-être." },
-  { year: "2026", title: "Excellence", description: "5 étoiles sur Google avec 8 avis clients enthousiastes." },
+  { year: "2010", title: "Constellations Familiales", description: "Certification en Constellations Familiales et Systémiques." },
+  { year: "2017", title: "Début de l\u2019activité", description: "Ouverture du cabinet de thérapie holistique à Jonzac." },
+  { year: "2018", title: "Massage Aromatouch\u00AE", description: "Certification en massage aux huiles essentielles Aromatouch\u00AE." },
+  { year: "2022", title: "Massage des 5 Continents\u00AE", description: "Diplôme en Massage des 5 Continents\u00AE, un voyage sensoriel unique." },
+  { year: "2023", title: "Décodage Echoquantique", description: "Certification en décodage Echoquantique, approche quantique innovante." },
+  { year: "2025", title: "Ennéagramme", description: "Formation à l\u2019Ennéagramme pour enrichir l\u2019accompagnement." },
 ]
 
 export default function AboutPage() {
@@ -82,17 +83,17 @@ export default function AboutPage() {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     name: `À Propos - ${spaInfo.name}`,
-    description: `Découvrez ${therapists[0].name}, praticienne certifiée en réflexologie et drainage lymphatique à ${spaInfo.address.city}. Formations, valeurs et parcours.`,
+    description: `Découvrez ${therapists[0].name}, thérapeute holistique et médium à ${spaInfo.address.city}. Soins énergétiques, constellations familiales, coaching, massages et décodage biologique.`,
     url: getCanonicalUrl('/a-propos'),
     isPartOf: {
       "@id": getCanonicalUrl('/#website')
     },
     about: {
-      "@id": getCanonicalUrl('/#sylvie-lebordais')
+      "@id": getCanonicalUrl('/#clemence-reznicek')
     },
     mainEntity: {
       "@type": "Person",
-      "@id": getCanonicalUrl('/#sylvie-lebordais'),
+      "@id": getCanonicalUrl('/#clemence-reznicek'),
       name: therapists[0].name,
       jobTitle: therapists[0].title,
       description: therapists[0].bio,
@@ -100,11 +101,12 @@ export default function AboutPage() {
         "@id": getCanonicalUrl('')
       },
       knowsAbout: [
-        "Réflexologie Plantaire",
-        "Drainage Lymphatique Manuel",
-        "Réflexologie Abdominale",
-        "Amma Assis",
-        "Prothésie Ongulaire"
+        "Médiumnité",
+        "Constellations Familiales",
+        "Soins Énergétiques",
+        "Massage des 5 Continents",
+        "Décodage Biologique",
+        "Coaching"
       ]
     }
   }
@@ -124,26 +126,25 @@ export default function AboutPage() {
             {/* Content */}
             <div>
               <span className="inline-block text-accent font-medium tracking-widest uppercase text-xs sm:text-sm mb-3 sm:mb-4">
-                Notre Philosophie
+                Mon Approche
               </span>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 sm:mb-6">
-                Un espace né d&apos;une passion
+                Un espace dédié à votre transformation
               </h1>
               <div className="space-y-3 sm:space-y-4 text-muted-foreground text-sm sm:text-base lg:text-lg leading-relaxed">
                 <p>
-                  Bienvenue chez Syl&apos;Vie Bien-Etre. Je suis Sylvie, fondatrice de cet espace
-                  dédié à votre bien-être, spécialisée en Réflexologie, Drainage Lymphatique
-                  Manuel, Amma Assis et Prothésiste Ongulaire.
+                  Bienvenue, je suis {therapists[0].name}, thérapeute holistique
+                  et médium à {spaInfo.address.city}.
                 </p>
                 <p>
-                  J&apos;ai créé un espace intimiste et chaleureux pour vous offrir bien plus
-                  qu&apos;une simple prestation : l&apos;alliance du bien-être et de la beauté.
-                  Chaque rendez-vous est un moment unique.
+                  Depuis 2017, j&apos;accompagne les personnes en quête de sens,
+                  de paix ou de transformation à travers une approche globale
+                  centrée sur l&apos;écoute, le bien-être et la reconnexion à soi.
                 </p>
                 <p>
-                  Je prends le temps de vous écouter et de comprendre vos besoins et vos attentes.
-                  Accordez-vous cette parenthèse de sérénité, où écoute, bienveillance et
-                  expertise sont au cœur de chaque instant.
+                  Mon cabinet est un espace de confiance et de bienveillance où
+                  chaque séance est un moment unique, adapté à vos besoins et à
+                  votre rythme.
                 </p>
               </div>
             </div>
@@ -154,8 +155,8 @@ export default function AboutPage() {
                 <div className="space-y-3 sm:space-y-4">
                   <div className="aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/bol-kansu.jpeg"
-                      alt="Massage Bol Kansu ayurvédique à Pipriac - Syl'Vie Bien-Etre"
+                      src="/images/soin-energetique.jpeg"
+                      alt={`Soin énergétique par ${therapists[0].name} à ${spaInfo.address.city}`}
                       width={400}
                       height={533}
                       className="object-cover w-full h-full"
@@ -165,8 +166,8 @@ export default function AboutPage() {
                 <div className="space-y-3 sm:space-y-4 pt-6 sm:pt-8">
                   <div className="aspect-square rounded-xl sm:rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/reflexologie-abdominale.jpeg"
-                      alt="Réflexologie abdominale Qi Nei Tsang près de Redon"
+                      src="/images/constellation-familiale.jpeg"
+                      alt={`Constellation familiale avec ${therapists[0].name} à ${spaInfo.address.city}`}
                       width={400}
                       height={400}
                       className="object-cover w-full h-full"
@@ -174,8 +175,8 @@ export default function AboutPage() {
                   </div>
                   <div className="aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/reflexologie-faciale-et-cranienne.jpeg"
-                      alt="Soin réflexologie faciale et crânienne à Pipriac"
+                      src="/images/coaching.jpeg"
+                      alt={`Coaching et accompagnement holistique à ${spaInfo.address.city}`}
                       width={400}
                       height={300}
                       className="object-cover w-full h-full"
@@ -189,17 +190,17 @@ export default function AboutPage() {
               <div className="hidden sm:block absolute -bottom-8 left-1/2 -translate-x-1/2 bg-primary text-white p-5 sm:p-6 rounded-xl shadow-lg">
                 <div className="flex items-center gap-6 sm:gap-8">
                   <div className="text-center">
-                    <div className="font-serif text-2xl sm:text-3xl text-accent">29</div>
+                    <div className="font-serif text-2xl sm:text-3xl text-accent">16</div>
                     <div className="text-xs sm:text-sm text-white/70">soins</div>
                   </div>
                   <div className="h-10 sm:h-12 w-px bg-white/20" />
                   <div className="text-center">
-                    <div className="font-serif text-2xl sm:text-3xl">8</div>
+                    <div className="font-serif text-2xl sm:text-3xl">24</div>
                     <div className="text-xs sm:text-sm text-white/70">avis</div>
                   </div>
                   <div className="h-10 sm:h-12 w-px bg-white/20" />
                   <div className="text-center">
-                    <div className="font-serif text-2xl sm:text-3xl text-accent">5.0</div>
+                    <div className="font-serif text-2xl sm:text-3xl text-accent">4.9</div>
                     <div className="text-xs sm:text-sm text-white/70">étoiles</div>
                   </div>
                 </div>
@@ -210,17 +211,17 @@ export default function AboutPage() {
             <div className="sm:hidden mt-6 bg-primary text-white p-4 rounded-xl shadow-lg">
               <div className="flex items-center justify-around">
                 <div className="text-center">
-                  <div className="font-serif text-2xl text-accent">29</div>
+                  <div className="font-serif text-2xl text-accent">16</div>
                   <div className="text-xs text-white/70">soins</div>
                 </div>
                 <div className="h-10 w-px bg-white/20" />
                 <div className="text-center">
-                  <div className="font-serif text-2xl">8</div>
+                  <div className="font-serif text-2xl">24</div>
                   <div className="text-xs text-white/70">avis</div>
                 </div>
                 <div className="h-10 w-px bg-white/20" />
                 <div className="text-center">
-                  <div className="font-serif text-2xl text-accent">5.0</div>
+                  <div className="font-serif text-2xl text-accent">4.9</div>
                   <div className="text-xs text-white/70">étoiles</div>
                 </div>
               </div>
@@ -327,8 +328,8 @@ export default function AboutPage() {
               Des mains expertes à votre service
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Formée auprès des meilleurs centres de formation en Bretagne,
-              je combine expertise technique et sensibilité humaine.
+              Formée en thérapies holistiques depuis 2010, je combine expertise
+              intuitive et approches multidimensionnelles.
             </p>
           </div>
 
@@ -342,7 +343,7 @@ export default function AboutPage() {
                 <div className="relative h-72">
                   <Image
                     src={therapist.image}
-                    alt="Sylvie praticienne certifiée en réflexologie et drainage lymphatique à Pipriac - Syl'Vie Bien-Etre"
+                    alt={`${therapist.name}, ${therapist.title} à ${spaInfo.address.city}`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover"
@@ -391,13 +392,17 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-white/80 leading-relaxed">
                 <p>
-                  Ma passion pour le bien-être m&apos;a amenée à me former auprès des meilleurs
-                  centres de formation en Bretagne. J&apos;ai obtenu mes certifications en
-                  Réflexologie, Drainage Lymphatique Manuel et Prothésie Ongulaire.
+                  Depuis 2010, ma passion pour le bien-être et la compréhension de
+                  l&apos;être humain m&apos;a amenée à me former en thérapies
+                  holistiques auprès de multiples écoles et formateurs. Constellations
+                  Familiales, Massage Aromatouch&reg;, Massage des 5 Continents&reg;,
+                  Décodage Echoquantique, Ennéagramme : chaque certification enrichit
+                  mon approche globale.
                 </p>
                 <p>
-                  Chaque soin que je propose est le fruit d&apos;un apprentissage rigoureux
-                  et d&apos;une pratique attentive, toujours au service de votre bien-être.
+                  Chaque soin que je propose est le fruit d&apos;un apprentissage
+                  rigoureux et d&apos;une pratique attentive, toujours au service de
+                  votre transformation et de votre bien-être.
                 </p>
               </div>
               <div className="mt-8">
@@ -412,16 +417,16 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/10 rounded-xl p-6 text-center">
-                <div className="font-serif text-4xl text-accent mb-2">3</div>
-                <div className="text-white/70 text-sm">centres de formation</div>
+                <div className="font-serif text-4xl text-accent mb-2">6</div>
+                <div className="text-white/70 text-sm">certifications</div>
               </div>
               <div className="bg-white/10 rounded-xl p-6 text-center">
-                <div className="font-serif text-4xl mb-2">29</div>
+                <div className="font-serif text-4xl mb-2">16</div>
                 <div className="text-white/70 text-sm">soins proposés</div>
               </div>
               <div className="bg-white/10 rounded-xl p-6 text-center">
-                <div className="font-serif text-4xl text-accent mb-2">5.0</div>
-                <div className="text-white/70 text-sm">étoiles Google</div>
+                <div className="font-serif text-4xl text-accent mb-2">4.9</div>
+                <div className="text-white/70 text-sm">étoiles Resalib</div>
               </div>
               <div className="bg-white/10 rounded-xl p-6 text-center">
                 <div className="font-serif text-4xl mb-2">100%</div>

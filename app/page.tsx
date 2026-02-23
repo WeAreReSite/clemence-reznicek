@@ -9,15 +9,15 @@ import { spaInfo, therapists } from "@/lib/data"
 import { getCanonicalUrl } from "@/lib/utils"
 
 export const metadata: Metadata = {
-  title: `${spaInfo.name} | Réflexologie & Drainage Lymphatique à ${spaInfo.address.city}`,
+  title: `${spaInfo.name} | Thérapeute Holistique & Médium à ${spaInfo.address.city}`,
   description:
-    `Cabinet de réflexologie et bien-être à ${spaInfo.address.city} (${spaInfo.address.postalCode}). ${therapists[0].name}, praticienne formée en réflexologie et drainage lymphatique, vous propose des soins personnalisés près de Redon.`,
+    `Cabinet de thérapie holistique à ${spaInfo.address.city} (${spaInfo.address.postalCode}). ${therapists[0].name}, thérapeute holistique et médium, vous propose soins énergétiques, constellations familiales, coaching et massages en Charente-Maritime.`,
   alternates: {
     canonical: getCanonicalUrl(''),
   },
   openGraph: {
-    title: `${spaInfo.name} | Réflexologie & Drainage Lymphatique à ${spaInfo.address.city}`,
-    description: `Cabinet de réflexologie et bien-être à ${spaInfo.address.city}. ${therapists[0].name}, praticienne certifiée, propose réflexologie plantaire, drainage lymphatique manuel, amma assis et beauté des mains.`,
+    title: `${spaInfo.name} | Thérapeute Holistique & Médium à ${spaInfo.address.city}`,
+    description: `Cabinet de thérapie holistique à ${spaInfo.address.city}. ${therapists[0].name} propose soins énergétiques, constellations familiales, coaching, massages et décodage biologique.`,
     url: getCanonicalUrl(''),
     type: "website",
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: getCanonicalUrl('/images/logo.png'),
         width: 1200,
         height: 630,
-        alt: `${spaInfo.name} - Cabinet de Réflexologie à ${spaInfo.address.city}`,
+        alt: `${spaInfo.name} - Thérapeute Holistique à ${spaInfo.address.city}`,
       },
     ],
   },

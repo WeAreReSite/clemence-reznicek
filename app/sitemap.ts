@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.sylviebienetre.fr'
+  const baseUrl = 'https://www.formationquantique.fr'
 
   // Static pages that actually exist in the app directory
   const staticPages: MetadataRoute.Sitemap = [

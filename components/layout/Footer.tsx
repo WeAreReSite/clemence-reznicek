@@ -5,10 +5,10 @@ import { spaInfo } from "@/lib/data"
 
 const footerLinks = {
   soins: [
-    { name: "Réflexologie Plantaire Pipriac", href: "/soins#reflexologie" },
-    { name: "Drainage Lymphatique Pipriac & Redon", href: "/soins#drainage" },
-    { name: "Amma Assis", href: "/soins#amma" },
-    { name: "Beauté des Mains", href: "/soins#beaute-mains" },
+    { name: "Soins Énergétiques", href: "/soins#soins-energetiques" },
+    { name: "Constellations Familiales", href: "/soins#constellations" },
+    { name: "Coaching & Accompagnement", href: "/soins#coaching" },
+    { name: "Massages Bien-Être", href: "/soins#massages" },
     { name: "Tous nos soins", href: "/soins" },
   ],
   informations: [
@@ -35,7 +35,7 @@ export function Footer() {
               <div className="relative w-14 h-14">
                 <Image
                   src="/images/logo.png"
-                  alt="Syl'Vie Bien-Etre - Cabinet de réflexologie à Pipriac"
+                  alt={`${spaInfo.name} - Thérapeute Holistique à ${spaInfo.address.city}`}
                   fill
                   sizes="56px"
                   className="object-contain"
@@ -56,8 +56,8 @@ export function Footer() {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1 text-xs text-white/60">
                 <span className="text-accent">★</span>
-                <span>5/5</span>
-                <span className="text-white/40">Google (8 avis)</span>
+                <span>4.9/5</span>
+                <span className="text-white/40">Resalib (24 avis)</span>
               </div>
             </div>
           </div>
@@ -171,11 +171,10 @@ export function Footer() {
           <div className="text-center">
             <h3 className="font-serif text-lg text-white mb-3">Zone d&apos;Intervention</h3>
             <p className="text-white/70 text-sm max-w-3xl mx-auto">
-              Cabinet situé à <strong className="text-white">Pipriac (35550)</strong>,
-              facilement accessible depuis <strong className="text-white">Redon</strong> (15km).
-              Nous accueillons des clients de toute <strong className="text-white">l&apos;Ille-et-Vilaine</strong> et
-              la <strong className="text-white">Bretagne</strong> dans un rayon de 30km :
-              Guipry-Messac, Bain-de-Bretagne, Guer et communes environnantes.
+              Cabinet situé à <strong className="text-white">{spaInfo.address.city} ({spaInfo.address.postalCode})</strong>,
+              en <strong className="text-white">Charente-Maritime</strong>.
+              Consultations en présentiel et à distance (visio) pour toute la <strong className="text-white">Nouvelle-Aquitaine</strong> :
+              Saintes, Cognac, Royan, Pons et communes environnantes dans un rayon de 40km.
             </p>
           </div>
         </div>

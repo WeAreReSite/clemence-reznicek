@@ -27,66 +27,54 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(getCanonicalUrl('')),
   title: {
-    default: "Syl'Vie Bien-Etre | Reflexologie Pipriac",
-    template: "%s | Syl'Vie Bien-Etre",
+    default: "Clémence Reznicek | Thérapeute Holistique Jonzac",
+    template: "%s | Clémence Reznicek",
   },
   keywords: [
-    // Tier 1 - PRIMARY target keywords
-    "drainage lymphatique Redon",
-    "drainage lymphatique Pipriac",
-    "drainage lymphatique Ille-et-Vilaine",
-    // Tier 2 - SECONDARY target keywords
-    "réflexologie plantaire Pipriac",
-    "réflexologue Redon",
-    "massage bien-être Pipriac",
-    // Tier 3 - LONG-TAIL/GEO target keywords
-    "drainage lymphatique jambes lourdes Bretagne",
-    "massage drainage cellulite Redon",
-    "soins bien-être Pipriac Redon",
-    // Existing keywords - maintaining current coverage
-    "réflexologie Pipriac",
-    "bien-être Pipriac",
-    "massage Pipriac",
-    "réflexologie Ille-et-Vilaine",
-    "drainage lymphatique Bretagne",
-    "réflexologie abdominale Pipriac",
-    "amma assis Pipriac",
-    "prothésiste ongulaire Pipriac",
-    "beauté des mains Pipriac",
-    "réflexologie 35550",
-    "massage bien-être Bretagne",
-    "drainage lymphatique manuel Bretagne",
-    "drainage lymphatique jambes lourdes",
-    "Sylvie Lebordais",
-    "réflexologie Redon",
-    "bien-être Redon",
+    "thérapeute holistique Jonzac",
+    "soins énergétiques Jonzac",
+    "constellations familiales Jonzac",
+    "constellations familiales Charente-Maritime",
+    "coaching holistique Jonzac",
+    "massage 5 continents Jonzac",
+    "décodage biologique Jonzac",
+    "médium Jonzac",
+    "LaHoChi Jonzac",
+    "magnétisme Jonzac",
+    "thérapeute holistique Charente-Maritime",
+    "bien-être Jonzac",
+    "soins énergétiques Charente-Maritime",
+    "Clémence Reznicek",
+    "formation quantique",
+    "massage bien-être Jonzac",
+    "constellation familiale Nouvelle-Aquitaine",
   ],
-  description: "Cabinet de réflexologie et bien-être à Pipriac (35550). Sylvie Lebordais, praticienne certifiée, vous propose drainage lymphatique, réflexologie plantaire et beauté des mains près de Redon.",
-  authors: [{ name: "Sylvie Lebordais - Syl'Vie Bien-Etre" }],
-  creator: "Syl'Vie Bien-Etre",
-  publisher: "Syl'Vie Bien-Etre",
+  description: "Cabinet de thérapie holistique à Jonzac (17500). Clémence Reznicek, thérapeute holistique et médium, vous propose soins énergétiques, constellations familiales, coaching et massages en Charente-Maritime.",
+  authors: [{ name: "Clémence Reznicek - Formation Quantique" }],
+  creator: "Clémence Reznicek",
+  publisher: "Clémence Reznicek",
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: getCanonicalUrl(''),
-    siteName: "Syl'Vie Bien-Etre",
-    title: "Syl'Vie Bien-Etre | Réflexologie & Drainage Lymphatique à Pipriac",
+    siteName: "Clémence Reznicek - Thérapeute Holistique",
+    title: "Clémence Reznicek | Thérapeute Holistique & Médium à Jonzac",
     description:
-      "Cabinet de réflexologie et bien-être à Pipriac (Bretagne). Réflexologie plantaire, drainage lymphatique manuel, amma assis et beauté des mains par Sylvie Lebordais.",
+      "Cabinet de thérapie holistique à Jonzac (17500). Soins énergétiques, constellations familiales, coaching holistique et massages bien-être par Clémence Reznicek en Charente-Maritime.",
     images: [
       {
         url: getCanonicalUrl('/images/logo.png'),
         width: 1200,
         height: 630,
-        alt: "Syl'Vie Bien-Etre - Cabinet de Réflexologie à Pipriac",
+        alt: "Clémence Reznicek - Thérapeute Holistique & Médium à Jonzac",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Syl'Vie Bien-Etre | Réflexologie & Drainage Lymphatique à Pipriac",
+    title: "Clémence Reznicek | Thérapeute Holistique & Médium à Jonzac",
     description:
-      "Cabinet de réflexologie et bien-être à Pipriac (Bretagne). Réflexologie plantaire, drainage lymphatique manuel, amma assis et beauté des mains.",
+      "Cabinet de thérapie holistique à Jonzac (17500). Soins énergétiques, constellations familiales, coaching holistique et massages bien-être en Charente-Maritime.",
     images: [getCanonicalUrl('/images/logo.png')],
   },
   robots: {
@@ -117,16 +105,16 @@ export default function RootLayout({
         <link rel="icon" href="/images/logo.png" sizes="any" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#2D5A4A" />
+        <meta name="theme-color" content="#5E4B8B" />
         {/* Language declaration for French site */}
         <link rel="alternate" hrefLang="fr-FR" href={getCanonicalUrl('')} />
         {/* Preload hero LCP image for better performance */}
         <link rel="preload" as="image" href="/images/hero-bg.jpg" fetchPriority="high" />
         {/* Geo meta tags for local SEO */}
-        <meta name="geo.region" content="FR-35" />
-        <meta name="geo.placename" content="Pipriac, Bretagne" />
-        <meta name="geo.position" content="47.7656;-1.9494" />
-        <meta name="ICBM" content="47.7656, -1.9494" />
+        <meta name="geo.region" content="FR-17" />
+        <meta name="geo.placename" content="Jonzac, Charente-Maritime" />
+        <meta name="geo.position" content="45.4464;-0.4353" />
+        <meta name="ICBM" content="45.4464, -0.4353" />
       </head>
       <body className="font-sans antialiased bg-background text-foreground overflow-x-clip">
         <SmoothScrollProvider>
@@ -145,43 +133,37 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HealthAndBeautyBusiness",
-              name: "Syl'Vie Bien-Etre",
+              name: "Clémence Reznicek",
               "@id": getCanonicalUrl(''),
               url: getCanonicalUrl(''),
-              telephone: "+33613648705",
-              email: "sylviebienetre35@gmail.com",
+              telephone: "+33632185259",
+              email: "formationquantique111@gmail.com",
               priceRange: "€€",
               image: getCanonicalUrl('/images/logo.png'),
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "1B Rue du Général de Gaulle",
-                addressLocality: "Pipriac",
-                addressRegion: "Bretagne",
-                postalCode: "35550",
+                streetAddress: "5 avenue Chanzy",
+                addressLocality: "Jonzac",
+                addressRegion: "Nouvelle-Aquitaine",
+                postalCode: "17500",
                 addressCountry: "FR",
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: 47.7656,
-                longitude: -1.9494,
+                latitude: 45.4464,
+                longitude: -0.4353,
               },
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
                   dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
                   opens: "09:00",
-                  closes: "20:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "Saturday",
-                  opens: "09:00",
-                  closes: "13:00",
+                  closes: "18:30",
                 },
               ],
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "5.0",
+                ratingValue: "4.9",
                 reviewCount: testimonials.length.toString(),
                 bestRating: "5",
               },
@@ -205,83 +187,83 @@ export default function RootLayout({
               ],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
-                name: "Services de Bien-Être",
+                name: "Services de Thérapie Holistique",
                 itemListElement: [
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Réflexologie Plantaire",
-                      description: "Massage des pieds d'origine chinoise pour rééquilibrer votre corps",
-                      areaServed: ["Pipriac", "Redon", "Ille-et-Vilaine"]
+                      name: "Soins Énergétiques",
+                      description: "LaHoChi, magnétisme et soins énergétiques pour rééquilibrer vos énergies",
+                      areaServed: ["Jonzac", "Saintes", "Charente-Maritime"]
                     },
                   },
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Drainage Lymphatique Manuel",
-                      description: "Massage doux pour éliminer les toxines et soulager les jambes lourdes",
-                      areaServed: ["Pipriac", "Redon", "Ille-et-Vilaine"]
+                      name: "Constellations Familiales",
+                      description: "Constellations familiales et systémiques pour libérer les mémoires transgénérationnelles",
+                      areaServed: ["Jonzac", "Saintes", "Charente-Maritime"]
                     },
                   },
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Réflexologie Abdominale (Qi Nei Tsang)",
-                      description: "Massage du ventre pour libérer les tensions du second cerveau",
-                      areaServed: ["Pipriac", "Redon", "Ille-et-Vilaine"]
+                      name: "Coaching & Accompagnement",
+                      description: "Coaching holistique et accompagnement personnalisé vers votre transformation intérieure",
+                      areaServed: ["Jonzac", "Saintes", "Charente-Maritime"]
                     },
                   },
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Amma Assis",
-                      description: "Massage japonais sur chaise ergonomique pour relaxation rapide",
-                      areaServed: ["Pipriac", "Redon", "Ille-et-Vilaine"]
+                      name: "Massages Bien-Être",
+                      description: "Massage des 5 continents et Aromatouch pour une détente profonde du corps et de l'esprit",
+                      areaServed: ["Jonzac", "Saintes", "Charente-Maritime"]
                     },
                   },
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Beauté des Mains - Prothésiste Ongulaire",
-                      description: "Extension en gel, remplissage et soins des ongles",
-                      areaServed: ["Pipriac", "Redon", "Ille-et-Vilaine"]
+                      name: "Décodage & Exploration Intérieure",
+                      description: "Décodage biologique et echoquantique pour comprendre les messages de votre corps",
+                      areaServed: ["Jonzac", "Saintes", "Charente-Maritime"]
                     },
                   },
                 ],
               },
               founder: {
                 "@type": "Person",
-                "@id": getCanonicalUrl('/#sylvie-lebordais'),
-                name: "Sylvie Lebordais",
-                jobTitle: "Praticienne en Réflexologie et Bien-Être",
+                "@id": getCanonicalUrl('/#clemence-reznicek'),
+                name: "Clémence Reznicek",
+                jobTitle: "Thérapeute Holistique & Médium",
               },
               areaServed: [
                 {
                   "@type": "City",
-                  name: "Pipriac",
-                  addressRegion: "Bretagne",
-                  postalCode: "35550",
+                  name: "Jonzac",
+                  addressRegion: "Nouvelle-Aquitaine",
+                  postalCode: "17500",
                   addressCountry: "FR"
                 },
                 {
                   "@type": "City",
-                  name: "Redon",
-                  addressRegion: "Bretagne",
+                  name: "Saintes",
+                  addressRegion: "Nouvelle-Aquitaine",
                   addressCountry: "FR"
                 },
                 {
                   "@type": "AdministrativeArea",
-                  name: "Ille-et-Vilaine",
+                  name: "Charente-Maritime",
                   addressCountry: "FR"
                 },
                 {
                   "@type": "AdministrativeArea",
-                  name: "Bretagne",
+                  name: "Nouvelle-Aquitaine",
                   addressCountry: "FR"
                 }
               ],
@@ -289,27 +271,25 @@ export default function RootLayout({
                 "@type": "GeoCircle",
                 geoMidpoint: {
                   "@type": "GeoCoordinates",
-                  latitude: 47.7656,
-                  longitude: -1.9494,
+                  latitude: 45.4464,
+                  longitude: -0.4353,
                 },
-                geoRadius: "30000",
-                description: "Rayon de 30km autour de Pipriac incluant Redon et environs"
+                geoRadius: "40000",
+                description: "Rayon de 40km autour de Jonzac incluant Saintes et environs"
               },
               knowsAbout: [
-                "drainage lymphatique manuel",
-                "drainage lymphatique Vodder",
-                "drainage lymphatique Leduc",
-                "réflexologie plantaire",
-                "réflexologie palmaire",
-                "réflexologie abdominale",
-                "réflexologie faciale",
-                "jambes lourdes",
-                "cellulite",
-                "bien-être",
-                "massage thérapeutique",
-                "Qi Nei Tsang",
-                "Amma assis",
-                "détoxification"
+                "soins énergétiques",
+                "LaHoChi",
+                "magnétisme",
+                "constellations familiales",
+                "coaching holistique",
+                "massage des 5 continents",
+                "aromatouch",
+                "décodage biologique",
+                "décodage echoquantique",
+                "méditation",
+                "aromatologie",
+                "médiumnité"
               ],
             }).replace(/</g, '\\u003c'),
           }}
@@ -324,8 +304,8 @@ export default function RootLayout({
               "@type": "WebSite",
               "@id": getCanonicalUrl('/#website'),
               url: getCanonicalUrl(''),
-              name: "Syl'Vie Bien-Etre",
-              description: "Cabinet de réflexologie et bien-être à Pipriac, Bretagne. Réflexologie plantaire, drainage lymphatique manuel, amma assis et beauté des mains.",
+              name: "Clémence Reznicek - Thérapeute Holistique",
+              description: "Cabinet de thérapie holistique à Jonzac, Charente-Maritime. Soins énergétiques, constellations familiales, coaching holistique et massages bien-être.",
               publisher: {
                 "@id": getCanonicalUrl('')
               },
@@ -349,108 +329,75 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "@id": getCanonicalUrl('/#sylvie-lebordais'),
-              name: "Sylvie Lebordais",
-              givenName: "Sylvie",
-              familyName: "Lebordais",
-              email: "sylviebienetre35@gmail.com",
-              telephone: "+33613648705",
-              jobTitle: "Praticienne en Réflexologie et Drainage Lymphatique",
+              "@id": getCanonicalUrl('/#clemence-reznicek'),
+              name: "Clémence Reznicek",
+              givenName: "Clémence",
+              familyName: "Reznicek",
+              email: "formationquantique111@gmail.com",
+              telephone: "+33632185259",
+              jobTitle: "Thérapeute Holistique & Médium",
               worksFor: {
                 "@type": "HealthAndBeautyBusiness",
                 "@id": getCanonicalUrl(''),
-                name: "Syl'Vie Bien-Etre"
+                name: "Clémence Reznicek"
               },
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "1B Rue du Général de Gaulle",
-                addressLocality: "Pipriac",
-                postalCode: "35550",
+                streetAddress: "5 avenue Chanzy",
+                addressLocality: "Jonzac",
+                postalCode: "17500",
                 addressCountry: "FR"
               },
               hasCredential: [
                 {
                   "@type": "EducationalOccupationalCredential",
                   credentialCategory: "Professional Certification",
-                  name: "Certification Réflexologie Plantaire, Palmaire, Pédiatrique et Bol Kansu",
-                  recognizedBy: {
-                    "@type": "Organization",
-                    name: "Centre de formation Réflexologie Bretagne",
-                    address: {
-                      "@type": "PostalAddress",
-                      addressLocality: "Pleugeuneuc",
-                      addressRegion: "Ille-et-Vilaine",
-                      addressCountry: "FR"
-                    }
-                  },
+                  name: "Certification Constellations Familiales",
+                  dateCreated: "2010",
                   educationalLevel: "Professional"
                 },
                 {
                   "@type": "EducationalOccupationalCredential",
                   credentialCategory: "Professional Certification",
-                  name: "Certification Drainage Lymphatique Manuel, Réflexologie Abdominale, Réflexologie Faciale et Crânienne, Amma Assis",
-                  recognizedBy: {
-                    "@type": "Organization",
-                    name: "Zensphère",
-                    address: {
-                      "@type": "PostalAddress",
-                      addressLocality: "Pacé",
-                      addressRegion: "Ille-et-Vilaine",
-                      addressCountry: "FR"
-                    }
-                  },
+                  name: "Certification Aromatouch",
+                  dateCreated: "2018",
                   educationalLevel: "Professional"
                 },
                 {
                   "@type": "EducationalOccupationalCredential",
                   credentialCategory: "Professional Certification",
-                  name: "Certification Prothésiste Ongulaire",
-                  recognizedBy: {
-                    "@type": "Person",
-                    name: "Anaïs Abaakil",
-                    address: {
-                      "@type": "PostalAddress",
-                      addressLocality: "Rennes",
-                      addressRegion: "Ille-et-Vilaine",
-                      addressCountry: "FR"
-                    }
-                  },
+                  name: "Certification Massage 5 Continents",
+                  dateCreated: "2022",
+                  educationalLevel: "Professional"
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  credentialCategory: "Professional Certification",
+                  name: "Certification Décodage Echoquantique",
+                  dateCreated: "2023",
+                  educationalLevel: "Professional"
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  credentialCategory: "Professional Certification",
+                  name: "Certification Ennéagramme",
+                  dateCreated: "2025",
                   educationalLevel: "Professional"
                 }
               ],
               knowsAbout: [
-                "Drainage Lymphatique Manuel méthode Vodder",
-                "Drainage Lymphatique Manuel méthode Leduc",
-                "Réflexologie Plantaire",
-                "Réflexologie Palmaire",
-                "Réflexologie Pédiatrique",
-                "Réflexologie Abdominale Qi Nei Tsang",
-                "Réflexologie Faciale et Crânienne",
-                "Amma Assis",
-                "Bol Kansu",
-                "Prothésie Ongulaire",
-                "Médecine Traditionnelle Chinoise",
-                "Thérapies manuelles bien-être"
-              ],
-              alumniOf: [
-                {
-                  "@type": "Organization",
-                  name: "Centre de formation Réflexologie Bretagne",
-                  address: {
-                    "@type": "PostalAddress",
-                    addressLocality: "Pleugeuneuc",
-                    addressCountry: "FR"
-                  }
-                },
-                {
-                  "@type": "Organization",
-                  name: "Zensphère",
-                  address: {
-                    "@type": "PostalAddress",
-                    addressLocality: "Pacé",
-                    addressCountry: "FR"
-                  }
-                }
+                "soins énergétiques",
+                "LaHoChi",
+                "magnétisme",
+                "constellations familiales",
+                "coaching holistique",
+                "massage des 5 continents",
+                "aromatouch",
+                "décodage biologique",
+                "décodage echoquantique",
+                "méditation",
+                "aromatologie",
+                "médiumnité"
               ],
               url: getCanonicalUrl('/a-propos'),
               sameAs: [

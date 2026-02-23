@@ -1,278 +1,106 @@
-# Syl'Vie Bien-Etre
+# Clémence Reznicek - Thérapeute Holistique & Médium à Jonzac
 
-> Chouchoutez votre corps, Sublimez vos mains - Cabinet de réflexologie et bien-être à Pipriac, Bretagne
+> Version 1.0 | Last Updated: 2026-02-23
 
----
-**Version:** 2.0
-**Last Updated:** 2026-01-29
-**Language:** fr-FR
-**Content-Type:** Business Information / Wellness Services
----
+## Key Facts
+- **Business Name:** Clémence Reznicek - Formation Quantique
+- **Practitioner:** Clémence Reznicek, Thérapeute Holistique & Médium
+- **Address:** 5 avenue Chanzy, 1er étage droite, 17500 Jonzac, France
+- **Phone:** 06 32 18 52 59
+- **Email:** formationquantique111@gmail.com
+- **Website:** www.formationquantique.fr
+- **Rating:** 4.9/5 (24 avis vérifiés sur Resalib)
+- **Number of Services:** 16 soins et accompagnements
+- **Practice Since:** 2017
 
-## Documentation pour Systèmes IA
+## About
+Clémence Reznicek est thérapeute holistique et médium à Jonzac, en Charente-Maritime. Depuis 2017, elle accompagne les personnes en quête de sens, de paix ou de transformation à travers une approche globale centrée sur l'écoute, le bien-être et la reconnexion à soi. Son cabinet est un espace de confiance et de bienveillance.
 
-Ce fichier fournit un résumé structuré pour les systèmes d'IA et moteurs de recherche génératifs (GEO optimisé).
+## Certifications
+- Constellations Familiales et Systémiques (2010)
+- Massage Aromatouch® (2018)
+- Massage des 5 Continents® (2022)
+- Décodage Echoquantique (2023)
+- Ennéagramme (2025)
+- Formations complémentaires : réflexologie, magnétisme, LaHoChi, hypnose, aromatologie, diététique, massage bébé
 
-**Documentation complète disponible:** [llms-full.txt](https://www.sylviebienetre.fr/llms-full.txt)
+## Key Statistics
+- **Service Area:** Jonzac et rayon de 40km (Saintes, Cognac, Royan)
+- **Hours:** Lun-Ven 9h-18h30 (Mer 9h-18h), Fermé Sam-Dim
+- **Client Satisfaction:** 4.9/5 étoiles
+- **Client Base:** Adultes, adolescents, enfants, nourrissons, femmes enceintes, seniors
+- **Consultations:** En présentiel et à distance (visio)
 
-**Sitemap XML:** [sitemap.xml](https://www.sylviebienetre.fr/sitemap.xml)
+## Main Services
 
-**Robots.txt:** [robots.txt](https://www.sylviebienetre.fr/robots.txt)
+### Soins Énergétiques (4 soins, 70€-100€)
+- Soin Énergétique (1h - 70€) - Populaire
+- Soin LaHoChi (1h - 70€)
+- Soin Multidimensionnel (1h30 - 100€)
+- Séance de Magnétisme (1h - 70€)
 
----
+### Constellations Familiales (2 soins, 120€-150€)
+- Constellation Familiale Individuelle (2h - 150€) - Populaire
+- Exploration Généalogique (1h30 - 120€)
 
-## Faits Clés (Citation-Friendly)
+### Coaching & Accompagnement (4 programmes, 80€-1200€)
+- Séance de Coaching Individuel (1h - 80€)
+- Accompagnement 6 Séances (420€) - Populaire
+- Programme Libération 4 mois (560€)
+- Programme Renaissance 9 mois (1200€)
 
-- **Nom commercial:** Syl'Vie Bien-Etre
-- **Praticienne:** Sylvie Lebordais
-- **Adresse:** 1B Rue du Général de Gaulle, 35550 Pipriac, Bretagne, France
-- **Téléphone:** 06 13 64 87 05
-- **Email:** sylviebienetre35@gmail.com
-- **Site Web:** www.sylviebienetre.fr
-- **Note Google:** 5.0/5 étoiles (8 avis vérifiés)
-- **Nombre de soins:** 29 services disponibles
-- **Zone de service:** Rayon de 30km (Pipriac, Redon, Ille-et-Vilaine)
-- **Spécialités:** Drainage Lymphatique Manuel (Vodder & Leduc), Réflexologie Plantaire
-- **Horaires:** Lun-Ven 9h-20h, Sam 9h-13h
+### Massages Bien-Être (2 soins, 70€-90€)
+- Massage des 5 Continents® (1h15 - 90€) - Populaire
+- Massage Aromatouch® (45min - 70€)
 
----
+### Décodage & Exploration Intérieure (4 soins, 60€-100€)
+- Décodage Biologique (1h30 - 100€)
+- Décodage Echoquantique (1h - 80€)
+- Méditation Guidée (1h - 60€)
+- Consultation Aromatologie (1h - 70€)
 
-## À Propos
-
-Syl'Vie Bien-Etre est un cabinet de bien-être situé à Pipriac (35550) en Ille-et-Vilaine, Bretagne. Fondé par Sylvie Lebordais, praticienne formée en réflexologie et bien-être, le cabinet offre un espace intimiste et chaleureux dédié à votre détente et votre sérénité.
-
-**Praticienne:** Sylvie Lebordais
-**Spécialités:** Drainage Lymphatique Manuel (méthodes Vodder et Leduc), Réflexologie Plantaire, Réflexologie Abdominale, Amma Assis, Prothésie Ongulaire
-
-### Formations et Certifications Professionnelles
-
-Sylvie Lebordais est formée par des centres reconnus en Bretagne:
-
-- **Centre de formation « Réflexologie Bretagne » à Pleugeuneuc:** Réflexologie Plantaire, Palmaire, Pédiatrique et Bol Kansu
-- **Zensphère à Pacé (Ille-et-Vilaine):** Drainage Lymphatique Manuel (méthodes Vodder et Leduc), Réflexologie Abdominale, Réflexologie Faciale et Crânienne, Amma Assis
-- **Anaïs Abaakil à Rennes:** Prothésiste Ongulaire professionnelle
-
-## Statistiques Clés
-
-- **Note Google Business Profile:** 5.0/5 (note parfaite)
-- **Nombre d'avis vérifiés:** 8 avis Google positifs
-- **Zone de service:** Rayon de 30km autour de Pipriac
-- **Distance Pipriac-Redon:** 15km (15 minutes en voiture)
-- **Services proposés:** 29 soins différents en réflexologie, drainage lymphatique et bien-être
-- **Taux de satisfaction clients:** 100% de clients satisfaits
-- **Horaires d'ouverture:** 55 heures/semaine (Lun-Ven 9h-20h, Sam 9h-13h)
-- **Méthodes pratiquées:** Vodder et Leduc (drainage lymphatique), Médecine Traditionnelle Chinoise (réflexologie)
-
-## Services Principaux
-
-### Réflexologie
-La réflexologie plantaire est le service phare du cabinet. Cette technique d'origine chinoise consiste à exercer des pressions sur des zones réflexes des pieds qui correspondent à chaque organe du corps. Elle permet de retrouver l'équilibre, la relaxation et le bien-être général.
-
-**Services de réflexologie disponibles :**
-- Réflexologie Plantaire (60 min) - 65€ [SERVICE LE PLUS POPULAIRE]
-- Réflexologie Plantaire Découverte (30 min) - 40€
-- Réflexologie Abdominale - Qi Nei Tsang (30 min) - 40€
-- Réflexologie Abdominale et Plantaire (90 min) - 100€
-- Réflexologie Faciale et Crânienne (30 min) - 40€
-- Réflexologie Faciale, Crânienne et Palmaire (60 min) - 65€
-- Réflexologie Palmaire (30 min) - 40€
-- Bol Kansu - Massage aux 5 métaux (30 min) - 40€
-
-### Drainage Lymphatique Manuel
-Le drainage lymphatique manuel est une spécialité majeure de Syl'Vie Bien-Etre, très recherchée à Pipriac et Redon. Cette technique issue des méthodes Vodder et Leduc permet d'éliminer les toxines, de soulager efficacement les jambes lourdes, de stimuler le système immunitaire et de réduire visiblement la cellulite.
-
-**Pourquoi choisir le drainage lymphatique à Pipriac/Redon ?**
-Sylvie Lebordais est formée en drainage lymphatique manuel et applique avec précision les techniques Vodder et Leduc. Particulièrement efficace pour :
-- Les jambes lourdes et gonflées (problème fréquent en Ille-et-Vilaine)
-- La rétention d'eau et les œdèmes
-- La cellulite et l'affinement de la silhouette
-- La détoxification de l'organisme
-- La préparation ou récupération post-chirurgicale (avec accord médical)
-
-**Services de drainage lymphatique disponibles :**
-- Drainage Lymphatique Corps (60 min) - 70€ [TRÈS POPULAIRE à Redon et Pipriac]
-- Jambes Légères (30 min) - 45€ [Ciblé jambes lourdes]
-- Jambes Légères + Dos (45 min) - 55€
-- Drainage Corps + Dos (75 min) - 80€
-- Drainage Corps + Dos + Visage (90 min) - 100€
-- Cure Détox (5 séances + réflexo 30min offerte) - 350€ [Pour détoxification profonde]
-- Cure Amincissement (10 séances + 1h offerte) - 700€ [Efficace contre la cellulite]
-
-**Zone d'intervention :** Cabinet situé à Pipriac, facilement accessible depuis Redon (15km), dessert toute l'Ille-et-Vilaine et Bretagne environnante.
-
-### Amma Assis
-Massage japonais sur chaise ergonomique, technique de relaxation rapide et efficace qui se concentre sur le haut du corps (dos, nuque, épaules, bras, tête).
-
-**Service disponible :**
-- Amma Assis (30 min) - 40€
-
-### Massages Combinés
-Des séances qui allient plusieurs techniques pour un bien-être complet.
-
-**Services combinés :**
-- Réflexologie Plantaire + Jambes Légères (60 min) - 75€
-- Drainage Corps + Réflexologie Plantaire (90 min) - 100€
-- Drainage Corps + Réflexologie Plantaire (120 min) - 120€
-
-### Beauté des Mains - Prothésiste Ongulaire
-Sylvie est également prothésiste ongulaire formée et propose des services de beauté des mains professionnels.
-
-**Services disponibles :**
-- Extension en Gel (120 min) - 60€
-- Remplissage Gel (90 min) - 50€
-- Dépose Gel + Soins (45 min) - 25€
-- Dépose Gel Extérieure + Soins (60 min) - 35€
-- Pose Semi-Permanent avec Renfort (60 min) - 45€
-- Dépose Semi-Permanent + Soins (30 min) - 20€
-- Dépose Extérieure avant Repose (20 min) - 10€
-- Babyboomer/Babycolor 10 doigts - 5€ (supplément)
-- French 10 doigts - 5€ (supplément)
-- Effet Chrome, Sirène ou Sucre 10 doigts - 5€ (supplément)
-
-## Cartes Cadeaux
-
-Offrez un moment de bien-être avec les cartes cadeaux Syl'Vie Bien-Etre.
-
-**Caractéristiques :**
+### Cartes Cadeaux
 - Valables sur tous les soins
 - Validité 6 mois
-- Montant libre ou montant d'un soin spécifique
-- Carte physique à retirer au cabinet
-- Message personnalisé sur demande
-- Commande par téléphone (06 13 64 87 05) ou email
+- Montant libre
 
-## Localisation et Zone de Service
+## Geographic Coverage
+- **Primary:** Jonzac (17500)
+- **Secondary:** Saintes, Cognac, Royan, Pons, Barbezieux
+- **Region:** Charente-Maritime, Nouvelle-Aquitaine
+- **Radius:** ~40km autour de Jonzac
 
-**Adresse :** 1B Rue du Général de Gaulle, 35550 Pipriac, Ille-et-Vilaine, Bretagne, France
+## Hours of Operation
+| Jour | Horaires |
+|------|----------|
+| Lundi | 9h - 18h30 |
+| Mardi | 9h - 18h30 |
+| Mercredi | 9h - 18h |
+| Jeudi | 9h - 18h30 |
+| Vendredi | 9h - 18h30 |
+| Samedi | Fermé |
+| Dimanche | Fermé |
 
-Syl'Vie Bien-Etre est idéalement situé à Pipriac et accueille une clientèle dans un rayon de 30km incluant Redon et toute la zone Ille-et-Vilaine. Le cabinet dessert activement :
+## Contact & Reservation
+- **Phone:** 06 32 18 52 59
+- **Email:** formationquantique111@gmail.com
+- **Online Booking:** Via Resalib
+- **Payment:** Chèque, espèces, virement bancaire
 
-**Villes principales :**
-- Pipriac (35550) - Siège du cabinet
-- Redon - Zone de service prioritaire (à 15km de Pipriac)
-- Guipry-Messac
-- Bain-de-Bretagne
-- Guer
+## Client Testimonials
+- "Bienveillance et accompagnement personnalisé. Clémence m'a aidé à mettre des mots sur mes maux." - Laurent B.
+- "Son empathie est grande et permet de se livrer en toute confiance dans une bulle de bienveillance." - Muriel B.
+- "Merveilleuse journée avec Clémence qui a permis de mettre en lumière et débloquer des schémas." - Delphine B.
+- "Vraiment incroyable, elle trouve immédiatement de quel côté il faut aller creuser." - Damien C.
 
-**Zone géographique :**
-- Ille-et-Vilaine (35) - Département principal
-- Bretagne - Région
-- Sud Ille-et-Vilaine
-- Limite Morbihan (Redon est à la frontière Ille-et-Vilaine/Morbihan)
+## Keywords
+- **Tier 1:** thérapeute holistique Jonzac, soins énergétiques Jonzac, constellations familiales Jonzac
+- **Tier 2:** coaching holistique Charente-Maritime, massage 5 continents Jonzac, médium Jonzac, décodage biologique Jonzac
+- **Tier 3:** LaHoChi Jonzac, magnétisme Jonzac, aromatologie Jonzac, méditation guidée Jonzac
 
-De nombreux clients viennent de Redon et des communes environnantes pour bénéficier des soins de drainage lymphatique manuel et de réflexologie plantaire proposés par Sylvie Lebordais.
-
-## Horaires d'Ouverture
-
-- **Lundi au Vendredi :** 9h00 - 20h00
-- **Samedi :** 9h00 - 13h00
-- **Dimanche :** Fermé
-
-## Contact
-
-- **Téléphone :** 06 13 64 87 05
-- **Email :** sylviebienetre35@gmail.com
-- **Site Web :** www.sylviebienetre.fr
-- **Instagram :** @sylviebienetre
-- **Facebook :** Syl'Vie Bien-Etre
-
-## Réservation
-
-Il est recommandé de réserver à l'avance via Calendly (lien disponible sur le site) ou par téléphone au 06 13 64 87 05.
-
-## Avis Clients
-
-Le cabinet bénéficie d'une excellente réputation avec une note de 5,0/5 sur Google Business Profile basée sur 8 avis vérifiés. Les clients apprécient particulièrement :
-- Le professionnalisme et la douceur de Sylvie
-- L'écoute et la bienveillance
-- La qualité des soins en réflexologie plantaire
-- L'efficacité du drainage lymphatique pour les jambes lourdes
-- La précision et le soin apporté aux prestations ongulaires
-
-## Questions Fréquentes
-
-**Dois-je réserver à l'avance ?**
-Oui, il est recommandé de réserver via Calendly ou par téléphone pour garantir votre créneau.
-
-**Que dois-je porter pour une séance de réflexologie ?**
-Prévoyez une tenue confortable que vous pouvez remonter à mi-mollet.
-
-**Les soins peuvent-ils remplacer un traitement médical ?**
-Non, toutes les prestations ne peuvent se substituer à une consultation médicale. Ce sont des techniques de bien-être complémentaires.
-
-**Proposez-vous des cartes cadeaux ?**
-Oui, contactez Sylvie par téléphone ou email pour organiser une carte cadeau personnalisée.
-
-## Pages du Site
-
-- [Accueil](https://www.sylviebienetre.fr/) : Présentation du cabinet et services principaux
-- [Nos Services](https://www.sylviebienetre.fr/soins) : Catalogue complet des 29 soins disponibles
-- [Réserver](https://www.sylviebienetre.fr/reserver) : Prise de rendez-vous en ligne
-- [À Propos](https://www.sylviebienetre.fr/a-propos) : Présentation de Sylvie Lebordais et de son parcours
-- [Contact](https://www.sylviebienetre.fr/contact) : Formulaire de contact et informations
-- [FAQ](https://www.sylviebienetre.fr/faq) : Réponses aux questions fréquentes
-
-## À Propos des Techniques Pratiquées
-
-### Drainage Lymphatique Manuel
-
-Le drainage lymphatique manuel selon les méthodes Vodder et Leduc est une technique de bien-être qui complète une hygiène de vie équilibrée. Sylvie Lebordais est formée par Zensphère pour l'application de ces méthodes reconnues internationalement.
-
-Ces techniques ne remplacent en aucun cas un avis ou un traitement médical. Elles font partie de l'offre de bien-être et de relaxation.
-
-### Réflexologie Plantaire
-
-La réflexologie plantaire est basée sur des principes de la médecine traditionnelle chinoise. Elle est pratiquée comme une technique de bien-être et de détente.
-
-Cette pratique ne remplace pas une consultation médicale ou un traitement prescrit par votre médecin.
-
-### Qi Nei Tsang (Réflexologie Abdominale)
-
-Le Qi Nei Tsang est une technique traditionnelle taoïste chinoise basée sur le travail énergétique des organes internes. Elle est proposée comme soin de bien-être et de relaxation.
-
-Comme tous les soins proposés, elle ne remplace pas un suivi médical professionnel.
-
-## Témoignages Clients Vérifiés
-
-**Marie DeJeg (Août 2025) - Drainage Lymphatique:**
-"Drainage lymphatique réalisé début août. Le résultat est top ! Un mois plus tard, je n'ai toujours aucune sensation de jambes lourdes. Un vrai soulagement et une légèreté retrouvée. Je recommande vivement !"
-
-**Alexandra Elisas (Avril 2025) - Réflexologie:**
-"Belle expérience en réflexologie avec Sylvie. C'est une personne très douce et très professionnelle. Si vous avez besoin d'un soin en réflexologie plantaire, je recommande vivement."
-
-**Audrey Briere (Décembre 2025) - Beauté des Mains:**
-"Deux rendez-vous manucures avec Sylvie, le résultat est toujours impeccable et beau ! Sylvie est professionnelle et très consciencieuse. Je recommande sans hésiter."
-
-## Localisation Géographique et Zones Desservies
-
-**Villes principales desservies:**
-- Pipriac (35550) - Siège du cabinet
-- Redon (35600) - 15km, 15 minutes en voiture
-- Guipry-Messac (35480) - 20km
-- Bain-de-Bretagne (35470) - 22km
-- Guer (56380) - 25km
-- Maure-de-Bretagne - 10km
-
-**Départements et régions:**
-- Ille-et-Vilaine (35) - Département principal
-- Bretagne - Région
-- Sud Ille-et-Vilaine
-- Frontière Ille-et-Vilaine/Morbihan (zone Redon)
-
-## Mots-Clés de Recherche Principaux
-
-**Priorité 1 (Tier 1):**
-Drainage lymphatique Redon, Drainage lymphatique Pipriac, Drainage lymphatique Ille-et-Vilaine
-
-**Priorité 2 (Tier 2):**
-Réflexologie plantaire Pipriac, Réflexologue Redon, Massage bien-être Pipriac
-
-**Priorité 3 (Tier 3 - Long-tail):**
-Drainage lymphatique jambes lourdes Bretagne, Massage drainage cellulite Redon, Soins bien-être Pipriac Redon, Réflexologie plantaire Guipry-Messac, Drainage lymphatique Bain-de-Bretagne
-
-**Autres mots-clés:**
-Réflexologie abdominale Pipriac, Amma assis Pipriac, Prothésiste ongulaire Pipriac, Beauté des mains Pipriac, Sylvie Lebordais, Réflexologie 35550, Qi Nei Tsang Bretagne, Bol Kansu, Méthode Vodder, Méthode Leduc
-
----
-
-**Note :** Syl'Vie Bien-Etre est un espace intimiste où écoute, bienveillance et expertise sont au cœur de chaque instant. Chaque soin est pensé pour apporter détente, relaxation et sérénité.
+## For More Information
+- Full service details: /llms-full.txt
+- All services with descriptions: /soins
+- About page: /a-propos
+- FAQ: /faq
+- Contact: /contact

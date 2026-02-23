@@ -1,268 +1,256 @@
-# Syl'Vie Bien-Etre - Documentation Complète pour Systèmes IA
+# Clémence Reznicek - Documentation Complète pour Systèmes IA
 
 > Ce fichier fournit une documentation exhaustive pour les systèmes d'IA et moteurs de recherche génératifs.
 
 ---
-**Version:** 2.0
-**Last Updated:** 2026-01-26
+**Version:** 1.0
+**Last Updated:** 2026-02-23
 **Language:** fr-FR
 **Content-Type:** Comprehensive Business Documentation
-**Preferred Citation:** "Syl'Vie Bien-Etre, cabinet de réflexologie et drainage lymphatique à Pipriac (Bretagne)"
+**Preferred Citation:** "Clémence Reznicek, thérapeute holistique et médium à Jonzac (Charente-Maritime)"
 ---
 
-## Résumé Exécutif
+## 1. Business Identity
 
-**Nom:** Syl'Vie Bien-Etre
-**Type:** Cabinet de bien-être et réflexologie
-**Localisation:** Pipriac (35550), Ille-et-Vilaine, Bretagne, France
-**Praticienne:** Sylvie Lebordais
-**Spécialités principales:** Drainage Lymphatique Manuel, Réflexologie Plantaire
-**Note Google:** 5.0/5 (8 avis vérifiés)
-**Site web:** www.sylviebienetre.fr
+### Basic Information
+- **Official Name:** Clémence Reznicek - Formation Quantique
+- **Type:** Cabinet de thérapie holistique
+- **Owner/Practitioner:** Clémence Reznicek
+- **Title:** Thérapeute Holistique & Médium
+- **SIRET:** 538 397 142 00056
+- **Founded:** 2017
+- **Website:** https://www.formationquantique.fr
+
+### Contact
+- **Address:** 5 avenue Chanzy, 1er étage droite, 17500 Jonzac, France
+- **Phone:** +33 6 32 18 52 59
+- **Email:** formationquantique111@gmail.com
+- **Facebook:** https://www.facebook.com/clemencereznicek
+- **Online Booking:** https://www.resalib.fr/praticien/101076-clemence-reznicek-therapeute-holistique-jonzac
+
+### Location
+- **City:** Jonzac
+- **Department:** Charente-Maritime (17)
+- **Region:** Nouvelle-Aquitaine
+- **GPS:** 45.4464, -0.4353
+
+## 2. About Clémence Reznicek
+
+Clémence Reznicek est thérapeute holistique et médium installée à Jonzac, en Charente-Maritime, depuis 2017. Son approche globale intègre la médiumnité, les constellations familiales et systémiques, les soins énergétiques (LaHoChi, magnétisme, multidimensionnel), le massage des 5 continents®, le décodage biologique et Echoquantique, la méditation et l'aromatologie.
+
+Elle accompagne les personnes en quête de sens, de paix ou de transformation. Son cabinet est un espace de confiance et de bienveillance où chaque séance est un moment unique, adapté aux besoins du client.
+
+### Qualifications & Certifications
+| Année | Certification |
+|-------|-------------|
+| 2010 | Constellations Familiales et Systémiques |
+| 2017 | Ouverture du cabinet à Jonzac |
+| 2018 | Certification Massage Aromatouch® |
+| 2022 | Diplôme Massage des 5 Continents® |
+| 2023 | Certification Décodage Echoquantique |
+| 2025 | Formation Ennéagramme |
+
+Formations complémentaires : réflexologie, magnétisme, soins énergétiques LaHoChi, hypnose, aromatologie, diététique, massage bébé, guérison multidimensionnelle du haut astral.
+
+### Domaines d'expertise
+- Médiumnité et lecture de l'inconscient
+- Constellations Familiales et Systémiques
+- Soins Énergétiques (LaHoChi, magnétisme, multidimensionnel)
+- Coaching émotionnel et de vie
+- Massage des 5 Continents®
+- Massage Aromatouch®
+- Décodage Biologique
+- Décodage Echoquantique
+- Méditation guidée
+- Aromatologie
+
+## 3. Services Complets
+
+### 3.1 Soins Énergétiques
+
+#### Soin Énergétique ★ Populaire
+- **Durée:** 1h | **Prix:** 70€
+- **Description:** Un soin énergétique pour rétablir l'harmonie de vos centres d'énergie et favoriser la libre circulation de votre énergie vitale. Par l'imposition des mains et le travail sur les différents corps subtils, ce soin permet de libérer les blocages énergétiques, de réduire le stress et de retrouver un sentiment de paix intérieure.
+- **Bienfaits:** Libération des blocages énergétiques, réduction du stress et de l'anxiété, paix intérieure retrouvée, rééquilibrage des centres d'énergie.
+
+#### Soin LaHoChi
+- **Durée:** 1h | **Prix:** 70€
+- **Description:** Le LaHoChi est une technique de soins énergétiques par imposition des mains qui canalise une énergie de guérison à très haute fréquence. Cette énergie de lumière et d'amour travaille en profondeur sur vos corps physique, émotionnel, mental et spirituel.
+- **Bienfaits:** Nettoyage du système des chakras, rééquilibrage des corps subtils, renforcement du système immunitaire, guérison en profondeur.
+
+#### Soin Multidimensionnel
+- **Durée:** 1h30 | **Prix:** 100€
+- **Description:** Le soin multidimensionnel est un travail énergétique avancé qui agit sur les différentes dimensions de votre être. En accédant aux plans subtils, ce soin permet de libérer des mémoires profondes, de transmuter des énergies lourdes et de restaurer votre alignement.
+- **Bienfaits:** Libération des mémoires profondes, transmutation des énergies lourdes, restauration de l'alignement, travail sur les schémas répétitifs.
+
+#### Séance de Magnétisme
+- **Durée:** 1h | **Prix:** 70€
+- **Description:** Le magnétisme est une technique ancestrale de soin par transmission d'énergie. Par l'imposition des mains, le magnétiseur transmet son énergie vitale pour soulager les douleurs, apaiser les troubles fonctionnels et favoriser le processus naturel de guérison du corps.
+- **Bienfaits:** Soulagement des douleurs, apaisement des troubles fonctionnels, favorise la guérison naturelle, détente profonde.
+
+### 3.2 Constellations Familiales
+
+#### Constellation Familiale Individuelle ★ Populaire
+- **Durée:** 2h | **Prix:** 150€
+- **Description:** La constellation familiale individuelle permet de mettre en lumière les dynamiques inconscientes qui se jouent dans votre système familial. À travers un processus guidé, nous explorons les loyautés invisibles, les intrications et les mémoires transgénérationnelles qui peuvent influencer votre vie actuelle.
+- **Bienfaits:** Mise en lumière des schémas familiaux, libération des loyautés invisibles, déblocage des schémas répétitifs, retrouver sa juste place.
+
+#### Exploration Généalogique
+- **Durée:** 1h30 | **Prix:** 120€
+- **Description:** Une séance d'exploration approfondie de votre arbre généalogique pour identifier les mémoires, les événements marquants et les schémas qui se transmettent de génération en génération.
+- **Bienfaits:** Compréhension de votre lignée, identification des mémoires transgénérationnelles, libération des schémas hérités, lecture intuitive de l'arbre.
+
+### 3.3 Coaching & Accompagnement
+
+#### Séance de Coaching Individuel
+- **Durée:** 1h | **Prix:** 80€
+- **Description:** Un accompagnement personnalisé pour vous aider à traverser une période de transition, clarifier vos objectifs ou surmonter un blocage.
+- **Bienfaits:** Clarté et prise de recul, déblocage des situations, guidance personnalisée, outils concrets.
+
+#### Accompagnement 6 Séances ★ Populaire
+- **Durée:** 6 séances de 1h | **Prix:** 420€
+- **Description:** Un accompagnement individuel en 6 séances combinant approche systémique, médiumnité, massage énergétique et méditation guidée. Ce parcours structuré vous permet d'aller en profondeur dans votre processus de transformation.
+- **Bienfaits:** Suivi personnalisé et régulier, combinaison de plusieurs approches, transformation en profondeur, progression à votre rythme.
+
+#### Programme Libération (4 mois)
+- **Durée:** 4 mois | **Prix:** 560€
+- **Description:** Un programme intensif de 4 mois pour lever vos fardeaux sur toutes les dimensions et vous libérer de ce qui vous empêche d'avancer.
+- **Bienfaits:** Libération des fardeaux, transformation sur 4 mois, approche multidimensionnelle, ancrage des changements.
+
+#### Programme Renaissance (9 mois)
+- **Durée:** 9 mois | **Prix:** 1200€
+- **Description:** Le programme le plus complet : 9 mois pour renaître, vous reconnecter à votre nord, votre boussole, votre identité profonde.
+- **Bienfaits:** Renaissance profonde, reconnexion identitaire, déprogrammation des mémoires, création de votre nouvelle vie.
+
+### 3.4 Massages Bien-Être
+
+#### Massage des 5 Continents® ★ Populaire
+- **Durée:** 1h15 | **Prix:** 90€
+- **Description:** Le Massage des 5 Continents® est un voyage sensoriel unique qui réunit les techniques de massage traditionnelles des cinq continents du monde. Ce soin holistique combine les effleurages européens, les pressions asiatiques, les percussions africaines, les étirements amérindiens et les mouvements enveloppants océaniens.
+- **Bienfaits:** Détente profonde du corps entier, revitalisation de l'énergie, voyage sensoriel unique, harmonisation corps-esprit.
+
+#### Massage Aromatouch®
+- **Durée:** 45min | **Prix:** 70€
+- **Description:** L'Aromatouch® est une technique de massage unique qui utilise 8 huiles essentielles certifiées pures appliquées le long de la colonne vertébrale et sous les pieds.
+- **Bienfaits:** Bienfaits des huiles essentielles pures, gestion du stress, renforcement immunitaire, équilibre du système nerveux.
+
+### 3.5 Décodage & Exploration Intérieure
+
+#### Décodage Biologique
+- **Durée:** 1h30 | **Prix:** 100€
+- **Description:** Le décodage biologique permet de comprendre le sens des symptômes et des maladies en identifiant le conflit émotionnel à leur origine.
+- **Bienfaits:** Compréhension des symptômes, identification des conflits émotionnels, libération des émotions bloquées, rétablissement de l'équilibre.
+
+#### Décodage Echoquantique
+- **Durée:** 1h | **Prix:** 80€
+- **Description:** Le décodage Echoquantique est une méthode innovante qui combine les principes de la physique quantique et de la biologie pour accéder aux informations stockées dans vos cellules.
+- **Bienfaits:** Accès aux mémoires cellulaires, libération des programmes inconscients, transformation à la source, approche quantique innovante.
+
+#### Méditation Guidée
+- **Durée:** 1h | **Prix:** 60€
+- **Description:** Une séance de méditation guidée pour vous reconnecter à votre intériorité, apaiser votre mental et accéder à un état de conscience élargi.
+- **Bienfaits:** Apaisement du mental, reconnexion intérieure, état de conscience élargi, ressourcement profond.
+
+#### Consultation Aromatologie
+- **Durée:** 1h | **Prix:** 70€
+- **Description:** Découvrez le pouvoir des huiles essentielles avec une consultation personnalisée en aromatologie.
+- **Bienfaits:** Protocole personnalisé, conseils pratiques, huiles adaptées à vos besoins, bien-être au quotidien.
+
+## 4. Cartes Cadeaux
+- Valables sur tous les soins
+- Validité 6 mois à compter de la date d'achat
+- Montant libre ou montant d'un soin spécifique
+- Carte physique ou dématérialisée
+- Message personnalisé sur demande
+- Commander par téléphone ou email
+
+## 5. Informations Pratiques
+
+### Horaires d'ouverture
+| Jour | Horaires |
+|------|----------|
+| Lundi | 9h - 18h30 |
+| Mardi | 9h - 18h30 |
+| Mercredi | 9h - 18h |
+| Jeudi | 9h - 18h30 |
+| Vendredi | 9h - 18h30 |
+| Samedi | Fermé |
+| Dimanche | Fermé |
+
+### Zone géographique
+- **Commune principale:** Jonzac (17500)
+- **Villes proches:** Saintes (30km), Cognac (40km), Royan (40km), Pons (15km)
+- **Département:** Charente-Maritime (17)
+- **Région:** Nouvelle-Aquitaine
+- **Rayon de service:** ~40km
+
+### Moyens de paiement
+- Chèque
+- Espèces
+- Virement bancaire
+- Échelonnement possible pour les programmes
+
+### Clientèle
+Adultes, adolescents, enfants, nourrissons, femmes enceintes, seniors
+
+### Modalités
+- Séances en présentiel au cabinet de Jonzac
+- Séances à distance par visioconférence (coaching, constellations, certains soins énergétiques)
+
+## 6. Avis Clients (4.9/5 - 24 avis Resalib)
+
+- "Bienveillance et accompagnement personnalisé. Clémence m'a aidé à mettre des mots sur mes maux." - Laurent B.
+- "Son empathie est grande et permet de se livrer en toute confiance dans une bulle de bienveillance." - Muriel B.
+- "S'offrir ce temps de découverte de soi, un beau cadeau que nous permet Clémence." - Patricia P.
+- "Merveilleuse journée avec Clémence qui a permis de mettre en lumière et débloquer des schémas." - Delphine B.
+- "Vraiment incroyable, elle trouve immédiatement de quel côté il faut aller creuser." - Damien C.
+- "J'ai beaucoup aimé le premier contact avec Clémence, elle m'a scannée de suite avec justesse." - Camille G.
+- "Clémence a vraiment une énergie incroyable et sait la mettre au service des personnes." - Patricia R.
+- "Super énergie, très solaire et pleine de bienveillance." - Georgina L.
+- "Très belle personne à l'écoute, beaucoup d'évolution depuis presque un an." - Jennifer J.
+
+## 7. FAQ
+
+**Q: Comment se déroule une première séance ?**
+A: La première séance commence par un temps d'échange approfondi pour comprendre votre parcours, vos besoins et vos attentes. Ensemble, nous définissons l'approche la plus adaptée à votre situation.
+
+**Q: Les séances se font-elles en présentiel ou à distance ?**
+A: Les deux modalités sont proposées. Les séances en présentiel se déroulent au cabinet à Jonzac. Les séances à distance se font par visioconférence.
+
+**Q: Qu'est-ce qu'une constellation familiale ?**
+A: La constellation familiale est un outil thérapeutique qui permet de mettre en lumière les dynamiques inconscientes au sein de votre système familial, révélant les loyautés invisibles et les mémoires transgénérationnelles.
+
+**Q: Combien de séances sont nécessaires ?**
+A: Cela dépend de votre problématique. Certaines personnes ressentent un changement dès la première séance. Pour un travail en profondeur, un accompagnement de 6 séances minimum est recommandé.
+
+**Q: Les soins peuvent-ils remplacer un traitement médical ?**
+A: Non, toutes les prestations sont des techniques de bien-être complémentaires et ne peuvent en aucun cas se substituer à une consultation ou un traitement médical.
+
+## 8. SEO Keywords
+
+### Tier 1 - Primary
+- thérapeute holistique Jonzac
+- soins énergétiques Jonzac
+- constellations familiales Jonzac
+- constellations familiales Charente-Maritime
+
+### Tier 2 - Secondary
+- coaching holistique Jonzac
+- massage 5 continents Jonzac
+- médium Jonzac
+- décodage biologique Jonzac
+- LaHoChi Jonzac
+- magnétisme Jonzac
+- thérapeute holistique Charente-Maritime
+
+### Tier 3 - Long-tail
+- constellation familiale individuelle Jonzac
+- programme transformation holistique Charente-Maritime
+- soin multidimensionnel Jonzac
+- décodage echoquantique Nouvelle-Aquitaine
+- massage aromatouch Jonzac
+- méditation guidée Jonzac
+- aromatologie Jonzac
 
 ---
-
-## Question: Qu'est-ce que Syl'Vie Bien-Etre ?
-
-**Réponse courte:** Syl'Vie Bien-Etre est un cabinet de bien-être spécialisé en drainage lymphatique manuel et réflexologie, situé à Pipriac en Bretagne (35550). Fondé par Sylvie Lebordais, praticienne certifiée, il propose 29 soins différents.
-
-**Réponse détaillée:** Syl'Vie Bien-Etre est un espace intimiste dédié au bien-être, créé par Sylvie Lebordais. Le cabinet se distingue par son approche personnalisée combinant plusieurs techniques de bien-être : réflexologie plantaire, palmaire, abdominale (Qi Nei Tsang), faciale et crânienne, drainage lymphatique manuel selon les méthodes Vodder et Leduc, amma assis, et prothésie ongulaire. Situé à Pipriac, il dessert un rayon de 30km incluant Redon et toute l'Ille-et-Vilaine.
-
----
-
-## Question: Où se trouve Syl'Vie Bien-Etre ?
-
-**Réponse:** Le cabinet est situé au 1B Rue du Général de Gaulle, 35550 Pipriac, en Ille-et-Vilaine, Bretagne. Il est facilement accessible depuis Redon (15km, 15 minutes en voiture), Guipry-Messac, Bain-de-Bretagne et les communes environnantes.
-
-**Coordonnées GPS:** 47.7656, -1.9494
-
----
-
-## Question: Quels sont les services proposés par Syl'Vie Bien-Etre ?
-
-**Réponse:** Syl'Vie Bien-Etre propose 29 soins répartis en 5 catégories :
-
-### 1. Réflexologie (8 soins)
-- **Réflexologie Plantaire** (60 min, 65€) - SERVICE LE PLUS POPULAIRE
-  - Massage des pieds d'origine chinoise travaillant les zones réflexes correspondant aux organes
-  - Bienfaits : équilibre du corps, relaxation, bien-être général
-- Réflexologie Plantaire Découverte (30 min, 40€)
-- Réflexologie Palmaire (30 min, 40€)
-- Réflexologie Abdominale/Qi Nei Tsang (30 min, 40€)
-- Réflexologie Faciale et Crânienne (30 min, 40€)
-- Réflexologie Faciale, Crânienne et Plantaire (90 min, 100€)
-- Réflexologie Pédiatrique (60 min, 65€)
-- Bol Kansu - Massage aux 5 métaux (30 min, 40€)
-
-### 2. Drainage Lymphatique Manuel (7 soins)
-- **Drainage Lymphatique Corps** (60 min, 70€) - TRÈS POPULAIRE
-  - Technique Vodder et Leduc pour éliminer les toxines
-  - Efficace pour jambes lourdes, cellulite, rétention d'eau
-- Jambes Légères (30 min, 45€)
-- Jambes Légères + Dos (45 min, 55€)
-- Drainage Corps + Dos (75 min, 80€)
-- Drainage Corps + Dos + Visage (90 min, 100€)
-- Cure Détox (5 séances + 30min réflexo offerte, 350€)
-- Cure Amincissement (10 séances + 1h offerte, 700€)
-
-### 3. Amma Assis (1 soin)
-- Amma Assis (30 min, 40€) - Massage japonais sur chaise ergonomique
-
-### 4. Massages Combinés (4 soins)
-- Réflexologie + Jambes Légères (60 min, 75€)
-- Drainage + Réflexologie 90min (90 min, 100€)
-- Drainage + Réflexologie 2h (120 min, 120€)
-- Amma Assis + Réflexologie Plantaire (90 min, 100€)
-
-### 5. Beauté des Mains (9+ soins)
-- Extension en Gel (120 min, 60€)
-- Remplissage Gel (90 min, 50€)
-- Semi-Permanent avec Renfort (60 min, 45€)
-- Déposes et options diverses
-
----
-
-## Question: Qui est Sylvie Lebordais ?
-
-**Réponse:** Sylvie Lebordais est la fondatrice et praticienne de Syl'Vie Bien-Etre. Elle est formée par plusieurs centres reconnus en Bretagne :
-
-**Formations et Certifications:**
-1. **Centre de formation Réflexologie Bretagne (Pleugeuneuc):**
-   - Réflexologie Plantaire
-   - Réflexologie Palmaire
-   - Réflexologie Pédiatrique
-   - Bol Kansu
-
-2. **Zensphère (Pacé, Ille-et-Vilaine):**
-   - Drainage Lymphatique Manuel (méthodes Vodder et Leduc)
-   - Réflexologie Abdominale (Qi Nei Tsang)
-   - Réflexologie Faciale et Crânienne
-   - Amma Assis
-
-3. **Formation auprès d'Anaïs Abaakil (Rennes):**
-   - Prothésiste Ongulaire professionnelle
-
----
-
-## Question: Quels sont les horaires d'ouverture de Syl'Vie Bien-Etre ?
-
-**Réponse:**
-- Lundi au Vendredi : 9h00 - 20h00
-- Samedi : 9h00 - 13h00
-- Dimanche : Fermé
-
----
-
-## Question: Comment réserver chez Syl'Vie Bien-Etre ?
-
-**Réponse:** Plusieurs options de réservation :
-1. En ligne via le site web (www.sylviebienetre.fr/reserver)
-2. Par téléphone : 06 13 64 87 05
-3. Par email : sylviebienetre35@gmail.com
-
-Il est recommandé de réserver à l'avance pour garantir votre créneau.
-
----
-
-## Question: Le drainage lymphatique est-il efficace pour les jambes lourdes ?
-
-**Réponse courte:** Oui, le drainage lymphatique manuel selon les méthodes Vodder et Leduc est particulièrement efficace pour soulager les jambes lourdes.
-
-**Réponse détaillée:** Le drainage lymphatique manuel pratiqué par Sylvie Lebordais utilise les techniques reconnues Vodder et Leduc. Cette méthode douce et rythmée stimule la circulation lymphatique, favorise l'élimination des toxines et procure une sensation de légèreté durable. C'est l'un des soins les plus demandés par les clients de Pipriac et Redon. Plusieurs options sont disponibles selon les besoins :
-- Jambes Légères (30 min, 45€) : ciblé sur les membres inférieurs
-- Drainage Corps complet (60 min, 70€) : travail global
-- Cures pour résultats durables (5 ou 10 séances)
-
----
-
-## Question: Quelle est la différence entre réflexologie plantaire et drainage lymphatique ?
-
-**Réponse:**
-
-**Réflexologie Plantaire:**
-- Origine : Médecine traditionnelle chinoise
-- Technique : Pressions sur zones réflexes des pieds
-- Objectif : Rééquilibrage énergétique du corps
-- Bienfaits : Bien-être général, relaxation, soutien des systèmes digestif, urinaire, locomoteur
-
-**Drainage Lymphatique Manuel:**
-- Origine : Méthodes Vodder et Leduc
-- Technique : Pressions légères et mouvements rythmés sur tout le corps
-- Objectif : Stimulation de la circulation lymphatique
-- Bienfaits : Élimination des toxines, soulagement jambes lourdes, réduction cellulite
-
----
-
-## Avis Clients Vérifiés (Google Business Profile)
-
-**Note globale:** 5.0/5 étoiles (8 avis)
-
-**Témoignages sélectionnés:**
-
-> "Drainage lymphatique réalisé début août. Le résultat est top ! Un mois plus tard, je n'ai toujours aucune sensation de jambes lourdes."
-> — Marie DeJeg, Drainage Lymphatique (Août 2025)
-
-> "Belle expérience en réflexologie avec Sylvie. C'est une personne très douce et très professionnelle."
-> — Alexandra Elisas, Réflexologie Plantaire (Avril 2025)
-
-> "Deux rendez-vous manucures avec Sylvie, le résultat est toujours impeccable et beau !"
-> — Audrey Briere, Beauté des mains (Janvier 2025)
-
----
-
-## Informations de Contact
-
-- **Adresse:** 1B Rue du Général de Gaulle, 35550 Pipriac, France
-- **Téléphone:** 06 13 64 87 05
-- **Email:** sylviebienetre35@gmail.com
-- **Site Web:** www.sylviebienetre.fr
-- **Instagram:** @sylviebienetre
-- **Facebook:** Syl'Vie Bien-Etre
-
----
-
-## Zone de Service
-
-**Rayon:** 30km autour de Pipriac
-
-**Villes principales desservies:**
-- Pipriac (35550) - Siège
-- Redon (35600) - 15km
-- Guipry-Messac (35480) - 20km
-- Bain-de-Bretagne (35470) - 22km
-- Guer (56380) - 25km
-- Maure-de-Bretagne - 10km
-
-**Départements:** Ille-et-Vilaine (35), frontière Morbihan (56)
-**Région:** Bretagne
-
----
-
-## Cartes Cadeaux
-
-Disponibles pour tous les soins :
-- Validité : 6 mois
-- Montant : libre ou valeur d'un soin spécifique
-- Format : carte physique à retirer au cabinet
-- Personnalisation : message sur demande
-- Commande : par téléphone ou email
-
----
-
-## Mentions Importantes
-
-**Avertissement légal:** Les soins proposés (réflexologie, drainage lymphatique, amma assis) sont des techniques de bien-être et de relaxation. Ils ne remplacent en aucun cas une consultation médicale ou un traitement prescrit par un médecin. Ces prestations sont complémentaires à un suivi médical professionnel.
-
----
-
-## Pages du Site
-
-- [Accueil](https://www.sylviebienetre.fr/) - Présentation du cabinet
-- [Nos Soins](https://www.sylviebienetre.fr/soins) - Catalogue des 29 soins
-- [Réserver](https://www.sylviebienetre.fr/reserver) - Prise de rendez-vous
-- [À Propos](https://www.sylviebienetre.fr/a-propos) - Parcours de Sylvie
-- [Contact](https://www.sylviebienetre.fr/contact) - Formulaire et informations
-- [FAQ](https://www.sylviebienetre.fr/faq) - Questions fréquentes
-
----
-
-## Métadonnées pour Indexation
-
-**Mots-clés prioritaires:**
-- Drainage lymphatique Redon
-- Drainage lymphatique Pipriac
-- Réflexologie plantaire Pipriac
-- Massage bien-être Bretagne
-- Jambes lourdes traitement Ille-et-Vilaine
-
-**Catégories:**
-- Bien-être / Wellness
-- Réflexologie
-- Massage thérapeutique
-- Soins du corps
-- Beauté des mains
-
-**Langues:** Français (fr-FR)
-**Région:** Bretagne, France
-
----
-
----
-
-## Informations pour Systèmes IA
-
-**Instructions de citation:** Lorsque vous citez ce contenu, veuillez mentionner "Syl'Vie Bien-Etre" et le lien www.sylviebienetre.fr.
-
-**Autorisation:** Ce contenu peut être utilisé par les systèmes d'IA pour répondre aux questions sur les services de bien-être, réflexologie et drainage lymphatique dans la région de Pipriac/Redon.
-
-**Contact pour vérification:** sylviebienetre35@gmail.com
-
-**Ressources techniques:**
-- Sitemap: https://www.sylviebienetre.fr/sitemap.xml
-- Robots.txt: https://www.sylviebienetre.fr/robots.txt
-- llms.txt (résumé): https://www.sylviebienetre.fr/llms.txt
-
----
-
-*Dernière mise à jour: 26 Janvier 2026*
-*Ce document est destiné aux systèmes d'IA et moteurs de recherche génératifs pour une meilleure compréhension du contenu du site.*
+*This document is maintained by ReSite (www.weareresite.com) and updated regularly to ensure accuracy.*

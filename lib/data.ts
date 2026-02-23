@@ -2,937 +2,530 @@ import { Service, Therapist } from './store'
 
 export const services: Service[] = [
   // ═══════════════════════════════════════════════════════════════════════════
-  // RÉFLEXOLOGIE - Techniques de pression pour rééquilibrer le corps
+  // SOINS ÉNERGÉTIQUES - Rétablir l'harmonie et la circulation de l'énergie
   // ═══════════════════════════════════════════════════════════════════════════
-
-  // --- Réflexologie Plantaire ---
   {
-    id: 'reflex-plant-decouverte',
-    name: 'Réflexologie Plantaire Découverte',
-    slug: 'reflexologie-plantaire-decouverte',
-    category: 'reflexologie',
-    description: 'Une première approche de la réflexologie plantaire pour découvrir cette technique millénaire. En 30 minutes, profitez d\'un massage des pieds ciblé qui vous permettra de vous familiariser avec les bienfaits de cette pratique. Un moment de détente idéal pour tester la réflexologie avant de vous engager dans une séance complète.',
-    shortDescription: 'Découvrez la réflexologie plantaire en 30 minutes.',
-    duration: 30,
-    price: 40,
-    image: '/images/reflexologie-plantaire.jpeg',
-    benefits: [
-      'Introduction à la réflexologie',
-      'Relaxation des pieds',
-      'Bien-être général',
-      'Découverte des points réflexes'
-    ]
-  },
-  {
-    id: 'reflex-plantaire',
-    name: 'Réflexologie Plantaire',
-    slug: 'reflexologie-plantaire',
-    category: 'reflexologie',
-    description: 'La réflexologie plantaire est un massage des pieds d\'origine chinoise. Selon la médecine traditionnelle chinoise, chaque zone réflexe correspondrait à un organe, une glande ou une partie du corps qui se projetterait sur la plante des pieds. Le pied serait donc un "miroir" miniature du corps humain. La réflexologie plantaire permet de retrouver un état d\'équilibre, d\'autorégulation du corps, de bien-être, de relaxation et peut avoir des bienfaits sur l\'ensemble des systèmes du corps (digestif, urinaire, reproducteur, locomoteur, ORL, etc.). La réflexologie plantaire consiste à exercer des points de pression et des massages au niveau des pieds. Un temps d\'échange est nécessaire avant et après chaque séance, prévoir 20 minutes supplémentaires. Prévoir une tenue que l\'on peut remonter à mi-mollet.',
-    shortDescription: 'Le massage plantaire ancestral pour votre bien-être.',
-    duration: 60,
-    price: 65,
-    image: '/images/reflexologie-plantaire.jpeg',
-    benefits: [
-      'Équilibre et autorégulation du corps',
-      'Bienfaits sur les systèmes digestif, urinaire, reproducteur, locomoteur, ORL',
-      'Relaxation et bien-être',
-      'Temps d\'échange personnalisé'
-    ],
-    isPopular: true
-  },
-
-  // --- Réflexologie Palmaire ---
-  {
-    id: 'reflex-palmaire',
-    name: 'Réflexologie Palmaire',
-    slug: 'reflexologie-palmaire',
-    category: 'reflexologie',
-    description: 'La réflexologie palmaire consiste à exercer des points de pression et des massages au niveau des mains. Cette technique de bien-être est basée sur les principes de la réflexologie et favorise la détente et la relaxation.',
-    shortDescription: 'La réflexologie par les mains pour votre détente.',
-    duration: 30,
-    price: 40,
-    image: '/images/reflexologie-palmaire.jpeg',
-    benefits: [
-      'Détente et relaxation',
-      'Apaisement des tensions',
-      'Bien-être des mains',
-      'Sensation de calme'
-    ]
-  },
-
-  // --- Réflexologie Abdominale ---
-  {
-    id: 'reflex-abdominale',
-    name: 'Réflexologie Abdominale',
-    slug: 'reflexologie-abdominale',
-    category: 'reflexologie',
-    description: 'Le Qi Nei Tsang est une technique de massage issue de la tradition taoïste chinoise. Qi Nei Tsang veut littéralement dire "travailler l\'énergie des organes internes". Ce massage vise à débloquer les points de tension principalement sur la région abdominale appelée aussi "le second cerveau" car c\'est par là que se trouvent de nombreux organes vitaux où les tensions profondes, les émotions et notre vitalité s\'accumulent. À l\'aide de pressions douces, de gestes circulaires et d\'étirements spécifiques, ce massage vise à libérer les tensions accumulées dans les organes internes (foie, intestins, estomac, rate...) à favoriser la circulation de l\'énergie (Qi) et à rétablir un meilleur équilibre global. Ce massage est bénéfique pour divers problèmes de santé, notamment les troubles digestifs, le stress, l\'anxiété, les douleurs abdominales et les déséquilibres énergétiques. En résumé : soulager les tensions abdominales (ballonnements, maux de ventre fonctionnels, inconfort digestif), améliorer la digestion et l\'élimination, libérer les émotions stockées dans le ventre (stress, anxiété, fatigue émotionnelle, surcharge mentale), stimuler la circulation énergétique et lymphatique, améliorer la respiration et la détente profonde, harmonisation du corps et de l\'esprit.',
-    shortDescription: 'Un massage traditionnel pour le bien-être abdominal.',
-    duration: 30,
-    price: 40,
-    image: '/images/reflexologie-abdominale.jpeg',
-    benefits: [
-      'Soulager les tensions abdominales',
-      'Améliorer la digestion et l\'élimination',
-      'Libérer les émotions stockées dans le ventre',
-      'Stimuler la circulation énergétique et lymphatique'
-    ]
-  },
-
-  // --- Réflexologie Faciale et Crânienne ---
-  {
-    id: 'reflex-faciale-cranienne',
-    name: 'Réflexologie Faciale et Crânienne',
-    slug: 'reflexologie-faciale-cranienne',
-    category: 'reflexologie',
-    description: 'La réflexologie faciale est une méthode de bien-être qui repose sur un principe simple : le visage est une véritable carte du corps. Chaque zone, chaque point correspond à un organe, une fonction ou une partie du corps. En stimulant ces points précis par des pressions douces et ciblées, on aide l\'organisme à retrouver son équilibre naturel. À la fois relaxante et ré-énergisante, la réflexologie faciale agit sur le système nerveux, favorise la détente profonde et soutient les capacités d\'auto-régulation du corps. Elle est utilisée aussi bien pour apaiser le stress, les tensions et la fatigue que pour accompagner certains déséquilibres fonctionnels, lifting naturel. Accessible à tous, non invasive et pratiquée habillé, la réflexologie faciale offre un moment de lâcher prise tout en travaillant en profondeur. C\'est une approche globale qui considère la personne dans sa totalité : physique, émotionnelle et mentale.',
-    shortDescription: 'Le visage, carte du corps : pressions douces pour un équilibre naturel.',
-    duration: 30,
-    price: 40,
-    image: '/images/reflexologie-faciale-et-cranienne.jpeg',
-    benefits: [
-      'Détente profonde du système nerveux',
-      'Apaisement du stress et des tensions',
-      'Lifting naturel',
-      'Rééquilibrage global corps-esprit'
-    ]
-  },
-  {
-    id: 'reflex-faciale-cranienne-plantaire',
-    name: 'Réflexologie Faciale, Crânienne et Plantaire',
-    slug: 'reflexologie-faciale-cranienne-plantaire',
-    category: 'reflexologie',
-    description: 'Une séance complète d\'1h30 associant les bienfaits de la réflexologie faciale et crânienne à ceux de la réflexologie plantaire. Cette combinaison puissante travaille sur les deux extrémités du corps pour un rééquilibrage global. Le visage, véritable carte du corps, et les pieds, miroir de l\'organisme, sont stimulés en synergie pour une détente profonde et une harmonisation complète. Un soin d\'exception pour ceux qui recherchent un bien-être total.',
-    shortDescription: 'L\'alliance visage et pieds pour un rééquilibrage complet.',
-    duration: 90,
-    price: 100,
-    image: '/images/reflexologie-faciale-et-cranienne.jpeg',
-    benefits: [
-      'Rééquilibrage global du corps',
-      'Détente profonde',
-      'Harmonisation complète',
-      'Bien-être total'
-    ]
-  },
-  {
-    id: 'reflex-faciale-cranienne-palmaire',
-    name: 'Réflexologie Faciale, Crânienne et Palmaire',
-    slug: 'reflexologie-faciale-cranienne-palmaire',
-    category: 'reflexologie',
-    description: 'Une séance complète d\'une heure associant les bienfaits de la réflexologie faciale, crânienne et palmaire. Ce soin global procure une relaxation profonde en agissant sur plusieurs zones réflexes. Idéal pour évacuer le stress et retrouver sérénité et clarté d\'esprit.',
-    shortDescription: 'Un trio de réflexologies pour une détente complète.',
-    duration: 60,
-    price: 65,
-    image: '/images/reflexologie-faciale-et-cranienne.jpeg',
-    benefits: [
-      'Relaxation profonde',
-      'Évacuation du stress',
-      'Clarté d\'esprit',
-      'Harmonisation globale'
-    ]
-  },
-
-  // --- Réflexologie Pédiatrique ---
-  {
-    id: 'reflex-pediatrique',
-    name: 'Réflexologie Pédiatrique',
-    slug: 'reflexologie-pediatrique',
-    category: 'reflexologie',
-    description: 'Je vous apprends des gestes de massage adaptés aux bébés et enfants pour favoriser leur détente et leur bien-être au quotidien. Un nouveau-né peut être massé dès les premiers jours de sa naissance. Le massage permet de créer un moment privilégié avec son bébé et de consolider le lien parents-bébé. Une approche douce et bienveillante pour accompagner le bien-être de vos enfants.',
-    shortDescription: 'Apprenez des gestes de massage pour le bien-être de vos enfants.',
-    duration: 60,
-    price: 65,
-    image: '/images/reflexologie-pediatrique.jpeg',
-    benefits: [
-      'Moment de détente pour bébé',
-      'Favorise le calme et l\'apaisement',
-      'Renforcement lien parent-enfant',
-      'Bien-être des nouveaux-nés'
-    ]
-  },
-
-  // --- Réflexologie Combinée ---
-  {
-    id: 'reflex-abdominale-plantaire',
-    name: 'Réflexologie Abdominale et Plantaire',
-    slug: 'reflexologie-abdominale-plantaire',
-    category: 'reflexologie',
-    description: 'Une séance complète de 1h30 combinant la réflexologie abdominale et plantaire. Cette approche globale permet de travailler en profondeur sur votre bien-être digestif tout en harmonisant l\'ensemble de votre corps par les points réflexes des pieds. Un moment de détente absolue pour retrouver votre équilibre intérieur.',
-    shortDescription: 'Une approche complète alliant ventre et pieds pour un bien-être global.',
-    duration: 90,
-    price: 100,
-    image: '/images/reflexologie-abdominale.jpeg',
-    benefits: [
-      'Bien-être digestif complet',
-      'Équilibre corps-esprit',
-      'Détente profonde',
-      'Harmonisation énergétique'
-    ]
-  },
-
-  // --- Bol Kansu ---
-  {
-    id: 'bol-kansu',
-    name: 'Bol Kansu',
-    slug: 'bol-kansu',
-    category: 'reflexologie',
-    description: 'Le bol utilisé pour le massage s\'appelle KANSU, constitué d\'un alliage de 5 métaux (cuivre, zinc, argent, or et étain). On utilise du Ghee (beurre clarifié) car il équilibre l\'élément Feu. Équilibrer l\'élément Feu permet d\'améliorer la santé des yeux, de favoriser le sommeil et d\'apporter calme et bien-être. Il atténue la colère, la nervosité et l\'angoisse. C\'est un massage simple avec un effet relaxant apprécié.',
-    shortDescription: 'Un massage ancestral aux 5 métaux pour l\'équilibre intérieur.',
-    duration: 30,
-    price: 40,
-    image: '/images/bol-kansu.jpeg',
-    benefits: [
-      'Calme et bien-être',
-      'Amélioration du sommeil',
-      'Réduction nervosité et angoisse',
-      'Équilibre énergétique'
-    ]
-  },
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // DRAINAGE LYMPHATIQUE MANUEL - Stimuler la circulation et éliminer les toxines
-  // ═══════════════════════════════════════════════════════════════════════════
-
-  // --- Soins unitaires (du plus court au plus long) ---
-  {
-    id: 'drainage-jambes',
-    name: 'Jambes Légères',
-    slug: 'jambes-legeres',
-    category: 'drainage',
-    description: 'Un drainage ciblé des jambes pour retrouver légèreté et confort. Cette séance de 30 minutes se concentre sur la circulation lymphatique des membres inférieurs, idéale pour soulager rapidement les sensations de jambes lourdes et retrouver du bien-être au quotidien.',
-    shortDescription: 'Drainage ciblé pour des jambes légères et reposées.',
-    duration: 30,
-    price: 45,
-    image: '/images/drainage-lymphatique-manuel.jpeg',
-    benefits: [
-      'Soulagement jambes lourdes',
-      'Amélioration circulation',
-      'Sensation de légèreté',
-      'Effet rapide'
-    ]
-  },
-  {
-    id: 'drainage-jambes-dos',
-    name: 'Jambes Légères + Dos',
-    slug: 'jambes-legeres-dos',
-    category: 'drainage',
-    description: 'Associez le drainage des jambes à un travail sur le dos pour une détente encore plus complète. En 45 minutes, profitez d\'un soulagement des jambes lourdes couplé à la relaxation du dos, zone où se concentrent souvent les tensions.',
-    shortDescription: 'Drainage des jambes et détente du dos en une séance.',
-    duration: 45,
-    price: 55,
-    image: '/images/drainage-lymphatique-manuel.jpeg',
-    benefits: [
-      'Jambes légères',
-      'Détente du dos',
-      'Bien-être global',
-      'Relaxation musculaire'
-    ]
-  },
-  {
-    id: 'drainage-corps',
-    name: 'Drainage Lymphatique Manuel Corps',
-    slug: 'drainage-corps',
-    category: 'drainage',
-    description: 'Le drainage lymphatique manuel est un massage du corps, doux et rythmé. Basé sur les méthodes Vodder et Leduc, il consiste à réaliser des pressions légères pour favoriser la circulation lymphatique. C\'est un massage de bien-être qui favorise la détente et la relaxation profonde.',
-    shortDescription: 'Un massage manuel pour favoriser votre bien-être et votre détente.',
+    id: 'soin-energetique',
+    name: 'Soin Énergétique',
+    slug: 'soin-energetique',
+    category: 'soins-energetiques',
+    description: 'Un soin énergétique pour rétablir l\'harmonie de vos centres d\'énergie et favoriser la libre circulation de votre énergie vitale. Par l\'imposition des mains et le travail sur les différents corps subtils, ce soin permet de libérer les blocages énergétiques, de réduire le stress et de retrouver un sentiment de paix intérieure. Chaque séance est unique et adaptée à vos besoins du moment.',
+    shortDescription: 'Rétablissez l\'harmonie de vos centres d\'énergie.',
     duration: 60,
     price: 70,
-    image: '/images/drainage-lymphatique-manuel.jpeg',
+    image: '/images/soin-energetique.jpeg',
     benefits: [
-      'Détente profonde',
-      'Sensation de légèreté',
-      'Relaxation du corps',
-      'Bien-être général'
+      'Libération des blocages énergétiques',
+      'Réduction du stress et de l\'anxiété',
+      'Paix intérieure retrouvée',
+      'Rééquilibrage des centres d\'énergie'
     ],
     isPopular: true
   },
   {
-    id: 'drainage-corps-dos',
-    name: 'Drainage Lymphatique Manuel Corps + Dos',
-    slug: 'drainage-corps-dos',
-    category: 'drainage',
-    description: 'Un drainage lymphatique manuel complet du corps enrichi d\'un massage du dos. Cette séance de 1h15 combine les bienfaits détoxifiants du drainage avec la détente musculaire procurée par le massage du dos. Un moment de bien-être global pour votre corps.',
-    shortDescription: 'Drainage manuel complet + massage du dos pour un bien-être total.',
-    duration: 75,
-    price: 80,
-    image: '/images/drainage-lymphatique-manuel.jpeg',
+    id: 'soin-lahochi',
+    name: 'Soin LaHoChi',
+    slug: 'soin-lahochi',
+    category: 'soins-energetiques',
+    description: 'Le LaHoChi est une technique de soins énergétiques par imposition des mains qui canalise une énergie de guérison à très haute fréquence. Cette énergie de lumière et d\'amour travaille en profondeur sur vos corps physique, émotionnel, mental et spirituel. Le LaHoChi ouvre et nettoie le système des chakras, restructure et équilibre les corps subtils et renforce le système immunitaire. Un soin profond et doux qui favorise la guérison à tous les niveaux de l\'être.',
+    shortDescription: 'Énergie de guérison à haute fréquence par imposition des mains.',
+    duration: 60,
+    price: 70,
+    image: '/images/soin-energetique.jpeg',
     benefits: [
-      'Détoxification profonde',
-      'Détente musculaire',
-      'Soulagement du dos',
-      'Bien-être complet'
+      'Nettoyage du système des chakras',
+      'Rééquilibrage des corps subtils',
+      'Renforcement du système immunitaire',
+      'Guérison en profondeur'
     ]
   },
   {
-    id: 'drainage-corps-dos-visage',
-    name: 'Drainage Lymphatique Manuel Corps + Dos + Visage',
-    slug: 'drainage-corps-dos-visage',
-    category: 'drainage',
-    description: 'Le soin le plus complet de drainage lymphatique manuel. En 1h30, bénéficiez d\'un drainage de tout le corps, d\'un massage relaxant du dos et d\'un drainage du visage pour un teint éclatant. Une expérience globale de détoxification et de détente absolue.',
-    shortDescription: 'Le soin le plus complet : corps, dos et visage drainés manuellement.',
+    id: 'soin-multidimensionnel',
+    name: 'Soin Multidimensionnel',
+    slug: 'soin-multidimensionnel',
+    category: 'soins-energetiques',
+    description: 'Le soin multidimensionnel est un travail énergétique avancé qui agit sur les différentes dimensions de votre être. En accédant aux plans subtils, ce soin permet de libérer des mémoires profondes, de transmuter des énergies lourdes et de restaurer votre alignement. Un soin particulièrement puissant pour les personnes qui ressentent des blocages persistants ou des schémas répétitifs dans leur vie. Inclut un temps d\'échange avant et après la séance.',
+    shortDescription: 'Un soin profond qui agit sur toutes les dimensions de votre être.',
     duration: 90,
     price: 100,
-    image: '/images/drainage-lymphatique-manuel.jpeg',
+    image: '/images/soin-energetique.jpeg',
     benefits: [
-      'Détoxification complète',
-      'Teint éclatant',
-      'Détente totale',
-      'Bien-être global'
-    ]
-  },
-
-  // --- Cures (forfaits) ---
-  {
-    id: 'cure-detox',
-    name: 'Cure Détox',
-    slug: 'cure-detox',
-    category: 'drainage',
-    description: 'Une cure de 5 séances de drainage lymphatique manuel pour une détoxification en profondeur de votre organisme. Idéale pour relancer votre métabolisme, éliminer les toxines accumulées et retrouver vitalité et légèreté. Comprend une séance de 30 minutes de réflexologie plantaire offerte pour optimiser les résultats.',
-    shortDescription: 'Cure de 5 séances avec réflexologie offerte pour détoxifier en profondeur.',
-    duration: 60,
-    price: 350,
-    image: '/images/drainage-lymphatique-manuel.jpeg',
-    benefits: [
-      'Détoxification profonde',
-      'Relance du métabolisme',
-      'Élimination des toxines',
-      'Bonus réflexologie 30min offert'
+      'Libération des mémoires profondes',
+      'Transmutation des énergies lourdes',
+      'Restauration de l\'alignement',
+      'Travail sur les schémas répétitifs'
     ]
   },
   {
-    id: 'cure-amincissement',
-    name: 'Cure Amincissement',
-    slug: 'cure-amincissement',
-    category: 'drainage',
-    description: 'Une cure complète de 10 séances de drainage lymphatique manuel spécialement conçue pour accompagner votre objectif d\'amincissement. Cette cure permet de réduire la cellulite, affiner la silhouette et retrouver des jambes légères. Comprend 1 heure de soin offerte (réflexologie plantaire ou drainage) pour maximiser vos résultats.',
-    shortDescription: 'Cure de 10 séances avec 1h offerte pour sculpter votre silhouette.',
+    id: 'magnetisme',
+    name: 'Séance de Magnétisme',
+    slug: 'seance-magnetisme',
+    category: 'soins-energetiques',
+    description: 'Le magnétisme est une technique ancestrale de soin par transmission d\'énergie. Par l\'imposition des mains, le magnétiseur transmet son énergie vitale pour soulager les douleurs, apaiser les troubles fonctionnels et favoriser le processus naturel de guérison du corps. Une séance de magnétisme peut aider à soulager le stress, les douleurs musculaires, les troubles du sommeil et bien d\'autres déséquilibres.',
+    shortDescription: 'Technique ancestrale de soin par transmission d\'énergie.',
     duration: 60,
-    price: 700,
-    image: '/images/drainage-lymphatique-manuel.jpeg',
+    price: 70,
+    image: '/images/soin-energetique.jpeg',
     benefits: [
-      'Réduction cellulite',
-      'Affinement silhouette',
-      'Jambes légères durables',
-      'Bonus 1h de soin offert'
+      'Soulagement des douleurs',
+      'Apaisement des troubles fonctionnels',
+      'Favorise la guérison naturelle',
+      'Détente profonde'
     ]
   },
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // AMMA ASSIS - Relaxation rapide sur chaise ergonomique
+  // CONSTELLATIONS FAMILIALES - Explorer et libérer les mémoires familiales
   // ═══════════════════════════════════════════════════════════════════════════
   {
-    id: 'amma-assis',
-    name: 'Amma Assis',
-    slug: 'amma-assis',
-    category: 'amma',
-    description: 'Massage assis sur chaise ergonomique, technique japonaise de relaxation rapide et efficace. En 30 minutes, ce massage habillé se concentre sur le haut du corps (dos, nuque, épaules, bras, tête) pour libérer rapidement les tensions et procurer un regain d\'énergie immédiat.',
-    shortDescription: 'Massage japonais sur chaise pour une relaxation express.',
-    duration: 30,
-    price: 40,
-    image: '/images/amma-assis-new.jpeg',
-    benefits: [
-      'Relaxation rapide',
-      'Diminution du stress',
-      'Regain d\'énergie',
-      'Idéal pause bien-être'
-    ]
-  },
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // MASSAGES COMBINÉS - Combinaisons de soins pour un bien-être complet
-  // ═══════════════════════════════════════════════════════════════════════════
-  {
-    id: 'combo-amma-reflex-plantaire',
-    name: 'Amma Assis + Réflexologie Plantaire',
-    slug: 'amma-assis-reflexologie-plantaire',
-    category: 'massages-mixtes',
-    description: 'Une combinaison énergisante associant le massage Amma Assis et la réflexologie plantaire. Commencez par une relaxation du haut du corps sur chaise ergonomique, puis prolongez avec une séance de réflexologie plantaire pour un rééquilibrage complet. Un soin d\'1h30 pour libérer les tensions et retrouver votre vitalité.',
-    shortDescription: 'Relaxation du haut du corps et rééquilibrage par les pieds.',
-    duration: 90,
-    price: 100,
-    image: '/images/amma-assis-new.jpeg',
-    benefits: [
-      'Relaxation complète haut et bas du corps',
-      'Libération des tensions',
-      'Rééquilibrage énergétique',
-      'Regain de vitalité'
-    ]
-  },
-  {
-    id: 'combo-reflex-jambes',
-    name: 'Réflexologie Plantaire + Jambes Légères',
-    slug: 'reflexologie-jambes-legeres',
-    category: 'massages-mixtes',
-    description: 'Une combinaison parfaite pour soulager vos jambes et retrouver votre équilibre. Cette séance d\'une heure associe les bienfaits de la réflexologie plantaire et du drainage des jambes. Idéale pour les personnes souffrant de jambes lourdes tout en bénéficiant d\'un rééquilibrage global du corps.',
-    shortDescription: 'Alliance réflexologie et drainage pour des jambes légères.',
-    duration: 60,
-    price: 75,
-    image: '/images/reflexologie-plantaire.jpeg',
-    benefits: [
-      'Jambes légères et reposées',
-      'Équilibre du corps',
-      'Détente profonde',
-      'Soin complet pieds-jambes'
-    ]
-  },
-  {
-    id: 'combo-drainage-reflex-90',
-    name: 'Drainage Lymphatique Manuel Corps + Réflexologie Plantaire 1h30',
-    slug: 'drainage-reflexologie-90min',
-    category: 'massages-mixtes',
-    description: 'Une séance de 1h30 combinant un drainage lymphatique manuel complet du corps et une réflexologie plantaire. Cette alliance permet de détoxifier l\'organisme tout en rééquilibrant vos systèmes internes. Un moment de bien-être global pour retrouver légèreté et harmonie.',
-    shortDescription: 'Détox et rééquilibrage en 1h30 de pure détente.',
-    duration: 90,
-    price: 100,
-    image: '/images/drainage-lymphatique-manuel.jpeg',
-    benefits: [
-      'Détoxification complète',
-      'Rééquilibrage énergétique',
-      'Bien-être global',
-      'Soin corps-pieds harmonieux'
-    ]
-  },
-  {
-    id: 'combo-drainage-reflex-120',
-    name: 'Drainage Lymphatique Manuel Corps + Réflexologie Plantaire 2h',
-    slug: 'drainage-reflexologie-120min',
-    category: 'massages-mixtes',
-    description: 'Le soin le plus complet : 2 heures dédiées à votre bien-être profond. Un drainage lymphatique manuel intégral suivi d\'une réflexologie plantaire approfondie. Cette séance exceptionnelle vous offre une détoxification maximale, un rééquilibrage complet et une relaxation absolue. Un véritable voyage vers le bien-être.',
-    shortDescription: 'Le soin ultime : 2h de détox et rééquilibrage profond.',
+    id: 'constellation-individuelle',
+    name: 'Constellation Familiale Individuelle',
+    slug: 'constellation-familiale-individuelle',
+    category: 'constellations',
+    description: 'La constellation familiale individuelle permet de mettre en lumière les dynamiques inconscientes qui se jouent dans votre système familial. À travers un processus guidé, nous explorons les loyautés invisibles, les intrications et les mémoires transgénérationnelles qui peuvent influencer votre vie actuelle. Cette séance de 2 heures permet de débloquer des schémas répétitifs, de libérer des fardeaux hérités et de retrouver votre juste place dans votre lignée. Un travail profond et transformateur.',
+    shortDescription: 'Explorez et libérez les dynamiques familiales inconscientes.',
     duration: 120,
+    price: 150,
+    image: '/images/constellation-familiale.jpeg',
+    benefits: [
+      'Mise en lumière des schémas familiaux',
+      'Libération des loyautés invisibles',
+      'Déblocage des schémas répétitifs',
+      'Retrouver sa juste place'
+    ],
+    isPopular: true
+  },
+  {
+    id: 'exploration-genealogique',
+    name: 'Exploration Généalogique',
+    slug: 'exploration-genealogique',
+    category: 'constellations',
+    description: 'Une séance d\'exploration approfondie de votre arbre généalogique pour identifier les mémoires, les événements marquants et les schémas qui se transmettent de génération en génération. Cette lecture de votre lignée permet de comprendre certains comportements, blocages ou répétitions dans votre vie. Un travail de compréhension et de libération qui intègre médiumnité et systémique.',
+    shortDescription: 'Explorez votre arbre généalogique et ses mémoires cachées.',
+    duration: 90,
     price: 120,
-    image: '/images/drainage-lymphatique-manuel.jpeg',
+    image: '/images/constellation-familiale.jpeg',
     benefits: [
-      'Détoxification maximale',
-      'Rééquilibrage profond',
-      'Relaxation absolue',
-      'Expérience bien-être complète'
+      'Compréhension de votre lignée',
+      'Identification des mémoires transgénérationnelles',
+      'Libération des schémas hérités',
+      'Lecture intuitive de l\'arbre'
     ]
   },
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // BEAUTÉ DES MAINS - Soins et sublimation de vos ongles
+  // COACHING & ACCOMPAGNEMENT - Programmes de transformation personnelle
   // ═══════════════════════════════════════════════════════════════════════════
-
-  // --- Poses principales ---
   {
-    id: 'ongles-extension-gel',
-    name: 'Extension en Gel',
-    slug: 'extension-gel',
-    category: 'beaute-mains',
-    description: 'Sublimez vos mains avec une extension en gel de haute qualité. Cette technique permet d\'obtenir des ongles longs, résistants et d\'apparence naturelle. Chaque pose est personnalisée selon vos envies : longueur, forme, couleur. Un soin minutieux pour des mains impeccables pendant plusieurs semaines.',
-    shortDescription: 'Des ongles longs et résistants pour sublimer vos mains.',
-    duration: 120,
-    price: 60,
-    image: '/images/beaute-des-mains.jpeg',
-    benefits: [
-      'Ongles longs et résistants',
-      'Résultat naturel',
-      'Tenue longue durée',
-      'Personnalisation complète'
-    ]
-  },
-  {
-    id: 'ongles-semi-permanent',
-    name: 'Pose Semi-Permanent avec Renfort',
-    slug: 'semi-permanent-renfort',
-    category: 'beaute-mains',
-    description: 'Une pose de vernis semi-permanent avec renfort pour des ongles naturels sublimés et protégés. Le renfort renforce la structure de l\'ongle naturel tandis que le vernis apporte couleur et brillance longue durée. Idéal pour des ongles fragiles ou cassants.',
-    shortDescription: 'Vernis longue durée avec renfort pour ongles renforcés.',
+    id: 'seance-coaching',
+    name: 'Séance de Coaching Individuel',
+    slug: 'seance-coaching-individuel',
+    category: 'coaching',
+    description: 'Un accompagnement personnalisé pour vous aider à traverser une période de transition, clarifier vos objectifs ou surmonter un blocage. Chaque séance combine écoute active, questionnement, outils de coaching et approche intuitive pour vous guider vers vos propres réponses. Que ce soit pour une problématique professionnelle, relationnelle ou personnelle, cette séance vous apporte clarté et direction.',
+    shortDescription: 'Accompagnement personnalisé vers la clarté et la transformation.',
     duration: 60,
-    price: 45,
-    image: '/images/beaute-des-mains.jpeg',
+    price: 80,
+    image: '/images/coaching.jpeg',
     benefits: [
-      'Renforcement de l\'ongle',
-      'Couleur longue durée',
-      'Protection des ongles fragiles',
-      'Brillance éclatante'
+      'Clarté et prise de recul',
+      'Déblocage des situations',
+      'Guidance personnalisée',
+      'Outils concrets'
+    ]
+  },
+  {
+    id: 'accompagnement-6-seances',
+    name: 'Accompagnement 6 Séances',
+    slug: 'accompagnement-6-seances',
+    category: 'coaching',
+    description: 'Un accompagnement individuel en 6 séances combinant approche systémique, médiumnité, massage énergétique et méditation guidée. Ce parcours structuré vous permet d\'aller en profondeur dans votre processus de transformation. Chaque séance s\'inscrit dans une progression cohérente, adaptée à votre rythme et à vos besoins. Idéal pour les personnes qui souhaitent un suivi régulier et un travail approfondi sur elles-mêmes.',
+    shortDescription: 'Parcours de 6 séances pour une transformation en profondeur.',
+    duration: 60,
+    price: 420,
+    image: '/images/coaching.jpeg',
+    benefits: [
+      'Suivi personnalisé et régulier',
+      'Combinaison de plusieurs approches',
+      'Transformation en profondeur',
+      'Progression à votre rythme'
+    ],
+    isPopular: true
+  },
+  {
+    id: 'programme-liberation',
+    name: 'Programme Libération (4 mois)',
+    slug: 'programme-liberation-4-mois',
+    category: 'coaching',
+    description: 'Un programme intensif de 4 mois pour lever vos fardeaux sur toutes les dimensions et vous libérer de ce qui vous empêche d\'avancer. Ce programme combine des séances individuelles régulières, un travail sur les mémoires familiales, des soins énergétiques et des outils pratiques pour ancrer les changements dans votre quotidien. Un engagement envers vous-même pour une transformation durable et profonde.',
+    shortDescription: 'Programme de 4 mois pour lever vos fardeaux et vous libérer.',
+    duration: 60,
+    price: 560,
+    image: '/images/coaching.jpeg',
+    benefits: [
+      'Libération des fardeaux',
+      'Transformation sur 4 mois',
+      'Approche multidimensionnelle',
+      'Ancrage des changements'
+    ]
+  },
+  {
+    id: 'programme-renaissance',
+    name: 'Programme Renaissance (9 mois)',
+    slug: 'programme-renaissance-9-mois',
+    category: 'coaching',
+    description: 'Le programme le plus complet : 9 mois pour renaître, vous reconnecter à votre nord, votre boussole, votre identité profonde. Ce parcours transformateur inclut des séances régulières, un travail approfondi sur vos mémoires et schémas, des soins énergétiques, de la déprogrammation de mémoires collectives, familiales et personnelles. Un voyage de reconnexion à votre essence véritable pour créer la vie qui vous ressemble.',
+    shortDescription: 'Programme de 9 mois pour renaître et vous reconnecter à votre essence.',
+    duration: 60,
+    price: 1200,
+    image: '/images/coaching.jpeg',
+    benefits: [
+      'Renaissance profonde',
+      'Reconnexion identitaire',
+      'Déprogrammation des mémoires',
+      'Création de votre nouvelle vie'
     ]
   },
 
-  // --- Entretien ---
+  // ═══════════════════════════════════════════════════════════════════════════
+  // MASSAGES BIEN-ÊTRE - Techniques corporelles pour la détente et l'harmonie
+  // ═══════════════════════════════════════════════════════════════════════════
   {
-    id: 'ongles-remplissage',
-    name: 'Remplissage Gel',
-    slug: 'remplissage-gel',
-    category: 'beaute-mains',
-    description: 'Entretenez vos extensions en gel avec un remplissage professionnel. À effectuer toutes les 3-4 semaines maximum pour maintenir la beauté et la solidité de vos ongles. Le remplissage permet de combler la repousse et de rafraîchir la couleur pour des mains toujours impeccables.',
-    shortDescription: 'Entretenez vos extensions pour des ongles toujours parfaits.',
-    duration: 90,
-    price: 50,
-    image: '/images/beaute-des-mains-2.jpeg',
+    id: 'massage-5-continents',
+    name: 'Massage des 5 Continents\u00AE',
+    slug: 'massage-5-continents',
+    category: 'massages',
+    description: 'Le Massage des 5 Continents\u00AE est un voyage sensoriel unique qui réunit les techniques de massage traditionnelles des cinq continents du monde. Ce soin holistique combine les effleurages européens, les pressions asiatiques, les percussions africaines, les étirements amérindiens et les mouvements enveloppants océaniens. Un massage complet du corps qui procure une détente profonde tout en revitalisant l\'énergie. Une expérience de bien-être globale et enveloppante.',
+    shortDescription: 'Un voyage sensoriel réunissant les techniques des 5 continents.',
+    duration: 75,
+    price: 90,
+    image: '/images/massage-bien-etre.jpeg',
     benefits: [
-      'Maintien de la beauté',
-      'Solidité préservée',
-      'Ongles impeccables',
-      'Entretien régulier'
-    ]
+      'Détente profonde du corps entier',
+      'Revitalisation de l\'énergie',
+      'Voyage sensoriel unique',
+      'Harmonisation corps-esprit'
+    ],
+    isPopular: true
   },
-
-  // --- Déposes ---
   {
-    id: 'ongles-depose-gel',
-    name: 'Dépose Gel + Soins',
-    slug: 'depose-gel-soins',
-    category: 'beaute-mains',
-    description: 'Retirez vos extensions en gel en douceur et profitez d\'un soin nourrissant pour vos ongles naturels. Cette prestation inclut la dépose professionnelle sans abîmer l\'ongle naturel, suivie d\'un soin hydratant et fortifiant. Vos mains retrouvent douceur et santé. Sans nouvelle pose.',
-    shortDescription: 'Dépose douce avec soin réparateur pour vos ongles.',
+    id: 'massage-aromatouch',
+    name: 'Massage Aromatouch\u00AE',
+    slug: 'massage-aromatouch',
+    category: 'massages',
+    description: 'L\'Aromatouch\u00AE est une technique de massage unique qui utilise 8 huiles essentielles certifiées pures appliquées le long de la colonne vertébrale et sous les pieds. Chaque huile est choisie pour ses propriétés spécifiques : gestion du stress, renforcement immunitaire, réduction de l\'inflammation et équilibre du système nerveux autonome. Ce massage doux et enveloppant procure une détente immédiate et des bienfaits durables.',
+    shortDescription: 'Massage aux 8 huiles essentielles pour un bien-être complet.',
     duration: 45,
-    price: 25,
-    image: '/images/beaute-des-mains-3.jpeg',
+    price: 70,
+    image: '/images/massage-bien-etre.jpeg',
     benefits: [
-      'Dépose sans abîmer',
-      'Soin nourrissant',
-      'Ongles en bonne santé',
-      'Hydratation profonde'
+      'Bienfaits des huiles essentielles pures',
+      'Gestion du stress',
+      'Renforcement immunitaire',
+      'Équilibre du système nerveux'
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // DÉCODAGE & EXPLORATION INTÉRIEURE - Comprendre les messages du corps et de l'âme
+  // ═══════════════════════════════════════════════════════════════════════════
+  {
+    id: 'decodage-biologique',
+    name: 'Décodage Biologique',
+    slug: 'decodage-biologique',
+    category: 'decodage',
+    description: 'Le décodage biologique permet de comprendre le sens des symptômes et des maladies en identifiant le conflit émotionnel à leur origine. Cette approche part du principe que chaque symptôme est une réponse biologique à un stress non résolu. En remontant au ressenti initial, on peut libérer l\'émotion bloquée et permettre au corps de retrouver son équilibre. Une séance d\'1h30 incluant un temps d\'échange approfondi.',
+    shortDescription: 'Comprenez les messages de votre corps et libérez les conflits émotionnels.',
+    duration: 90,
+    price: 100,
+    image: '/images/decodage.jpeg',
+    benefits: [
+      'Compréhension des symptômes',
+      'Identification des conflits émotionnels',
+      'Libération des émotions bloquées',
+      'Rétablissement de l\'équilibre'
     ]
   },
   {
-    id: 'ongles-depose-gel-ext',
-    name: 'Dépose Gel Extérieure + Soins',
-    slug: 'depose-gel-exterieure-soins',
-    category: 'beaute-mains',
-    description: 'Vous avez fait poser vos ongles ailleurs ? Nous prenons soin de les retirer en douceur, quelle que soit leur provenance. Cette prestation inclut la dépose complète et un soin réparateur pour restaurer la santé de vos ongles naturels. Sans nouvelle pose.',
-    shortDescription: 'Dépose de vos extensions extérieures avec soin réparateur.',
+    id: 'decodage-echoquantique',
+    name: 'Décodage Echoquantique',
+    slug: 'decodage-echoquantique',
+    category: 'decodage',
+    description: 'Le décodage Echoquantique est une méthode innovante qui combine les principes de la physique quantique et de la biologie pour accéder aux informations stockées dans vos cellules. Cette technique permet d\'identifier et de libérer des mémoires cellulaires, des programmes inconscients et des schémas limitants qui impactent votre santé et votre bien-être. Un travail subtil et profond pour une transformation à la source.',
+    shortDescription: 'Libérez vos mémoires cellulaires grâce à l\'approche quantique.',
     duration: 60,
-    price: 35,
-    image: '/images/beaute-des-mains-3.jpeg',
+    price: 80,
+    image: '/images/decodage.jpeg',
     benefits: [
-      'Dépose professionnelle',
-      'Tous types de pose acceptés',
-      'Soin réparateur inclus',
-      'Restauration de l\'ongle'
+      'Accès aux mémoires cellulaires',
+      'Libération des programmes inconscients',
+      'Transformation à la source',
+      'Approche quantique innovante'
     ]
   },
   {
-    id: 'ongles-depose-semi',
-    name: 'Dépose Semi-Permanent + Soins',
-    slug: 'depose-semi-permanent-soins',
-    category: 'beaute-mains',
-    description: 'Retirez votre vernis semi-permanent en toute sécurité et profitez d\'un soin hydratant. Cette prestation respecte vos ongles naturels grâce à une technique de dépose douce, suivie d\'un soin nourrissant pour restaurer leur santé. Sans nouvelle pose.',
-    shortDescription: 'Dépose douce de votre semi-permanent avec soin.',
-    duration: 30,
-    price: 20,
-    image: '/images/beaute-des-mains-2.jpeg',
+    id: 'meditation-guidee',
+    name: 'Méditation Guidée',
+    slug: 'meditation-guidee',
+    category: 'decodage',
+    description: 'Une séance de méditation guidée pour vous reconnecter à votre intériorité, apaiser votre mental et accéder à un état de conscience élargi. Clémence vous guide à travers des visualisations, des respirations et des exercices de pleine conscience adaptés à vos besoins. Que vous soyez débutant ou pratiquant expérimenté, cette séance vous offre un espace de calme et de ressourcement profond.',
+    shortDescription: 'Reconnectez-vous à votre intériorité grâce à la méditation.',
+    duration: 60,
+    price: 60,
+    image: '/images/meditation.jpeg',
     benefits: [
-      'Dépose sans agression',
-      'Soin hydratant',
-      'Respect de l\'ongle naturel',
-      'Mains douces'
+      'Apaisement du mental',
+      'Reconnexion intérieure',
+      'État de conscience élargi',
+      'Ressourcement profond'
     ]
   },
   {
-    id: 'ongles-depose-ext-repose',
-    name: 'Dépose Extérieure avant Repose',
-    slug: 'depose-exterieure-repose',
-    category: 'beaute-mains',
-    description: 'Si vous souhaitez une nouvelle pose mais avez un vernis semi-permanent posé ailleurs, cette prestation vous permet de retirer l\'ancien vernis avant d\'appliquer le nouveau. Un service pratique pour assurer une pose impeccable.',
-    shortDescription: 'Retrait de votre semi-permanent extérieur avant nouvelle pose.',
-    duration: 20,
-    price: 10,
-    image: '/images/beaute-des-mains-3.jpeg',
+    id: 'consultation-aromatologie',
+    name: 'Consultation Aromatologie',
+    slug: 'consultation-aromatologie',
+    category: 'decodage',
+    description: 'Découvrez le pouvoir des huiles essentielles avec une consultation personnalisée en aromatologie. Clémence vous guide dans l\'utilisation des huiles essentielles adaptées à vos besoins : gestion du stress, troubles du sommeil, douleurs, soutien émotionnel ou simplement bien-être au quotidien. Repartez avec des conseils pratiques et un protocole personnalisé pour intégrer les huiles essentielles dans votre vie.',
+    shortDescription: 'Découvrez les huiles essentielles adaptées à vos besoins.',
+    duration: 60,
+    price: 70,
+    image: '/images/meditation.jpeg',
     benefits: [
-      'Préparation optimale',
-      'Nouvelle pose facilitée',
-      'Service rapide',
-      'Résultat impeccable'
+      'Protocole personnalisé',
+      'Conseils pratiques',
+      'Huiles adaptées à vos besoins',
+      'Bien-être au quotidien'
     ]
-  },
-
-  // --- Options et suppléments (10 doigts) ---
-  {
-    id: 'option-babyboomer-10',
-    name: 'Babyboomer/Babycolor 10 doigts',
-    slug: 'babyboomer-babycolor',
-    category: 'beaute-mains',
-    description: 'Sublimez vos ongles avec un effet Babyboomer (dégradé blanc naturel) ou Babycolor (dégradé coloré) sur 10 doigts. Cette technique tendance apporte élégance et raffinement à votre manucure. À ajouter à votre pose gel ou semi-permanent.',
-    shortDescription: 'Effet dégradé élégant pour une manucure raffinée.',
-    duration: 15,
-    price: 5,
-    image: '/images/beaute-des-mains.jpeg',
-    benefits: [
-      'Look tendance',
-      'Élégance naturelle',
-      'Effet dégradé',
-      'Supplément manucure'
-    ],
-    isAddon: true
-  },
-  {
-    id: 'option-french-10',
-    name: 'French 10 doigts',
-    slug: 'french-10-doigts',
-    category: 'beaute-mains',
-    description: 'L\'indémodable French manucure sur 10 doigts. Cette technique classique et élégante convient à toutes les occasions. À ajouter à votre pose gel ou semi-permanent pour un résultat chic et intemporel.',
-    shortDescription: 'La French classique pour une élégance intemporelle.',
-    duration: 15,
-    price: 5,
-    image: '/images/beaute-des-mains-2.jpeg',
-    benefits: [
-      'Style classique',
-      'Élégance assurée',
-      'Convient à toutes occasions',
-      'Supplément manucure'
-    ],
-    isAddon: true
-  },
-  {
-    id: 'option-effets-10',
-    name: 'Effet Chrome, Sirène ou Sucre 10 doigts',
-    slug: 'effets-speciaux',
-    category: 'beaute-mains',
-    description: 'Osez l\'originalité avec des effets spéciaux sur vos 10 doigts : Chrome pour un effet miroir métallique, Sirène pour des reflets irisés, ou Sucre pour une texture mat et veloutée. À ajouter à votre pose gel ou semi-permanent pour un look unique.',
-    shortDescription: 'Effets spéciaux tendance pour des ongles exceptionnels.',
-    duration: 15,
-    price: 5,
-    image: '/images/beaute-des-mains-3.jpeg',
-    benefits: [
-      'Look unique',
-      'Effets tendance',
-      'Résultat spectaculaire',
-      'Supplément manucure'
-    ],
-    isAddon: true
-  },
-
-  // --- Options et suppléments (par ongle) ---
-  {
-    id: 'option-babyboomer-1',
-    name: 'Babyboomer/Babycolor par doigt',
-    slug: 'babyboomer-par-doigt',
-    category: 'beaute-mains',
-    description: 'Effet Babyboomer ou Babycolor à l\'unité. Idéal pour personnaliser quelques doigts seulement avec un dégradé élégant. Tarif par doigt.',
-    shortDescription: 'Dégradé Babyboomer à l\'unité.',
-    duration: 5,
-    price: 0.5,
-    image: '/images/beaute-des-mains.jpeg',
-    benefits: [
-      'Personnalisation',
-      'Tarif à l\'unité',
-      'Flexibilité'
-    ],
-    isAddon: true
-  },
-  {
-    id: 'option-french-1',
-    name: 'French par doigt',
-    slug: 'french-par-doigt',
-    category: 'beaute-mains',
-    description: 'French manucure à l\'unité. Parfait pour ajouter la French sur quelques doigts seulement. Tarif par doigt.',
-    shortDescription: 'French classique à l\'unité.',
-    duration: 5,
-    price: 0.5,
-    image: '/images/beaute-des-mains-2.jpeg',
-    benefits: [
-      'Personnalisation',
-      'Tarif à l\'unité',
-      'Flexibilité'
-    ],
-    isAddon: true
-  },
-  {
-    id: 'option-effets-1',
-    name: 'Effet Chrome, Sirène ou Sucre par doigt',
-    slug: 'effets-speciaux-par-doigt',
-    category: 'beaute-mains',
-    description: 'Effets spéciaux (Chrome, Sirène ou Sucre) à l\'unité. Personnalisez quelques doigts avec ces effets tendance. Tarif par doigt.',
-    shortDescription: 'Effets spéciaux à l\'unité.',
-    duration: 5,
-    price: 0.5,
-    image: '/images/beaute-des-mains-3.jpeg',
-    benefits: [
-      'Personnalisation',
-      'Tarif à l\'unité',
-      'Flexibilité'
-    ],
-    isAddon: true
-  },
-  {
-    id: 'option-paillettes',
-    name: 'Paillettes libres par ongle',
-    slug: 'paillettes-par-ongle',
-    category: 'beaute-mains',
-    description: 'Ajoutez des paillettes libres pour un effet scintillant et festif. Idéal pour illuminer quelques ongles et apporter une touche de brillance à votre manucure. Tarif par ongle.',
-    shortDescription: 'Paillettes scintillantes à l\'unité.',
-    duration: 5,
-    price: 0.5,
-    image: '/images/beaute-des-mains.jpeg',
-    benefits: [
-      'Effet scintillant',
-      'Look festif',
-      'Personnalisation'
-    ],
-    isAddon: true
-  },
-  {
-    id: 'option-nail-art',
-    name: 'Déco Nail Art simple (stamping) par ongle',
-    slug: 'nail-art-stamping',
-    category: 'beaute-mains',
-    description: 'Décorez vos ongles avec un motif nail art simple réalisé en stamping. Une technique rapide pour ajouter des motifs élégants à votre manucure. Tarif par ongle.',
-    shortDescription: 'Motif nail art stamping à l\'unité.',
-    duration: 5,
-    price: 0.5,
-    image: '/images/beaute-des-mains-2.jpeg',
-    benefits: [
-      'Motifs tendance',
-      'Personnalisation',
-      'Résultat professionnel'
-    ],
-    isAddon: true
-  },
-  {
-    id: 'option-incrustation',
-    name: 'Incrustation sur construction gel par ongle',
-    slug: 'incrustation-gel',
-    category: 'beaute-mains',
-    description: 'Incrustez des éléments décoratifs (strass, pierres, décors) directement dans la construction gel de vos ongles. Une personnalisation haut de gamme pour un résultat unique et durable. Tarif par ongle.',
-    shortDescription: 'Incrustation décorative dans le gel.',
-    duration: 10,
-    price: 4,
-    image: '/images/beaute-des-mains-3.jpeg',
-    benefits: [
-      'Personnalisation haut de gamme',
-      'Résultat unique',
-      'Tenue longue durée'
-    ],
-    isAddon: true
   }
 ]
 
 export const categories = [
   {
-    id: 'reflexologie',
-    name: 'Réflexologie',
-    description: 'Techniques de pression pour rééquilibrer le corps',
-    image: '/images/reflexologie-plantaire.jpeg'
+    id: 'soins-energetiques',
+    name: 'Soins Énergétiques',
+    description: 'Rétablir l\'harmonie et la circulation de l\'énergie',
+    image: '/images/soin-energetique.jpeg'
   },
   {
-    id: 'drainage',
-    name: 'Drainage Lymphatique Manuel',
-    description: 'Stimuler la circulation et éliminer les toxines',
-    image: '/images/drainage-lymphatique-manuel.jpeg'
+    id: 'constellations',
+    name: 'Constellations Familiales',
+    description: 'Explorer et libérer les mémoires familiales',
+    image: '/images/constellation-familiale.jpeg'
   },
   {
-    id: 'amma',
-    name: 'Amma Assis',
-    description: 'Relaxation rapide sur chaise ergonomique',
-    image: '/images/amma-assis-new.jpeg'
+    id: 'coaching',
+    name: 'Coaching & Accompagnement',
+    description: 'Programmes de transformation personnelle',
+    image: '/images/coaching.jpeg'
   },
   {
-    id: 'massages-mixtes',
-    name: 'Massages Combinés',
-    description: 'Combinaisons de soins pour un bien-être complet',
-    image: '/images/drainage-lymphatique-manuel.jpeg'
+    id: 'massages',
+    name: 'Massages Bien-Être',
+    description: 'Techniques corporelles pour la détente et l\'harmonie',
+    image: '/images/massage-bien-etre.jpeg'
   },
   {
-    id: 'beaute-mains',
-    name: 'Beauté des Mains',
-    description: 'Soins et sublimation de vos ongles',
-    images: [
-      '/images/beaute-des-mains.jpeg',
-      '/images/beaute-des-mains-2.jpeg',
-      '/images/beaute-des-mains-3.jpeg'
-    ]
+    id: 'decodage',
+    name: 'Décodage & Exploration Intérieure',
+    description: 'Comprendre les messages du corps et de l\'âme',
+    image: '/images/decodage.jpeg'
   }
 ]
 
 export const therapists: Therapist[] = [
   {
     id: '1',
-    name: 'Sylvie Lebordais',
-    title: 'Praticienne en Réflexologie et Bien-Être',
-    image: '/images/photo-de-sylive.jpeg',
-    specialties: ['Réflexologie Plantaire', 'Drainage Lymphatique Manuel', 'Amma Assis', 'Prothésiste Ongulaire'],
-    bio: 'Formée au Centre de formation « Réflexologie Bretagne » à Pleugeuneuc (Réflexologie Plantaire, Palmaire, Pédiatrique et Bol Kansu), à Zensphère à Pacé (Drainage Lymphatique Manuel, Réflexologie Abdominale, Faciale et Crânienne, Amma Assis) et auprès d\'Anaïs Abaakil à Rennes (Prothésiste Ongulaire). Passionnée par le bien-être, j\'ai créé un espace intimiste où écoute, bienveillance et expertise sont au cœur de chaque instant.'
+    name: 'Clémence Reznicek',
+    title: 'Thérapeute Holistique & Médium',
+    image: '/images/clemence-reznicek.jpeg',
+    specialties: ['Médiumnité', 'Constellations Familiales', 'Soins Énergétiques', 'Massage des 5 Continents\u00AE', 'Décodage Biologique', 'Coaching'],
+    bio: 'Thérapeute holistique et médium, j\'accompagne depuis 2017 les personnes en quête de sens, de paix ou de transformation. Mon approche globale intègre la médiumnité, les constellations familiales et systémiques, les soins énergétiques (LaHoChi, magnétisme, multidimensionnel), le massage des 5 continents\u00AE, le décodage biologique et Echoquantique, la méditation et l\'aromatologie. Formée en Constellations Familiales et Systémiques, Massage Aromatouch\u00AE, Massage des 5 Continents\u00AE, Décodage Echoquantique et Ennéagramme, j\'intègre de multiples disciplines pour une approche véritablement holistique. Mon cabinet à Jonzac est un espace de confiance et de bienveillance où chaque séance est un moment unique.'
   }
 ]
 
 export const testimonials = [
   {
     id: '1',
-    name: 'Audrey Briere',
+    name: 'Laurent B.',
     rating: 5,
-    text: 'Deux rendez-vous manucures avec Sylvie, le résultat est toujours impeccable et beau ! Sylvie est professionnelle et très consciencieuse. Je recommande sans hésiter.',
-    service: 'Beauté des mains',
-    date: '2025-12'
+    text: 'Bienveillance et accompagnement personnalisé. Clémence m\'a aidé à mettre des mots sur mes maux. Un vrai déclic dans ma compréhension de moi-même.',
+    service: 'Coaching',
+    date: '2025-01'
   },
   {
     id: '2',
-    name: 'Alexandra Elisas',
+    name: 'Muriel B.',
     rating: 5,
-    text: 'Belle expérience en réflexologie avec Sylvie. C\'est une personne très douce et très professionnelle. Si vous avez besoin d\'un soin en réflexologie plantaire, je recommande vivement.',
-    service: 'Réflexologie Plantaire',
-    date: '2025-04'
+    text: 'Son empathie est grande et permet de se livrer en toute confiance dans une bulle de bienveillance. Mme Reznicek a compris avec tout son savoir-faire et savoir-être comment alléger mon fardeau.',
+    service: 'Constellation Familiale',
+    date: '2025-09'
   },
   {
     id: '3',
-    name: 'Marie DeJeg',
+    name: 'Patricia P.',
     rating: 5,
-    text: 'Drainage lymphatique réalisé début août. Le résultat est top ! Un mois plus tard, je n\'ai toujours aucune sensation de jambes lourdes. Un vrai soulagement et une légèreté retrouvée. Je recommande vivement !',
-    service: 'Drainage Lymphatique Manuel',
-    date: '2025-08'
+    text: 'S\'offrir ce temps de découverte de soi, un beau cadeau que nous permet Clémence. Une expérience profonde et libératrice.',
+    service: 'Accompagnement',
+    date: '2025-09'
   },
   {
     id: '4',
-    name: 'Karine Lambert',
+    name: 'Delphine B.',
     rating: 5,
-    text: 'Merci beaucoup pour ce magnifique moment de détente en réflexologie plantaire. Sylvie est une personne bienveillante et très professionnelle. Je recommande +++',
-    service: 'Réflexologie Plantaire',
-    date: '2025-05'
+    text: 'Merveilleuse journée avec Clémence qui a permis de mettre en lumière et débloquer des schémas. Un travail en profondeur remarquable.',
+    service: 'Constellation Familiale',
+    date: '2025-08'
   },
   {
     id: '5',
-    name: 'Coralie Gautier',
+    name: 'Damien C.',
     rating: 5,
-    text: 'Sylvie est une personne douce, à l\'écoute et passionnée. Vous pouvez y aller les yeux fermés. Merci Sylvie à bientôt.',
-    service: 'Réflexologie Plantaire',
-    date: '2025-04'
+    text: 'Vraiment incroyable, elle trouve immédiatement de quel côté il faut aller creuser. Une capacité de lecture exceptionnelle.',
+    service: 'Soin Énergétique',
+    date: '2025-05'
   },
   {
     id: '6',
-    name: 'Orane Le Moal',
+    name: 'Camille G.',
     rating: 5,
-    text: 'J\'ai effectué une séance de réflexologie plantaire d\'une heure avec Sylvie. Un pur moment de détente. Je recommande les yeux fermés.',
-    service: 'Réflexologie Plantaire',
-    date: '2025-03'
+    text: 'J\'ai beaucoup aimé le premier contact avec Clémence, elle m\'a scannée de suite avec justesse. Une thérapeute d\'exception.',
+    service: 'Soin Énergétique',
+    date: '2025-06'
   },
   {
     id: '7',
-    name: 'Céline Kergosien',
+    name: 'Patricia R.',
     rating: 5,
-    text: 'Merci beaucoup pour ce moment de détente. Sylvie est une belle personne et à l\'écoute. Je recommande +++',
-    service: 'Réflexologie',
-    date: '2025-04'
+    text: 'Clémence a vraiment une énergie incroyable et sait la mettre au service des personnes. Une belle rencontre.',
+    service: 'Soin Énergétique',
+    date: '2025-07'
   },
   {
     id: '8',
-    name: 'Christele Briere',
+    name: 'Georgina L.',
     rating: 5,
-    text: 'Très bon moment de détente. Je recommande. Délais très courts pour réserver. Au top',
-    service: 'Réflexologie',
-    date: '2026-01'
+    text: 'Super énergie, très solaire et pleine de bienveillance. Je recommande vivement.',
+    service: 'Massage des 5 Continents',
+    date: '2025-07'
   },
   {
     id: '9',
-    name: 'CHRISTINE SIGALAT',
+    name: 'Jennifer J.',
     rating: 5,
-    text: 'Excellente expérience.',
-    service: 'Réflexologie',
-    date: '2025-04'
+    text: 'Très belle personne à l\'écoute, beaucoup d\'évolution depuis presque un an de suivi. Clémence accompagne avec justesse et douceur.',
+    service: 'Accompagnement',
+    date: '2025-02'
   }
 ]
 
 export const faqs = [
   {
-    question: 'Dois-je réserver à l\'avance ?',
-    answer: 'Oui, je vous recommande de réserver votre rendez-vous via Calendly (lien disponible sur le site) ou par téléphone au 06 13 64 87 05. La réservation permet de garantir votre créneau et de préparer au mieux votre accueil.'
+    question: 'Comment se déroule une première séance ?',
+    answer: 'La première séance commence par un temps d\'échange approfondi pour comprendre votre parcours, vos besoins et vos attentes. Ensemble, nous définissons l\'approche la plus adaptée à votre situation. Que ce soit un soin énergétique, une constellation familiale ou un coaching, chaque séance est unique et personnalisée. Prévoyez une tenue confortable et venez simplement comme vous êtes.'
   },
   {
     question: 'Quelles sont vos qualifications ?',
-    answer: 'Je suis formée au Centre de formation « Réflexologie Bretagne » à Pleugeuneuc (Réflexologie Plantaire, Palmaire, Pédiatrique et Bol Kansu), à Zensphère à Pacé (Drainage Lymphatique Manuel, Réflexologie Abdominale, Faciale et Crânienne, Amma Assis) et auprès d\'Anaïs Abaakil à Rennes (Prothésiste Ongulaire).'
+    answer: 'Je suis formée en Constellations Familiales et Systémiques (2010), Massage Aromatouch\u00AE (2018), Massage des 5 Continents\u00AE (2022), Décodage Echoquantique (2023) et Ennéagramme (2025). Je suis également formée en réflexologie, magnétisme, soins énergétiques LaHoChi, hypnose, aromatologie, diététique et massage bébé. J\'exerce en tant que thérapeute holistique depuis 2017.'
   },
   {
-    question: 'Que dois-je porter pour une séance de réflexologie plantaire ?',
-    answer: 'Pour la réflexologie plantaire, prévoyez une tenue confortable que vous pouvez remonter à mi-mollet afin de faciliter le massage des pieds et des jambes. Votre confort est essentiel pour profiter pleinement de la séance.'
+    question: 'Les séances se font-elles en présentiel ou à distance ?',
+    answer: 'Je propose les deux modalités. Les séances en présentiel se déroulent dans mon cabinet à Jonzac (5 avenue Chanzy). Les séances à distance se font par visioconférence et sont tout aussi efficaces pour le coaching, les constellations familiales et certains soins énergétiques. Nous définissons ensemble le format le plus adapté à votre situation.'
   },
   {
-    question: 'Proposez-vous des cures ou forfaits ?',
-    answer: 'Oui, je propose deux cures spéciales : la Cure Détox (5 séances de drainage + 30 min de réflexologie offerte) à 350€ et la Cure Amincissement (10 séances de drainage + 1h de soin offert) à 700€. Ces cures permettent d\'optimiser les résultats sur la durée.'
+    question: 'Qu\'est-ce qu\'une constellation familiale ?',
+    answer: 'La constellation familiale est un outil thérapeutique qui permet de mettre en lumière les dynamiques inconscientes au sein de votre système familial. Elle révèle les loyautés invisibles, les intrications et les mémoires transgénérationnelles qui influencent votre vie actuelle. En séance individuelle, nous travaillons avec des figurines ou des marqueurs au sol pour représenter votre système et permettre une libération en profondeur.'
   },
   {
-    question: 'Venez-vous de Redon ou de l\'Ille-et-Vilaine ?',
-    answer: 'Oui ! Le cabinet Syl\'Vie Bien-Etre à Pipriac est facilement accessible depuis Redon (15km seulement) et dessert toute la zone Ille-et-Vilaine dans un rayon de 30km. De nombreux clients viennent de Redon, Guipry-Messac, Bain-de-Bretagne et des communes environnantes pour profiter des soins de drainage lymphatique et de réflexologie.'
-  },
-  {
-    question: 'Le drainage lymphatique est-il efficace pour les jambes lourdes ?',
-    answer: 'Absolument. Le drainage lymphatique manuel selon les méthodes Vodder et Leduc est particulièrement efficace pour soulager les jambes lourdes et gonflées. Cette technique douce stimule la circulation lymphatique, favorise l\'élimination des toxines et procure une sensation de légèreté durable. C\'est l\'une des demandes les plus fréquentes des clients de Pipriac et Redon.'
-  },
-  {
-    question: 'Combien de temps dure une séance de drainage lymphatique ?',
-    answer: 'Cela dépend de vos besoins. Pour un soulagement ciblé des jambes lourdes, la séance "Jambes Légères" dure 30 minutes. Pour un drainage complet du corps, comptez 60 minutes. Pour des résultats optimaux contre la cellulite ou la rétention d\'eau, je recommande une cure de 5 à 10 séances.'
+    question: 'Combien de séances sont nécessaires ?',
+    answer: 'Cela dépend de votre problématique et de vos objectifs. Certaines personnes ressentent un changement significatif dès la première séance. Pour un travail en profondeur, je recommande un accompagnement de 6 séances minimum. Les programmes de 4 ou 9 mois sont idéaux pour une transformation durable. Nous évaluons ensemble l\'avancement à chaque séance.'
   },
   {
     question: 'Les soins peuvent-ils remplacer un traitement médical ?',
-    answer: 'Non, toutes les prestations proposées ne peuvent en aucun cas se substituer à une consultation médicale ou à un traitement prescrit par votre médecin. La réflexologie et le drainage lymphatique sont des techniques de bien-être complémentaires qui favorisent la détente et l\'équilibre du corps.'
+    answer: 'Non, toutes les prestations proposées sont des techniques de bien-être complémentaires et ne peuvent en aucun cas se substituer à une consultation médicale ou à un traitement prescrit par votre médecin. Elles visent à favoriser l\'équilibre, le bien-être et la reconnexion à soi en complément d\'un suivi médical si nécessaire.'
+  },
+  {
+    question: 'Quels moyens de paiement acceptez-vous ?',
+    answer: 'J\'accepte les paiements par chèque, espèces et virement bancaire. Le règlement s\'effectue à la fin de chaque séance. Pour les programmes (4 mois et 9 mois), un échelonnement du paiement est possible. N\'hésitez pas à me contacter pour en discuter.'
   },
   {
     question: 'Où se situe votre cabinet ?',
-    answer: 'Mon espace bien-être se trouve au 1B Rue du Général de Gaulle, 35550 Pipriac, en Ille-et-Vilaine. Un espace intimiste et chaleureux pensé pour votre confort et votre sérénité, facilement accessible depuis Redon et toute la Bretagne sud.'
+    answer: 'Mon cabinet se trouve au 5 avenue Chanzy, 1er étage droite, 17500 Jonzac, en Charente-Maritime. Un espace calme et confidentiel, propice à la reconnexion à soi. Jonzac est facilement accessible depuis Saintes, Cognac, Royan et Bordeaux.'
   },
   {
-    question: 'Quels sont vos horaires d\'ouverture ?',
-    answer: 'Je vous accueille du lundi au vendredi de 9h à 20h et le samedi de 9h à 13h. Le dimanche est fermé. N\'hésitez pas à me contacter pour prendre rendez-vous.'
+    question: 'Quels sont vos horaires ?',
+    answer: 'Je vous accueille du lundi au vendredi de 9h à 18h30 (le mercredi jusqu\'à 18h). Le cabinet est fermé le samedi et le dimanche. Pour prendre rendez-vous, contactez-moi par téléphone au 06 32 18 52 59 ou par email.'
   },
+  {
+    question: 'Pour qui sont ces séances ?',
+    answer: 'Mes séances s\'adressent à tous : adultes, adolescents, enfants, nourrissons, femmes enceintes et seniors. Chaque approche est adaptée à l\'âge et aux besoins de la personne. Que vous traversiez une période difficile, que vous cherchiez à vous comprendre ou simplement à vous offrir un moment de bien-être, vous êtes les bienvenus.'
+  }
 ]
 
 // Featured services to highlight on homepage (client's main specialties)
 export const featuredServices = [
   {
-    id: 'reflexologie',
-    title: 'Réflexologie',
-    subtitle: 'Plantaire • Abdominale • Faciale • Crânienne',
-    description: 'Techniques ancestrales de pression sur les zones réflexes pour rééquilibrer votre corps et libérer les tensions profondes.',
-    image: '/images/reflexologie-plantaire.jpeg',
-    href: '/soins#reflexologie',
-    highlights: ['Équilibre du corps', 'Relaxation profonde', 'Bien-être durable'],
-    accent: 'from-rose-500/20 to-amber-500/20'
-  },
-  {
-    id: 'drainage',
-    title: 'Drainage Lymphatique Manuel',
-    subtitle: 'Méthode Vodder & Leduc',
-    description: 'Un massage doux et dynamique pour stimuler la circulation lymphatique, éliminer les toxines et retrouver des jambes légères.',
-    image: '/images/drainage-lymphatique-manuel.jpeg',
-    href: '/soins#drainage',
-    highlights: ['Détoxification', 'Jambes légères', 'Système immunitaire'],
-    accent: 'from-teal-500/20 to-emerald-500/20'
-  },
-  {
-    id: 'amma',
-    title: 'Amma Assis',
-    subtitle: 'Relaxation Express',
-    description: 'Technique japonaise sur chaise ergonomique. En 30 minutes, libérez les tensions du haut du corps et retrouvez votre énergie.',
-    image: '/images/amma-assis-new.jpeg',
-    href: '/soins#amma',
-    highlights: ['Relaxation rapide', 'Regain d\'énergie', 'Anti-stress'],
+    id: 'soins-energetiques',
+    title: 'Soins Énergétiques',
+    subtitle: 'LaHoChi \u2022 Magnétisme \u2022 Multidimensionnel',
+    description: 'Rétablissez l\'harmonie de vos centres d\'énergie et libérez les blocages qui vous empêchent d\'avancer. Des soins profonds et personnalisés.',
+    image: '/images/soin-energetique.jpeg',
+    href: '/soins#soins-energetiques',
+    highlights: ['\u00C9quilibre \u00e9nerg\u00e9tique', 'Lib\u00e9ration des blocages', 'Paix int\u00e9rieure'],
     accent: 'from-violet-500/20 to-indigo-500/20'
+  },
+  {
+    id: 'constellations',
+    title: 'Constellations Familiales',
+    subtitle: 'Systémiques & Généalogiques',
+    description: 'Explorez les dynamiques inconscientes de votre système familial et libérez-vous des schémas hérités pour retrouver votre juste place.',
+    image: '/images/constellation-familiale.jpeg',
+    href: '/soins#constellations',
+    highlights: ['Libération des schémas', 'Mémoires familiales', 'Transformation profonde'],
+    accent: 'from-amber-500/20 to-orange-500/20'
+  },
+  {
+    id: 'coaching',
+    title: 'Coaching & Accompagnement',
+    subtitle: 'Programmes 4 & 9 mois',
+    description: 'Un accompagnement sur mesure combinant systémique, médiumnité, soins énergétiques et méditation pour une transformation durable.',
+    image: '/images/coaching.jpeg',
+    href: '/soins#coaching',
+    highlights: ['Accompagnement personnalisé', 'Transformation durable', 'Reconnexion à soi'],
+    accent: 'from-teal-500/20 to-emerald-500/20'
   }
 ]
 
 export const spaInfo = {
-  name: 'Syl\'Vie Bien-Etre',
-  tagline: 'Chouchoutez votre corps, Sublimez vos mains',
-  calendlyUrl: 'https://calendly.com/sylviebienetre35',
-  description: 'Cabinet de drainage lymphatique et réflexologie à Pipriac (35). Un espace cocooning dédié à votre bien-être et sérénité.',
-  welcomeText: 'Bienvenue, Je suis Sylvie, fondatrice de Syl\'Vie Bien-Etre, spécialisée en Réflexologie, Drainage Lymphatique Manuel, Amma Assis et Prothésiste Ongulaire. J\'ai créé un espace intimiste et chaleureux pour vous offrir bien plus qu\'une simple prestation : l\'alliance du bien-être et de la beauté. Chaque rendez-vous est un moment unique, je prends le temps de vous écouter et de comprendre vos besoins et vos attentes. Accordez-vous cette parenthèse de sérénité, où écoute, bienveillance et expertise sont au cœur de chaque instant.',
+  name: 'Clémence Reznicek',
+  tagline: 'Thérapeute Holistique & Médium à Jonzac',
+  calendlyUrl: 'https://www.resalib.fr/praticien/101076-clemence-reznicek-therapeute-holistique-jonzac',
+  description: 'Cabinet de thérapie holistique à Jonzac (17). Soins énergétiques, constellations familiales, coaching, massages et décodage biologique. Un espace de confiance et de bienveillance pour votre transformation.',
+  welcomeText: 'Bienvenue, je suis Clémence Reznicek, thérapeute holistique et médium à Jonzac. Depuis 2017, j\'accompagne les personnes en quête de sens, de paix ou de transformation à travers une approche globale centrée sur l\'écoute, le bien-être et la reconnexion à soi. Mon cabinet est un espace de confiance et de bienveillance où chaque séance est un moment unique, adapté à vos besoins. Que vous souhaitiez explorer vos mémoires familiales, libérer des blocages énergétiques, ou simplement vous offrir un moment de détente profonde, je vous accueille avec douceur et professionnalisme.',
   address: {
-    street: '1B Rue du Général de Gaulle',
-    city: 'Pipriac',
-    postalCode: '35550',
+    street: '5 avenue Chanzy, 1er étage droite',
+    city: 'Jonzac',
+    postalCode: '17500',
     country: 'France'
   },
-  phone: '0613648705',
-  email: 'sylviebienetre35@gmail.com',
-  website: 'sylviebienetre.fr',
+  phone: '0632185259',
+  email: 'formationquantique111@gmail.com',
+  website: 'formationquantique.fr',
   hours: {
-    weekdays: '9h-20h',
-    saturday: '9h-13h',
+    weekdays: '9h-18h30',
+    saturday: 'Fermé',
     sunday: 'Fermé',
     detailed: {
-      monday: '9h-20h',
-      tuesday: '9h-20h',
-      wednesday: '9h-20h',
-      thursday: '9h-20h',
-      friday: '9h-20h',
-      saturday: '9h-13h',
+      monday: '9h-18h30',
+      tuesday: '9h-18h30',
+      wednesday: '9h-18h',
+      thursday: '9h-18h30',
+      friday: '9h-18h30',
+      saturday: 'Fermé',
       sunday: 'Fermé'
     }
   },
   social: {
-    instagram: 'https://www.instagram.com/sylviebienetre?igsh=MTA2dWRmbnNtdGVjeg==',
-    facebook: 'https://www.facebook.com/share/16uZzBAaPw/'
+    instagram: '',
+    facebook: 'https://www.facebook.com/clemencereznicek'
   }
 }
 
@@ -940,28 +533,27 @@ export const timeSlots = [
   '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
   '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
   '15:00', '15:30', '16:00', '16:30', '17:00', '17:30',
-  '18:00', '18:30', '19:00', '19:30', '20:00'
+  '18:00'
 ]
 
 export const giftCardData = {
-  title: 'Offrez un Moment de Bien-Être',
-  subtitle: 'La carte cadeau parfaite',
-  description: 'Offrez bien plus qu\'un simple cadeau : offrez une pause, un moment de détente absolue, une parenthèse de bien-être. Les cartes cadeaux Syl\'Vie Bien-Etre sont valables sur l\'ensemble de nos soins (réflexologie, drainage lymphatique, massages, beauté des mains) et s\'adaptent à tous vos besoins.',
+  title: 'Offrez un Moment de Transformation',
+  subtitle: 'Le cadeau qui change la vie',
+  description: 'Offrez bien plus qu\'un simple cadeau : offrez une parenthèse de reconnexion à soi, un moment de transformation et de bien-être profond. Les cartes cadeaux sont valables sur l\'ensemble des soins (soins énergétiques, constellations, massages, coaching) et s\'adaptent à tous les besoins.',
   features: [
     'Valable sur tous les soins',
     'Validité 6 mois',
     'Au montant de votre choix',
-    'Retrait au cabinet'
+    'Envoi par email ou courrier'
   ],
   ctaText: 'Commander une carte cadeau',
   ctaHref: '/contact',
-  // Additional detailed information
   details: {
     validity: '6 mois à compter de la date d\'achat',
     denominations: 'Montant libre ou montant d\'un soin spécifique',
-    format: 'Carte physique à retirer au cabinet',
+    format: 'Carte physique ou dématérialisée',
     personalization: 'Message personnalisé sur demande',
-    usage: 'Présenter la carte lors de la prise de rendez-vous par téléphone ou sur place',
-    purchase: 'Contactez-nous par téléphone (06 13 64 87 05) ou email pour commander votre carte cadeau'
+    usage: 'Mentionner la carte cadeau lors de la prise de rendez-vous',
+    purchase: 'Contactez-moi par téléphone (06 32 18 52 59) ou email pour commander votre carte cadeau'
   }
 }

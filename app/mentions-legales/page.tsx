@@ -58,14 +58,14 @@ export default function MentionsLegalesPage() {
               Éditeur du site
             </h2>
             <p>
-              <strong>Sylvie Lebordais ({spaInfo.name})</strong><br />
+              <strong>Clémence Reznicek ({spaInfo.name})</strong><br />
               Forme juridique : Micro-entreprise<br />
-              Dirigeant : Sylvie Lebordais<br />
-              1B rue du Général de Gaulle, 35550 Pipriac<br />
-              Tél : <a href={`tel:${spaInfo.phone}`} className="text-primary hover:underline">06 13 64 87 05</a><br />
+              Dirigeant : Clémence Reznicek<br />
+              {spaInfo.address.street}, {spaInfo.address.postalCode} {spaInfo.address.city}<br />
+              Tél : <a href={`tel:${spaInfo.phone}`} className="text-primary hover:underline">06 32 18 52 59</a><br />
               Email : <a href={`mailto:${spaInfo.email}`} className="text-primary hover:underline">{spaInfo.email}</a><br />
-              SIRET : 941 768 665 00015<br />
-              Code APE : 96.04Z
+              SIRET : 538 397 142 00056<br />
+              Code APE : 86.90F
             </p>
 
             <h2 className="font-serif text-2xl text-foreground mt-8 mb-4">

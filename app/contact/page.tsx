@@ -39,7 +39,7 @@ export default function ContactPage() {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     name: `Contact - ${spaInfo.name}`,
-    description: `Page de contact pour ${spaInfo.name}. Prenez rendez-vous pour vos soins de réflexologie et drainage lymphatique.`,
+    description: `Page de contact pour ${spaInfo.name}. Prenez rendez-vous pour vos soins holistiques, constellations familiales et massages.`,
     url: getCanonicalUrl('/contact'),
     mainEntity: {
       "@id": getCanonicalUrl('')

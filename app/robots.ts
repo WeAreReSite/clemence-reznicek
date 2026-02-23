@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://www.sylviebienetre.fr'
+  const baseUrl = 'https://www.formationquantique.fr'
 
   // Common paths to disallow for all crawlers
   const commonDisallow = ['/api/', '/admin/', '/_next/']

@@ -3,23 +3,23 @@ import { Award, Shield, Heart, Leaf } from "lucide-react"
 const trustPoints = [
   {
     icon: Award,
-    title: "Praticienne Formée",
-    description: "Formée en Réflexologie Bretagne, Zensphère et auprès de professionnels reconnus en Bretagne.",
+    title: "Thérapeute Certifiée",
+    description: "Formée depuis 2010 en constellations familiales, soins énergétiques, massages et décodage biologique.",
   },
   {
     icon: Leaf,
-    title: "Produits de Qualité",
-    description: "Utilisation de produits professionnels de haute qualité, dont le Ghee bio pour le Bol Kansu.",
+    title: "Approche Holistique",
+    description: "Une approche globale qui considère l'être dans sa totalité : physique, émotionnel, mental et spirituel.",
   },
   {
     icon: Heart,
-    title: "Soins Personnalisés",
-    description: "Chaque soin est adapté à vos besoins spécifiques pour une expérience sur mesure.",
+    title: "Séances Personnalisées",
+    description: "Chaque séance est unique et adaptée à vos besoins, votre rythme et vos objectifs.",
   },
   {
     icon: Shield,
-    title: "Écoute & Bienveillance",
-    description: "Un temps d'échange avant et après chaque séance pour comprendre vos besoins et attentes.",
+    title: "Espace de Confiance",
+    description: "Un cabinet bienveillant et confidentiel, propice à la reconnexion à soi et à la transformation.",
   },
 ]
 

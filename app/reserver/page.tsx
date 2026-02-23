@@ -8,18 +8,18 @@ import { Breadcrumbs } from "@/components/Breadcrumbs"
 
 export const metadata: Metadata = {
   title: "Réserver",
-  description: `Réservez votre soin bien-être chez ${spaInfo.name} à ${spaInfo.address.city}. Choisissez parmi réflexologie plantaire, drainage lymphatique, amma assis ou beauté des mains.`,
+  description: `Réservez votre soin chez ${spaInfo.name} à ${spaInfo.address.city}. Soins énergétiques, constellations familiales, coaching, massages et décodage biologique.`,
   alternates: {
     canonical: getCanonicalUrl('/reserver'),
   },
   openGraph: {
     title: `Réserver | ${spaInfo.name}`,
-    description: `Réservez en ligne votre séance de réflexologie, drainage lymphatique ou beauté des mains à ${spaInfo.address.city}. Prise de rendez-vous simple et rapide.`,
+    description: `Réservez en ligne votre séance de thérapie holistique à ${spaInfo.address.city}. Prise de rendez-vous simple et rapide.`,
     url: getCanonicalUrl('/reserver'),
     type: "website",
     images: [
       {
-        url: getCanonicalUrl('/images/reflexologie-plantaire.jpeg'),
+        url: getCanonicalUrl('/images/soin-energetique.jpeg'),
         width: 1200,
         height: 630,
         alt: `Réserver un soin - ${spaInfo.name} à ${spaInfo.address.city}`,
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `Réserver | ${spaInfo.name}`,
-    description: `Réservez en ligne votre séance de réflexologie ou drainage lymphatique à ${spaInfo.address.city}.`,
-    images: [getCanonicalUrl('/images/reflexologie-plantaire.jpeg')],
+    description: `Réservez en ligne votre séance de thérapie holistique à ${spaInfo.address.city}.`,
+    images: [getCanonicalUrl('/images/soin-energetique.jpeg')],
   },
 }
 
@@ -54,7 +54,7 @@ export default function ReserverPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: `Réserver - ${spaInfo.name}`,
-    description: `Page de réservation pour ${spaInfo.name}. Réservez votre séance de réflexologie, drainage lymphatique ou beauté des mains.`,
+    description: `Page de réservation pour ${spaInfo.name}. Réservez votre séance de thérapie holistique, soin énergétique ou massage.`,
     url: getCanonicalUrl('/reserver'),
     isPartOf: {
       "@id": getCanonicalUrl('/#website')

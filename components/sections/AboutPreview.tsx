@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Award } from "lucide-react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { therapists } from "@/lib/data"
+import { therapists, spaInfo } from "@/lib/data"
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger)
@@ -155,7 +155,7 @@ export function AboutPreview() {
     return () => ctx.revert()
   }, [])
 
-  const sylvie = therapists[0]
+  const therapist = therapists[0]
 
   return (
     <section ref={sectionRef} className="section-padding py-16 md:py-24 lg:py-32 bg-background overflow-hidden">
@@ -169,8 +169,8 @@ export function AboutPreview() {
             >
               <div ref={imageRef} className="absolute inset-0 scale-105">
                 <Image
-                  src={sylvie.image}
-                  alt="Sylvie praticienne en réflexologie plantaire et drainage lymphatique à Pipriac - Syl'Vie Bien-Etre"
+                  src={therapist.image}
+                  alt={`${therapist.name}, ${therapist.title} à ${spaInfo.address.city}`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -191,7 +191,7 @@ export function AboutPreview() {
                 </div>
                 <p className="font-serif text-sm text-foreground">Certifiée</p>
                 <p className="text-muted-foreground text-[10px] leading-tight mt-0.5">
-                  Réflexologie Bretagne
+                  Thérapeute Certifiée
                 </p>
                 <div className="flex gap-0.5 mt-1.5 justify-center">
                   {[...Array(5)].map((_, i) => (
@@ -217,20 +217,20 @@ export function AboutPreview() {
               ref={taglineRef}
               className="inline-block text-accent font-medium tracking-widest uppercase text-sm mb-4"
             >
-              {sylvie.title}
+              {therapist.title}
             </span>
             <h2
               ref={headingRef}
               className="font-serif text-4xl md:text-5xl text-foreground mb-6 leading-tight"
             >
-              {sylvie.name}
+              {therapist.name}
             </h2>
             <div ref={textRef} className="space-y-4 text-muted-foreground mb-8">
               <p className="leading-relaxed text-lg">
-                {sylvie.bio}
+                {therapist.bio}
               </p>
               <div className="flex flex-wrap gap-2 pt-2">
-                {sylvie.specialties.slice(0, 2).map((specialty) => (
+                {therapist.specialties.slice(0, 2).map((specialty) => (
                   <span
                     key={specialty}
                     className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-accent/10 text-accent font-medium"

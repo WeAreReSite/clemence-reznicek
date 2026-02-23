@@ -13,29 +13,29 @@ import { ScrollToAnchor } from "@/components/ScrollToAnchor"
 
 export const metadata: Metadata = {
   title: "Nos Soins",
-  description: `Découvrez tous les soins ${spaInfo.name} à ${spaInfo.address.city} : réflexologie plantaire, drainage lymphatique manuel, amma assis, beauté des mains. 29 soins pour votre bien-être.`,
+  description: `Découvrez tous les soins de ${spaInfo.name} à ${spaInfo.address.city} : soins énergétiques, constellations familiales, coaching, massages bien-être et décodage biologique.`,
   alternates: {
     canonical: getCanonicalUrl('/soins'),
   },
   openGraph: {
     title: `Nos Soins | ${spaInfo.name}`,
-    description: `29 soins de bien-être à ${spaInfo.address.city} : réflexologie plantaire, drainage lymphatique manuel, amma assis, beauté des mains. Tarifs et réservation.`,
+    description: `Soins holistiques à ${spaInfo.address.city} : soins énergétiques, constellations familiales, coaching, massage des 5 continents, décodage biologique. Tarifs et réservation.`,
     url: getCanonicalUrl('/soins'),
     type: "website",
     images: [
       {
-        url: getCanonicalUrl('/images/reflexologie-plantaire.jpeg'),
+        url: getCanonicalUrl('/images/soin-energetique.jpeg'),
         width: 1200,
         height: 630,
-        alt: `Soins de réflexologie et drainage lymphatique - ${spaInfo.name}`,
+        alt: `Soins holistiques et énergétiques - ${spaInfo.name}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: `Nos Soins | ${spaInfo.name}`,
-    description: `29 soins de bien-être à ${spaInfo.address.city} : réflexologie plantaire, drainage lymphatique manuel, amma assis, beauté des mains.`,
-    images: [getCanonicalUrl('/images/reflexologie-plantaire.jpeg')],
+    description: `Soins holistiques à ${spaInfo.address.city} : soins énergétiques, constellations familiales, coaching, massages et décodage biologique.`,
+    images: [getCanonicalUrl('/images/soin-energetique.jpeg')],
   },
 }
 
@@ -49,8 +49,8 @@ export default function SoinsPage() {
   const servicesSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Soins de bien-être - Syl'Vie Bien-Etre",
-    description: "Liste complète des soins de réflexologie, drainage lymphatique et beauté des mains proposés par Syl'Vie Bien-Etre à Pipriac",
+    name: `Soins holistiques - ${spaInfo.name}`,
+    description: `Liste complète des soins énergétiques, constellations familiales, coaching, massages et décodage proposés par ${spaInfo.name} à ${spaInfo.address.city}`,
     numberOfItems: services.length,
     itemListElement: services.map((service, index) => ({
       "@type": "ListItem",
@@ -63,7 +63,7 @@ export default function SoinsPage() {
         provider: {
           "@id": getCanonicalUrl('')
         },
-        areaServed: ["Pipriac", "Redon", "Ille-et-Vilaine", "Bretagne"],
+        areaServed: ["Jonzac", "Saintes", "Charente-Maritime", "Nouvelle-Aquitaine"],
         offers: {
           "@type": "Offer",
           price: service.price,

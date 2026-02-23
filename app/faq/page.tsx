@@ -15,18 +15,18 @@ import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "FAQ - Questions Fréquentes",
-  description: `Questions fréquentes sur ${spaInfo.name} à ${spaInfo.address.city} : réservation, déroulement des soins de réflexologie, drainage lymphatique, qualifications de Sylvie Lebordais.`,
+  description: `Questions fréquentes sur ${spaInfo.name} à ${spaInfo.address.city} : déroulement des séances, soins énergétiques, constellations familiales, coaching, qualifications.`,
   alternates: {
     canonical: getCanonicalUrl('/faq'),
   },
   openGraph: {
     title: `FAQ - Questions Fréquentes | ${spaInfo.name}`,
-    description: `Trouvez les réponses à vos questions sur les soins de réflexologie et drainage lymphatique à ${spaInfo.address.city}. Réservation, tarifs, qualifications.`,
+    description: `Trouvez les réponses à vos questions sur les soins holistiques à ${spaInfo.address.city}. Réservation, tarifs, qualifications.`,
     url: getCanonicalUrl('/faq'),
     type: "website",
     images: [
       {
-        url: getCanonicalUrl('/images/reflexologie-plantaire.jpeg'),
+        url: getCanonicalUrl('/images/soin-energetique.jpeg'),
         width: 1200,
         height: 630,
         alt: `FAQ - ${spaInfo.name}`,
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `FAQ - Questions Fréquentes | ${spaInfo.name}`,
-    description: `Trouvez les réponses à vos questions sur les soins de réflexologie et drainage lymphatique à ${spaInfo.address.city}.`,
-    images: [getCanonicalUrl('/images/reflexologie-plantaire.jpeg')],
+    description: `Trouvez les réponses à vos questions sur les soins holistiques à ${spaInfo.address.city}.`,
+    images: [getCanonicalUrl('/images/soin-energetique.jpeg')],
   },
 }
 

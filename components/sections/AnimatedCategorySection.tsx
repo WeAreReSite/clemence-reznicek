@@ -10,7 +10,7 @@ import { Clock, ArrowRight, Sparkles, Check, X, Calendar, ChevronDown } from "lu
 import { Service } from "@/lib/store"
 import { formatPrice, formatDuration } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { services as allServices } from "@/lib/data"
+import { services as allServices, spaInfo } from "@/lib/data"
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger)
@@ -30,29 +30,29 @@ interface AnimatedCategorySectionProps {
   index: number
 }
 
-// Category accent colors for expanded cards - Warm, cocooning, feminine palette
+// Category accent colors for expanded cards - Spiritual, holistic palette
 const categoryAccents: Record<string, { bg: string; text: string; gradient: string }> = {
-  reflexologie: {
+  "soins-energetiques": {
     bg: "bg-primary",
     text: "text-primary",
-    gradient: "from-primary/15 via-primary/10 to-secondary-light/20",
+    gradient: "from-primary/15 via-primary/10 to-accent-light/20",
   },
-  drainage: {
-    bg: "bg-primary",
-    text: "text-primary",
-    gradient: "from-primary/15 via-secondary-light/15 to-accent-light/20",
-  },
-  amma: {
+  constellations: {
     bg: "bg-secondary",
     text: "text-secondary-dark",
     gradient: "from-secondary/15 via-secondary-light/15 to-primary/10",
   },
-  "massages-mixtes": {
+  coaching: {
     bg: "bg-accent",
     text: "text-accent",
-    gradient: "from-accent/15 via-secondary-light/15 to-primary/10",
+    gradient: "from-accent/15 via-accent-light/15 to-primary/10",
   },
-  "beaute-mains": {
+  massages: {
+    bg: "bg-primary",
+    text: "text-primary",
+    gradient: "from-primary/15 via-secondary-light/15 to-accent-light/20",
+  },
+  decodage: {
     bg: "bg-secondary",
     text: "text-secondary-dark",
     gradient: "from-secondary/20 via-secondary-light/15 to-accent-light/15",
@@ -369,7 +369,7 @@ function RegularCategorySection({
       {category.image && (
         <Image
           src={category.image}
-          alt={`${category.name} à Pipriac près de Redon - Syl'Vie Bien-Etre`}
+          alt={`${category.name} - ${spaInfo.name} à ${spaInfo.address.city}`}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 50vw"
@@ -574,7 +574,7 @@ function BeauteMainsSection({
             {images[0] && (
               <Image
                 src={images[0]}
-                alt={`Prothésie ongulaire et beauté des mains à Pipriac - Syl'Vie Bien-Etre`}
+                alt={`${category.name} - ${spaInfo.name} à ${spaInfo.address.city}`}
                 fill
                 className="object-contain p-2"
                 sizes="(max-width: 768px) 100vw, 45vw"
@@ -591,7 +591,7 @@ function BeauteMainsSection({
             {images[1] && (
               <Image
                 src={images[1]}
-                alt={`Pose d'ongles en gel et nail art près de Redon - Syl'Vie Bien-Etre`}
+                alt={`${category.name} - ${spaInfo.name}`}
                 fill
                 className="object-contain p-2"
                 sizes="(max-width: 768px) 100vw, 40vw"
@@ -608,7 +608,7 @@ function BeauteMainsSection({
             {images[2] && (
               <Image
                 src={images[2]}
-                alt={`Manucure et soins des ongles à Pipriac - Cabinet Syl'Vie Bien-Etre`}
+                alt={`Soins et bien-être - ${spaInfo.name} à ${spaInfo.address.city}`}
                 fill
                 className="object-contain p-2"
                 sizes="(max-width: 768px) 100vw, 35vw"

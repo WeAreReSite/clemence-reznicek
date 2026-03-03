@@ -171,3 +171,81 @@ npx tsc --noEmit && npm run lint && npm run build
 
 ## Custom Commands
 - `/project:implement-feedback` - Trigger autonomous feedback implementation workflow
+
+---
+
+# File Map
+
+## Content (project root `content/`)
+| File | Purpose |
+|------|---------|
+| `content/site.ts` | siteConfig, navigation, footer |
+| `content/homepage.ts` | hero, trustBar, entryPoints, introduction, serviceCategories, rmdSpotlight, values, promotions, faq, practicalInfo, ctaFinal |
+| `content/testimonials.ts` | allTestimonials, testimonialSection, testimonialsPage |
+| `content/massages.ts` | massagesPage |
+| `content/soins.ts` | soinsPage |
+| `content/rmd.ts` | rmdPage |
+| `content/about.ts` | aboutPage |
+| `content/contact.ts` | contactPage |
+| `content/legal.ts` | legalPage |
+| `content/metadata.ts` | metadata (SEO for all pages) |
+
+## App Router Pages (`src/app/`)
+| File | Route | Description |
+|------|-------|-------------|
+| `src/app/layout.tsx` | (root) | Root layout — StickyHeader + Footer, font variables, metadata |
+| `src/app/page.tsx` | `/` | Homepage — all 12 sections in order |
+| `src/app/massages/page.tsx` | `/massages` | Massages page |
+| `src/app/soins/page.tsx` | `/soins` | Soins et accompagnements page |
+| `src/app/rmd/page.tsx` | `/rmd` | Programme RMD Signature page |
+| `src/app/a-propos/page.tsx` | `/a-propos` | About page with story, values, certifications |
+| `src/app/temoignages/page.tsx` | `/temoignages` | Testimonials grid page |
+| `src/app/contact/page.tsx` | `/contact` | Contact page with form + info |
+| `src/app/mentions-legales/page.tsx` | `/mentions-legales` | Legal notices page |
+| `src/app/sitemap.ts` | `/sitemap.xml` | Generated XML sitemap |
+| `src/app/robots.ts` | `/robots.txt` | Robots rules + AI crawler restrictions |
+| `src/app/globals.css` | — | TailwindCSS v4 theme tokens (DO NOT OVERWRITE) |
+| `src/app/error.tsx` | — | Error boundary (DO NOT OVERWRITE) |
+| `src/app/not-found.tsx` | — | 404 page (DO NOT OVERWRITE) |
+| `src/app/loading.tsx` | — | Loading state (DO NOT OVERWRITE) |
+
+## Layout Components (`src/components/layout/`)
+| File | Description |
+|------|-------------|
+| `src/components/layout/footer.tsx` | Server component footer — 3 columns, social icons, copyright |
+
+## Section Components (`src/components/sections/`)
+| File | Type | Description |
+|------|------|-------------|
+| `hero-section.tsx` | Server | Full-screen hero with background image and CTAs |
+| `trust-bar.tsx` | Server | Stats badges row (stars, years, certifications, location) |
+| `entry-points.tsx` | Server | 3 entry point cards (massage, soin, premiere seance) |
+| `introduction.tsx` | Server | Clemence portrait + bio paragraphs |
+| `testimonials-section.tsx` | Server | Dark section with 3 testimonial cards (desktop) |
+| `testimonial-carousel.tsx` | Client | Mobile swipe carousel for testimonials |
+| `service-categories.tsx` | Server | All 4 service category blocks |
+| `rmd-spotlight.tsx` | Server | RMD programme highlight section |
+| `values-section.tsx` | Server | 3 values with icons |
+| `promotions-section.tsx` | Server | Promotion banner |
+| `accordion.tsx` | Client | FAQ accordion |
+| `practical-info.tsx` | Server | Address, hours, map embed |
+| `cta-final.tsx` | Server | Final call-to-action section |
+| `inner-page-hero.tsx` | Server | Reusable inner page hero (title + subtitle + optional bg image) |
+| `service-detail.tsx` | Server | Service cards in grid or list layout |
+| `contact-form.tsx` | Client | Contact/booking form with validation |
+| `sticky-header.tsx` | Client | Sticky nav with dropdown, scroll hide/show, mobile menu |
+| `mobile-menu.tsx` | Client | Slide-in mobile navigation |
+
+## UI Primitives (`src/components/ui/`)
+Button, Input, Textarea, Select, Label, HelperText, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Divider, Icon, Section, SectionHeader
+
+## Library (`src/lib/`)
+| File | Description |
+|------|-------------|
+| `src/lib/fonts.ts` | headingFont (Cormorant Garamond) + bodyFont (Raleway) with CSS variables |
+| `src/lib/utils.ts` | cn() utility (DO NOT OVERWRITE) |
+
+## Types (`src/types/`)
+| File | Description |
+|------|-------------|
+| `src/types/content.ts` | All TypeScript types for content data structures |

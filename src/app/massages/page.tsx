@@ -1,0 +1,136 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import { metadata as siteMetadata } from '../../../content/metadata';
+import { massagesPage } from '../../../content/massages';
+import { InnerPageHero } from '@/components/sections';
+import { Section, SectionHeader, Button } from '@/components/ui';
+
+export const metadata: Metadata = {
+  title: siteMetadata.massages.title,
+  description: siteMetadata.massages.description,
+  keywords: siteMetadata.massages.keywords,
+  openGraph: {
+    title: siteMetadata.massages.title,
+    description: siteMetadata.massages.description,
+    images: [{ url: siteMetadata.massages.ogImage ?? '/images/work/DSC02663.jpg' }],
+  },
+};
+
+export default function MassagesPage() {
+  return (
+    <>
+      {/* Hero */}
+      <InnerPageHero
+        title={massagesPage.heroTitle}
+        subtitle={massagesPage.heroSubtitle}
+        backgroundImage={massagesPage.heroImage}
+      />
+
+      {/* Introduction */}
+      <Section background="warmWhite">
+        <div className="mx-auto max-w-[720px] text-center">
+          <p className="font-body text-base text-neutral-600 leading-relaxed">
+            {massagesPage.introduction}
+          </p>
+        </div>
+      </Section>
+
+      {/* Service cards */}
+      <Section background="cream">
+        <SectionHeader title="Les massages" decorative />
+        <div className="flex flex-col gap-12 lg:gap-16">
+          {massagesPage.services.map((service, index) => (
+            <div
+              key={service.name}
+              className={`flex flex-col lg:flex-row gap-8 lg:gap-12 items-center ${
+                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+              }`}
+            >
+              {/* Image */}
+              {service.image && (
+                <div className="w-full lg:w-1/2 shrink-0">
+                  <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
+                    <Image
+                      src={service.image.src}
+                      alt={service.image.alt}
+                      width={service.image.width}
+                      height={service.image.height}
+                      className="object-cover object-[center_30%] w-full h-full"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Content */}
+              <div className="w-full lg:w-1/2">
+                <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-indigo-500 mb-4">
+                  {service.name}
+                </h2>
+                <p className="font-body text-base text-neutral-600 leading-relaxed mb-6">
+                  {service.description}
+                </p>
+                <div className="flex items-center gap-4 font-body text-sm">
+                  <span className="font-semibold text-indigo-500">{service.price}</span>
+                  <span className="text-neutral-400" aria-hidden="true">·</span>
+                  <span className="text-neutral-500">{service.duration}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Mon approche */}
+      <Section background="roseTint">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* Text */}
+          <div>
+            <SectionHeader
+              title={massagesPage.approachTitle}
+              align="left"
+              decorative
+            />
+            <div className="flex flex-col gap-4">
+              {massagesPage.approachText.map((paragraph, i) => (
+                <p key={i} className="font-body text-base text-neutral-600 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+
+          {/* Image */}
+          <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
+            <Image
+              src={massagesPage.approachImage.src}
+              alt={massagesPage.approachImage.alt}
+              width={massagesPage.approachImage.width}
+              height={massagesPage.approachImage.height}
+              className="object-cover w-full h-full"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+      </Section>
+
+      {/* CTA */}
+      <Section background="indigoDeep">
+        <div className="text-center">
+          <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-50 mb-4">
+            Prêt·e pour un massage ?
+          </h2>
+          <p className="font-body text-base text-neutral-200 mb-8 max-w-lg mx-auto">
+            Réserve ta séance et offre-toi un moment de douceur et de reconnexion.
+          </p>
+          <Link href={massagesPage.cta.href}>
+            <Button variant="warm" size="lg">
+              {massagesPage.cta.label}
+            </Button>
+          </Link>
+        </div>
+      </Section>
+    </>
+  );
+}

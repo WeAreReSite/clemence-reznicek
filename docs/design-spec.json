@@ -1,0 +1,2843 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-03-02T12:00:00Z",
+  "input": {
+    "businessType": "Bien être holistique et émotionnel",
+    "businessName": "Clémence REZNICEK",
+    "location": "Jonzac (17500), Charente-Maritime",
+    "targetAudience": "Personnes en quête de clarté, sécurité intérieure et ancrage — tous profils, pas nécessairement spirituels",
+    "stylePreferences": "Chaleureux, luxueux/premium, apaisant/zen, élégant/raffiné. Rose poudré + doré-jaune orangé + indigo + prune-violet. Typographie élégante avec empattement. Photos plein écran immersives, tons pastels doux, formes géométriques. Pas d'animations excessives. Ambiance cocon, chaleureuse sans élitisme.",
+    "usp": "Qualité de présence unique alliant intuition, somatique et vision systémique pour des transformations douces, profondes et durables. 10 ans d'expérience, 58 avis Google (5/5).",
+    "clientReportPath": ".claude/website-generator/briefs/clemence-reznicek.md",
+    "sourceReference": "client-brief.json"
+  },
+  "overview": {
+    "designDirection": [
+      "Chaleureux",
+      "Luxueux / Premium",
+      "Apaisant / Zen",
+      "Professionnel / Sérieux",
+      "Convivial / Accessible",
+      "Moderne",
+      "Élégant / Raffiné"
+    ],
+    "competitorAudit": [
+      {
+        "url": "https://anderias.com/",
+        "verdict": "disliked",
+        "clientReason": "Trop de choses, pas assez clair, l'image d'accueil est trop chargée"
+      },
+      {
+        "url": "https://www.sophiechague.fr/",
+        "verdict": "liked",
+        "clientReason": "l'élégance et le raffinement",
+        "designNotes": "White + black + gold accent. Lulo Clean bold geometric headings + Open Sans body. 0-24px radius range. Subtle box-shadows. Mood: minimal, luxurious, editorial."
+      },
+      {
+        "url": "https://www.gwladysdemarsac.com/",
+        "verdict": "liked",
+        "clientReason": "la pureté et la clarté",
+        "designNotes": "Token-based CSS variables, Arial system fonts. Border-radius 0 by default, 24px on buttons. Subtle shadows. Mood: pure, clean, professional, generous whitespace."
+      },
+      {
+        "url": "https://celine-avecvous.com/",
+        "verdict": "audited",
+        "designNotes": "White bg + charcoal buttons + purple accent. Arial font. Full-round pill buttons (9999px). Natural shadows. Mood: calm, approachable, nature-inspired. Typical wellness convergence point."
+      }
+    ],
+    "convergencePoint": "French wellness sites converge on: white backgrounds, charcoal/black text, generic sans-serif fonts (Arial, Open Sans), soft pastel accents (sage green, lavender, light blue), pill-shaped buttons, minimal shadows. Most lack distinctive personality or warmth — they feel clinical rather than cocoon-like.",
+    "designDifferentiator": "This design breaks convergence through: warm cream/rose-tinted backgrounds instead of stark white; a four-hue identity palette (rose+gold+indigo+violet) instead of single-accent monotony; Cormorant Garamond elegant serif headings for editorial luxury instead of geometric sans-serif; warm neutral scale with amber undertones instead of cool grays; geometric decorative elements from the client's stated preference.",
+    "inspirationSites": [
+      {
+        "url": "https://www.sophiechague.fr/",
+        "clientReason": "l'élégance et le raffinement"
+      },
+      {
+        "url": "https://www.gwladysdemarsac.com/",
+        "clientReason": "la pureté et la clarté"
+      }
+    ],
+    "aspirationalSites": [
+      {
+        "url": "Novu Wellness (referenced via design galleries)",
+        "source": "DesignRush best wellness websites 2026",
+        "technique": "Elegant serif typography with warm gold accents against dark navy sections, creating luxe spa aesthetic with modern healing ethos.",
+        "adaptation": "Borrow dark indigo sections with gold typography for testimonial/quote blocks. Warm-dark contrast creates depth without clutter."
+      },
+      {
+        "url": "Kora Day Wellness Spa (referenced via SiteBuilderReport)",
+        "source": "SiteBuilderReport spa website examples",
+        "technique": "Muted nature-inspired accent colors with high-quality environmental photography. Sophisticated color palette creating relaxation and luxury.",
+        "adaptation": "Apply to hero image treatment: overlay rose-tinted gradient on immersive photos to unify photography with palette without overloading."
+      },
+      {
+        "url": "Anima Wellness by PeachWeb (Awwwards nominee)",
+        "source": "Awwwards 3D wellness website",
+        "technique": "Purposeful micro-animations on scroll with generous spacing and modular card layouts. 3D elements for depth without clutter.",
+        "adaptation": "Adopt restrained scroll-triggered opacity/translate animations only. No 3D — too much motion for this client. Keep the generous spacing and modular card approach."
+      }
+    ],
+    "context": "Client has a complete visual identity (logo files: 'infinity tech.png', 'infinity tech (2).png'). Client explicitly stated a complete brand charter exists (couleurs, typos, logo). Ambiance desired: cocon feeling — warmth and 'haute vibration' without elitism, welcoming all profiles. Site must clearly guide visitors to 3 entry-point booking types: massage, soin, or 1ère séance."
+  },
+  "categories": {
+    "color": {
+      "status": "complete",
+      "filledBy": "visual-design-researcher",
+      "overview": {
+        "designDirection": "Warm cocoon palette anchored by the client's four stated colors. Rose poudre as soft feminine base, dore-jaune-orange as luminous warm accent, indigo as deep trustworthy anchor, prune-violet as rich spiritual accent. Warm cream backgrounds replace stark white to create cocoon warmth. Neutral scale has amber undertones (hue ~60) instead of cool gray — this is the key differentiator from clinical wellness sites that default to blue-gray neutrals. Aspirational: Novu Wellness (DesignRush) — dark indigo sections with gold type for testimonial blocks. Adapted for holistic bien-etre: indigo backgrounds for deep content sections create contrast without clutter."
+      },
+      "palette": {
+        "primary": {
+          "name": "Rose Poudre",
+          "description": "Soft powdery rose — the feminine warmth of the cocoon. Used for subtle backgrounds, highlights, and accent surfaces.",
+          "base": "oklch(0.756 0.0624 9.7)",
+          "light": "oklch(0.915 0.0234 7.7)",
+          "dark": "oklch(0.652 0.0741 10.4)",
+          "50": "oklch(0.960 0.0120 8.0)",
+          "100": "oklch(0.915 0.0234 7.7)",
+          "200": "oklch(0.860 0.0400 8.5)",
+          "300": "oklch(0.810 0.0550 9.0)",
+          "400": "oklch(0.756 0.0624 9.7)",
+          "500": "oklch(0.700 0.0680 10.0)",
+          "600": "oklch(0.652 0.0741 10.4)",
+          "700": "oklch(0.560 0.0700 11.0)",
+          "800": "oklch(0.460 0.0600 11.5)",
+          "900": "oklch(0.360 0.0500 12.0)"
+        },
+        "secondary": {
+          "name": "Dore Lumineux",
+          "description": "Warm golden-orange — luminous and radiant like candlelight. Primary accent for CTAs, highlights, decorative elements.",
+          "base": "oklch(0.742 0.1202 79.1)",
+          "light": "oklch(0.892 0.0685 85.7)",
+          "dark": "oklch(0.650 0.1181 76.0)",
+          "50": "oklch(0.955 0.0300 83.0)",
+          "100": "oklch(0.892 0.0685 85.7)",
+          "200": "oklch(0.840 0.0900 82.0)",
+          "300": "oklch(0.790 0.1050 80.5)",
+          "400": "oklch(0.742 0.1202 79.1)",
+          "500": "oklch(0.695 0.1273 82.0)",
+          "600": "oklch(0.650 0.1181 76.0)",
+          "700": "oklch(0.570 0.1100 74.0)",
+          "800": "oklch(0.480 0.0950 72.0)",
+          "900": "oklch(0.380 0.0750 70.0)"
+        },
+        "deepAccent": {
+          "name": "Indigo Sacre",
+          "description": "Deep indigo — trust, depth, spiritual anchor. Used for headings on light backgrounds, dark section backgrounds, and primary text emphasis.",
+          "base": "oklch(0.404 0.1351 279.5)",
+          "light": "oklch(0.553 0.1236 282.7)",
+          "dark": "oklch(0.320 0.1043 279.5)",
+          "50": "oklch(0.950 0.0200 280.0)",
+          "100": "oklch(0.900 0.0400 280.5)",
+          "200": "oklch(0.820 0.0700 281.0)",
+          "300": "oklch(0.720 0.1000 281.5)",
+          "400": "oklch(0.553 0.1236 282.7)",
+          "500": "oklch(0.404 0.1351 279.5)",
+          "600": "oklch(0.360 0.1200 279.0)",
+          "700": "oklch(0.320 0.1043 279.5)",
+          "800": "oklch(0.270 0.0850 278.0)",
+          "900": "oklch(0.220 0.0650 277.0)"
+        },
+        "richAccent": {
+          "name": "Prune Mystique",
+          "description": "Plum-violet — richness, intuition, sacred femininity. Used sparingly for decorative accents, hover states on indigo, gradient endpoints.",
+          "base": "oklch(0.430 0.1013 325.0)",
+          "light": "oklch(0.594 0.0957 324.7)",
+          "dark": "oklch(0.330 0.0895 322.1)",
+          "50": "oklch(0.950 0.0180 324.0)",
+          "100": "oklch(0.890 0.0400 324.5)",
+          "200": "oklch(0.800 0.0650 324.5)",
+          "300": "oklch(0.700 0.0800 324.8)",
+          "400": "oklch(0.594 0.0957 324.7)",
+          "500": "oklch(0.430 0.1013 325.0)",
+          "600": "oklch(0.380 0.0960 323.0)",
+          "700": "oklch(0.330 0.0895 322.1)",
+          "800": "oklch(0.270 0.0750 320.0)",
+          "900": "oklch(0.210 0.0600 318.0)"
+        },
+        "neutral": {
+          "name": "Sable Chaud",
+          "description": "Warm sand-toned neutral scale with amber undertones (hue ~60). Replaces cool gray to reinforce the cocoon warmth. NOT blue-gray — this is deliberate.",
+          "50": "oklch(0.978 0.0042 56.4)",
+          "100": "oklch(0.953 0.0101 58.2)",
+          "200": "oklch(0.904 0.0172 61.9)",
+          "300": "oklch(0.830 0.0245 59.3)",
+          "400": "oklch(0.727 0.0344 58.2)",
+          "500": "oklch(0.629 0.0357 58.1)",
+          "600": "oklch(0.530 0.0334 63.7)",
+          "700": "oklch(0.434 0.0268 62.6)",
+          "800": "oklch(0.336 0.0187 63.8)",
+          "900": "oklch(0.239 0.0108 60.9)"
+        },
+        "background": {
+          "cream": {
+            "value": "oklch(0.980 0.0062 75.4)",
+            "usage": "Primary page background — warm cream, NOT stark white. Creates cocoon warmth."
+          },
+          "roseTint": {
+            "value": "oklch(0.979 0.0076 7.3)",
+            "usage": "Alternate section background with rose undertone. Use for testimonials, about sections."
+          },
+          "warmWhite": {
+            "value": "oklch(0.992 0.0034 67.8)",
+            "usage": "Near-white with warm bias. For cards, modals, overlays on cream background."
+          },
+          "indigoDeep": {
+            "value": "oklch(0.270 0.0850 278.0)",
+            "usage": "Dark indigo section background for contrast blocks (testimonials, quotes, feature highlights). Text in gold or cream."
+          }
+        },
+        "functional": {
+          "success": "oklch(0.583 0.1003 151.1)",
+          "warning": "oklch(0.695 0.1273 82.0)",
+          "error": "oklch(0.576 0.1553 29.4)",
+          "info": "oklch(0.514 0.0658 250.7)"
+        }
+      },
+      "semantic": {
+        "warmAccent": "secondary (Dore Lumineux)",
+        "softBase": "primary (Rose Poudre)",
+        "deepAccent": "deepAccent (Indigo Sacre)",
+        "richAccent": "richAccent (Prune Mystique)",
+        "bodyText": "neutral.800 on cream bg — contrast 11.32:1 (WCAG AAA)",
+        "headingText": "deepAccent.500 on cream bg — contrast 8.93:1 (WCAG AAA)",
+        "mutedText": "neutral.600 on cream bg — contrast 5.02:1 (WCAG AA)",
+        "ctaPrimary": "secondary.400 bg with neutral.900 text",
+        "ctaSecondary": "deepAccent.500 bg with neutral.50 text — contrast 8.87:1"
+      },
+      "gradients": {
+        "heroOverlay": "linear-gradient(135deg, oklch(0.756 0.0624 9.7 / 0.15), oklch(0.742 0.1202 79.1 / 0.10))",
+        "sectionAccent": "linear-gradient(180deg, oklch(0.960 0.0120 8.0), oklch(0.980 0.0062 75.4))",
+        "indigoToPlum": "linear-gradient(135deg, oklch(0.404 0.1351 279.5), oklch(0.430 0.1013 325.0))",
+        "warmGlow": "radial-gradient(ellipse at center, oklch(0.892 0.0685 85.7 / 0.20), transparent 70%)"
+      },
+      "contrastVerification": {
+        "bodyTextOnCream": "neutral.800 (#3E352D) on cream (#FBF8F4): 11.32:1 — WCAG AAA",
+        "headingsOnCream": "indigo.500 (#3D3B8F) on cream (#FBF8F4): 8.93:1 — WCAG AAA",
+        "mutedTextOnCream": "neutral.600 (#7A6858) on cream (#FBF8F4): 5.02:1 — WCAG AA",
+        "whiteOnIndigo": "warmWhite (#FEFCFA) on indigo.500 (#3D3B8F): 9.24:1 — WCAG AAA",
+        "goldOnDark": "gold.400 (#D4A24A) on neutral.900 (#231E1A): 7.13:1 — WCAG AA",
+        "whiteOnPruneDark": "warmWhite (#FEFCFA) on prune.700 (#4A2350): 12.46:1 — WCAG AAA"
+      },
+      "crossReferences": ["typography", "imagery", "elevationAndShadows", "interactionStates"],
+      "sourceQuote": "Rose poudré, Doré-jaune orangé, quelque chose de lumineux et de chaud, J'aime bien l'indigo aussi, le prune-violet",
+      "importantNote": "Client states a complete visual identity charter exists. Actual hex/OKLCH values must be extracted from the provided logo files ('infinity tech.png', 'infinity tech (2).png') and brand charter by the design-implementer before implementation. The values here are research-derived approximations that honor the client's stated color descriptions."
+    },
+    "typography": {
+      "status": "complete",
+      "filledBy": "visual-design-researcher",
+      "overview": {
+        "designDirection": "Cormorant Garamond for headings delivers the elegant serif the client asked for, with calligraphic refinement that evokes French editorial luxury without being stuffy. Its high-contrast strokes and delicate serifs feel premium and sophisticated — directly opposed to the geometric sans-serifs (Lulo Clean, Arial) used by competitors sophiechague.fr and gwladysdemarsac.com. Paired with Raleway for body: its tall x-height and thin elegance complement Cormorant's classical warmth while remaining highly legible at body sizes. Raleway's lighter weights feel graceful and upscale, avoiding the utilitarian feel of Open Sans or the genericness of Inter. Aspirational: Kora Day Wellness Spa (SiteBuilderReport) — serif heading + clean sans body pairing creating sophisticated warmth. Adapted for holistic bien-etre: Cormorant's calligraphic roots nod to the handwritten, personal quality of Clemence's practice."
+      },
+      "headingFont": {
+        "name": "Cormorant Garamond",
+        "description": "Elegant high-contrast serif with calligraphic heritage. 45 font files across 9 styles and 5 weights (Light to Bold). Free on Google Fonts (SIL Open Font License).",
+        "style": "serif",
+        "specificFont": "Cormorant Garamond",
+        "source": "Google Fonts",
+        "weights": {
+          "light": 300,
+          "regular": 400,
+          "medium": 500,
+          "semibold": 600,
+          "bold": 700
+        },
+        "primaryWeight": 600,
+        "italicAvailable": true,
+        "usage": "All headings (h1-h6), pull quotes, hero text, section titles. Semibold (600) for primary headings, Medium (500) for subheadings, Light Italic (300i) for decorative quotes.",
+        "note": "Client expressed a preference for 'elegant serif' — Cormorant Garamond fulfills this with refined calligraphic character. NOT a generic Playfair Display (overused in wellness). Cormorant's delicate thin strokes and classical proportions create genuine editorial elegance.",
+        "letterSpacing": {
+          "headings": "0.01em",
+          "allCaps": "0.08em",
+          "subheadings": "0.005em"
+        }
+      },
+      "bodyFont": {
+        "name": "Raleway",
+        "description": "Elegant geometric sans-serif with tall x-height and thin strokes. Originally designed by Matt McInerney, expanded by Pablo Impallari. 9 weights (Thin to Heavy) with italics. Free on Google Fonts.",
+        "style": "sans-serif",
+        "source": "Google Fonts",
+        "weights": {
+          "light": 300,
+          "regular": 400,
+          "medium": 500,
+          "semibold": 600
+        },
+        "primaryWeight": 400,
+        "italicAvailable": true,
+        "usage": "Body text, navigation, buttons, form labels, captions, metadata. Regular (400) for body, Medium (500) for emphasis/nav, Light (300) for large decorative body text.",
+        "letterSpacing": {
+          "body": "0.01em",
+          "small": "0.02em",
+          "buttons": "0.04em",
+          "nav": "0.06em"
+        },
+        "lineHeight": {
+          "body": 1.7,
+          "compact": 1.5,
+          "tight": 1.3
+        }
+      },
+      "scale": {
+        "ratio": 1.25,
+        "ratioName": "Major Third",
+        "baseSize": "1rem",
+        "basePx": 16,
+        "steps": {
+          "xs": {
+            "rem": "0.64rem",
+            "px": 10.2,
+            "clamp": "clamp(0.625rem, 0.58rem + 0.2vw, 0.75rem)",
+            "lineHeight": 1.5,
+            "usage": "Fine print, legal text, badges"
+          },
+          "sm": {
+            "rem": "0.8rem",
+            "px": 12.8,
+            "clamp": "clamp(0.75rem, 0.72rem + 0.2vw, 0.875rem)",
+            "lineHeight": 1.5,
+            "usage": "Captions, metadata, helper text"
+          },
+          "base": {
+            "rem": "1rem",
+            "px": 16,
+            "clamp": "clamp(0.9375rem, 0.9rem + 0.2vw, 1rem)",
+            "lineHeight": 1.7,
+            "usage": "Body text, paragraphs, list items"
+          },
+          "md": {
+            "rem": "1.25rem",
+            "px": 20,
+            "clamp": "clamp(1.125rem, 1rem + 0.5vw, 1.25rem)",
+            "lineHeight": 1.6,
+            "usage": "Lead paragraphs, large body, card titles"
+          },
+          "lg": {
+            "rem": "1.5625rem",
+            "px": 25,
+            "clamp": "clamp(1.25rem, 1.1rem + 0.75vw, 1.5625rem)",
+            "lineHeight": 1.4,
+            "usage": "h4, section subtitles"
+          },
+          "xl": {
+            "rem": "1.953rem",
+            "px": 31.2,
+            "clamp": "clamp(1.5rem, 1.3rem + 1vw, 1.953rem)",
+            "lineHeight": 1.3,
+            "usage": "h3, card group titles"
+          },
+          "2xl": {
+            "rem": "2.441rem",
+            "px": 39.1,
+            "clamp": "clamp(1.75rem, 1.5rem + 1.5vw, 2.441rem)",
+            "lineHeight": 1.2,
+            "usage": "h2, page section titles"
+          },
+          "3xl": {
+            "rem": "3.052rem",
+            "px": 48.8,
+            "clamp": "clamp(2rem, 1.6rem + 2vw, 3.052rem)",
+            "lineHeight": 1.15,
+            "usage": "h1, page titles"
+          },
+          "4xl": {
+            "rem": "3.815rem",
+            "px": 61,
+            "clamp": "clamp(2.25rem, 1.8rem + 2.5vw, 3.815rem)",
+            "lineHeight": 1.1,
+            "usage": "Hero heading, display text"
+          },
+          "5xl": {
+            "rem": "4.768rem",
+            "px": 76.3,
+            "clamp": "clamp(2.5rem, 2rem + 3vw, 4.768rem)",
+            "lineHeight": 1.05,
+            "usage": "Hero display, editorial accent (rare)"
+          }
+        }
+      },
+      "fontLoadingStrategy": "Google Fonts API with display=swap. Preconnect to fonts.googleapis.com and fonts.gstatic.com. Load only required weights: Cormorant Garamond 300,300i,500,600 + Raleway 300,400,500,600.",
+      "crossReferences": ["brandAndPrinciples", "color", "shapeAndBorders"],
+      "sourceQuote": "élégant avec empattement peut être",
+      "confidence": "high — Cormorant Garamond validated against client's stated preference for elegant serif, competitor differentiation confirmed, available free on Google Fonts"
+    },
+    "spacing": {
+      "status": "complete",
+      "filledBy": "visual-design-researcher",
+      "overview": {
+        "designDirection": "Generous, breathing spacing that creates the cocoon sensation. Client explicitly dislikes cluttered layouts (anderias.com) and admires purity/clarity (gwladysdemarsac.com). Spacing is wider than typical wellness sites — especially section padding — to let immersive photos and elegant typography breathe. 8px base grid with larger increments for sections. Mobile spacing is proportionally tighter but still generous."
+      },
+      "baseUnit": "0.5rem",
+      "baseUnitPx": 8,
+      "scale": {
+        "0": "0rem",
+        "px": "0.0625rem",
+        "0.5": "0.125rem",
+        "1": "0.25rem",
+        "1.5": "0.375rem",
+        "2": "0.5rem",
+        "2.5": "0.625rem",
+        "3": "0.75rem",
+        "3.5": "0.875rem",
+        "4": "1rem",
+        "5": "1.25rem",
+        "6": "1.5rem",
+        "7": "1.75rem",
+        "8": "2rem",
+        "9": "2.25rem",
+        "10": "2.5rem",
+        "11": "2.75rem",
+        "12": "3rem",
+        "14": "3.5rem",
+        "16": "4rem",
+        "20": "5rem",
+        "24": "6rem",
+        "28": "7rem",
+        "32": "8rem",
+        "36": "9rem",
+        "40": "10rem"
+      },
+      "sectionSpacing": {
+        "mobile": {
+          "sectionPadding": "3rem",
+          "sectionGap": "2.5rem",
+          "containerPaddingX": "1.25rem"
+        },
+        "tablet": {
+          "sectionPadding": "5rem",
+          "sectionGap": "4rem",
+          "containerPaddingX": "2rem"
+        },
+        "desktop": {
+          "sectionPadding": "7rem",
+          "sectionGap": "6rem",
+          "containerPaddingX": "3rem"
+        },
+        "note": "Section padding is deliberately generous — the cocoon feeling requires visual breathing room. Competitors use 3-4rem section padding on desktop; we use 7rem to create spaciousness."
+      },
+      "componentSpacing": {
+        "cardPadding": "1.5rem",
+        "cardGap": "1.5rem",
+        "buttonPaddingX": "1.75rem",
+        "buttonPaddingY": "0.875rem",
+        "inputPaddingX": "1rem",
+        "inputPaddingY": "0.75rem",
+        "stackGapSm": "0.5rem",
+        "stackGapMd": "1rem",
+        "stackGapLg": "1.5rem",
+        "inlineGapSm": "0.5rem",
+        "inlineGapMd": "0.75rem",
+        "inlineGapLg": "1.25rem"
+      },
+      "elementSpacing": {
+        "headingMarginBottom": "0.75rem",
+        "paragraphMarginBottom": "1.25rem",
+        "listItemGap": "0.5rem",
+        "labelToInput": "0.375rem",
+        "iconToText": "0.5rem"
+      },
+      "crossReferences": ["typography", "shapeAndBorders", "layoutAndGrid"],
+      "note": "Client provided no explicit spacing information. Anti-clutter preference (inspired by sophiechague.fr and gwladysdemarsac.com) implies generous whitespace. These values are research-derived to create the airy, uncluttered feel the client desires."
+    },
+    "shapeAndBorders": {
+      "status": "complete",
+      "filledBy": "visual-design-researcher",
+      "overview": {
+        "designDirection": "Softened geometry — not fully rounded (which reads casual/playful) and not sharp (which reads corporate/cold). Cormorant Garamond's classical proportions pair with gentle 4-6px radii that feel refined and intentional. The client's stated preference for 'formes geometriques' is honored through decorative geometric accents (thin-line diamonds, hexagons, sacred geometry motifs) rather than sharp-cornered UI elements. Competitors: sophiechague.fr uses 0-24px range; gwladysdemarsac.com defaults to 0 (sharp). We use a soft 4-6px default that is warmer than both while maintaining elegance."
+      },
+      "borderRadius": {
+        "none": "0rem",
+        "sm": "0.125rem",
+        "md": "0.25rem",
+        "DEFAULT": "0.375rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "2xl": "1rem",
+        "3xl": "1.5rem",
+        "full": "9999px",
+        "usage": {
+          "cards": "lg (0.5rem) — soft but not bubbly",
+          "buttons": "DEFAULT (0.375rem) — refined, not pill-shaped. Competitors use 9999px pills; this is deliberately more architectural.",
+          "inputs": "DEFAULT (0.375rem) — matches buttons",
+          "images": "md (0.25rem) for thumbnails, none (0) for hero/full-bleed images",
+          "badges": "full (9999px) — only badges use pill shape",
+          "modals": "xl (0.75rem)",
+          "tooltips": "md (0.25rem)"
+        }
+      },
+      "borders": {
+        "width": {
+          "thin": "0.0625rem",
+          "default": "0.0625rem",
+          "thick": "0.125rem"
+        },
+        "color": {
+          "default": "oklch(0.904 0.0172 61.9)",
+          "subtle": "oklch(0.953 0.0101 58.2)",
+          "emphasis": "oklch(0.742 0.1202 79.1 / 0.3)",
+          "focus": "oklch(0.404 0.1351 279.5)"
+        },
+        "usage": {
+          "cardBorder": "thin subtle — barely visible, used for structure only",
+          "inputBorder": "default default — visible for affordance",
+          "dividerBorder": "thin subtle — section separation",
+          "accentBorder": "thick emphasis — gold-tinted decorative border"
+        }
+      },
+      "dividers": {
+        "horizontal": {
+          "style": "solid",
+          "width": "0.0625rem",
+          "color": "oklch(0.904 0.0172 61.9)",
+          "spacing": "2rem"
+        },
+        "decorative": {
+          "style": "Thin geometric line with centered diamond or infinity motif",
+          "color": "oklch(0.742 0.1202 79.1 / 0.4)",
+          "usage": "Between major sections. Ties to client's infinity logo and geometric preference."
+        }
+      },
+      "geometricElements": {
+        "stated": true,
+        "description": "Formes geometriques",
+        "implementation": {
+          "sacredGeometry": "Thin-line geometric patterns as decorative overlays — circles, diamonds, infinity loops. Color: gold or indigo at low opacity (0.08-0.15). Inspired by client's infinity logo.",
+          "sectionDividers": "Centered diamond/lozenge motif between sections instead of plain horizontal rule.",
+          "backgroundAccents": "Subtle geometric grid or radial pattern in background of accent sections. Very low opacity, warm gold or rose tint.",
+          "cardDecorations": "Optional thin geometric border accent on service cards — single corner or side decoration.",
+          "note": "Geometric elements must be subtle and restrained, not busy. They are ornamentation, not structure. The anti-clutter principle overrides if any geometric element creates visual noise."
+        }
+      },
+      "crossReferences": ["layoutAndGrid", "componentPatterns", "typography", "color"],
+      "sourceQuote": "Formes geometriques"
+    },
+    "elevationAndShadows": {
+      "status": "complete",
+      "filledBy": "visual-design-researcher",
+      "overview": {
+        "designDirection": "Warm-tinted shadows using the neutral amber hue instead of default cool black/gray. This is a key differentiator — most wellness sites use rgba(0,0,0,x) shadows that look cold. Our shadows use oklch values from the warm neutral scale, creating a sense of ambient warmth like soft lamplight. Shadows are subtle and layered (multiple shadow values per level) for natural depth. Aspirational: Anima Wellness (Awwwards) — generous spacing with natural shadow depth. Adapted for holistic bien-etre: warm shadow color creates cocoon light effect."
+      },
+      "shadowColor": {
+        "base": "oklch(0.239 0.0108 60.9)",
+        "note": "Shadow color derived from neutral.900 (warm sand dark) instead of pure black. Maintains warm character even in shadows."
+      },
+      "levels": {
+        "0": {
+          "name": "flat",
+          "value": "none",
+          "usage": "Default state, no elevation"
+        },
+        "1": {
+          "name": "subtle",
+          "value": "0 0.0625rem 0.125rem oklch(0.239 0.0108 60.9 / 0.04), 0 0.0625rem 0.1875rem oklch(0.239 0.0108 60.9 / 0.06)",
+          "usage": "Resting cards, input fields. Barely perceptible — adds grounding without lifting."
+        },
+        "2": {
+          "name": "low",
+          "value": "0 0.125rem 0.25rem oklch(0.239 0.0108 60.9 / 0.05), 0 0.25rem 0.5rem oklch(0.239 0.0108 60.9 / 0.08)",
+          "usage": "Hovered cards, dropdown menus. Gentle lift."
+        },
+        "3": {
+          "name": "medium",
+          "value": "0 0.25rem 0.5rem oklch(0.239 0.0108 60.9 / 0.06), 0 0.5rem 1rem oklch(0.239 0.0108 60.9 / 0.10)",
+          "usage": "Active cards, floating elements, sticky header. Clear but not aggressive."
+        },
+        "4": {
+          "name": "high",
+          "value": "0 0.5rem 1rem oklch(0.239 0.0108 60.9 / 0.08), 0 1rem 2rem oklch(0.239 0.0108 60.9 / 0.12)",
+          "usage": "Modals, popovers, image gallery overlays."
+        },
+        "5": {
+          "name": "highest",
+          "value": "0 0.75rem 1.5rem oklch(0.239 0.0108 60.9 / 0.10), 0 1.5rem 3rem oklch(0.239 0.0108 60.9 / 0.15)",
+          "usage": "Rare — full-screen overlays, lightbox. Maximum depth."
+        }
+      },
+      "componentMapping": {
+        "card-resting": "level 1 (subtle)",
+        "card-hover": "level 2 (low)",
+        "card-active": "level 3 (medium)",
+        "header-sticky": "level 2 (low)",
+        "dropdown": "level 3 (medium)",
+        "modal": "level 4 (high)",
+        "toast": "level 3 (medium)",
+        "tooltip": "level 2 (low)",
+        "imageGalleryOverlay": "level 5 (highest)"
+      },
+      "innerShadow": {
+        "subtle": "inset 0 0.125rem 0.25rem oklch(0.239 0.0108 60.9 / 0.04)",
+        "usage": "Pressed button state, input fields with focus to create recessed effect"
+      },
+      "crossReferences": ["color", "interactionStates", "shapeAndBorders"]
+    },
+    "iconography": {
+      "status": "complete",
+      "filledBy": "visual-design-researcher",
+      "overview": {
+        "designDirection": "Phosphor Icons in Light weight for primary UI, with Regular weight for emphasis. Phosphor offers 6 weight variants (Thin/Light/Regular/Bold/Fill/Duotone) giving precise control over visual hierarchy. The Light weight (1px stroke) matches Cormorant Garamond's delicate thin strokes and Raleway's elegant lightness. This creates visual coherence between typography and iconography that competitors miss — most use default Lucide/Heroicons at regular weight which looks utilitarian. For this holistic wellness practice, the thinner, more refined icons feel more aligned with the premium, zen aesthetic."
+      },
+      "library": {
+        "name": "Phosphor Icons",
+        "version": "2.x",
+        "package": "@phosphor-icons/react",
+        "source": "https://phosphoricons.com/",
+        "license": "MIT"
+      },
+      "style": {
+        "primaryWeight": "light",
+        "emphasisWeight": "regular",
+        "decorativeWeight": "duotone",
+        "strokeWidth": "1px (light), 1.5px (regular)",
+        "note": "Light weight for navigation, service icons, form icons. Regular weight for CTAs, alerts, emphasis. Duotone for decorative feature icons on service cards (uses primary + secondary color as duotone pair)."
+      },
+      "sizes": {
+        "xs": "0.875rem",
+        "sm": "1rem",
+        "md": "1.25rem",
+        "lg": "1.5rem",
+        "xl": "2rem",
+        "2xl": "2.5rem",
+        "3xl": "3rem",
+        "usage": {
+          "inline": "sm (1rem) — inline with body text",
+          "navigation": "md (1.25rem) — nav items, breadcrumbs",
+          "button": "md (1.25rem) — inside buttons",
+          "card": "xl (2rem) — service card icons",
+          "feature": "2xl-3xl (2.5-3rem) — feature highlights, service categories",
+          "hero": "3xl (3rem) — hero section accent icons"
+        }
+      },
+      "mobileSizes": {
+        "sm": "1.125rem",
+        "md": "1.375rem",
+        "lg": "1.75rem",
+        "note": "Slightly larger on mobile for touch-friendliness. Minimum touch target 2.75rem (44px) for interactive icons."
+      },
+      "touchTargets": {
+        "minimum": "2.75rem",
+        "recommended": "3rem",
+        "note": "All interactive icons must have at least 44px (2.75rem) touch target via padding, even if icon itself is smaller."
+      },
+      "accessibilityMarkup": {
+        "decorative": "aria-hidden='true' — icons that duplicate adjacent text",
+        "informational": "role='img' aria-label='[description]' — standalone icons conveying meaning",
+        "interactive": "Wrapped in button/link with aria-label, icon itself aria-hidden='true'",
+        "note": "All service category icons must have aria-label matching the service name. Navigation icons that stand alone (mobile menu hamburger, close, etc.) must have descriptive aria-label."
+      },
+      "colorUsage": {
+        "default": "currentColor (inherits text color)",
+        "accent": "oklch(0.742 0.1202 79.1) — gold for feature highlights",
+        "muted": "oklch(0.629 0.0357 58.1) — neutral.500 for secondary icons",
+        "duotonePrimary": "oklch(0.404 0.1351 279.5) — indigo",
+        "duotoneSecondary": "oklch(0.756 0.0624 9.7) — rose poudre"
+      },
+      "crossReferences": ["typography", "color", "spacing", "interactionStates"]
+    },
+    "motion": {
+      "status": "complete",
+      "filledBy": "visual-design-researcher",
+      "overview": {
+        "designDirection": "Breath-like motion language — slow, deliberate, organic. Client explicitly prohibited excessive animation ('pas d'animation qui bouge de partout'). Motion here serves only two purposes: (1) guiding attention on scroll entry, (2) confirming interaction feedback. All animations use gentle ease-out curves that feel like slow exhalation. No bouncing, no spring physics, no parallax. Elements fade in and gently rise — like steam from a cup of tea. This restraint is itself a design statement: in a world of flashy wellness sites, stillness communicates genuine calm."
+      },
+      "durations": {
+        "instant": "100ms",
+        "fast": "200ms",
+        "normal": "350ms",
+        "slow": "500ms",
+        "slower": "700ms",
+        "entrance": "800ms",
+        "usage": {
+          "instant": "Color changes, opacity toggles, cursor feedback",
+          "fast": "Button hover/active states, icon transitions, tooltip show",
+          "normal": "Card hover elevation, dropdown open, input focus ring",
+          "slow": "Mobile menu open/close, modal entrance, accordion expand",
+          "slower": "Section scroll-in entrance, hero text reveal",
+          "entrance": "Initial page load hero animation only"
+        }
+      },
+      "easings": {
+        "default": "cubic-bezier(0.25, 0.1, 0.25, 1.0)",
+        "easeOut": "cubic-bezier(0.0, 0.0, 0.2, 1.0)",
+        "easeIn": "cubic-bezier(0.4, 0.0, 1.0, 1.0)",
+        "gentle": "cubic-bezier(0.4, 0.0, 0.0, 1.0)",
+        "breath": "cubic-bezier(0.22, 0.61, 0.36, 1.0)",
+        "usage": {
+          "default": "General transitions, hover states",
+          "easeOut": "Elements entering view — fast start, slow landing",
+          "easeIn": "Elements exiting view — slow start, fast exit",
+          "gentle": "Scroll-triggered reveals — ultra-smooth deceleration",
+          "breath": "Primary entrance animation curve — named for the slow exhale feeling. Used for hero text reveal and section entries."
+        }
+      },
+      "patterns": {
+        "constraint": "No excessive animations — client explicitly stated 'pas d'animation qui bouge de partout'",
+        "approach": "Restrained, purposeful motion only. Animations should not be omnipresent or distracting.",
+        "scrollReveal": {
+          "type": "fadeUp",
+          "translateY": "1.5rem",
+          "opacity": "0 to 1",
+          "duration": "slower (700ms)",
+          "easing": "breath",
+          "stagger": "100ms between siblings",
+          "threshold": "0.15 (triggers when 15% visible)",
+          "note": "Only apply to major content blocks — NOT every paragraph or small element. Maximum 3-4 animated elements per viewport height."
+        },
+        "heroEntrance": {
+          "type": "sequenced fadeIn",
+          "sequence": ["background image (instant)", "overlay gradient (300ms delay)", "heading text (500ms delay)", "subtitle (700ms delay)", "CTA button (900ms delay)"],
+          "duration": "entrance (800ms) each",
+          "easing": "breath",
+          "note": "One-time only, on page load. Not retriggered on scroll."
+        },
+        "hoverFeedback": {
+          "type": "elevation + subtle scale",
+          "scale": "1.01",
+          "duration": "normal (350ms)",
+          "easing": "default",
+          "note": "Cards only. Scale is barely perceptible — 1% — just enough to feel responsive."
+        },
+        "microInteractions": {
+          "buttonPress": "scale(0.98) for 100ms on active",
+          "linkUnderline": "width transition from 0% to 100% on hover, 350ms ease-out",
+          "inputFocus": "border-color transition 200ms + subtle ring appear 350ms",
+          "menuToggle": "hamburger-to-X morph, 350ms ease-out"
+        }
+      },
+      "reducedMotion": {
+        "strategy": "@media (prefers-reduced-motion: reduce) removes all transforms and reduces all durations to 0ms. Opacity transitions kept at 200ms maximum for basic feedback. Scroll reveals show content immediately without animation.",
+        "cssRule": "@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }"
+      },
+      "crossReferences": ["interactionStates", "elevationAndShadows", "spacing"],
+      "sourceQuote": "pas d'animation qui bouge de partout"
+    },
+    "interactionStates": {
+      "status": "complete",
+      "filledBy": "visual-design-researcher",
+      "overview": {
+        "designDirection": "States use warmth shifts rather than cold mechanical darkening. Hover warms (adds gold tint); active deepens (shifts toward indigo). Focus uses indigo ring for clarity. Disabled desaturates into warm neutral. This creates an interaction language where engagement feels welcoming rather than clinical."
+      },
+      "buttons": {
+        "primary": {
+          "default": {
+            "background": "oklch(0.404 0.1351 279.5)",
+            "text": "oklch(0.978 0.0042 56.4)",
+            "border": "none",
+            "shadow": "level 1"
+          },
+          "hover": {
+            "background": "oklch(0.360 0.1200 279.0)",
+            "text": "oklch(0.978 0.0042 56.4)",
+            "shadow": "level 2",
+            "transform": "translateY(-0.0625rem)",
+            "transition": "350ms default"
+          },
+          "active": {
+            "background": "oklch(0.320 0.1043 279.5)",
+            "text": "oklch(0.978 0.0042 56.4)",
+            "shadow": "level 1",
+            "transform": "translateY(0) scale(0.98)"
+          },
+          "focus": {
+            "outline": "0.125rem solid oklch(0.742 0.1202 79.1)",
+            "outlineOffset": "0.125rem",
+            "note": "Gold focus ring — high visibility against indigo button and cream backgrounds"
+          },
+          "disabled": {
+            "background": "oklch(0.830 0.0245 59.3)",
+            "text": "oklch(0.629 0.0357 58.1)",
+            "opacity": "1",
+            "cursor": "not-allowed",
+            "note": "Desaturated warm neutral instead of opacity reduction — maintains visual coherence"
+          },
+          "loading": {
+            "background": "oklch(0.404 0.1351 279.5 / 0.8)",
+            "content": "Subtle pulsing opacity (0.8 to 1.0) on 1.5s loop with breath easing",
+            "spinner": "Small circle spinner in oklch(0.978 0.0042 56.4)"
+          }
+        },
+        "secondary": {
+          "default": {
+            "background": "transparent",
+            "text": "oklch(0.404 0.1351 279.5)",
+            "border": "0.0625rem solid oklch(0.404 0.1351 279.5)",
+            "shadow": "none"
+          },
+          "hover": {
+            "background": "oklch(0.404 0.1351 279.5 / 0.06)",
+            "text": "oklch(0.360 0.1200 279.0)",
+            "border": "0.0625rem solid oklch(0.360 0.1200 279.0)",
+            "transition": "350ms default"
+          },
+          "active": {
+            "background": "oklch(0.404 0.1351 279.5 / 0.12)",
+            "text": "oklch(0.320 0.1043 279.5)"
+          },
+          "focus": {
+            "outline": "0.125rem solid oklch(0.742 0.1202 79.1)",
+            "outlineOffset": "0.125rem"
+          },
+          "disabled": {
+            "background": "transparent",
+            "text": "oklch(0.727 0.0344 58.2)",
+            "border": "0.0625rem solid oklch(0.830 0.0245 59.3)",
+            "cursor": "not-allowed"
+          }
+        },
+        "warm": {
+          "default": {
+            "background": "oklch(0.742 0.1202 79.1)",
+            "text": "oklch(0.239 0.0108 60.9)",
+            "border": "none"
+          },
+          "hover": {
+            "background": "oklch(0.695 0.1273 82.0)",
+            "transform": "translateY(-0.0625rem)",
+            "shadow": "level 2"
+          },
+          "active": {
+            "background": "oklch(0.650 0.1181 76.0)",
+            "transform": "translateY(0) scale(0.98)"
+          },
+          "note": "Gold 'warm' CTA variant for primary booking actions — stands out against cream/rose backgrounds"
+        }
+      },
+      "cards": {
+        "default": {
+          "background": "oklch(0.992 0.0034 67.8)",
+          "border": "0.0625rem solid oklch(0.953 0.0101 58.2)",
+          "shadow": "level 1",
+          "borderRadius": "0.5rem"
+        },
+        "hover": {
+          "shadow": "level 2",
+          "transform": "translateY(-0.125rem) scale(1.01)",
+          "borderColor": "oklch(0.742 0.1202 79.1 / 0.3)",
+          "transition": "350ms default",
+          "note": "Border warms to gold tint on hover — signals interactivity with warmth"
+        },
+        "active": {
+          "shadow": "level 1",
+          "transform": "translateY(0) scale(1.0)"
+        },
+        "focus": {
+          "outline": "0.125rem solid oklch(0.404 0.1351 279.5)",
+          "outlineOffset": "0.125rem"
+        }
+      },
+      "inputs": {
+        "default": {
+          "background": "oklch(0.992 0.0034 67.8)",
+          "border": "0.0625rem solid oklch(0.904 0.0172 61.9)",
+          "text": "oklch(0.336 0.0187 63.8)",
+          "placeholder": "oklch(0.629 0.0357 58.1)",
+          "shadow": "none"
+        },
+        "hover": {
+          "borderColor": "oklch(0.830 0.0245 59.3)",
+          "transition": "200ms default"
+        },
+        "focus": {
+          "borderColor": "oklch(0.404 0.1351 279.5)",
+          "shadow": "0 0 0 0.1875rem oklch(0.404 0.1351 279.5 / 0.12)",
+          "outline": "none",
+          "note": "Indigo ring on focus — clear affordance. Shadow ring instead of outline for softer appearance."
+        },
+        "error": {
+          "borderColor": "oklch(0.576 0.1553 29.4)",
+          "shadow": "0 0 0 0.1875rem oklch(0.576 0.1553 29.4 / 0.10)",
+          "helperText": "oklch(0.576 0.1553 29.4)"
+        },
+        "disabled": {
+          "background": "oklch(0.953 0.0101 58.2)",
+          "border": "0.0625rem solid oklch(0.904 0.0172 61.9)",
+          "text": "oklch(0.727 0.0344 58.2)",
+          "cursor": "not-allowed"
+        }
+      },
+      "links": {
+        "default": {
+          "color": "oklch(0.404 0.1351 279.5)",
+          "textDecoration": "underline",
+          "textUnderlineOffset": "0.1875rem",
+          "textDecorationColor": "oklch(0.404 0.1351 279.5 / 0.3)"
+        },
+        "hover": {
+          "color": "oklch(0.430 0.1013 325.0)",
+          "textDecorationColor": "oklch(0.430 0.1013 325.0 / 0.6)",
+          "transition": "350ms default",
+          "note": "Links shift from indigo toward plum-violet on hover — a warm chromatic shift instead of simple darkening"
+        },
+        "active": {
+          "color": "oklch(0.330 0.0895 322.1)"
+        },
+        "focus": {
+          "outline": "0.125rem solid oklch(0.742 0.1202 79.1)",
+          "outlineOffset": "0.125rem",
+          "borderRadius": "0.125rem"
+        },
+        "visited": {
+          "color": "oklch(0.430 0.1013 325.0)",
+          "note": "Visited links use plum-violet — distinguishable from unvisited indigo"
+        }
+      },
+      "touchStates": {
+        "tapHighlight": "oklch(0.742 0.1202 79.1 / 0.10)",
+        "activeScale": "scale(0.97)",
+        "feedbackDuration": "150ms",
+        "note": "On touch devices: subtle gold flash on tap, slight scale-down for haptic-feeling feedback. All touch targets minimum 2.75rem (44px)."
+      },
+      "crossReferences": ["color", "motion", "elevationAndShadows", "typography"]
+    },
+    "voiceAndTone": {
+      "status": "complete",
+      "filledBy": "content-brand-researcher",
+      "overview": {
+        "designDirection": "Warm, poetic but grounded voice that mirrors the practitioner's own natural communication style. Clemence uses 'tu' (informal French), speaks from the heart with precise vocabulary, and avoids both clinical jargon and esoteric mysticism. The voice is that of a wise, compassionate friend — not a guru, not a therapist behind a desk. Aspirational: Behance holistic wellness branding projects — intimate, first-person storytelling with soft authority. Adapted for holistic bien-etre in Jonzac: poetic French with somatic/embodiment vocabulary, grounded in tangible transformation language. The Cormorant Garamond headings call for elevated, considered headline copy — short, resonant phrases rather than marketing slogans. The warm cream + rose + gold palette supports a voice that feels luminous and enveloping rather than sharp or clinical.",
+        "clientVoiceReference": "Client naturally writes with warmth, precision, and poetic clarity. Examples from her FAQ: 'Viens comme tu es, avec ce que tu vis' — 'Mon rôle est d'éclairer ce qui se joue' — 'Je ne pousse jamais à la consommation : c'est ton corps et ton vécu qui guident.' This is the authentic voice to mirror and amplify."
+      },
+      "dimensions": {
+        "warmth": {
+          "value": "85%",
+          "description": "Highly warm — enveloping, caring, maternal without being condescending. Like a hand on the shoulder. The cocoon sensation extends from visual to verbal.",
+          "evidence": "Client testimonials consistently mention 'douceur', 'bienveillance', 'rayon de soleil'. Client's own writing radiates warmth: 'J'offre une presence fine, stable et profondement engagee.'"
+        },
+        "formality": {
+          "value": "30% formal / 70% conversational",
+          "description": "Uses 'tu' (informal French address). Conversational and intimate, but never slangy or careless. Language is precise and considered — poetic register rather than colloquial. Elegant informality, like a heartfelt letter.",
+          "evidence": "Client uses 'tu' throughout her FAQ, combined with elevated vocabulary ('reorganisation interieure durable', 'dynamiques invisibles'). This is rare — most wellness sites default to clinical 'vous'."
+        },
+        "technicality": {
+          "value": "25%",
+          "description": "Avoids jargon and technical terms. When specialized concepts appear (systemic constellations, somatic regulation, LaHoChi), they are briefly explained in plain language. The goal is accessibility — 'meme les plus moldus d'entre nous' should feel welcome.",
+          "evidence": "Client explicitly targets all profiles, not just spiritual seekers. Her FAQ answers decode concepts naturally: 'Je lis les dynamiques, les mouvements, les memoires, jamais l'avenir.'"
+        },
+        "energy": {
+          "value": "45% — calm and grounded",
+          "description": "Not high-energy or urgent. Not lethargic either. The energy is like a steady, warm flame — present, alive, but not agitated. Matches the breath-like motion language of the design system.",
+          "evidence": "Client's motion design is explicitly restrained ('pas d'animation qui bouge de partout'). The verbal energy must match — gentle confidence, not exclamation marks."
+        },
+        "authority": {
+          "value": "65%",
+          "description": "Confident without being didactic. Authority comes from 10 years of experience, 58 five-star reviews, and the precision of her language — not from claiming titles or making bold promises. Quiet authority, like someone who has seen much and speaks from lived wisdom.",
+          "evidence": "Client positions herself as guide, not guru: 'sans surplomb, sans dogme, sans posture de sachante'. 11 certifications provide credibility without needing to be forceful."
+        },
+        "humor": {
+          "value": "15%",
+          "description": "Rare and light. A gentle smile, never a joke. The 'moldus d'entre nous' reference (Harry Potter) shows she can be playful when appropriate, but humor is never the dominant register.",
+          "evidence": "The 'moldus' reference in her client brief is the only instance of humor. The overall tone is sincere and present."
+        }
+      },
+      "voiceAttributes": {
+        "primary": [
+          {
+            "axis": "warmth",
+            "position": "Enveloppante — like being wrapped in a soft blanket. Every sentence should feel like an invitation to soften.",
+            "implementation": "Use sensory language (lumiere, chaleur, douceur, souffle). Prefer round, flowing sentence structures over staccato."
+          },
+          {
+            "axis": "clarity",
+            "position": "Limpide — the client's core value. Complex concepts become simple, never dumbed down. Clarity is a form of generosity here.",
+            "implementation": "Short sentences for key messages. One idea per paragraph. Avoid nested clauses. Use concrete images: 'eclairer ce qui se joue' rather than abstract promises."
+          },
+          {
+            "axis": "authority",
+            "position": "Douce autorite — earned through presence, not proclaimed. Never 'I am the expert'; always 'here is what I have observed in 10 years'.",
+            "implementation": "Let testimonials and credentials speak. Personal voice uses observation ('j'observe', 'je lis', 'j'eclaire') rather than prescription ('vous devez', 'il faut')."
+          },
+          {
+            "axis": "character",
+            "position": "Poetique ancree — poetic without floating, grounded without being heavy. The sacred (Espace sacre) is expressed through simple, felt language, not mystical vocabulary.",
+            "implementation": "Use metaphors rooted in nature and body: light, breath, roots, flow, space, depth. Avoid celestial/angelic/cosmic vocabulary."
+          }
+        ]
+      },
+      "person": {
+        "default": "first-singular",
+        "description": "Clemence speaks as 'je' (I) to 'tu' (you informal). This creates an intimate one-to-one relationship. The whole practice is built on personal presence, so the voice must be personal.",
+        "variations": {
+          "hero": "first-singular addressing second-singular — 'Je t'accompagne...' or impersonal invitation — 'Un espace pour se deposer...'",
+          "about": "first-singular autobiographical — 'Depuis 10 ans, j'accompagne...'",
+          "services": "first-singular describing — 'Je propose...' then second-singular benefit — 'Tu repars avec...'",
+          "testimonials": "third-person client voice — direct quotes",
+          "contact": "first-singular inviting — 'Appelle-moi...' or 'Ecris-moi...'"
+        }
+      },
+      "headlinePatterns": {
+        "primary": "poetic-statement",
+        "description": "Short, resonant phrases that evoke a feeling rather than promise a result. Matches Cormorant Garamond's editorial elegance.",
+        "patterns": [
+          {
+            "type": "poetic-statement",
+            "frequency": "60%",
+            "examples": ["Se connaitre et s'aimer dans toutes nos dimensions", "Espace sacre", "Eclairer ce qui se joue en profondeur", "Un lieu pour se deposer"],
+            "usage": "Hero, section headers, page titles"
+          },
+          {
+            "type": "invitation",
+            "frequency": "25%",
+            "examples": ["Viens comme tu es", "Offre-toi cet espace", "Laisse ton corps te guider"],
+            "usage": "CTA proximity, service introductions, about page"
+          },
+          {
+            "type": "benefit-oriented",
+            "frequency": "15%",
+            "examples": ["Retrouve ta clarte", "Plus de securite interieure", "Des transformations douces et durables"],
+            "usage": "Service cards, feature highlights, booking sections"
+          }
+        ],
+        "antiPatterns": ["question-based headlines (too marketing-aggressive for this brand)", "urgency/scarcity headlines", "numbered lists in headings ('5 raisons de...')", "exclamation marks in headings"]
+      },
+      "messagingHierarchy": [
+        {
+          "position": 1,
+          "message": "Safe space to be seen and understood",
+          "implementation": "Hero area — immediate emotional landing. Slogan + subtitle + warm imagery.",
+          "rationale": "Client's core USP is quality of presence. First impression must convey safety and welcome."
+        },
+        {
+          "position": 2,
+          "message": "Three clear entry points: Massage, Soin, or 1ere seance",
+          "implementation": "Immediately below hero — three visually distinct cards or columns.",
+          "rationale": "Client explicitly identified clarity of entry as the #1 site problem to fix."
+        },
+        {
+          "position": 3,
+          "message": "Clemence's unique presence and approach",
+          "implementation": "Brief personal introduction with portrait photo. 2-3 sentences max.",
+          "rationale": "Solo practitioner — the person IS the brand. Trust starts with seeing her."
+        },
+        {
+          "position": 4,
+          "message": "Tangible transformation through testimonials",
+          "implementation": "Social proof section — 58 avis 5/5 Google badge + 2-3 curated testimonials.",
+          "rationale": "Testimonials echo the client's voice back: 'douceur', 'justesse', 'liberation'. Most convincing after meeting her."
+        },
+        {
+          "position": 5,
+          "message": "Depth and range of services",
+          "implementation": "Service categories section showing the full ecosystem: body work, emotional, systemic, energetic.",
+          "rationale": "Shows breadth after establishing trust. Visitor now understands this is comprehensive care."
+        },
+        {
+          "position": 6,
+          "message": "RMD signature program as the deep transformation path",
+          "implementation": "Dedicated feature block for RMD — positioned as the culmination, not the first offer.",
+          "rationale": "High-value offer (1333 euros) needs trust built first. Positioned after general services."
+        },
+        {
+          "position": 7,
+          "message": "Practical information and reassurance",
+          "implementation": "FAQ, practical details (1er etage, hours, what to expect), address with map.",
+          "rationale": "Removes friction for those ready to book. Answers the 'how' after the 'why'."
+        },
+        {
+          "position": 8,
+          "message": "Invitation to connect",
+          "implementation": "Contact section — phone CTA prominent, form as alternative, social links.",
+          "rationale": "Client prefers phone booking. CTA is warm invitation, not pressured conversion."
+        }
+      ],
+      "vocabulary": {
+        "onBrandWords": [
+          "eclairer",
+          "clarté",
+          "douceur",
+          "presence",
+          "ancrage",
+          "deposer",
+          "espace",
+          "profondeur",
+          "justesse",
+          "souffle",
+          "transformation",
+          "reorganisation",
+          "securite interieure",
+          "accompagner",
+          "accueillir"
+        ],
+        "offBrandWords": [
+          "guerir",
+          "chakra",
+          "vibration haute",
+          "ascension",
+          "eveil spirituel",
+          "pouvoir",
+          "miraculeux",
+          "instantané",
+          "garantie",
+          "promesse",
+          "diagnostiquer",
+          "predire",
+          "expert",
+          "maitre",
+          "urgence"
+        ],
+        "toneByPage": {
+          "hero": "Confident, poetic, enveloping — the first breath when entering the cocoon",
+          "about": "Personal, warm, grounded — her story told with simplicity and presence",
+          "services": "Clear, inviting, descriptive — each service named with care, benefits felt not listed",
+          "testimonials": "Raw, authentic — client voices unpolished, showing real transformation",
+          "contact": "Intimate, welcoming, simple — 'Viens comme tu es' energy",
+          "rmd": "Elevated, committed, transformative — this is the deep work, the voice rises to match",
+          "faq": "Conversational, reassuring, direct — addressing real concerns with honest answers"
+        },
+        "frenchWellnessTerms": {
+          "preferred": ["bien-etre", "accompagnement", "soin", "seance", "reguler", "apaiser", "ressentir", "traverser", "se deposer", "se reorganiser", "se retrouver"],
+          "avoided": ["therapie (implies medical)", "patient (implies medical)", "traitement (implies medical)", "guérison (implies cure)", "pouvoir de guérison", "don", "voyance (client explicitly reframes mediumnity as non-predictive)"]
+        }
+      },
+      "ctaStyle": {
+        "primary": {
+          "text": "Prendre rendez-vous",
+          "tone": "Warm invitation, not urgent push. The button should feel like an open door, not a countdown timer.",
+          "sourceQuote": "Client chose 'Prendre rendez-vous' as CTA text, 'Appeler directement' as primary action."
+        },
+        "secondary": [
+          {
+            "text": "Decouvrir les soins",
+            "context": "Hero or services teaser — invites exploration"
+          },
+          {
+            "text": "En savoir plus",
+            "context": "Service cards — gentle expansion"
+          },
+          {
+            "text": "Me contacter",
+            "context": "Contact section — personal, direct"
+          },
+          {
+            "text": "Offrir un soin",
+            "context": "Gift card feature — generous, warm"
+          }
+        ],
+        "antiPatterns": ["Urgency language ('Derniere place!', 'Plus que 2 places')", "Discount-first CTAs ('Profitez de -20%')", "Generic ('Cliquer ici', 'Soumettre')", "Aggressive ('Reservez MAINTENANT')"],
+        "placement": "Primary CTA in hero + sticky header on mobile. Secondary CTAs at end of each service section. Phone number always visible in header.",
+        "phoneEmphasis": "Phone number should be tap-to-call on mobile, prominently displayed. Client prefers phone contact — the CTA journey leads to a call, not a form."
+      },
+      "crossReferences": ["typography", "color", "brandAndPrinciples", "motion"]
+    },
+    "imagery": {
+      "status": "complete",
+      "filledBy": "content-brand-researcher",
+      "overview": {
+        "designDirection": "Authentic, warm, natural-light photography that creates the cocoon sensation. Real photos are the primary asset — the client has extensive professional photography (35+ work shots, 12 team portraits, 10 establishment photos). Stock photos should only supplement for abstract/atmospheric hero backgrounds or texture overlays. Aspirational: Kora Day Wellness Spa (SiteBuilderReport) — muted nature-inspired accent colors with high-quality environmental photography creating luxe warmth. Adapted for holistic bien-etre: overlay rose-tinted gradient on immersive photos to unify photography with the warm cream/rose palette. Photography should feel intimate and present, like you are already inside the cocoon — not looking at it from outside."
+      },
+      "style": {
+        "layout": "Photos plein écran immersives",
+        "colorTreatment": "Tons pastels doux",
+        "sourceQuote": "Photos plein écran immersives, Tons pastels doux",
+        "direction": {
+          "mood": "Warm, intimate, luminous — natural light with golden/amber warmth. Never clinical fluorescent, never dark and moody.",
+          "approach": "Candid over posed. Real moments over staged perfection. The practitioner photographed in natural working conditions, not studio portraits.",
+          "lighting": "Soft natural light preferred — window light, golden hour, warm ambient. If edited, push toward warm tones (add amber/rose, reduce blue). Matches warm cream background of the design system.",
+          "depth": "Shallow depth of field for intimacy on detail shots (hands, oils, candles). Wider depth for establishment shots to show the full cocoon space.",
+          "composition": "Rule of thirds with generous negative space. Subject positioned off-center to leave breathing room — matches the generous spacing of the layout system (7rem section padding). Avoid tight crops that feel claustrophobic.",
+          "humanPresence": "Hands are the hero subject — Clemence's hands working, touching, healing. Faces secondary (consent + mystique). The practice is tactile; imagery must convey touch and care."
+        }
+      },
+      "subjects": {
+        "establishment": {
+          "description": "Establishment / workspace photos — the cocoon space itself",
+          "files": [
+            "DSC03014.jpg", "DSC02931.jpg", "DSC02927.jpg", "DSC02926.jpg", "DSC02924.jpg",
+            "DSC02827.jpg", "DSC02779.jpg", "DSC03033.jpg", "DSC03037.jpg", "DSC03022.jpg"
+          ],
+          "guidance": "Show the warmth and intimacy of the physical space. These photos embody the 'cocon' feeling the client wants. Use for About page, background sections, and footer ambiance. Establish the space as a character — it is part of the healing."
+        },
+        "team": {
+          "description": "Practitioner / portrait photos — Clemence herself",
+          "files": [
+            "DSC02967.jpg", "DSC02960.jpg", "DSC02961.jpg", "DSC02979.jpg", "DSC02996.jpg",
+            "DSC02906.jpg", "DSC02663.jpg", "DSC02664.jpg", "DSC02550.jpg", "2026_01_14_00009.jpg",
+            "DSC02350.jpg", "DSC02384.jpg"
+          ],
+          "guidance": "Solo practitioner — her face IS the brand. Use the most warm, approachable portrait for the About section. Natural, genuine smile preferred. For homepage, a working shot (hands-on) is more powerful than a posed portrait. Avoid corporate headshot styling."
+        },
+        "work": {
+          "description": "In-session / practice photos — the actual work",
+          "files": [
+            "DSC02941.jpg", "DSC02968.jpg", "DSC02979.jpg", "DSC02840.jpg", "DSC02859.jpg",
+            "DSC02652.jpg", "DSC02663.jpg", "DSC02664.jpg", "DSC02690.jpg", "DSC02692.jpg",
+            "DSC02702.jpg", "DSC02705.jpg", "DSC02714.jpg", "DSC02716.jpg", "DSC02722.jpg",
+            "DSC02735.jpg", "DSC02736.jpg", "DSC02738.jpg", "DSC02740.jpg", "DSC02750.jpg",
+            "DSC02766.jpg", "DSC02767.jpg", "DSC02438.jpg", "DSC02447.jpg", "DSC02546.jpg",
+            "DSC02550.jpg", "DSC02620.jpg", "DSC02630.jpg", "DSC02636.jpg", "2026_01_14_00007.jpg",
+            "DSC02174.jpg", "DSC02185.jpg", "DSC02308.jpg", "DSC02384.jpg", "2026_01_14_00006.jpg"
+          ],
+          "guidance": "Core visual asset — these show what the visitor will experience. Prioritize: massage shots (hands on body, oils, warmth), constellation objects (client's anecdote mentions these), energy work (hands hovering, light effects). For hero, select the most visually calm and warm in-session shot. For service cards, match photo to specific service. NEVER show client faces without consent — prefer over-shoulder, hands-only, or silhouette shots."
+        },
+        "product": {
+          "description": "Product / object photos — tools of practice",
+          "files": ["DSC02925.jpg"],
+          "guidance": "Oils, crystals, pendulum, oracle cards, essential oils (doTERRA). These objects tell a story. Use as decorative details in service pages or as background texture. The constellation objects mentioned by client are particularly meaningful."
+        },
+        "other": {
+          "description": "Other photos — ambiance and atmosphere",
+          "files": ["DSC02999.jpg"],
+          "guidance": "Supplementary atmospheric shots. Use for section backgrounds with overlay."
+        }
+      },
+      "subjectPriority": [
+        "work (in-session — the core visual promise)",
+        "team (Clemence's presence — trust builder)",
+        "establishment (the cocoon space — ambiance)",
+        "product (tools — detail and texture)",
+        "other (atmospheric filler)"
+      ],
+      "treatment": {
+        "heroUsage": "Full-screen immersive hero images — explicitly preferred",
+        "colorToning": "Soft pastel tones — explicitly preferred. Apply warm color grading: boost warmth (+amber/rose), reduce blue channel, gentle desaturation for pastel effect. Target: the photo should feel like it belongs on the warm cream background.",
+        "heroConstraint": "Hero image must NOT be overloaded/cluttered — explicitly disliked at anderias.com",
+        "heroPattern": {
+          "type": "full-bleed with gradient overlay",
+          "description": "Full-viewport hero image with a soft gradient overlay transitioning from transparent at top to cream background at bottom. This creates seamless content flow. Overlay uses oklch colors from the palette: rose-tint at 0.15 opacity or indigo-tint at 0.20 opacity for dark variant.",
+          "mobileVariant": "Same pattern but image cropped to portrait orientation. Focal point must be centered (safe zone: middle 60% of image). Text overlay positioned in lower third with solid cream backdrop for legibility.",
+          "textPlacement": "Centered or left-aligned over the overlay zone. Cormorant Garamond heading in warm white or indigo depending on overlay darkness. Never place text over busy image areas."
+        },
+        "cardImagePattern": {
+          "type": "top-image card with gentle radius",
+          "description": "Service cards show relevant work photo at top (aspect 3:2), with card content below. Image has border-radius lg (0.5rem) on top corners only. Gentle hover: scale(1.02) on image container.",
+          "fallback": "If no matching real photo exists for a service, use a subtle gradient in palette colors (rose-to-gold or indigo-to-prune) as placeholder."
+        },
+        "beforeAfter": "NOT used — inappropriate for this type of holistic/emotional practice. Transformation is internal, not visual. Client explicitly works with emotions, dynamics, and inner reorganization.",
+        "imageOverlays": {
+          "warmGradient": "linear-gradient(to bottom, oklch(0.980 0.0062 75.4 / 0), oklch(0.980 0.0062 75.4 / 0.85)) — cream fade for content sections over photos",
+          "roseVeil": "oklch(0.756 0.0624 9.7 / 0.08) — subtle rose tint overlay for warmth unification",
+          "indigoDark": "linear-gradient(135deg, oklch(0.270 0.0850 278.0 / 0.75), oklch(0.330 0.0895 322.1 / 0.65)) — dark overlay for testimonial/quote blocks with gold text"
+        }
+      },
+      "specs": {
+        "hasVideos": true,
+        "logos": ["infinity tech.png", "infinity tech (2).png"],
+        "format": {
+          "preferred": "WebP with JPEG fallback",
+          "quality": "80-85% for WebP, 85% for JPEG fallback",
+          "maxFileSize": "300KB for standard images, 500KB for hero images (after compression)",
+          "lazyLoading": "All images below the fold use loading='lazy'. Hero image is eager-loaded with priority.",
+          "responsiveSizes": "srcset with 640w, 960w, 1280w, 1920w breakpoints. Sizes attribute matches layout grid."
+        },
+        "aspectRatios": {
+          "hero": {
+            "desktop": "16:9 (1920x1080 native, served at 2x for retina)",
+            "mobile": "9:16 portrait crop or 3:4 if landscape fallback",
+            "note": "Keep focal point centered for responsive cropping. Safe zone: middle 60% horizontally."
+          },
+          "serviceCards": {
+            "ratio": "3:2",
+            "dimensions": "640x427 at 1x, 1280x854 at 2x",
+            "note": "Landscape orientation. Cropped to show relevant detail, not full scene."
+          },
+          "teamPortrait": {
+            "ratio": "4:5",
+            "dimensions": "480x600 at 1x, 960x1200 at 2x",
+            "note": "Slightly taller than square — elegant portrait proportion matching Cormorant Garamond's vertical emphasis."
+          },
+          "gallery": {
+            "ratio": "mixed — masonry layout",
+            "dimensions": "Variable, max 1280px on longest side",
+            "note": "For portfolio/gallery sections. Mix landscape and portrait for visual rhythm."
+          },
+          "testimonialBackground": {
+            "ratio": "21:9 ultrawide",
+            "dimensions": "1920x823",
+            "note": "Atmospheric background behind testimonial cards. Heavily overlaid — image provides texture, not detail."
+          }
+        },
+        "placeholders": {
+          "strategy": "During development, use picsum.photos with seed values for consistent placeholder images. On production, all placeholders replaced with real client photos.",
+          "seeds": {
+            "hero": "picsum.photos/seed/clemence-hero/1920/1080",
+            "service": "picsum.photos/seed/clemence-soin/640/427",
+            "portrait": "picsum.photos/seed/clemence-portrait/480/600",
+            "space": "picsum.photos/seed/clemence-espace/960/640"
+          }
+        }
+      },
+      "stockPhotoGuidance": {
+        "principle": "Real photos first, always. Client has 50+ professional photos — stock should be supplementary only.",
+        "whenToUseStock": "Abstract texture backgrounds, nature details (soft-focus botanicals, water, light patterns), geometric/sacred geometry overlays. Never for people, hands, or the practice space.",
+        "searchTerms": [
+          "warm light soft focus abstract",
+          "golden hour light texture",
+          "essential oils soft light",
+          "candle warm glow bokeh",
+          "natural linen fabric texture warm",
+          "botanical soft focus warm tones",
+          "sacred geometry gold thin lines",
+          "meditation space warm ambient light",
+          "hands gentle touch healing warm",
+          "soft pastel rose gold abstract"
+        ],
+        "stockSources": {
+          "unsplash": {
+            "collections": ["holistic wellness", "massage therapy", "warm light", "meditation space"],
+            "note": "Free, high-quality. Good for atmospheric/texture shots."
+          },
+          "pexels": {
+            "collections": ["massage", "wellness", "essential oils", "warm light"],
+            "note": "Free, good variety. Search in French too: 'bien-etre', 'massage', 'huiles essentielles'."
+          }
+        },
+        "colorMatching": "All stock photos must be color-graded to match the warm palette before use. Reject any stock with: cool blue tones, clinical white backgrounds, harsh flash lighting, green-tinted fluorescents."
+      },
+      "crossReferences": ["color", "layoutAndGrid", "voiceAndTone", "typography", "shapeAndBorders"],
+      "antiPattern": "Overloaded hero image — client cited anderias.com as disliked specifically for 'l'image d'accueil est trop chargée'"
+    },
+    "brandAndPrinciples": {
+      "status": "complete",
+      "filledBy": "orchestrator",
+      "enrichedBy": "content-brand-researcher",
+      "valuesAndTokens": {
+        "businessName": "Clémence REZNICEK",
+        "businessType": "Bien être holistique et émotionnel",
+        "location": "Jonzac (17500), Charente-Maritime",
+        "services": "Massages (Shambala, Solar, Aromatouch), Soins énergétiques (LaHoChi), Accompagnements (coaching, régulation émotionnelle/somatique, aromathérapie), Spiritualité (médiumnité, constellations familiales, décodage quantique). Signature: RMD (9 séances).",
+        "targetAudience": "Personnes en quête de clarté, sécurité intérieure et ancrage — tous profils, pas nécessairement spirituels",
+        "usp": "Qualité de présence unique alliant intuition, somatique et vision systémique pour des transformations douces, profondes et durables. 10 ans d'expérience, 58 avis Google (5/5)."
+      },
+      "personality": {
+        "ambianceKeywords": [
+          "Chaleureux",
+          "Luxueux / Premium",
+          "Apaisant / Zen",
+          "Professionnel / Sérieux",
+          "Convivial / Accessible",
+          "Moderne",
+          "Élégant / Raffiné"
+        ],
+        "coconFeeling": "Site should feel like a warm cocoon, reflecting the practitioner's physical workspace",
+        "inclusivity": "High vibration / premium feel without elitism — welcoming all profiles",
+        "sourceQuote": "Je voudrai que cela ressemble à un cocon comme mon lieu de travail. Que les personnes ressentent la chaleur de ce lieu et la haute vibration sans que cela paraisse élitiste. J'accueille tout type de profils, même les plus moldus d'entre nous.",
+        "traits": {
+          "description": "Five brand personality traits derived from client's own voice, values, and the visual design system",
+          "primary": [
+            {
+              "trait": "Lumineuse",
+              "description": "Radiant warmth without blinding — like candlelight, not a spotlight. The gold accent palette, the warm cream backgrounds, and Clemence's 'rayon de soleil' presence all converge.",
+              "visualExpression": "Gold accents (Dore Lumineux), warm cream backgrounds, natural light photography",
+              "verbalExpression": "Language of light: eclairer, lumiere, clarte, rayonner. Never harsh or exposing."
+            },
+            {
+              "trait": "Ancrée",
+              "description": "Grounded, rooted, stable. Not floating in the spiritual ether. Clemence's somatic work and 'securite interieure' value are deeply embodied. The brand is earthbound even when discussing the invisible.",
+              "visualExpression": "Warm earth-toned neutrals (Sable Chaud), serif typography with weight and history, generous spacing that feels settled",
+              "verbalExpression": "Language of roots: ancrage, stabilite, profondeur, sol, corps, terre. Avoid floating/cosmic imagery."
+            },
+            {
+              "trait": "Precise",
+              "description": "Clarity and exactitude in service. Not vague, not woolly. Clemence's value of Clarte extends to the brand — every element has purpose. The design system's meticulous spacing and color science reflect this.",
+              "visualExpression": "Defined grid system, intentional spacing, clear typographic hierarchy, geometric decorative elements",
+              "verbalExpression": "Language of precision: justesse, juste, eclairage, discernement, lucidite. Avoid vagueness and promises."
+            },
+            {
+              "trait": "Accueillante",
+              "description": "Open-door welcome for all profiles. The 'moldus' reference is key — this brand actively de-mystifies and includes. Premium feel without gate-keeping.",
+              "visualExpression": "Soft border-radii (not sharp), approachable button sizes, cocoon-warm colors, human photography over abstract symbols",
+              "verbalExpression": "Language of welcome: accueillir, viens comme tu es, tout type de profils, sans jugement. Active de-mystification of spiritual terms."
+            },
+            {
+              "trait": "Sacree",
+              "description": "A sense of the sacred without religion or dogma. 'Espace sacre' is the subtitle — the sacred here means deep respect for the human experience, the body, the lineage. It is reverence, not worship.",
+              "visualExpression": "Indigo Sacre for depth, geometric/sacred geometry as subtle decoration, Cormorant Garamond's classical gravitas, breath-like motion",
+              "verbalExpression": "Language of the sacred: espace, profondeur, dimension, invisible, mouvement, reorganisation. Never religious vocabulary."
+            }
+          ]
+        }
+      },
+      "principles": {
+        "clarity": "Clear navigational hierarchy — visitor must immediately understand the 3 entry points: massage, soin, or 1ère séance",
+        "elegance": "Inspired by sophiechague.fr (élégance, raffinement) and gwladysdemarsac.com (pureté, clarté)",
+        "antiClutter": "Explicitly reject overloaded, unclear layouts as seen on anderias.com",
+        "values": [
+          "Présence", "Humanité", "Clarté", "Sécurité intérieure",
+          "Transformation douce", "Intuition éclairée", "Vision systémique", "Éthique", "Liberté"
+        ],
+        "designPrinciples": [
+          {
+            "name": "Cocoon First",
+            "description": "Every design decision must pass the cocoon test: does this element make the visitor feel warmer, safer, more held? If not, remove it. The warm cream backgrounds, generous spacing, soft radii, and breath-like motion all serve this principle.",
+            "source": "Client request: 'que cela ressemble a un cocon comme mon lieu de travail'"
+          },
+          {
+            "name": "Clarity as Kindness",
+            "description": "Navigation, service presentation, and copy must be immediately comprehensible. Confusion is the opposite of care. The 3-entry-point structure, clear typographic hierarchy, and simple CTA flow all serve clarity.",
+            "source": "Client's value of Clarte + complaint about current site lacking 'fil conducteur'"
+          },
+          {
+            "name": "Sacred Simplicity",
+            "description": "The sacred is expressed through restraint, not excess. Every added element must justify its presence. This aligns with the anti-clutter principle and the breath-like motion system. Less is more when the 'less' is intentional.",
+            "source": "Client subtitle 'Espace sacre' + explicit dislike of anderias.com overload"
+          },
+          {
+            "name": "Warmth Over Perfection",
+            "description": "Prefer human imperfection over polished perfection. Real photos over stock, conversational 'tu' over formal 'vous', hand-touched geometric accents over machine-perfect patterns. The brand is human first.",
+            "source": "Client's entire communication style — warm, direct, personal. Testimonials praise her humanite."
+          },
+          {
+            "name": "Accessible Depth",
+            "description": "The site should be welcoming at surface level (massage, bien-etre, warmth) and reveal depth progressively (systemic vision, transgenerational work, RMD). Like the practice itself — you enter through the body and discover the layers.",
+            "source": "Client's service hierarchy: massage first, then accompaniment, then constellations, then energy work. Progressive depth."
+          }
+        ]
+      },
+      "marketPositioning": {
+        "tier": "Premium accessible",
+        "description": "Not luxury spa pricing, not discount wellness. Premium through quality of presence and depth of expertise, accessible through warmth and inclusivity. Prices range from 30 euros (aromatherapy) to 1333 euros (RMD), showing both entry points and committed transformation paths.",
+        "differentiators": [
+          {
+            "angle": "Integrative multi-modality",
+            "description": "Most wellness practitioners specialize in one modality. Clemence integrates massage, energy work, mediumship, systemic constellations, somatic regulation, and aromatherapy under one unified vision. The RMD signature program is the ultimate expression of this integration.",
+            "competitiveContext": "French wellness market is fragmented — massage therapists, energy healers, and coaches rarely overlap. Clemence's integration is genuinely rare."
+          },
+          {
+            "angle": "Quality of presence as USP",
+            "description": "While competitors lead with techniques or certifications, Clemence leads with her quality of being-with. This is difficult to communicate on a website — the design system must embody this presence through warm photography, intimate voice, and the cocoon sensation.",
+            "competitiveContext": "Every wellness practitioner claims to 'listen'. Clemence's 58 five-star reviews consistently confirm it with words like 'justesse', 'douceur', 'profondeur'."
+          },
+          {
+            "angle": "Ethical non-predictive spiritual work",
+            "description": "In a market where mediums and energy healers often make bold claims, Clemence explicitly positions herself with ethical boundaries: no predictions, no promises, no dependency creation. This is a trust signal for skeptical visitors.",
+            "competitiveContext": "Client explicitly states: 'Je lis les dynamiques, les mouvements, les memoires, jamais l'avenir.' This ethical stance is rare and should be highlighted."
+          },
+          {
+            "angle": "Somatic grounding",
+            "description": "The practice is anchored in the body — somatic regulation, massage, physical presence. This grounds the spiritual/energetic work and makes it accessible to non-spiritual visitors.",
+            "competitiveContext": "Many holistic practitioners lose non-spiritual audiences by leading with energy/spirit. Clemence leads with the body and lets depth emerge naturally."
+          }
+        ]
+      },
+      "trustFactors": {
+        "ranked": [
+          {
+            "rank": 1,
+            "factor": "Testimonials and reviews",
+            "weight": "highest",
+            "implementation": "58 Google reviews at 5/5 — display prominently. Curated testimonials with emotional language. Google review widget + handpicked quotes.",
+            "rationale": "For personal wellness services, social proof from real clients is the strongest trust signal. Research confirms 81% of consumers need trust before buying."
+          },
+          {
+            "rank": 2,
+            "factor": "Personal presence and authenticity",
+            "weight": "high",
+            "implementation": "Warm portrait photo, personal voice in copy, video if available. Show her face, her space, her hands at work.",
+            "rationale": "Solo practitioner selling intimate personal services — the visitor must feel they 'know' Clemence before calling."
+          },
+          {
+            "rank": 3,
+            "factor": "Professional credentials",
+            "weight": "medium-high",
+            "implementation": "11 certifications listed in About section. Not as hero content — as supporting evidence. Formatted elegantly, not as a wall of text.",
+            "rationale": "Certifications validate the multi-modality approach and answer the unspoken question: 'Is she qualified to do all this?'"
+          },
+          {
+            "rank": 4,
+            "factor": "Years of experience",
+            "weight": "medium",
+            "implementation": "10 years mentioned naturally in introduction, not as a badge. Integrated into her story.",
+            "rationale": "Longevity signals stability and depth. In a field with high turnover, 10 years is meaningful."
+          },
+          {
+            "rank": 5,
+            "factor": "Ethical transparency",
+            "weight": "medium",
+            "implementation": "FAQ answers about boundaries (no predictions, no diagnosis, no dependency). Clear pricing visible. Honest about what the work is and is not.",
+            "rationale": "In a field with charlatanism concerns, explicit ethical boundaries build trust with skeptical visitors."
+          },
+          {
+            "rank": 6,
+            "factor": "Physical space quality",
+            "weight": "medium",
+            "implementation": "Establishment photos showing the warm, cared-for space. Address and map visible.",
+            "rationale": "A beautiful, cared-for physical space signals professional investment and care for client experience."
+          }
+        ]
+      },
+      "emotionalJourney": {
+        "before": {
+          "state": "Confused, burdened, seeking clarity",
+          "feelings": ["Something feels stuck or heavy but I can not name it", "I have tried other approaches but nothing goes deep enough", "I am curious but unsure if this is for me", "I want change but am afraid of what I might find"],
+          "needs": ["To feel safe before opening up", "To understand what will happen in a session", "To see that others like me have been helped", "To know the practitioner is ethical and grounded"],
+          "websiteResponse": "Immediate warmth and clarity. The hero communicates safety. The 3 entry points reduce decision anxiety. Testimonials validate the experience."
+        },
+        "during": {
+          "state": "Being held, seen, and gently guided",
+          "feelings": ["I feel truly seen and heard for the first time", "I understand something I could not see before", "My body is releasing tension I did not know I carried", "This is deep but it does not feel forced"],
+          "websiteResponse": "The service pages describe the experience with felt language, not clinical process. Photos show warmth, hands, care. The voice uses 'tu' for intimacy."
+        },
+        "after": {
+          "state": "Lighter, clearer, reorganized",
+          "feelings": ["I feel like a weight has been lifted", "I see my situation from a new angle", "I want to continue this work", "I want to recommend Clemence to others"],
+          "websiteResponse": "Testimonials capture this transformation. RMD is positioned as the continuation path. Gift cards allow sharing the experience. Social links enable organic recommendation."
+        }
+      },
+      "crossReferences": ["color", "typography", "motion", "voiceAndTone", "imagery"]
+    },
+    "conversionStrategy": {
+      "status": "complete",
+      "filledBy": "conversion-structure-researcher",
+      "overview": {
+        "designDirection": "Conversion strategy built on warm invitation rather than pressure. Research shows wellness websites convert at 1.87-4.20% average, with strong performers above 5%. For a solo holistic practitioner, conversion means booking a first session — the funnel is short. Primary action is phone call (client preferred), with visible online booking button as secondary path. Trust signals are the engine: 58 five-star Google reviews are an exceptionally strong asset. CTA placement follows the 'after trust, before friction' principle — primary CTA in hero, repeated after testimonials and after service cards. Aspirational: Gentle Guide (Lapa Ninja) — progressive disclosure pattern with multiple low-friction CTAs that guide without overwhelming. Adapted for holistic bien-etre: warm imperative CTAs ('Offre-toi cet espace') placed at natural decision points, never interrupting the cocoon flow. Unsection hero patterns — minimal, single-focus hero with centered typography matches the Sacred Simplicity design principle."
+      },
+      "primaryCTA": {
+        "action": "phone-call",
+        "buttonText": "Prendre rendez-vous",
+        "phoneNumber": "0632185259",
+        "telLink": "tel:+33632185259",
+        "behavior": {
+          "desktop": "Opens phone dialer or shows phone number prominently with click-to-copy",
+          "mobile": "Direct tel: link initiates call immediately"
+        },
+        "placement": [
+          "Hero section — below slogan and subtitle",
+          "Sticky header — visible on scroll (mobile: icon + text, desktop: full button)",
+          "After testimonials section — when trust is highest",
+          "Footer — final catch-all"
+        ],
+        "visualStyle": "warm button variant (Dore Lumineux bg with neutral.900 text) — stands out against cream/rose backgrounds without clashing with indigo",
+        "sourceQuote": "Appeler directement | Prendre rendez-vous"
+      },
+      "secondaryCTAs": [
+        {
+          "action": "online-booking",
+          "buttonText": "Réserver en ligne",
+          "context": "For visitors who prefer not to call — visible alongside primary CTA in hero and contact section",
+          "behavior": "Opens booking modal or navigates to contact page with pre-selected service type",
+          "visualStyle": "secondary button variant (indigo outline on cream bg)"
+        },
+        {
+          "action": "discover-services",
+          "buttonText": "Découvrir les soins",
+          "context": "Hero section — for visitors not ready to book, invites exploration",
+          "behavior": "Smooth scroll to services overview section",
+          "visualStyle": "text link with animated underline, indigo color"
+        },
+        {
+          "action": "gift-card",
+          "buttonText": "Offrir un soin",
+          "context": "Dedicated gift card banner or card in services section",
+          "behavior": "Navigates to gift card section or contact with gift card pre-selected",
+          "visualStyle": "warm button variant — matches primary CTA warmth"
+        },
+        {
+          "action": "contact-form",
+          "buttonText": "Me contacter",
+          "context": "Contact section — alternative to phone for written questions",
+          "behavior": "Scrolls to contact form or opens contact page",
+          "visualStyle": "secondary button variant"
+        }
+      ],
+      "trustSignals": {
+        "googleReviews": {
+          "count": 58,
+          "rating": 5,
+          "displayPreference": "Les deux (widget Google + témoignages choisis)",
+          "implementation": {
+            "widget": "Google review badge/widget showing 5/5 stars and 58 avis — placed in hero area or immediately below as a trust bar",
+            "selectedTestimonials": "3-5 curated testimonials displayed as cards with star rating, client first name, and transformation outcome highlighted. Rotating carousel on mobile, visible grid on desktop.",
+            "aggregateSchema": "AggregateRating schema markup (5.0, 58 reviews) for rich snippets in search results"
+          }
+        },
+        "yearsExperience": {
+          "value": 10,
+          "display": "Naturally integrated into About introduction — '10 ans d'accompagnement' — not as a standalone badge",
+          "placement": "About/intro section on homepage, About page header"
+        },
+        "certifications": {
+          "count": 11,
+          "display": "Elegant list or grid in About section — formatted as discrete items, not a wall of text. Grouped by modality type.",
+          "placement": "About page primary, homepage About section secondary"
+        },
+        "ethicalBoundaries": {
+          "display": "FAQ answers addressing skeptic concerns — no predictions, no diagnosis, no dependency. Positioned as trust differentiator.",
+          "placement": "FAQ section, About page ethics paragraph"
+        },
+        "physicalSpace": {
+          "display": "Establishment photos showing the warm, cared-for cocoon space",
+          "placement": "About section background, contact page, subtle homepage presence"
+        },
+        "trustBar": {
+          "description": "Horizontal strip below hero with key trust signals in a single row",
+          "contents": ["58 avis 5/5 Google", "10 ans d'expérience", "11 certifications", "Jonzac (17)"],
+          "background": "roseTint background or transparent on cream",
+          "placement": "Immediately below hero section — first thing after emotional landing"
+        }
+      },
+      "urgencyTactics": {
+        "approach": "Minimal — urgency is anti-brand for this cocoon-warmth practice. No countdown timers, no scarcity messaging, no pressure tactics.",
+        "permitted": [
+          {
+            "type": "seasonal-promotion",
+            "example": "Atelier méditation — prochaine date le [date]",
+            "tone": "Informational, not pressured. States the fact, does not create false scarcity."
+          },
+          {
+            "type": "current-offers",
+            "example": "Atelier aromathérapie — places ouvertes",
+            "tone": "Welcoming invitation, not limited-time pressure"
+          },
+          {
+            "type": "gift-card-seasonal",
+            "example": "Offrir un moment de douceur — cartes cadeaux disponibles",
+            "tone": "Generous, warm — aligned with holiday/gift-giving seasons"
+          }
+        ],
+        "forbidden": [
+          "Countdown timers",
+          "Stock/availability scarcity ('Plus que X places')",
+          "Discount-first messaging",
+          "Flash sale language",
+          "FOMO-inducing copy"
+        ],
+        "rationale": "Client's voiceAndTone explicitly lists urgency language as anti-pattern. The brand personality is calm, grounded, and non-pressured. Research confirms wellness audiences respond better to warmth than urgency."
+      },
+      "bookingFlow": {
+        "entryPoints": [
+          {
+            "type": "massage",
+            "label": "Massage",
+            "description": "Shambala, Solar, ou Aromatouch — le corps d'abord",
+            "icon": "PhosphorIcon: HandPalm (light)",
+            "priceRange": "75€ - 120€",
+            "ctaText": "Réserver un massage",
+            "color": "primary (Rose Poudre) tint for card accent"
+          },
+          {
+            "type": "soin",
+            "label": "Soin énergétique",
+            "description": "LaHoChi Multidimensionnel — apaiser et rééquilibrer",
+            "icon": "PhosphorIcon: Sparkle (light)",
+            "priceRange": "60€",
+            "ctaText": "Réserver un soin",
+            "color": "richAccent (Prune Mystique) tint for card accent"
+          },
+          {
+            "type": "premiere-seance",
+            "label": "1ère séance",
+            "description": "Exploration et éclairage — ton point de départ",
+            "icon": "PhosphorIcon: Compass (light)",
+            "priceRange": "60€",
+            "ctaText": "Prendre ma 1ère séance",
+            "color": "deepAccent (Indigo Sacre) tint for card accent"
+          }
+        ],
+        "flowDescription": "Three visually distinct cards immediately below hero, each with its own color accent from the palette. Cards use equal width (3-column grid on desktop, stacked on mobile). Each card has: icon, label, short description, price, and CTA button. Below these 3 cards, a subtle text note: 'Les accompagnements en profondeur (constellations, médiumnité, RMD...) sont accessibles après une première rencontre.'",
+        "postEntryPath": "After initial session, client gains access to deeper services: constellations familiales, médiumnité, décodage quantique, RMD program. These are presented in the full services section but clearly marked as requiring an initial meeting.",
+        "sourceQuote": "J'aimerai que le client qui vienne me voir comprenne que soit il prend rdv pour un massage, un soin ou alors une 1ere séance. Que pour le reste, c'est uniquement après ces 3 types de rdv."
+      },
+      "socialProofStrategy": {
+        "googleWidget": {
+          "position": "Trust bar below hero or within testimonials section",
+          "display": "Compact badge showing Google logo + 5 stars + '58 avis' + link to Google Business profile",
+          "updateFrequency": "Review count updates periodically via Google Business API or manual update"
+        },
+        "testimonialDisplay": {
+          "format": "Card-based with star rating, client first name (initial for last), and 2-3 sentence excerpt emphasizing transformation outcome",
+          "count": "5 curated testimonials (provided by client) + Google widget for aggregate",
+          "layout": {
+            "desktop": "3-column grid with one featured testimonial spanning full width above",
+            "mobile": "Swipeable carousel with pagination dots"
+          },
+          "background": "indigoDeep section background with cream/gold text — creates dramatic contrast and emotional weight",
+          "decorative": "Subtle geometric accent (thin gold line or infinity motif) as section divider"
+        },
+        "rationale": "Research shows 84% of consumers trust online reviews as much as personal recommendations. 58 reviews at 5/5 is exceptional social proof — it must be prominently displayed, not buried."
+      },
+      "mobileConversionSpecifics": {
+        "stickyHeader": {
+          "content": "Logo (compact) + hamburger menu + 'Prendre RDV' button (warm variant)",
+          "behavior": "Appears on scroll-down, hides on scroll-up for content visibility. Phone icon tap-to-call always visible.",
+          "height": "3.5rem (56px) — compact to maximize content area"
+        },
+        "clickToCall": {
+          "phoneDisplay": "Formatted as 06 32 18 52 59 (French spacing) with phone icon",
+          "tapTarget": "Minimum 44px touch target via padding",
+          "placement": "Header (always), hero section, contact section, footer"
+        },
+        "simplifiedForms": {
+          "maxFields": 4,
+          "fields": ["Prénom", "Téléphone", "Type de soin (dropdown: Massage / Soin / 1ère séance)", "Message (optional)"],
+          "design": "Single column, large touch targets (min 48px height), clear labels above fields, instant validation"
+        },
+        "bottomBar": {
+          "description": "Optional fixed bottom bar on mobile with two actions side by side",
+          "actions": ["Appeler (phone icon + tel link)", "Réserver (navigates to booking/contact)"],
+          "background": "warmWhite with subtle top shadow",
+          "visibility": "Shows after scrolling past hero, hides when footer is visible"
+        }
+      },
+      "conversionBenchmarks": {
+        "industryAverage": "1.87% - 4.20% for health/wellness websites",
+        "strongPerformance": "Above 5%",
+        "exceptional": "Above 10%",
+        "targetForThisSite": "4-6% — achievable with strong social proof (58 reviews), clear 3-entry-point funnel, and mobile-optimized click-to-call",
+        "source": "inBeat Agency CRO wellness benchmarks 2025"
+      },
+      "crossReferences": ["pagePatterns", "brandAndPrinciples", "voiceAndTone", "componentPatterns", "color"]
+    },
+    "pagePatterns": {
+      "status": "complete",
+      "filledBy": "conversion-structure-researcher",
+      "overview": {
+        "designDirection": "Page structure follows the progressive depth principle: surface-level warmth (massage, body) reveals deeper layers (systemic, energetic, spiritual) as trust builds — mirroring how the practice itself works. Homepage is the primary conversion page with a 12-section flow creating visual rhythm through alternating backgrounds, column counts, and content density. Inner pages are lean and focused — each service category gets its own page. Aspirational: Gentle Guide (Lapa Ninja) — progressive disclosure pattern reducing cognitive load, with sections revealing incrementally. Adapted for holistic bien-etre: the homepage narrative arc mirrors the client journey from curiosity to booking. Unsection testimonial patterns — dark background contrast sections with card-based social proof create emotional weight at the right moment."
+      },
+      "sitemap": {
+        "required": [
+          {
+            "page": "Accueil",
+            "path": "/",
+            "purpose": "Primary conversion page — emotional landing, 3 entry points, trust building, CTA",
+            "seoFocus": "bien-etre holistique Jonzac, massage Jonzac, soin energetique Charente-Maritime"
+          },
+          {
+            "page": "Massages",
+            "path": "/massages",
+            "purpose": "Dedicated page for the 3 massage types (Shambala, Solar, Aromatouch) with pricing, descriptions, and booking CTA",
+            "seoFocus": "massage Jonzac, massage Shambala, massage intuitif Charente-Maritime"
+          },
+          {
+            "page": "Soins & Accompagnements",
+            "path": "/soins",
+            "purpose": "Soins energetiques (LaHoChi), coaching, regulation emotionnelle, aromatherapie — grouped by depth level",
+            "seoFocus": "soin energetique Jonzac, accompagnement bien-etre, regulation emotionnelle"
+          },
+          {
+            "page": "RMD — Accompagnement Signature",
+            "path": "/rmd",
+            "purpose": "Dedicated landing page for the signature 9-session program — positioned as the deep transformation path",
+            "seoFocus": "accompagnement holistique profond, transformation personnelle, RMD"
+          },
+          {
+            "page": "A propos",
+            "path": "/a-propos",
+            "purpose": "Clemence's story, values, certifications, approach — trust-building through personal connection",
+            "seoFocus": "Clemence Reznicek, praticienne bien-etre holistique, 10 ans experience"
+          },
+          {
+            "page": "Temoignages",
+            "path": "/temoignages",
+            "purpose": "Full testimonial page with Google widget + all curated testimonials — social proof hub",
+            "seoFocus": "avis Clemence Reznicek, temoignages bien-etre holistique"
+          },
+          {
+            "page": "Contact & Reservation",
+            "path": "/contact",
+            "purpose": "Contact form, phone, map, hours, practical info — frictionless booking completion",
+            "seoFocus": "reservation massage Jonzac, rendez-vous bien-etre Charente-Maritime"
+          },
+          {
+            "page": "Mentions legales",
+            "path": "/mentions-legales",
+            "purpose": "Legal requirements — SIRET, CGV, RGPD",
+            "seoFocus": null
+          }
+        ],
+        "optional": [
+          {
+            "page": "Blog",
+            "path": "/blog",
+            "purpose": "Future content hub for SEO and authority — client wants to 'keep the option'",
+            "status": "placeholder-ready",
+            "seoFocus": "bien-etre articles, meditation, regulation emotionnelle conseils"
+          },
+          {
+            "page": "Spiritualite",
+            "path": "/spiritualite",
+            "purpose": "Dedicated page for mediumnite, constellations familiales, decodage quantique — only if service volume justifies separate page",
+            "status": "evaluate-post-launch"
+          },
+          {
+            "page": "Cartes Cadeaux",
+            "path": "/cartes-cadeaux",
+            "purpose": "Gift card purchase page — could be a section on contact page initially",
+            "status": "evaluate-post-launch"
+          }
+        ]
+      },
+      "navigation": {
+        "primary": {
+          "items": [
+            { "label": "Accueil", "path": "/" },
+            { "label": "Massages", "path": "/massages" },
+            { "label": "Soins", "path": "/soins" },
+            { "label": "RMD", "path": "/rmd" },
+            { "label": "A propos", "path": "/a-propos" },
+            { "label": "Contact", "path": "/contact" }
+          ],
+          "ctaButton": {
+            "label": "Prendre rendez-vous",
+            "action": "tel:+33632185259",
+            "variant": "warm",
+            "note": "Always visible in header — warm gold button that stands out from nav items"
+          }
+        },
+        "mobile": {
+          "trigger": "Hamburger icon (Phosphor: List, light weight) — morphs to X on open",
+          "panel": "Full-screen overlay with centered nav items, large touch targets (min 48px), staggered fade-in animation (100ms delay per item). Phone number and social links at bottom.",
+          "background": "cream background with subtle rose tint overlay"
+        },
+        "footer": {
+          "columns": [
+            {
+              "label": "Navigation",
+              "links": ["Accueil", "Massages", "Soins", "RMD", "A propos", "Temoignages"]
+            },
+            {
+              "label": "Contact",
+              "content": ["Phone: 06 32 18 52 59", "Email: clemence.reznicek@gmail.com", "5 avenue Chanzy, 17500 Jonzac", "Lun-Ven 9h-18h15, Sam 10h-12h30"]
+            },
+            {
+              "label": "Suivre",
+              "links": ["Facebook", "Instagram", "YouTube", "Google Business"]
+            }
+          ],
+          "bottom": "Logo + mentions legales link + SIRET + copyright",
+          "background": "deepAccent (Indigo Sacre) dark variant with cream/gold text — creates grounding weight at page bottom"
+        },
+        "currentProblem": "Not elegant enough, not modern or clean enough. Lacks clarity and narrative thread.",
+        "sourceQuote": "Il n'est pas assez élégant, moderne et épuré. Il manque aussi de clarté et de fil conducteur."
+      },
+      "homepageFlow": {
+        "requirement": "Visitor must immediately understand they can book one of 3 entry-point types: massage, soin, or 1ère séance. All deeper services accessible only after an initial appointment.",
+        "sourceQuote": "J'aimerai que le client qui vienne me voir comprenne que soit il prend rdv pour un massage, un soin ou alors une 1ere séance. Que pour le reste, c'est uniquement après ces 3 types de rdv.",
+        "sections": [
+          {
+            "order": 1,
+            "name": "Hero",
+            "purpose": "Emotional landing — cocoon sensation, slogan, primary CTA",
+            "required": true,
+            "desktopColumns": 1,
+            "mobileLayout": "stacked-centered",
+            "background": "full-bleed immersive photo with warm gradient overlay fading to cream",
+            "content": {
+              "slogan": "Se connaitre et s'aimer dans toutes nos dimensions",
+              "subtitle": "Espace sacré",
+              "cta": ["Prendre rendez-vous (warm button)", "Découvrir les soins (text link, scroll)"],
+              "image": "Full-viewport work/establishment photo — warm, calm, not cluttered"
+            },
+            "rhythm": "FULL WIDTH — immersive, single focus, maximum emotional impact"
+          },
+          {
+            "order": 2,
+            "name": "Trust Bar",
+            "purpose": "Immediate credibility — compact social proof strip",
+            "required": true,
+            "desktopColumns": 4,
+            "mobileLayout": "2x2-grid",
+            "background": "roseTint",
+            "content": {
+              "items": ["58 avis 5/5 (Google icon)", "10 ans d'expérience", "11 certifications", "Jonzac (17)"]
+            },
+            "rhythm": "COMPACT STRIP — low height, high density, visual breathing room above and below"
+          },
+          {
+            "order": 3,
+            "name": "Trois Portes d'Entree",
+            "purpose": "CRITICAL — the 3 entry-point booking types. Immediate clarity on how to begin.",
+            "required": true,
+            "desktopColumns": 3,
+            "mobileLayout": "stacked-cards",
+            "background": "cream (default)",
+            "content": {
+              "heading": "Par ou commencer ?",
+              "cards": [
+                { "type": "massage", "icon": "HandPalm", "label": "Massage", "description": "Shambala, Solar ou Aromatouch — le corps d'abord", "price": "Des 75€", "cta": "Reserver un massage" },
+                { "type": "soin", "icon": "Sparkle", "label": "Soin energetique", "description": "LaHoChi Multidimensionnel — apaiser et reequilibrer", "price": "60€", "cta": "Reserver un soin" },
+                { "type": "premiere-seance", "icon": "Compass", "label": "1ere seance", "description": "Exploration et eclairage — ton point de depart", "price": "60€", "cta": "Prendre ma 1ere seance" }
+              ],
+              "footnote": "Les accompagnements en profondeur sont accessibles apres une premiere rencontre."
+            },
+            "rhythm": "3-COLUMN GRID — equal weight, clear choice architecture, each card has distinct color accent"
+          },
+          {
+            "order": 4,
+            "name": "Introduction Clemence",
+            "purpose": "Personal connection — the person IS the brand. Brief, warm, with portrait.",
+            "required": true,
+            "desktopColumns": 2,
+            "mobileLayout": "image-above-text",
+            "background": "cream (default)",
+            "content": {
+              "layout": "Asymmetric split — portrait photo (40%) left, text (60%) right on desktop",
+              "portrait": "Warm, approachable photo of Clemence — natural smile, in her workspace",
+              "text": "2-3 sentences from mission statement — personal, warm, using 'je' and 'tu'",
+              "credentials": "Subtle mention: '10 ans d'accompagnement, 11 certifications'",
+              "cta": "En savoir plus sur mon parcours (link to A propos)"
+            },
+            "rhythm": "ASYMMETRIC 2-COL — image-text split creates visual variety after the symmetric 3-column grid"
+          },
+          {
+            "order": 5,
+            "name": "Temoignages",
+            "purpose": "Social proof at peak trust moment — after meeting Clemence, before deeper services",
+            "required": true,
+            "desktopColumns": 1,
+            "mobileLayout": "carousel",
+            "background": "indigoDeep — dramatic dark contrast section with cream/gold text",
+            "content": {
+              "googleBadge": "Compact Google review widget — 5 stars, 58 avis",
+              "testimonials": "3 featured testimonials as cards with star rating and client first name",
+              "layout": "Full-width dark background. Centered heading. Testimonial cards in horizontal row (desktop) or swipeable carousel (mobile)."
+            },
+            "rhythm": "DARK FULL-WIDTH — dramatic contrast creates emotional weight. Single column focus. The dark/light alternation is key to visual rhythm."
+          },
+          {
+            "order": 6,
+            "name": "Services Complets",
+            "purpose": "Full service ecosystem — 4 categories showing breadth and depth",
+            "required": true,
+            "desktopColumns": 2,
+            "mobileLayout": "stacked-cards",
+            "background": "cream (default)",
+            "content": {
+              "heading": "Tous les soins",
+              "categories": [
+                { "name": "Massages", "services": 3, "priceRange": "75€-120€", "icon": "HandPalm" },
+                { "name": "Soins energetiques", "services": 1, "price": "60€", "icon": "Sparkle" },
+                { "name": "Accompagnements", "services": 4, "priceRange": "30€-150€", "icon": "Heart" },
+                { "name": "Spiritualite", "services": 2, "priceRange": "60€-333€", "icon": "Star" }
+              ],
+              "layout": "2x2 grid of category cards. Each card: icon, category name, service count, price range, link to dedicated page."
+            },
+            "rhythm": "2x2 GRID — compact overview after the expansive dark testimonial section. Balanced, organized."
+          },
+          {
+            "order": 7,
+            "name": "RMD Signature",
+            "purpose": "Spotlight on signature program — positioned after trust and service breadth are established",
+            "required": true,
+            "desktopColumns": 2,
+            "mobileLayout": "image-above-text",
+            "background": "roseTint — warm accent background distinguishes this from regular services",
+            "content": {
+              "layout": "Asymmetric split — decorative/atmospheric image (45%) right, text (55%) left. Reversed from Introduction section for visual zigzag.",
+              "heading": "RMD — L'accompagnement signature",
+              "description": "Brief poetic description of the 9-session deep transformation program",
+              "details": ["9 seances", "1 333€ (reglement en plusieurs fois)", "Union de toutes les modalites"],
+              "cta": "Decouvrir le programme RMD (link to /rmd)"
+            },
+            "rhythm": "ASYMMETRIC 2-COL REVERSED — zigzag from section 4. Rose background creates warmth distinction from cream."
+          },
+          {
+            "order": 8,
+            "name": "Valeurs & Approche",
+            "purpose": "Brand values communicated through felt language — why Clemence is different",
+            "required": false,
+            "desktopColumns": 3,
+            "mobileLayout": "stacked-cards",
+            "background": "cream (default)",
+            "content": {
+              "heading": "Ce qui guide mon accompagnement",
+              "values": [
+                { "name": "Presence", "description": "Une ecoute fine, stable et profondement engagee" },
+                { "name": "Clarte", "description": "Eclairer ce qui etait flou, changer l'angle de vue" },
+                { "name": "Douceur", "description": "Des transformations profondes mais non violentes" }
+              ],
+              "layout": "3 value cards with subtle geometric decorative accent (thin gold line). Icons from Phosphor duotone."
+            },
+            "rhythm": "3-COLUMN — returns to 3-col pattern but with different content density (text-only cards vs image cards in section 3)"
+          },
+          {
+            "order": 9,
+            "name": "Promotions & Actualites",
+            "purpose": "Current offers — meditation workshop, aromatherapy workshop, gift cards",
+            "required": false,
+            "desktopColumns": 1,
+            "mobileLayout": "stacked",
+            "background": "indigoDeep — second dark section for rhythm, lighter treatment than testimonials",
+            "content": {
+              "heading": "En ce moment",
+              "items": ["Atelier meditation", "Atelier aromatherapie", "Cartes cadeaux disponibles"],
+              "layout": "Banner-style — single column, centered text, decorative geometric border"
+            },
+            "rhythm": "DARK FULL-WIDTH BANNER — second dark accent creates bookend rhythm with testimonials section"
+          },
+          {
+            "order": 10,
+            "name": "FAQ",
+            "purpose": "Address objections and reduce booking friction — answers real questions",
+            "required": true,
+            "desktopColumns": 1,
+            "mobileLayout": "accordion",
+            "background": "cream (default)",
+            "content": {
+              "heading": "Questions frequentes",
+              "questions": 9,
+              "layout": "Accordion pattern — single column, max-width 720px centered for readability. Each question expandable.",
+              "note": "FAQ content provided by client — 9 Q&As covering session flow, mediumnity ethics, RMD vs massage, online sessions, etc."
+            },
+            "rhythm": "SINGLE COLUMN NARROW — centered text creates calm, focused reading experience after the visual density above"
+          },
+          {
+            "order": 11,
+            "name": "Infos Pratiques",
+            "purpose": "Remove final booking friction — address, hours, practical details, map",
+            "required": true,
+            "desktopColumns": 2,
+            "mobileLayout": "stacked",
+            "background": "roseTint",
+            "content": {
+              "layout": "2-column: practical info (left) + embedded map (right)",
+              "details": ["5 avenue Chanzy, 17500 Jonzac", "Lun-Ven 9h-18h15, Sam 10h-12h30", "1er etage, sans acces PMR", "Venir seul(e) sauf pour les mineurs", "Pas d'animaux"],
+              "map": "Embedded Google Maps or static map with link to directions"
+            },
+            "rhythm": "2-COLUMN — practical split layout. Rose background signals transition toward contact."
+          },
+          {
+            "order": 12,
+            "name": "CTA Final",
+            "purpose": "Final conversion catch — warm invitation to connect",
+            "required": true,
+            "desktopColumns": 1,
+            "mobileLayout": "centered",
+            "background": "cream with warm gradient overlay or atmospheric photo with overlay",
+            "content": {
+              "heading": "Prete a commencer ?",
+              "subheading": "Appelle-moi ou ecris-moi — viens comme tu es.",
+              "cta": ["Prendre rendez-vous (warm button, primary)", "06 32 18 52 59 (phone number, visible)"],
+              "socialLinks": ["Facebook", "Instagram", "YouTube"]
+            },
+            "rhythm": "SINGLE COLUMN CENTERED — final focus, generous padding, clear single action. The page ends with the same warmth it began."
+          }
+        ],
+        "rhythmSummary": "Section column alternation: 1 → 4 → 3 → 2 → 1 → 2x2 → 2 → 3 → 1 → 1 → 2 → 1. Background alternation: photo → roseTint → cream → cream → indigoDeep → cream → roseTint → cream → indigoDeep → cream → roseTint → cream. This creates a breathing rhythm: immersive → compact → structured → asymmetric → dramatic → organized → asymmetric-reversed → structured → dramatic → focused → practical → intimate."
+      },
+      "innerPagePatterns": {
+        "massagesPage": {
+          "sections": [
+            { "name": "Hero", "content": "Page title + atmospheric massage photo with overlay", "columns": 1 },
+            { "name": "Introduction", "content": "Brief intro to massage philosophy — body-first approach", "columns": 1 },
+            { "name": "Service Cards", "content": "3 massage types with photo, description, duration, price, CTA each", "columns": 3 },
+            { "name": "Booking CTA", "content": "Warm invitation to book — phone + form", "columns": 1 }
+          ]
+        },
+        "soinsPage": {
+          "sections": [
+            { "name": "Hero", "content": "Page title + atmospheric soin photo", "columns": 1 },
+            { "name": "Energetique", "content": "LaHoChi description with photo — single service spotlight", "columns": 2 },
+            { "name": "Accompagnements", "content": "Coaching, regulation, aromatherapie — card grid", "columns": 2 },
+            { "name": "Spiritualite", "content": "Mediumnite, constellations, decodage — with 'after first session' note", "columns": 2 },
+            { "name": "Booking CTA", "content": "Warm CTA", "columns": 1 }
+          ]
+        },
+        "rmdPage": {
+          "sections": [
+            { "name": "Hero", "content": "Elevated display — RMD as the deep transformation path", "columns": 1 },
+            { "name": "What is RMD", "content": "Description of the signature approach — all modalities united", "columns": 2 },
+            { "name": "Program Structure", "content": "9 sessions, what each involves, the journey", "columns": 1 },
+            { "name": "Pricing", "content": "1 333€ — payment plan available. Transparent, no surprises.", "columns": 1 },
+            { "name": "Testimonials", "content": "Testimonials specifically about deep transformation work", "columns": 1 },
+            { "name": "Booking CTA", "content": "Begin your RMD journey — phone CTA", "columns": 1 }
+          ]
+        },
+        "aboutPage": {
+          "sections": [
+            { "name": "Hero", "content": "Portrait of Clemence + name + tagline", "columns": 2 },
+            { "name": "Story", "content": "Personal history — 10 years, why this work, the path", "columns": 1 },
+            { "name": "Values", "content": "9 values with short descriptions — elegant grid", "columns": 3 },
+            { "name": "Certifications", "content": "11 certifications grouped by modality type", "columns": 2 },
+            { "name": "Space", "content": "Photos of the cocoon workspace — gallery", "columns": "masonry" },
+            { "name": "CTA", "content": "Warm invitation to connect", "columns": 1 }
+          ]
+        },
+        "contactPage": {
+          "sections": [
+            { "name": "Header", "content": "Contact title + warm invitation text", "columns": 1 },
+            { "name": "Contact Grid", "content": "Form (left) + phone/address/hours/map (right)", "columns": 2 },
+            { "name": "Practical Info", "content": "Access details, rules, what to expect", "columns": 1 },
+            { "name": "Gift Cards", "content": "Gift card option with CTA", "columns": 1 }
+          ]
+        }
+      },
+      "crossReferences": ["conversionStrategy", "imagery", "layoutAndGrid", "voiceAndTone", "componentPatterns"]
+    },
+    "layoutAndGrid": {
+      "status": "complete",
+      "filledBy": "conversion-structure-researcher",
+      "overview": {
+        "designDirection": "12-column CSS Grid system with fluid container widths and generous gutters matching the cocoon spacing philosophy. Mobile-first approach with 6 breakpoints covering 320px to 1536px+. Container max-width capped at 1280px to maintain readable line lengths with the Raleway body font (65-75ch optimal). Full-bleed sections (hero, testimonials, dark accent) break out of container for edge-to-edge impact. Research-based breakpoints aligned with 2025 device landscape. The generous section padding (7rem desktop, from spacing category) combined with this grid creates the breathing, uncluttered feeling the client desires."
+      },
+      "grid": {
+        "system": "CSS Grid (grid-template-columns) with 12-column base",
+        "columns": 12,
+        "gutterDesktop": "1.5rem",
+        "gutterTablet": "1.25rem",
+        "gutterMobile": "1rem",
+        "implementation": "Use CSS Grid with named grid areas for semantic layout. Tailwind grid-cols-12 as utility class base. Subgrid for nested component alignment where supported.",
+        "commonLayouts": {
+          "fullWidth": "grid-column: 1 / -1 — spans all 12 columns",
+          "contentWidth": "grid-column: 2 / 12 — 10-column centered content area",
+          "narrowContent": "grid-column: 3 / 11 — 8-column for body text (optimal line length)",
+          "asymmetricLeft": "grid-column: 1 / 6 (5 cols) + grid-column: 6 / 13 (7 cols) — for image-text splits",
+          "asymmetricRight": "grid-column: 1 / 8 (7 cols) + grid-column: 8 / 13 (5 cols) — reversed split",
+          "threeEqual": "grid-column: span 4 each — for 3-card layouts (entry points, values)",
+          "twoEqual": "grid-column: span 6 each — for 2-column layouts (services, contact)",
+          "fourEqual": "grid-column: span 3 each — for trust bar"
+        }
+      },
+      "breakpoints": {
+        "xs": {
+          "minWidth": "0px",
+          "maxWidth": "479px",
+          "columns": 4,
+          "containerMaxWidth": "100%",
+          "containerPaddingX": "1.25rem",
+          "gutterWidth": "0.75rem",
+          "sectionPaddingY": "3rem",
+          "usage": "Small smartphones portrait — single column stacked layouts, large touch targets, simplified navigation"
+        },
+        "sm": {
+          "minWidth": "480px",
+          "maxWidth": "639px",
+          "columns": 4,
+          "containerMaxWidth": "460px",
+          "containerPaddingX": "1.25rem",
+          "gutterWidth": "1rem",
+          "sectionPaddingY": "3.5rem",
+          "usage": "Large smartphones portrait — still single column but wider cards, slightly more breathing room"
+        },
+        "md": {
+          "minWidth": "640px",
+          "maxWidth": "767px",
+          "columns": 8,
+          "containerMaxWidth": "600px",
+          "containerPaddingX": "1.5rem",
+          "gutterWidth": "1rem",
+          "sectionPaddingY": "4rem",
+          "usage": "Small tablets portrait — 2-column layouts begin, cards side by side"
+        },
+        "lg": {
+          "minWidth": "768px",
+          "maxWidth": "1023px",
+          "columns": 12,
+          "containerMaxWidth": "720px",
+          "containerPaddingX": "2rem",
+          "gutterWidth": "1.25rem",
+          "sectionPaddingY": "5rem",
+          "usage": "Tablets portrait/landscape — full 12-column grid activates, 2-3 column layouts, desktop nav may begin"
+        },
+        "xl": {
+          "minWidth": "1024px",
+          "maxWidth": "1279px",
+          "columns": 12,
+          "containerMaxWidth": "960px",
+          "containerPaddingX": "2.5rem",
+          "gutterWidth": "1.5rem",
+          "sectionPaddingY": "6rem",
+          "usage": "Small desktops/laptops — full layout with all columns visible, asymmetric splits, sidebar layouts"
+        },
+        "2xl": {
+          "minWidth": "1280px",
+          "maxWidth": null,
+          "columns": 12,
+          "containerMaxWidth": "1200px",
+          "containerPaddingX": "3rem",
+          "gutterWidth": "1.5rem",
+          "sectionPaddingY": "7rem",
+          "usage": "Large desktops — maximum container width with generous margins. Content does not stretch beyond 1200px for readability."
+        }
+      },
+      "containerWidths": {
+        "content": {
+          "maxWidth": "1200px",
+          "description": "Primary content container — used for all standard page sections",
+          "centering": "margin: 0 auto"
+        },
+        "narrow": {
+          "maxWidth": "720px",
+          "description": "Narrow text container — used for FAQ, body text, single-column prose. Ensures 65-75ch line length with Raleway at 1rem.",
+          "centering": "margin: 0 auto"
+        },
+        "wide": {
+          "maxWidth": "1400px",
+          "description": "Wide container — used for image galleries, card grids with many items",
+          "centering": "margin: 0 auto"
+        },
+        "fullBleed": {
+          "maxWidth": "100vw",
+          "description": "Full viewport width — used for hero sections, dark accent sections (testimonials, promotions), and footer. Content inside still constrained to content maxWidth."
+        }
+      },
+      "layoutPrinciples": {
+        "antiClutter": "Avoid cluttered, overloaded layouts — explicitly stated via dislike of anderias.com ('Trop de choses, pas assez clair')",
+        "purityAndClarity": "Inspired by gwladysdemarsac.com — purete and clarte as explicit values",
+        "elegance": "Inspired by sophiechague.fr — elegance and raffinement as explicit values",
+        "immersiveHero": "Full-screen immersive photo layouts — explicitly selected as visual style preference",
+        "breathingRoom": "Section padding is deliberately generous (7rem desktop, 3rem mobile). This is 2-3x more than typical wellness sites and creates the cocoon spaciousness.",
+        "lineLength": "Body text constrained to 65-75 characters per line for optimal readability. Use narrow container (720px) for prose sections.",
+        "visualRhythm": "Homepage alternates between full-width immersive sections and contained grid sections. Background colors alternate cream/roseTint/indigoDeep to create rhythm. Column counts vary (1→4→3→2→1→2x2→2→3→1→1→2→1) to prevent monotony."
+      },
+      "sectionPaddingByBreakpoint": {
+        "xs": { "paddingY": "3rem", "paddingX": "1.25rem" },
+        "sm": { "paddingY": "3.5rem", "paddingX": "1.25rem" },
+        "md": { "paddingY": "4rem", "paddingX": "1.5rem" },
+        "lg": { "paddingY": "5rem", "paddingX": "2rem" },
+        "xl": { "paddingY": "6rem", "paddingX": "2.5rem" },
+        "2xl": { "paddingY": "7rem", "paddingX": "3rem" },
+        "note": "These match the spacing.sectionSpacing values. Use clamp() for fluid scaling: clamp(3rem, 2rem + 4vw, 7rem) for paddingY."
+      },
+      "layoutByPageType": {
+        "homepage": "Full-bleed hero → contained sections alternating backgrounds and column counts → full-bleed footer. See pagePatterns.homepageFlow for complete 12-section flow.",
+        "servicePage": "Compact hero (half-height) → contained content with service cards → booking CTA → footer",
+        "aboutPage": "Portrait hero (asymmetric split) → single-column story → 3-column values → 2-column certs → gallery → CTA → footer",
+        "contactPage": "Header → 2-column form+info layout → practical details → footer",
+        "rmdPage": "Elevated hero → 2-column explanation → single-column journey → pricing → testimonials → CTA → footer"
+      },
+      "mobileRequirement": "Version mobile parfaite — listed as a top priority by client",
+      "crossReferences": ["imagery", "shapeAndBorders", "pagePatterns", "spacing", "componentPatterns"]
+    },
+    "componentPatterns": {
+      "status": "complete",
+      "filledBy": "conversion-structure-researcher",
+      "overview": {
+        "designDirection": "Component inventory derived directly from pagePatterns and conversionStrategy requirements. Every component listed is used in at least one page section. Components use the visual tokens from color, typography, spacing, shapeAndBorders, and elevationAndShadows categories for full coherence. Aspirational: Gentle Guide (Lapa Ninja) — progressive disclosure cards with hover micro-interactions. Adapted for holistic bien-etre: warm card hover states (gold border tint) and breath-like transitions. Design Vault navigation patterns — sticky header with CTA button that compresses on scroll."
+      },
+      "inventory": {
+        "baseUI": [
+          {
+            "name": "Button",
+            "description": "Primary interactive element — warm invitation, not aggressive push",
+            "variants": {
+              "warm": {
+                "background": "secondary.400 (Dore Lumineux)",
+                "text": "neutral.900",
+                "usage": "Primary CTA — 'Prendre rendez-vous', booking actions",
+                "border": "none",
+                "shadow": "level 1"
+              },
+              "primary": {
+                "background": "deepAccent.500 (Indigo Sacre)",
+                "text": "neutral.50",
+                "usage": "Secondary emphasis — 'Reserver un soin', 'En savoir plus'",
+                "border": "none",
+                "shadow": "level 1"
+              },
+              "secondary": {
+                "background": "transparent",
+                "text": "deepAccent.500",
+                "usage": "Tertiary actions — 'Voir tous les soins', 'Lire plus'",
+                "border": "1px solid deepAccent.500",
+                "shadow": "none"
+              },
+              "ghost": {
+                "background": "transparent",
+                "text": "deepAccent.500",
+                "usage": "Inline text actions — navigation links, subtle CTAs",
+                "border": "none",
+                "textDecoration": "underline on hover"
+              },
+              "warmOnDark": {
+                "background": "secondary.400 (Dore Lumineux)",
+                "text": "neutral.900",
+                "usage": "CTA on dark (indigo) backgrounds — testimonials section, footer",
+                "border": "none"
+              }
+            },
+            "sizes": {
+              "sm": { "paddingX": "1.25rem", "paddingY": "0.625rem", "fontSize": "sm (0.875rem)", "minHeight": "2.25rem" },
+              "md": { "paddingX": "1.75rem", "paddingY": "0.875rem", "fontSize": "base (1rem)", "minHeight": "2.75rem" },
+              "lg": { "paddingX": "2.25rem", "paddingY": "1rem", "fontSize": "md (1.125rem)", "minHeight": "3.25rem" }
+            },
+            "states": "See interactionStates.buttons for full state definitions (hover, active, focus, disabled, loading)",
+            "borderRadius": "DEFAULT (0.375rem)",
+            "letterSpacing": "0.04em (from typography.bodyFont.letterSpacing.buttons)",
+            "fontWeight": 500,
+            "fontFamily": "Raleway",
+            "icon": "Optional leading or trailing Phosphor icon (md size), 0.5rem gap"
+          },
+          {
+            "name": "Input",
+            "description": "Form input fields — single column, large touch targets",
+            "variants": ["text", "email", "tel", "textarea", "select"],
+            "sizes": {
+              "md": { "paddingX": "1rem", "paddingY": "0.75rem", "fontSize": "base (1rem)", "minHeight": "2.75rem" },
+              "lg": { "paddingX": "1.25rem", "paddingY": "0.875rem", "fontSize": "md (1.125rem)", "minHeight": "3.25rem" }
+            },
+            "states": "See interactionStates.inputs for full state definitions",
+            "borderRadius": "DEFAULT (0.375rem)",
+            "label": {
+              "position": "Above input",
+              "fontSize": "sm (0.875rem)",
+              "fontWeight": 500,
+              "color": "neutral.700",
+              "gap": "0.375rem (labelToInput from spacing)"
+            },
+            "helperText": {
+              "fontSize": "sm (0.875rem)",
+              "color": "neutral.500 (default) or error (on validation fail)",
+              "gap": "0.25rem below input"
+            }
+          },
+          {
+            "name": "Badge",
+            "description": "Small label for categorization, status, or trust indicators",
+            "variants": {
+              "default": { "background": "neutral.100", "text": "neutral.700" },
+              "accent": { "background": "primary.100 (rose)", "text": "primary.700" },
+              "dark": { "background": "deepAccent.500", "text": "neutral.50" }
+            },
+            "borderRadius": "full (9999px)",
+            "padding": "0.25rem 0.75rem",
+            "fontSize": "xs (0.75rem)",
+            "fontWeight": 500,
+            "letterSpacing": "0.04em"
+          },
+          {
+            "name": "Divider",
+            "description": "Section separator — plain or decorative geometric",
+            "variants": {
+              "plain": { "style": "1px solid neutral.200", "margin": "2rem 0" },
+              "decorative": { "style": "Thin line with centered diamond/infinity motif in gold at 40% opacity", "margin": "0 auto", "maxWidth": "200px" }
+            }
+          },
+          {
+            "name": "Icon",
+            "description": "Phosphor Icons wrapper with consistent sizing and accessibility",
+            "library": "@phosphor-icons/react",
+            "defaultWeight": "light",
+            "sizes": "See iconography.sizes for full scale (xs through 3xl)",
+            "accessibility": "See iconography.accessibilityMarkup for aria patterns"
+          }
+        ],
+        "composite": [
+          {
+            "name": "ServiceCard",
+            "description": "Card displaying a single service with image, title, description, price, duration, and CTA",
+            "slots": ["image (3:2 aspect, top)", "icon (optional, Phosphor duotone)", "title (Cormorant Garamond md weight)", "description (2-3 lines max)", "price (prominent)", "duration (muted)", "cta (Button sm)"],
+            "variants": {
+              "withImage": "Photo at top, content below — for massage page service cards",
+              "withIcon": "Icon at top, content below — for entry-point cards on homepage",
+              "compact": "No image, just icon + title + price + CTA — for service overview grid"
+            },
+            "layout": {
+              "desktop": "Vertical card, fixed width within grid column",
+              "mobile": "Full-width stacked card"
+            },
+            "styling": {
+              "background": "warmWhite",
+              "border": "1px solid neutral.100",
+              "borderRadius": "lg (0.5rem)",
+              "shadow": "level 1 (subtle)",
+              "padding": "1.5rem",
+              "hoverShadow": "level 2 (low)",
+              "hoverBorderColor": "secondary.400 at 30% opacity (gold tint)",
+              "hoverTransform": "translateY(-2px) scale(1.01)"
+            }
+          },
+          {
+            "name": "EntryPointCard",
+            "description": "Specialized card for the 3 entry-point booking types — more prominent than standard ServiceCard",
+            "slots": ["icon (Phosphor light, xl size)", "label (Cormorant Garamond semibold)", "description (1-2 lines)", "priceIndicator (from X€)", "cta (Button md, warm variant)"],
+            "colorAccents": {
+              "massage": "primary.100 (rose tint) top border or icon background",
+              "soin": "richAccent.100 (prune tint) top border or icon background",
+              "premiereSeance": "deepAccent.100 (indigo tint) top border or icon background"
+            },
+            "layout": {
+              "desktop": "Equal width in 3-column grid",
+              "mobile": "Full-width stacked, slight horizontal padding"
+            },
+            "styling": {
+              "background": "warmWhite",
+              "borderTop": "3px solid [colorAccent]",
+              "borderRadius": "lg (0.5rem)",
+              "shadow": "level 1",
+              "padding": "2rem 1.5rem",
+              "textAlign": "center"
+            }
+          },
+          {
+            "name": "TestimonialCard",
+            "description": "Client testimonial with star rating, quote, and attribution",
+            "slots": ["stars (5 filled stars, gold)", "quote (Raleway italic, 2-4 lines)", "attribution (first name + initial)"],
+            "variants": {
+              "onLight": { "background": "warmWhite", "border": "1px solid neutral.100", "textColor": "neutral.800" },
+              "onDark": { "background": "transparent or deepAccent.600 at 30%", "border": "1px solid neutral.50 at 15%", "textColor": "neutral.50" }
+            },
+            "styling": {
+              "borderRadius": "lg (0.5rem)",
+              "padding": "2rem",
+              "quoteFont": "Raleway 400 italic",
+              "quoteFontSize": "md (1.125rem)",
+              "quoteLineHeight": 1.7,
+              "starColor": "secondary.400 (Dore Lumineux)",
+              "starSize": "sm (1rem)"
+            }
+          },
+          {
+            "name": "TrustBadge",
+            "description": "Compact trust signal item for the trust bar",
+            "slots": ["icon (Phosphor light, sm)", "value (bold number or short text)", "label (muted descriptor)"],
+            "layout": "Horizontal: icon + value + label in a single row",
+            "styling": {
+              "fontSize": "sm (0.875rem) for label, base (1rem) bold for value",
+              "color": "neutral.700 for label, deepAccent.500 for value",
+              "gap": "0.5rem between icon and text"
+            }
+          },
+          {
+            "name": "ValueCard",
+            "description": "Brand value display card — icon + name + short description",
+            "slots": ["icon (Phosphor duotone, xl)", "name (Cormorant Garamond medium)", "description (1-2 lines Raleway)"],
+            "styling": {
+              "background": "transparent or warmWhite",
+              "border": "none or subtle decorative gold line accent",
+              "padding": "1.5rem",
+              "textAlign": "center",
+              "iconColor": "secondary.400 (Dore Lumineux)"
+            }
+          },
+          {
+            "name": "CategoryCard",
+            "description": "Service category overview card — for the 4-category grid on homepage",
+            "slots": ["icon (Phosphor duotone, 2xl)", "categoryName (Cormorant Garamond semibold)", "serviceCount (e.g., '3 soins')", "priceRange", "link (arrow + 'Decouvrir')"],
+            "styling": {
+              "background": "warmWhite",
+              "border": "1px solid neutral.100",
+              "borderRadius": "lg (0.5rem)",
+              "shadow": "level 1",
+              "padding": "2rem",
+              "hoverShadow": "level 2",
+              "hoverBorderColor": "secondary.400 at 30%"
+            }
+          },
+          {
+            "name": "PromotionBanner",
+            "description": "Current offer/event banner — for promotions section",
+            "slots": ["icon (optional)", "title", "description", "cta (optional Button)"],
+            "styling": {
+              "background": "indigoDeep or gradient (indigo to prune)",
+              "text": "neutral.50",
+              "borderRadius": "lg (0.5rem)",
+              "padding": "2rem 2.5rem",
+              "border": "1px solid secondary.400 at 20% (subtle gold frame)"
+            }
+          }
+        ],
+        "sections": [
+          {
+            "name": "HeroSection",
+            "description": "Full-viewport immersive hero with overlay, heading, subtitle, and CTA",
+            "slots": ["backgroundImage", "gradientOverlay", "heading (4xl-5xl Cormorant Garamond)", "subtitle (md Raleway)", "ctaPrimary (Button warm lg)", "ctaSecondary (ghost link)"],
+            "responsiveRules": {
+              "desktop": "Full viewport height (100vh). Text centered or left-aligned in lower third. Gradient overlay from transparent to cream at bottom.",
+              "tablet": "80vh minimum. Text centered. Same overlay pattern.",
+              "mobile": "70vh minimum. Text centered in lower half with solid cream backdrop behind text for legibility. Image cropped to portrait focus zone."
+            },
+            "styling": {
+              "minHeight": { "desktop": "100vh", "tablet": "80vh", "mobile": "70vh" },
+              "textShadow": "0 2px 4px oklch(0.239 0.0108 60.9 / 0.3) — for text legibility over image",
+              "overlay": "heroOverlay gradient from color.gradients"
+            }
+          },
+          {
+            "name": "TrustBarSection",
+            "description": "Compact horizontal strip of trust signals",
+            "layout": {
+              "desktop": "4 items in a single row, evenly spaced",
+              "tablet": "4 items in a row, tighter spacing",
+              "mobile": "2x2 grid"
+            },
+            "styling": {
+              "background": "background.roseTint",
+              "paddingY": "1.5rem",
+              "borderBottom": "1px solid neutral.200"
+            }
+          },
+          {
+            "name": "SectionHeader",
+            "description": "Reusable section heading block — title + optional subtitle + optional decorative element",
+            "slots": ["title (2xl Cormorant Garamond semibold)", "subtitle (md Raleway light, optional)", "decorativeElement (geometric divider, optional)"],
+            "styling": {
+              "textAlign": "center",
+              "marginBottom": "3rem (desktop), 2rem (mobile)",
+              "titleColor": "deepAccent.500 on light backgrounds, neutral.50 on dark backgrounds",
+              "subtitleColor": "neutral.600 on light, neutral.200 on dark"
+            }
+          },
+          {
+            "name": "TestimonialSection",
+            "description": "Dark-background social proof section with Google badge + testimonial cards",
+            "layout": {
+              "desktop": "Full-width dark bg. Centered SectionHeader. Google badge above. 3 TestimonialCards in row below.",
+              "mobile": "Stacked: header → Google badge → swipeable carousel of testimonial cards"
+            },
+            "styling": {
+              "background": "background.indigoDeep",
+              "paddingY": "section spacing per breakpoint",
+              "decorative": "Subtle geometric pattern overlay at 5% opacity"
+            }
+          },
+          {
+            "name": "CTASection",
+            "description": "Final conversion section — warm invitation with prominent CTA",
+            "slots": ["heading (2xl Cormorant Garamond)", "subheading (md Raleway)", "ctaPrimary (Button warm lg)", "phoneNumber (visible, tap-to-call)", "socialLinks (icon row)"],
+            "styling": {
+              "background": "cream with subtle warm gradient or atmospheric photo with overlay",
+              "textAlign": "center",
+              "paddingY": "generous (5rem-7rem)"
+            }
+          },
+          {
+            "name": "FAQSection",
+            "description": "Accordion-based FAQ — narrow container for readability",
+            "layout": {
+              "desktop": "Single column, max-width 720px centered",
+              "mobile": "Full width with container padding"
+            },
+            "styling": {
+              "background": "cream",
+              "itemBorder": "1px solid neutral.200 between items",
+              "questionFont": "Raleway 500, base size",
+              "answerFont": "Raleway 400, base size, neutral.700",
+              "expandIcon": "Phosphor CaretDown, rotates 180deg on expand",
+              "transition": "350ms default easing for expand/collapse"
+            }
+          }
+        ],
+        "interactive": [
+          {
+            "name": "StickyHeader",
+            "description": "Header that appears on scroll with compact nav and CTA",
+            "behavior": {
+              "initial": "Full header visible with logo, nav items, CTA button",
+              "onScroll": "Compresses to compact height (3.5rem mobile, 4rem desktop). Shadow level 2 appears. Background becomes cream with slight transparency (backdrop-blur).",
+              "scrollDirection": "Shows on scroll-up, hides on scroll-down (mobile only). Always visible on desktop."
+            },
+            "responsiveRules": {
+              "desktop": "Logo (left) + nav items (center) + CTA button (right). Full horizontal nav.",
+              "tablet": "Logo (left) + hamburger (right) + CTA button (right of hamburger)",
+              "mobile": "Logo (left) + phone icon (center-right) + hamburger (right)"
+            },
+            "styling": {
+              "background": "oklch(0.980 0.0062 75.4 / 0.95) — cream at 95% opacity",
+              "backdropFilter": "blur(8px)",
+              "shadow": "level 2 (low) when scrolled",
+              "height": { "desktop": "4.5rem", "compact": "3.5rem" },
+              "zIndex": 50
+            }
+          },
+          {
+            "name": "MobileMenu",
+            "description": "Full-screen overlay navigation for mobile/tablet",
+            "behavior": {
+              "trigger": "Hamburger icon tap → morphs to X",
+              "animation": "Overlay slides in from right (350ms ease-out). Nav items stagger fade-in (100ms delay each).",
+              "close": "X tap, outside tap, or Escape key"
+            },
+            "styling": {
+              "background": "background.cream with roseTint overlay",
+              "navItemSize": "xl (1.5rem) Cormorant Garamond",
+              "navItemSpacing": "1.5rem between items",
+              "touchTarget": "min 48px per item",
+              "footer": "Phone number + social icons at bottom"
+            },
+            "accessibility": {
+              "ariaLabel": "Menu de navigation",
+              "focusTrap": "Focus trapped within menu when open",
+              "escapeClose": "Escape key closes menu and returns focus to trigger",
+              "ariaExpanded": "true/false on hamburger button"
+            }
+          },
+          {
+            "name": "Accordion",
+            "description": "Expandable FAQ items — single open or multi-open",
+            "behavior": {
+              "mode": "single-open — only one item expanded at a time",
+              "animation": "Height transition 350ms default easing. Content fades in 200ms.",
+              "icon": "CaretDown rotates 180deg on expand"
+            },
+            "accessibility": {
+              "role": "region with aria-labelledby pointing to question",
+              "questionRole": "button with aria-expanded true/false",
+              "answerRole": "role=region, aria-hidden when collapsed",
+              "keyboard": "Enter/Space toggles, Arrow keys navigate between items"
+            },
+            "styling": {
+              "questionPadding": "1rem 0",
+              "answerPadding": "0 0 1rem 0",
+              "borderBottom": "1px solid neutral.200",
+              "questionHover": "color shifts to deepAccent.400"
+            }
+          },
+          {
+            "name": "TestimonialCarousel",
+            "description": "Swipeable testimonial carousel for mobile",
+            "behavior": {
+              "swipe": "Horizontal swipe to navigate between cards",
+              "autoplay": "Disabled — user-controlled only (accessibility)",
+              "indicators": "Pagination dots below carousel",
+              "snap": "CSS scroll-snap-type: x mandatory"
+            },
+            "accessibility": {
+              "role": "region with aria-label 'Temoignages clients'",
+              "ariaLive": "polite — announces current testimonial on change",
+              "keyboard": "Left/Right arrows navigate, no autoplay"
+            },
+            "styling": {
+              "gap": "1rem between cards",
+              "dotSize": "8px, active dot: 12px, color: secondary.400",
+              "overflow": "overflow-x: auto, scrollbar-width: none"
+            }
+          },
+          {
+            "name": "ContactForm",
+            "description": "Simple contact/booking form — max 4 fields",
+            "fields": [
+              { "name": "prenom", "type": "text", "label": "Ton prenom", "required": true },
+              { "name": "telephone", "type": "tel", "label": "Ton telephone", "required": true },
+              { "name": "type_soin", "type": "select", "label": "Ce qui t'interesse", "options": ["Massage", "Soin energetique", "1ere seance", "Autre"], "required": true },
+              { "name": "message", "type": "textarea", "label": "Un mot pour moi (facultatif)", "required": false, "rows": 3 }
+            ],
+            "submitButton": {
+              "text": "Envoyer ma demande",
+              "variant": "warm",
+              "size": "lg",
+              "fullWidth": true
+            },
+            "layout": "Single column, labels above inputs, generous spacing between fields (1.25rem)",
+            "validation": {
+              "mode": "onBlur — validate when field loses focus",
+              "errorDisplay": "Inline below field with error color and icon",
+              "successFeedback": "Toast notification or inline success message"
+            },
+            "styling": {
+              "maxWidth": "480px",
+              "fieldGap": "1.25rem",
+              "inputMinHeight": "3rem (48px) for touch targets"
+            }
+          },
+          {
+            "name": "GoogleReviewWidget",
+            "description": "Compact Google reviews badge showing aggregate rating",
+            "display": {
+              "format": "Google logo + 5 gold stars + '58 avis' text + link to Google Business",
+              "variants": {
+                "compact": "Single horizontal line — for trust bar",
+                "expanded": "Stacked with rating number (5.0) — for testimonials section"
+              }
+            },
+            "styling": {
+              "starColor": "secondary.400 (Dore Lumineux)",
+              "textColor": "neutral.700 on light, neutral.100 on dark",
+              "fontSize": "sm (0.875rem)",
+              "gap": "0.5rem between elements"
+            }
+          },
+          {
+            "name": "MapEmbed",
+            "description": "Google Maps embed for contact/practical info section",
+            "styling": {
+              "borderRadius": "lg (0.5rem)",
+              "aspectRatio": "16:9 on desktop, 4:3 on mobile",
+              "border": "1px solid neutral.200",
+              "lazyLoad": true
+            },
+            "accessibility": {
+              "title": "Localisation du cabinet — 5 avenue Chanzy, 17500 Jonzac",
+              "ariaLabel": "Carte Google Maps montrant l'emplacement du cabinet"
+            }
+          }
+        ]
+      },
+      "responsiveRules": {
+        "navigation": {
+          "desktop": "Horizontal nav bar — logo left, nav items center, CTA button right. All items visible.",
+          "tablet": "Logo left, CTA button + hamburger right. Nav items in overlay menu.",
+          "mobile": "Logo left, phone icon + hamburger right. CTA in overlay menu. Sticky behavior on scroll."
+        },
+        "cardGrid": {
+          "3col": { "desktop": "3 columns (span 4 each)", "tablet": "2 columns + 1 below centered", "mobile": "Single column stacked" },
+          "2col": { "desktop": "2 columns (span 6 each)", "tablet": "2 columns", "mobile": "Single column stacked" },
+          "4col": { "desktop": "4 columns (span 3 each)", "tablet": "2 columns (2x2)", "mobile": "2 columns (2x2) or single column" },
+          "gap": "1.5rem (cardGap from spacing)"
+        },
+        "hero": {
+          "desktop": "100vh, text in lower third, gradient overlay bottom",
+          "tablet": "80vh, text centered, gradient overlay",
+          "mobile": "70vh, text centered in lower half with solid cream backdrop for legibility"
+        },
+        "sidebar": "Not used — this site uses full-width section layout exclusively. No sidebar patterns needed."
+      },
+      "crossReferences": ["color", "typography", "spacing", "shapeAndBorders", "elevationAndShadows", "iconography", "motion", "interactionStates", "pagePatterns", "conversionStrategy"]
+    },
+    "accessibility": {
+      "status": "complete",
+      "filledBy": "conversion-structure-researcher",
+      "overview": {
+        "designDirection": "WCAG 2.1 AA as baseline minimum, with select AAA enhancements where they align with the cocoon design philosophy (generous spacing, clear contrast, large touch targets). The European Accessibility Act (EAA) came into force June 2025, making AA compliance a legal requirement for EU businesses. This wellness practice serves vulnerable populations (people in emotional distress, seeking healing) — accessibility is both legal and ethical. The warm color palette has been pre-verified for contrast (see color.contrastVerification). Focus management uses gold ring on indigo/cream backgrounds for high visibility. Touch targets exceed AA minimums at 44-48px. Reduced motion fully supported per the motion category."
+      },
+      "wcagLevel": {
+        "target": "WCAG 2.1 AA",
+        "enhanced": ["WCAG 2.2 focus-not-obscured (new in 2.2)", "AAA-level touch targets (44x44px minimum, 48px recommended)"],
+        "rationale": "AA is the legal baseline under EAA and the industry standard. AAA touch targets are adopted because mobile-first is a client priority and the target audience may include people with motor difficulties or older adults."
+      },
+      "perceivable": {
+        "colorContrast": {
+          "textMinimum": "4.5:1 for normal text (WCAG 1.4.3 AA)",
+          "largeTextMinimum": "3:1 for large text — 18pt+ or 14pt bold (WCAG 1.4.3 AA)",
+          "nonTextMinimum": "3:1 for UI components and graphical objects (WCAG 1.4.11 AA)",
+          "verified": {
+            "bodyTextOnCream": "11.32:1 — WCAG AAA (verified in color category)",
+            "headingsOnCream": "8.93:1 — WCAG AAA (verified in color category)",
+            "mutedTextOnCream": "5.02:1 — WCAG AA (verified in color category)",
+            "whiteOnIndigo": "9.24:1 — WCAG AAA (verified in color category)",
+            "goldOnDark": "7.13:1 — WCAG AA (verified in color category)",
+            "whiteOnPruneDark": "12.46:1 — WCAG AAA (verified in color category)"
+          },
+          "note": "All text/background combinations pre-verified in color.contrastVerification. No additional verification needed for standard usage. Custom combinations must be checked before implementation."
+        },
+        "textAlternatives": {
+          "images": "All content images require descriptive alt text in French. Decorative images (geometric accents, background textures) use alt='' and aria-hidden='true'.",
+          "icons": "See iconography.accessibilityMarkup — decorative icons hidden, informational icons labeled, interactive icons wrapped in labeled button/link.",
+          "heroImages": "alt text describes the emotional scene, not just literal content. Example: 'Espace chaleureux du cabinet de Clemence — lumiere douce et ambiance cocon' rather than 'photo of room'.",
+          "complexImages": "Service photos that convey specific information should have detailed alt text. Gallery images can use brief descriptions."
+        },
+        "mediaAlternatives": {
+          "video": "Client has videos — all must have French captions (sous-titres). Transcript available as text alternative.",
+          "audio": "If ambient audio is used (client mentioned liking music on massage page), it must NOT autoplay. User-initiated only with visible controls."
+        },
+        "adaptableContent": {
+          "semanticHTML": "Use semantic elements: header, nav, main, section, article, aside, footer. Headings in logical order (h1 once per page, h2 for sections, h3 for subsections).",
+          "readingOrder": "DOM order must match visual order. CSS Grid/Flexbox order property used carefully — visual reordering must not break screen reader sequence.",
+          "landmarks": "ARIA landmarks: banner (header), navigation (nav), main (main content), contentinfo (footer), complementary (sidebar if any), region (labeled sections).",
+          "responsiveReflow": "Content must reflow at 320px viewport width without horizontal scrolling (WCAG 1.4.10 Reflow). All content accessible without zoom at 200%."
+        },
+        "distinguishable": {
+          "colorNotSole": "Color is never the only means of conveying information. Form errors use icon + text + color. Links use underline + color. Active states use multiple visual cues.",
+          "textSpacing": "Content readable with text spacing overrides: line-height 1.5x font size, letter spacing 0.12em, word spacing 0.16em, paragraph spacing 2x font size (WCAG 1.4.12).",
+          "contentOnHover": "Tooltips/popovers triggered by hover must be dismissible (Escape), hoverable (user can move pointer to tooltip), and persistent (stays until dismissed) (WCAG 1.4.13)."
+        }
+      },
+      "operable": {
+        "keyboardAccessible": {
+          "allFunctionality": "All interactive elements operable via keyboard. Tab, Shift+Tab for navigation. Enter/Space for activation. Arrow keys for complex widgets (accordion, carousel).",
+          "noKeyboardTraps": "Focus never trapped except in modal dialogs (with Escape to close). Mobile menu overlay traps focus but releases on close.",
+          "customShortcuts": "No custom keyboard shortcuts implemented — avoids conflicts with assistive technology."
+        },
+        "focusManagement": {
+          "focusVisible": {
+            "style": "2px solid oklch(0.742 0.1202 79.1) (gold) with 2px offset — high visibility against both cream and indigo backgrounds",
+            "note": "Gold focus ring chosen for universal visibility. Passes 3:1 contrast against cream bg (7.13:1 per gold-on-dark verification) and against indigo bg."
+          },
+          "focusOrder": "Logical tab order follows visual layout: header → nav → main content (top to bottom, left to right) → footer. Skip link as first focusable element.",
+          "focusOnDark": "On indigoDeep backgrounds (testimonials, footer), focus ring uses gold (secondary.400) — remains highly visible.",
+          "focusNotObscured": "Focus indicator never hidden by sticky header, overlays, or other elements. Sticky header accounts for focused element position (scroll-padding-top).",
+          "modalFocus": "When modal/overlay opens: focus moves to first interactive element inside. On close: focus returns to trigger element."
+        },
+        "skipNavigation": {
+          "implementation": "Visually hidden skip link as first focusable element on every page. Visible on focus.",
+          "text": "Aller au contenu principal",
+          "target": "#main-content on the main element",
+          "styling": "Position absolute, off-screen. On focus: visible, positioned at top-left, high z-index, cream bg with indigo text, padding 0.75rem 1.5rem."
+        },
+        "touchTargets": {
+          "minimum": "44px x 44px (2.75rem) — AAA level adopted as baseline due to mobile-first priority",
+          "recommended": "48px x 48px (3rem) — used for primary CTAs and form inputs",
+          "spacing": "Minimum 8px (0.5rem) between adjacent touch targets to prevent mis-taps",
+          "implementation": "All buttons meet minimum via padding. Icon-only buttons use padding to expand hit area. Links in body text exempt per WCAG (inline text exception).",
+          "mobileSpecific": "Phone icon in header: 48px touch target. Hamburger menu: 48px. Carousel dots: 44px per dot with 8px gap."
+        },
+        "enoughTime": {
+          "noTimeouts": "No session timeouts or time-limited interactions on this site.",
+          "carousel": "Testimonial carousel has NO autoplay. User-controlled swipe/arrow navigation only.",
+          "animations": "All scroll-triggered animations are one-time (not looping). No content disappears or becomes inaccessible after animation."
+        }
+      },
+      "understandable": {
+        "language": {
+          "pageLanguage": "<html lang='fr'> — French is the primary language",
+          "languageParts": "Any English terms (e.g., technical words, brand names) wrapped in <span lang='en'> if substantive",
+          "note": "All user-facing content is in French per CLAUDE.md code style requirements"
+        },
+        "predictable": {
+          "consistentNavigation": "Navigation appears in same position on every page. Same order, same labels.",
+          "consistentIdentification": "Same UI components identified consistently across pages. Button labels match their function everywhere.",
+          "noFocusChange": "Focusing on any element does not trigger a context change (no auto-submit, no auto-navigate).",
+          "noInputChange": "Changing a form input does not trigger automatic page navigation or submission."
+        },
+        "inputAssistance": {
+          "errorIdentification": "Form errors identified with: red border color + error icon (Phosphor WarningCircle) + descriptive text message below field. Error text uses role='alert' for screen reader announcement.",
+          "labels": "All form inputs have visible labels above the field (never placeholder-only). Labels use htmlFor/id association.",
+          "instructions": "Form includes brief instruction text: 'Je te recontacte dans les 24h' or similar expectation-setting.",
+          "errorSuggestion": "When possible, suggest corrections: 'Le numero de telephone doit contenir 10 chiffres' rather than just 'Numero invalide'.",
+          "confirmationPrevention": "Contact form shows summary before final submission. Phone number displayed for visual confirmation."
+        }
+      },
+      "robust": {
+        "parsing": "Valid, semantic HTML5. No duplicate IDs. Proper nesting of elements.",
+        "nameRoleValue": "All custom interactive components have proper ARIA roles, states, and properties. Native HTML elements preferred over ARIA-enhanced divs.",
+        "statusMessages": {
+          "formSuccess": "role='status' with aria-live='polite' — announces 'Ton message a ete envoye' without moving focus",
+          "formError": "role='alert' with aria-live='assertive' — announces validation errors immediately",
+          "carouselChange": "aria-live='polite' region announcing current testimonial on change"
+        }
+      },
+      "industrySpecific": {
+        "wellnessAccessibility": {
+          "emotionalSafety": "Testimonials describing difficult emotional experiences should use content warnings if graphic. Language is warm and non-triggering per voiceAndTone guidelines.",
+          "physicalAccessibility": "Site must clearly state physical access limitations: '1er etage, sans acces PMR'. This transparency is both honest and an accessibility requirement (informing disabled visitors before they travel).",
+          "cognitiveAccessibility": "Target audience may include people in emotional distress. Clear, simple navigation, warm language, and predictable interactions reduce cognitive load. No surprise popups, no aggressive CTAs, no overwhelming animations.",
+          "readingLevel": "Content written at accessible reading level — short sentences, simple vocabulary, one idea per paragraph. Aligns with voiceAndTone clarity principle."
+        },
+        "frenchLegalRequirements": {
+          "RGAA": "French government accessibility standard (Referentiel General d'Amelioration de l'Accessibilite) aligns with WCAG 2.1 AA. Compliance recommended for all French websites.",
+          "EAA": "European Accessibility Act effective June 2025 — WCAG 2.1 AA compliance required for businesses offering services to the public.",
+          "mentionsLegales": "Accessibility statement should be included in mentions-legales page, stating conformance level and contact for accessibility issues."
+        }
+      },
+      "fontMinimums": {
+        "bodyText": "16px (1rem) minimum — never smaller for body content",
+        "smallText": "12px (0.75rem) absolute minimum — only for fine print/legal. 14px (0.875rem) for captions and metadata.",
+        "mobileMinimum": "16px body text minimum on mobile to prevent iOS zoom on input focus",
+        "lineHeight": "1.5 minimum for body text (1.7 used in this design system — exceeds minimum)"
+      },
+      "reducedMotion": {
+        "strategy": "Full support via @media (prefers-reduced-motion: reduce). See motion.reducedMotion for complete CSS rule.",
+        "behavior": "All transforms removed. All durations reduced to near-zero. Opacity transitions kept at 200ms max for basic feedback. Scroll reveals show content immediately. Carousel transitions are instant.",
+        "testing": "Test with reduced motion enabled in OS settings (macOS: System Preferences → Accessibility → Display → Reduce Motion)"
+      },
+      "ariaPatterns": {
+        "navigation": {
+          "mainNav": "role='navigation' aria-label='Navigation principale'",
+          "mobileMenu": "role='dialog' aria-label='Menu de navigation' aria-modal='true' (when open)",
+          "footerNav": "role='navigation' aria-label='Navigation secondaire'",
+          "skipLink": "First focusable element, targets #main-content"
+        },
+        "sections": {
+          "hero": "role='banner' or within header landmark",
+          "main": "<main id='main-content'> — single main per page",
+          "testimonials": "role='region' aria-label='Temoignages clients'",
+          "faq": "Each question: button with aria-expanded. Each answer: role='region' aria-labelledby='question-id'",
+          "footer": "role='contentinfo'"
+        },
+        "forms": {
+          "contactForm": "role='form' aria-label='Formulaire de contact'",
+          "inputs": "aria-required='true' for required fields. aria-describedby pointing to helper/error text.",
+          "errors": "role='alert' aria-live='assertive' for error messages",
+          "success": "role='status' aria-live='polite' for success confirmation"
+        },
+        "interactive": {
+          "accordion": "button + aria-expanded + aria-controls. Panel: role='region' aria-labelledby.",
+          "carousel": "role='region' aria-label + aria-live='polite'. Navigation: previous/next buttons with aria-label.",
+          "modal": "role='dialog' aria-modal='true' aria-labelledby. Focus trap. Escape closes."
+        }
+      },
+      "testingChecklist": [
+        "Keyboard-only navigation through all pages — verify tab order, focus visibility, no traps",
+        "Screen reader testing (VoiceOver on macOS/iOS) — verify landmarks, headings, form labels, live regions",
+        "Color contrast verification for all text/background combinations — automated via axe-core",
+        "200% zoom test — verify no content loss or horizontal scroll",
+        "320px viewport test — verify reflow without horizontal scroll",
+        "Reduced motion test — verify all animations respect preference",
+        "Touch target size audit — verify all interactive elements meet 44px minimum",
+        "Form validation flow — verify error announcement, suggestions, and recovery",
+        "Mobile screen reader test — verify carousel, accordion, and menu accessibility"
+      ],
+      "crossReferences": ["color", "typography", "motion", "iconography", "interactionStates", "spacing", "componentPatterns"]
+    }
+  },
+  "pipeline": {
+    "stage": "validated",
+    "completedStages": ["brief-extracted", "input-collected", "analysis-complete", "visual-design-complete", "content-brand-research-complete", "conversion-structure-research-complete", "validated"]
+  }
+}

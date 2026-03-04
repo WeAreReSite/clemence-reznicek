@@ -622,3 +622,15 @@ Visité en novembre 2023
 Clémence REZNICEK Médium - Massage - Thérapies Holistiques - Soins Énergétiques (propriétaire)
 il y a 2 ans
 Merci 🙏
+
+Copiez-collez 3-5 de vos meilleurs avis clients
+Clémence est d'une douceur infini et d'une incroyable justesse, elle est très professionnelle et m'a mis très facilement à l'aise. Le travail que nous avons fait ensemble ces six derniers mois est allé chercher en profondeur, des peurs et des blocages qui m'empêchaient d'avancer. Je me sens aujourd'hui libérée d'un poid, plus alignée et optimiste. Je ne peux que la recommander les yeux fermer
+
+Clémence vous accompagne avec une grande douceur.... Elle trouve les mots justes.... La libération est incroyable. La reconnection est immédiate, le soulagement instantané 🌈 Il me manque les mots pour décrire ce que j'ai vécue... Il faut le vivre 💫
+
+Une très belle découverte avec une personne solaire et passionnée. Clemence a mis le doigt sur une problématique que je n’entrevoyait pas. Merci beaucoup pour cette entrevue et ce temps consacré 🙏
+
+Pour moi, il y a eu un avant et un après la constellation du 14 juillet. Mon intention était de me libérer des peurs et des croyances qui ne m’appartenaient pas. Dès le lendemain, et toute la semaine qui a suivi, j’ai eu des prises de conscience, des peurs libérées et une confiance en moi et à l’avenir qui s’est installée. À mon avis, le processus ne fait que commencer !
+Merci Clémence pour ta bienveillance et ton accompagnement 🙏
+
+Clémence m'a appris qui j'étais réellement toujours dans la bien vaillance et à l'écoute dans la bonne humeur un vrai rayon de soleil qui fait beaucoup de bien au moral je la recommande. Personne très compétente qui connaît bien son travail et le fait avec beaucoup de sérieux très professionnels. Un grand merci 😊

@@ -146,7 +146,7 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-[70vh] lg:min-h-screen flex items-end overflow-hidden"
+      className="relative w-full min-h-[70vh] lg:min-h-screen flex items-center overflow-hidden pt-[4.5rem]"
     >
       {/* Background image container — wraps image for Ken Burns transform */}
       <div
@@ -196,7 +196,7 @@ export function HeroSection() {
       />
 
       {/* Content — positioned in the lower portion */}
-      <div className="relative z-[2] w-full px-[clamp(1.25rem,4vw,3rem)] pb-[clamp(3rem,8vw,6rem)] pt-[clamp(6rem,20vw,12rem)]">
+      <div className="relative z-[2] w-full px-[clamp(1.25rem,4vw,3rem)] py-[clamp(2rem,4vw,3rem)]">
         <div className="mx-auto max-w-[720px] text-center">
           {/* Subtitle */}
           <p

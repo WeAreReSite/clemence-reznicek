@@ -1,9 +1,62 @@
+'use client';
+
+import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { introduction } from '../../../content/homepage';
-import { Section, SectionHeader, ScrollReveal, Button } from '@/components/ui';
+import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW } from '@/lib/gsap-setup';
+import { Section, SectionHeader, Button } from '@/components/ui';
 
 export function IntroductionSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const imageWrapper = el.querySelector<HTMLElement>('[data-intro-image]');
+    const textBlock = el.querySelector<HTMLElement>('[data-intro-text]');
+
+    const ctx = gsap.context(() => {
+      // Curtain-drop reveal from top on portrait
+      if (imageWrapper) {
+        gsap.set(imageWrapper, { clipPath: 'inset(100% 0 0 0)' });
+        ScrollTrigger.create({
+          trigger: imageWrapper,
+          start: 'top 80%',
+          once: true,
+          onEnter: () => {
+            gsap.to(imageWrapper, {
+              clipPath: 'inset(0% 0 0 0)',
+              duration: 1.2,
+              ease: EASE_WELLNESS_FLOW,
+            });
+          },
+        });
+      }
+
+      // Text slides up
+      if (textBlock) {
+        gsap.from(textBlock, {
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          ease: EASE_WELLNESS_FLOW,
+          scrollTrigger: {
+            trigger: textBlock,
+            start: 'top 85%',
+            once: true,
+          },
+        });
+      }
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <Section background="cream">
       <SectionHeader
@@ -11,11 +64,12 @@ export function IntroductionSection() {
         decorative
         align="left"
         className="lg:hidden"
+        animated
       />
 
-      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-        {/* Image — 40% on desktop */}
-        <ScrollReveal className="w-full lg:w-[40%] shrink-0">
+      <div ref={sectionRef} className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+        {/* Image -- 40% on desktop */}
+        <div className="w-full lg:w-[40%] shrink-0" data-intro-image>
           <div className="relative overflow-hidden rounded-lg shadow-[var(--shadow-2)]">
             <Image
               src={introduction.image.src}
@@ -26,15 +80,16 @@ export function IntroductionSection() {
               sizes="(max-width: 1024px) 100vw, 40vw"
             />
           </div>
-        </ScrollReveal>
+        </div>
 
-        {/* Text — 60% on desktop */}
-        <ScrollReveal delay={150} className="w-full lg:w-[60%]">
+        {/* Text -- 60% on desktop */}
+        <div className="w-full lg:w-[60%]" data-intro-text>
           <SectionHeader
             title={introduction.sectionTitle}
             decorative
             align="left"
             className="hidden lg:block"
+            animated
           />
 
           <h3 className="font-heading text-xl font-semibold text-indigo-500 mb-6">
@@ -57,11 +112,11 @@ export function IntroductionSection() {
 
           {/* CTA */}
           <Link href={introduction.cta.href}>
-            <Button variant="secondary" size="md">
+            <Button variant="secondary" size="md" data-magnetic>
               {introduction.cta.label}
             </Button>
           </Link>
-        </ScrollReveal>
+        </div>
       </div>
     </Section>
   );

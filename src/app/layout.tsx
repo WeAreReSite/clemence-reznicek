@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { headingFont, bodyFont } from '@/lib/fonts';
 import { StickyHeader } from '@/components/sections';
 import { Footer } from '@/components/layout/footer';
+import { CustomCursor } from '@/components/ui/custom-cursor';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StickyHeader />
         <main id="main-content">{children}</main>
         <Footer />
+        <CustomCursor />
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import { AnimatedHeading } from './animated-heading';
 
 /* ----------------------------------------------------------------
    Section header wrapper
@@ -75,6 +76,8 @@ export interface SectionHeaderProps
   decorative?: boolean;
   /** Light text for dark backgrounds */
   dark?: boolean;
+  /** Animate heading characters with cylinder rotation */
+  animated?: boolean;
 }
 
 function SectionHeader({
@@ -82,23 +85,28 @@ function SectionHeader({
   subtitle,
   decorative = false,
   dark = false,
+  animated = false,
   align = 'center',
   className,
   ...props
 }: SectionHeaderProps) {
+  const headingClassName = cn(
+    'font-heading text-2xl font-semibold tracking-[var(--tracking-headings)] leading-tight',
+    dark ? 'text-neutral-50' : 'text-indigo-500'
+  );
+
   return (
     <div
       className={cn(sectionHeaderVariants({ align }), className)}
       {...props}
     >
-      <h2
-        className={cn(
-          'font-heading text-2xl font-semibold tracking-[var(--tracking-headings)] leading-tight',
-          dark ? 'text-neutral-50' : 'text-indigo-500'
-        )}
-      >
-        {title}
-      </h2>
+      {animated ? (
+        <AnimatedHeading text={title} className={headingClassName} />
+      ) : (
+        <h2 className={headingClassName}>
+          {title}
+        </h2>
+      )}
 
       {decorative && <DecorativeDivider dark={dark} />}
 

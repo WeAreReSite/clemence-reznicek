@@ -33,7 +33,7 @@ export function Footer() {
               alt={siteConfig.logo.alt}
               width={siteConfig.logo.width}
               height={siteConfig.logo.height}
-              className="h-12 w-auto object-contain brightness-0 invert"
+              className="h-12 w-auto object-contain"
             />
           </Link>
           <p className="mt-4 max-w-sm font-body text-sm text-neutral-300 leading-relaxed">

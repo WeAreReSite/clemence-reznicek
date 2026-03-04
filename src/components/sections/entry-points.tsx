@@ -1,10 +1,13 @@
+'use client';
+
+import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { entryPoints } from '../../../content/homepage';
+import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW } from '@/lib/gsap-setup';
 import {
   Section,
   SectionHeader,
-  ScrollReveal,
   Card,
   CardHeader,
   CardTitle,
@@ -20,60 +23,153 @@ const borderColors: Record<string, string> = {
 };
 
 export function EntryPointsSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    const images = el.querySelectorAll<HTMLElement>('[data-clip-reveal]');
+    const cards = el.querySelectorAll<HTMLElement>('[data-card]');
+    const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+
+    const ctx = gsap.context(() => {
+      if (isDesktop) {
+        // Scrub-driven iris reveal on desktop
+        images.forEach((img) => {
+          gsap.set(img, { clipPath: 'circle(0% at 50% 50%)' });
+          gsap.to(img, {
+            clipPath: 'circle(100% at 50% 50%)',
+            ease: 'none',
+            scrollTrigger: {
+              trigger: img,
+              start: 'top 80%',
+              end: 'top 30%',
+              scrub: 0.8,
+            },
+          });
+        });
+      } else {
+        // Triggered reveal on mobile
+        images.forEach((img) => {
+          gsap.set(img, { clipPath: 'circle(0% at 50% 50%)' });
+          ScrollTrigger.create({
+            trigger: img,
+            start: 'top 85%',
+            once: true,
+            onEnter: () => {
+              gsap.to(img, {
+                clipPath: 'circle(100% at 50% 50%)',
+                duration: 1,
+                ease: EASE_WELLNESS_FLOW,
+              });
+            },
+          });
+        });
+
+        // Subtle scale pulse on mobile scroll
+        cards.forEach((card) => {
+          gsap.to(card, {
+            scale: 1.02,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 70%',
+              end: 'top 40%',
+              scrub: 0.6,
+            },
+          });
+          gsap.to(card, {
+            scale: 1.0,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 40%',
+              end: 'top 10%',
+              scrub: 0.6,
+            },
+          });
+        });
+      }
+
+      // Fade-in card content
+      cards.forEach((card, i) => {
+        gsap.from(card, {
+          y: isDesktop ? 60 : 30,
+          opacity: 0,
+          duration: 0.8,
+          ease: EASE_WELLNESS_FLOW,
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            once: true,
+          },
+          delay: isDesktop ? i * 0.15 : 0,
+        });
+      });
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <Section background="warmWhite">
       <SectionHeader
         title={entryPoints.sectionTitle}
         subtitle={entryPoints.sectionSubtitle}
         decorative
+        animated
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-        {entryPoints.cards.map((card, index) => (
-          <ScrollReveal key={card.slug} delay={index * 100} className="h-full">
+      <div ref={sectionRef} className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+        {entryPoints.cards.map((card) => (
+          <div key={card.slug} data-card className="h-full group">
             <Card
-              className={`border-t-4 ${borderColors[card.slug] ?? 'border-t-primary-400'} overflow-hidden !p-0 flex flex-col h-full`}
+              className={`border-t-4 ${borderColors[card.slug] ?? 'border-t-primary-400'} overflow-hidden !p-0 flex flex-col h-full transition-[transform,box-shadow] duration-[400ms] ease-[var(--ease-default)] hover:-translate-y-1 hover:shadow-[var(--shadow-3)]`}
             >
-            {/* Card image */}
-            <div className="relative aspect-[3/2] w-full">
-              <Image
-                src={card.image.src}
-                alt={card.image.alt}
-                width={card.image.width}
-                height={card.image.height}
-                className="object-cover object-[center_30%] w-full h-full"
-                sizes="(max-width: 1024px) 100vw, 33vw"
-              />
-            </div>
+              {/* Card image with clip-path reveal */}
+              <div className="relative aspect-[4/3] w-full overflow-hidden" data-clip-reveal>
+                <Image
+                  src={card.image.src}
+                  alt={card.image.alt}
+                  width={card.image.width}
+                  height={card.image.height}
+                  className="object-cover object-[center_30%] w-full h-full transition-transform duration-700 ease-[var(--ease-default)] group-hover:scale-[1.04]"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                />
+              </div>
 
-            <div className="p-6 flex flex-col flex-1">
-              <CardHeader>
-                <CardTitle className="font-heading text-xl font-semibold">
-                  {card.title}
-                </CardTitle>
-              </CardHeader>
+              <div className="p-6 flex flex-col flex-1">
+                <CardHeader>
+                  <CardTitle className="font-heading text-xl font-semibold">
+                    {card.title}
+                  </CardTitle>
+                </CardHeader>
 
-              <CardContent className="flex-1">
-                <p className="text-sm text-neutral-600 leading-relaxed mb-4">
-                  {card.description}
-                </p>
-                <div className="flex items-center gap-3 text-sm text-neutral-500">
-                  <span className="font-medium text-neutral-700">{card.price}</span>
-                  <span aria-hidden="true">·</span>
-                  <span>{card.duration}</span>
-                </div>
-              </CardContent>
+                <CardContent className="flex-1">
+                  <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                    {card.description}
+                  </p>
+                  <div className="flex items-center gap-3 text-sm text-neutral-500">
+                    <span className="font-medium text-neutral-700">{card.price}</span>
+                    <span aria-hidden="true">&middot;</span>
+                    <span>{card.duration}</span>
+                  </div>
+                </CardContent>
 
-              <CardFooter className="mt-auto">
-                <Link href={card.cta.href} className="w-full">
-                  <Button variant="secondary" size="sm" fullWidth>
-                    {card.cta.label}
-                  </Button>
-                </Link>
-              </CardFooter>
-            </div>
-          </Card>
-          </ScrollReveal>
+                <CardFooter className="mt-auto">
+                  <Link href={card.cta.href} className="w-full">
+                    <Button variant="secondary" size="sm" fullWidth data-magnetic>
+                      {card.cta.label}
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </div>
+            </Card>
+          </div>
         ))}
       </div>
     </Section>

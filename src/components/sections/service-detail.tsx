@@ -55,7 +55,7 @@ export function ServiceDetailSection({ services, layout = 'grid' }: ServiceDetai
         <Card key={service.name} className="overflow-hidden !p-0">
           {/* Image (if available) */}
           {service.image && (
-            <div className="relative aspect-[3/2] w-full">
+            <div className="relative aspect-[4/3] w-full">
               <Image
                 src={service.image.src}
                 alt={service.image.alt}

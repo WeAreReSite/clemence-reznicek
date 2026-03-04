@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { soinsPage } from '../../../content/soins';
-import { InnerPageHero } from '@/components/sections';
-import { Section, SectionHeader, Button, Card, CardHeader, CardTitle, CardContent } from '@/components/ui';
+import {
+  InnerPageHero,
+  SoinsCategoryNav,
+  SoinsCategoryBlock,
+} from '@/components/sections';
+import { Section, Button } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: siteMetadata.soins.title,
@@ -16,6 +19,21 @@ export const metadata: Metadata = {
     images: [{ url: siteMetadata.soins.ogImage ?? '/images/work/DSC02550.jpg' }],
   },
 };
+
+/** Normalize a French string to a URL-safe slug */
+function slugify(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+const categoryTabs = soinsPage.categories.map((cat) => ({
+  id: slugify(cat.title),
+  label: cat.title,
+}));
 
 export default function SoinsPage() {
   return (
@@ -36,85 +54,23 @@ export default function SoinsPage() {
         </div>
       </Section>
 
-      {/* Service categories */}
+      {/* Sticky category navigation */}
+      <SoinsCategoryNav categories={categoryTabs} />
+
+      {/* Category blocks */}
       {soinsPage.categories.map((category, index) => (
         <Section
           key={category.title}
           background={index % 2 === 0 ? 'cream' : 'roseTint'}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-            {/* Image — alternating sides */}
-            {index % 2 === 1 && category.image && (
-              <div className="hidden lg:block relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
-                <Image
-                  src={category.image.src}
-                  alt={category.image.alt}
-                  width={category.image.width}
-                  height={category.image.height}
-                  className="object-cover object-[center_30%] w-full h-full"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-            )}
-
-            {/* Content */}
-            <div>
-              <SectionHeader
-                title={category.title}
-                subtitle={category.description}
-                align="left"
-                decorative
-              />
-
-              {/* Mobile image */}
-              {category.image && (
-                <div className="lg:hidden relative aspect-[4/3] w-full rounded-2xl overflow-hidden mb-8">
-                  <Image
-                    src={category.image.src}
-                    alt={category.image.alt}
-                    width={category.image.width}
-                    height={category.image.height}
-                    className="object-cover object-[center_30%] w-full h-full"
-                    sizes="100vw"
-                  />
-                </div>
-              )}
-
-              <div className="flex flex-col gap-6">
-                {category.services.map((service) => (
-                  <Card key={service.name}>
-                    <CardHeader>
-                      <CardTitle className="text-lg">{service.name}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="font-body text-sm text-neutral-600 leading-relaxed mb-3">
-                        {service.description}
-                      </p>
-                      <div className="flex items-center gap-3 font-body text-sm">
-                        <span className="font-semibold text-indigo-500">{service.price}</span>
-                        <span className="text-neutral-400" aria-hidden="true">·</span>
-                        <span className="text-neutral-500">{service.duration}</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Image — alternating sides (desktop even index) */}
-            {index % 2 === 0 && category.image && (
-              <div className="hidden lg:block relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
-                <Image
-                  src={category.image.src}
-                  alt={category.image.alt}
-                  width={category.image.width}
-                  height={category.image.height}
-                  className="object-cover object-[center_30%] w-full h-full"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-            )}
-          </div>
+          <SoinsCategoryBlock
+            id={slugify(category.title)}
+            title={category.title}
+            description={category.description}
+            services={category.services}
+            image={category.image}
+            ctaHref={soinsPage.cta.href}
+          />
         </Section>
       ))}
 

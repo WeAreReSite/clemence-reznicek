@@ -1,251 +1,61 @@
-# Bien-Être Website Template
+# CLAUDE.md
 
-## Purpose
-This is a **template** for French wellness (bien-être) businesses. It is NOT a specific business - it's a customizable foundation for:
-- Spas and massage centers
-- Yoga and meditation studios
-- Fitness coaches and gyms
-- Nutritionists and dietitians
-- Wellness coaches
-- Naturopaths
-- Wellness retreats
-- Any other bien-être business
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## How It Works
-1. **Client provides data** (business name, services, location, etc.)
-2. **Template is customized** with client-specific content
-3. **Components are data-driven** - they render whatever data is provided
-4. **SEO adapts** to client's business type and location
+## Project Overview
 
-## Stack
-- Next.js 15+ (App Router)
-- TypeScript (strict mode)
-- TailwindCSS 4
-- shadcn/ui components
-- Zustand for state management
-- React Hook Form + Zod for forms
-- GSAP for animations
+Marketing website for Clemence Reznicek, a holistic wellness practitioner in Jonzac, France. Built with Next.js 15 (App Router), React 19, Tailwind CSS v4, and TypeScript. The site is in French.
 
-## Directory Structure
-- `app/` - App Router pages and layouts
-- `components/` - React components
-  - `ui/` - shadcn/ui base components
-  - `layout/` - Header, Footer (data-driven)
-  - `sections/` - Page sections (data-driven)
-  - `forms/` - Form components
-- `lib/` - Utilities, data, store
-  - `lib/data.ts` - **CLIENT DATA GOES HERE**
-  - `lib/store.ts` - Zustand store
-  - `lib/utils.ts` - Utility functions
-- `hooks/` - Custom React hooks
-- `public/` - Static assets
-
-## CRITICAL: Template Rules
-- **NEVER hardcode business-specific content in components**
-- **ALWAYS use data from `lib/data.ts` or props**
-- **Components must work for ANY wellness business type**
-- **Colors/fonts come from CSS variables (customizable)**
-- **SEO must adapt to client's actual business**
-
-## Quality Gates (MANDATORY)
-- Run `npm run lint` after every file edit
-- Run `npm run build` before commits
-- All images MUST use next/image with dimensions
-- No `any` types in TypeScript
-- No hardcoded business content in components
-
-## SEO Requirements
-- Every page has generateMetadata (populated from client data)
-- Structured data schema matches client's business type:
-  - Spa → DaySpa
-  - Yoga → SportsActivityLocation
-  - Fitness → ExerciseGym
-  - Nutrition → MedicalBusiness
-- sitemap.ts generates from client's services
-- robots.ts configures AI crawlers
-- llms.txt updated with client's business summary
+Production domain: `clemence-reznicek.fr`
 
 ## Commands
-- `npm run dev` - Start development server
-- `npm run build` - Production build
-- `npm run lint` - Run ESLint
-- `npm run start` - Start production server
 
-## Code Style
-- Server Components by default
-- Mark client components with 'use client'
-- Use @/ import alias for all imports
-- French for user-facing content
-- English for code/comments
+- **Dev server:** `npm run dev`
+- **Build:** `npm run build`
+- **Lint:** `npm run lint`
+- **E2E tests:** `npm run test` (Playwright, builds then runs against localhost:3099)
+- **E2E tests with UI:** `npm run test:ui`
 
-## Frontend Tools
+## Architecture
 
-### MCP Servers
-- `playwright` - Browser automation, screenshots, visual testing
-- `lighthouse` - Performance, accessibility, SEO audits
-- `context7` - Up-to-date documentation for any library
-- `figma` - Design-to-code translation (global)
+### Content/Code Separation
 
-### Slash Commands (`/frontend/*`)
-- `/frontend/design` - Create distinctive UI with frontend-design skill
-- `/frontend/from-figma` - Implement designs from Figma URL
-- `/frontend/component` - Generate new components
-- `/frontend/animate` - Add GSAP animations
-- `/frontend/visual-test` - Run visual testing workflow
-- `/frontend/screenshot` - Capture screenshots
-- `/frontend/docs` - Look up library documentation
-- `/frontend/design-system` - Generate design system rules
+All copywriting, pricing, testimonials, and business data live in **`content/*.ts`** files as typed TypeScript objects. Components import from `content/` — never hardcode French text in components. Types for all content are defined in `src/types/content.ts`.
 
-### Built-in Skills
-- `frontend-design` - Create production-grade interfaces
-- `figma:implement-design` - Translate Figma to code
-- `figma:code-connect-components` - Map Figma to code components
+Key content files: `site.ts` (business config, nav, footer), `homepage.ts` (all homepage sections), `metadata.ts` (SEO per page), `massages.ts`, `soins.ts`, `rmd.ts`, `about.ts`, `contact.ts`, `testimonials.ts`, `legal.ts`.
 
-See `.claude/FRONTEND-TOOLS.md` for complete documentation.
+### Component Organization
 
-## Agent Delegation
+- **`src/components/ui/`** — Atomic UI primitives (Button, Card, Input, Badge, Section, etc.) built with `class-variance-authority` for variants. Barrel-exported from `index.ts`.
+- **`src/components/sections/`** — Page-level section components (HeroSection, Accordion, ContactForm, etc.). Barrel-exported from `index.ts`.
+- **`src/components/layout/`** — Layout components (Footer).
 
-### Context & Discovery (Use FIRST)
-- `codebase-locator` - Find files by topic, identify customization points
-- `codebase-analyzer` - Understand how code works, trace data flow
+### Pages (App Router)
 
-### Implementation (Read client data first!)
-- `seo-specialist` - Adapt SEO to client's business type
-- `design-implementer` - Create data-driven, flexible components
-- `content-writer` - Generate French content from client data
+Routes: `/` (home), `/massages`, `/soins`, `/rmd`, `/a-propos`, `/temoignages`, `/contact`, `/mentions-legales`. Each page composes section components and reads from `content/`.
 
-### Quality Assurance
-- `qa-reviewer` - Verify code quality and template compliance
+### Styling
 
-## Customization Workflow
-1. Receive client data (business info, services, location)
-2. Use `codebase-locator` to find files to customize
-3. Update `lib/data.ts` with client's actual data
-4. Use `seo-specialist` to adapt SEO to their business
-5. Use `content-writer` to generate French content
-6. Use `qa-reviewer` to verify no hardcoded content
+- **Tailwind CSS v4** with `@tailwindcss/postcss` (not the old config-based setup). Design tokens defined via `@theme` in `src/app/globals.css`.
+- Color palette: primary (Rose Poudre), secondary (Dore/gold), indigo (Indigo Sacre), plum (Prune Mystique), neutral (Sable Chaud). Background tokens: `bg-cream`, `bg-rose-tint`, `bg-warm-white`, `bg-indigo-deep`.
+- Fluid typography using `clamp()` via `--font-size-*` tokens.
+- Fonts: Cormorant Garamond (headings, `--font-heading`), Raleway (body, `--font-body`). Loaded via `next/font/google` in `src/lib/fonts.ts`.
 
----
+### Animations
 
-# Client Feedback Autopilot
+GSAP with ScrollTrigger for scroll-driven animations. Use the `useGsap` hook from `src/lib/gsap-setup.ts` which handles scoped context, cleanup, and reduced-motion. Brand easings: `EASE_WELLNESS_FLOW`, `EASE_BREATHE`, `EASE_SETTLE`.
 
-## Multi-Agent System
-This project uses autonomous agents for feedback implementation:
-- **feedback-orchestrator**: Parses feedback, manages dependencies
-- **visual-engineer**: Tailwind/Shadcn theming only
-- **content-strategist**: Copy editing + fact verification (has web search)
-- **react-architect**: Component structure only
+### Key Libraries
 
-### Shared State
-- `.claude/memory/state/task_ledger.json` - Master task registry
-- `.claude/memory/outputs/` - Agent output files
+- `class-variance-authority` + `clsx` + `tailwind-merge` — variant-driven component styling (`cn()` helper in `src/lib/utils.ts`)
+- `react-hook-form` + `zod` — form handling and validation (contact form)
+- `@phosphor-icons/react` — icon library
+- `gsap` — animations
 
-## Validation Workflow
-**CRITICAL**: Run validation after EVERY file change:
-```bash
-npx tsc --noEmit && npm run lint && npm run build
-```
+### Path Alias
 
-## Tech Stack Rules
-### React/Next.js
-- Use 'use client' directive for client components
-- Hooks MUST be at top level (never conditional)
-- Use dynamic import with `ssr: false` for browser-only code
-- Avoid direct window/document access in component body
+`@/*` maps to `./src/*` (configured in tsconfig.json).
 
-### TailwindCSS v4
-- Theme variables in globals.css @theme block
-- Use CSS variables for all themeable values
-- Prefer oklch() color space for better interpolation
+### Design Spec
 
-### ShadcnUI
-- Extend via composition, don't modify /ui/ base files
-- Use CVA for custom variants
-- CSS variables for theming (--primary, --secondary, etc.)
-
-## Git Workflow
-- Create feature branch before changes
-- Small, atomic commits with clear messages
-- Run validation before every commit
-- Never force push to main
-
-## Custom Commands
-- `/project:implement-feedback` - Trigger autonomous feedback implementation workflow
-
----
-
-# File Map
-
-## Content (project root `content/`)
-| File | Purpose |
-|------|---------|
-| `content/site.ts` | siteConfig, navigation, footer |
-| `content/homepage.ts` | hero, trustBar, entryPoints, introduction, serviceCategories, rmdSpotlight, values, promotions, faq, practicalInfo, ctaFinal |
-| `content/testimonials.ts` | allTestimonials, testimonialSection, testimonialsPage |
-| `content/massages.ts` | massagesPage |
-| `content/soins.ts` | soinsPage |
-| `content/rmd.ts` | rmdPage |
-| `content/about.ts` | aboutPage |
-| `content/contact.ts` | contactPage |
-| `content/legal.ts` | legalPage |
-| `content/metadata.ts` | metadata (SEO for all pages) |
-
-## App Router Pages (`src/app/`)
-| File | Route | Description |
-|------|-------|-------------|
-| `src/app/layout.tsx` | (root) | Root layout — StickyHeader + Footer, font variables, metadata |
-| `src/app/page.tsx` | `/` | Homepage — all 12 sections in order |
-| `src/app/massages/page.tsx` | `/massages` | Massages page |
-| `src/app/soins/page.tsx` | `/soins` | Soins et accompagnements page |
-| `src/app/rmd/page.tsx` | `/rmd` | Programme RMD Signature page |
-| `src/app/a-propos/page.tsx` | `/a-propos` | About page with story, values, certifications |
-| `src/app/temoignages/page.tsx` | `/temoignages` | Testimonials grid page |
-| `src/app/contact/page.tsx` | `/contact` | Contact page with form + info |
-| `src/app/mentions-legales/page.tsx` | `/mentions-legales` | Legal notices page |
-| `src/app/sitemap.ts` | `/sitemap.xml` | Generated XML sitemap |
-| `src/app/robots.ts` | `/robots.txt` | Robots rules + AI crawler restrictions |
-| `src/app/globals.css` | — | TailwindCSS v4 theme tokens (DO NOT OVERWRITE) |
-| `src/app/error.tsx` | — | Error boundary (DO NOT OVERWRITE) |
-| `src/app/not-found.tsx` | — | 404 page (DO NOT OVERWRITE) |
-| `src/app/loading.tsx` | — | Loading state (DO NOT OVERWRITE) |
-
-## Layout Components (`src/components/layout/`)
-| File | Description |
-|------|-------------|
-| `src/components/layout/footer.tsx` | Server component footer — 3 columns, social icons, copyright |
-
-## Section Components (`src/components/sections/`)
-| File | Type | Description |
-|------|------|-------------|
-| `hero-section.tsx` | Server | Full-screen hero with background image and CTAs |
-| `trust-bar.tsx` | Server | Stats badges row (stars, years, certifications, location) |
-| `entry-points.tsx` | Server | 3 entry point cards (massage, soin, premiere seance) |
-| `introduction.tsx` | Server | Clemence portrait + bio paragraphs |
-| `testimonials-section.tsx` | Server | Dark section with 3 testimonial cards (desktop) |
-| `testimonial-carousel.tsx` | Client | Mobile swipe carousel for testimonials |
-| `service-categories.tsx` | Server | All 4 service category blocks |
-| `rmd-spotlight.tsx` | Server | RMD programme highlight section |
-| `values-section.tsx` | Server | 3 values with icons |
-| `promotions-section.tsx` | Server | Promotion banner |
-| `accordion.tsx` | Client | FAQ accordion |
-| `practical-info.tsx` | Server | Address, hours, map embed |
-| `cta-final.tsx` | Server | Final call-to-action section |
-| `inner-page-hero.tsx` | Server | Reusable inner page hero (title + subtitle + optional bg image) |
-| `service-detail.tsx` | Server | Service cards in grid or list layout |
-| `contact-form.tsx` | Client | Contact/booking form with validation |
-| `sticky-header.tsx` | Client | Sticky nav with dropdown, scroll hide/show, mobile menu |
-| `mobile-menu.tsx` | Client | Slide-in mobile navigation |
-
-## UI Primitives (`src/components/ui/`)
-Button, Input, Textarea, Select, Label, HelperText, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, Badge, Divider, Icon, Section, SectionHeader
-
-## Library (`src/lib/`)
-| File | Description |
-|------|-------------|
-| `src/lib/fonts.ts` | headingFont (Cormorant Garamond) + bodyFont (Raleway) with CSS variables |
-| `src/lib/utils.ts` | cn() utility (DO NOT OVERWRITE) |
-
-## Types (`src/types/`)
-| File | Description |
-|------|-------------|
-| `src/types/content.ts` | All TypeScript types for content data structures |
+The full design specification is in `docs/design-spec.json`. QA report at `docs/qa-report.md`.

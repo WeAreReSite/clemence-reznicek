@@ -158,7 +158,7 @@ export function HeroSection() {
           alt={hero.backgroundImage.alt}
           fill
           priority
-          className="object-cover object-[center_30%]"
+          className="object-cover object-top sm:object-[center_30%]"
           sizes="100vw"
           quality={85}
         />

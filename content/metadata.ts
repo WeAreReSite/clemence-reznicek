@@ -117,6 +117,6 @@ export const metadata: MetadataContent = {
   legal: {
     title: "Mentions légales | Clémence Reznicek",
     description:
-      "Mentions légales du site clemence-reznicek.fr. Informations sur l'éditeur, l'hébergeur et la politique de confidentialité.",
+      "Mentions légales du site clemencereznicek.com. Informations sur l'éditeur, l'hébergeur et la politique de confidentialité.",
   },
 };

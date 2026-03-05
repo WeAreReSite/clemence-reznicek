@@ -96,7 +96,7 @@ export function CTAFinalSection() {
             src={ctaFinal.backgroundImage.src}
             alt={ctaFinal.backgroundImage.alt}
             fill
-            className="object-cover object-[center_30%]"
+            className="object-cover object-top sm:object-[center_30%]"
             sizes="100vw"
             quality={75}
           />

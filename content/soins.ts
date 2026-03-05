@@ -29,13 +29,6 @@ export const soinsPage: SoinsPageContent = {
           price: "60 euros",
           duration: "45 min",
         },
-        {
-          name: "Décodage quantique",
-          description:
-            "Le décodage quantique est une lecture intuitive et énergétique qui permet d'éclairer les mécanismes inconscients à l'œuvre dans ta vie. Il aide à comprendre pourquoi certains schémas se répètent et ouvre des pistes de transformation. Ce n'est pas une prédiction, c'est un outil de clarté.",
-          price: "60 euros",
-          duration: "1h",
-        },
       ],
       image: {
         src: "/images/work/DSC02550.jpg",
@@ -101,14 +94,14 @@ export const soinsPage: SoinsPageContent = {
           name: "Constellation familiale individuelle",
           description:
             "En séance individuelle, on explore les dynamiques familiales qui influencent ta vie actuelle. À l'aide de figurines ou de représentation spatiale, les nœuds deviennent visibles et une nouvelle organisation peut se mettre en place. C'est souvent un moment d'une grande intensité et de profonde libération.",
-          price: "60 euros",
-          duration: "1h",
+          price: "Me contacter",
+          duration: "",
         },
         {
           name: "Constellation familiale en groupe",
           description:
             "Une journée en groupe pour un travail systémique en profondeur. Le groupe crée un champ de résonance puissant qui amplifie le travail. Chaque participant est à la fois témoin et acteur. C'est une expérience humaine unique dans un cadre sécurisant et bienveillant.",
-          price: "333 euros",
+          price: "Me contacter",
           duration: "Journée complète",
         },
       ],
@@ -128,15 +121,15 @@ export const soinsPage: SoinsPageContent = {
           name: "Atelier méditation",
           description:
             "Un moment de présence partagée pour se retrouver, respirer et se recentrer ensemble. Pas besoin d'expérience préalable. On pratique dans la simplicité et la bienveillance.",
-          price: "15 euros",
-          duration: "1h",
+          price: "Me contacter",
+          duration: "",
         },
         {
           name: "Atelier aromathérapie",
           description:
             "Un atelier pour découvrir les huiles essentielles doTERRA, apprendre à les utiliser au quotidien et créer tes propres synergies. Un moment convivial et enrichissant.",
-          price: "30 euros",
-          duration: "1h30",
+          price: "Me contacter",
+          duration: "",
         },
         {
           name: "Stage développement spirituel",

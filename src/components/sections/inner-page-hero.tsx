@@ -13,7 +13,7 @@ interface InnerPageHeroProps {
 
 export function InnerPageHero({ title, subtitle, backgroundImage }: InnerPageHeroProps) {
   return (
-    <section className="relative w-full min-h-[30vh] lg:min-h-[40vh] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full min-h-[40vh] md:min-h-[38vh] lg:min-h-[40vh] flex items-center justify-center overflow-hidden">
       {/* Background image (optional) */}
       {backgroundImage ? (
         <>
@@ -22,7 +22,7 @@ export function InnerPageHero({ title, subtitle, backgroundImage }: InnerPageHer
             alt={backgroundImage.alt}
             fill
             priority
-            className="object-cover object-[center_30%]"
+            className="object-cover object-top sm:object-[center_30%]"
             sizes="100vw"
             quality={80}
           />
@@ -47,7 +47,7 @@ export function InnerPageHero({ title, subtitle, backgroundImage }: InnerPageHer
       )}
 
       {/* Content */}
-      <div className="relative z-[2] px-[clamp(1.25rem,4vw,3rem)] py-[clamp(4rem,10vw,6rem)] text-center max-w-[720px] mx-auto">
+      <div className="relative z-[2] px-[clamp(1.25rem,4vw,3rem)] pt-[clamp(5rem,12vw,7rem)] pb-[clamp(3rem,8vw,5rem)] text-center max-w-[720px] mx-auto">
         <h1
           className="font-heading text-3xl lg:text-4xl font-semibold text-neutral-50 leading-tight mb-4"
           style={{ textShadow: '0 2px 6px oklch(0 0 0 / 0.20)' }}

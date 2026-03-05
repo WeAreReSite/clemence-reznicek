@@ -122,7 +122,7 @@ export function ServiceCategoriesSection() {
                     alt={category.image.alt}
                     width={category.image.width}
                     height={category.image.height}
-                    className="object-cover object-[center_30%] w-full h-full transition-transform duration-700 ease-[var(--ease-default)] group-hover:scale-[1.04]"
+                    className="object-cover object-top w-full h-full transition-transform duration-700 ease-[var(--ease-default)] group-hover:scale-[1.04]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>

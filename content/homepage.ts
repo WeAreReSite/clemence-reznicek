@@ -262,29 +262,29 @@ export const serviceCategories: ServiceCategoryContent = {
           name: "Constellations familiales individuelles",
           description:
             "Un travail systémique pour éclairer les dynamiques familiales qui influencent ta vie.",
-          price: "60 euros",
-          duration: "1h",
+          price: "Me contacter",
+          duration: "",
         },
         {
           name: "Constellations familiales en groupe",
           description:
             "Une journée en groupe pour un travail systémique en profondeur, dans un cadre sécurisant et bienveillant.",
-          price: "333 euros",
+          price: "Me contacter",
           duration: "Journée",
         },
         {
           name: "Atelier méditation",
           description:
             "Un moment de présence partagée pour se retrouver, respirer et se recentrer ensemble.",
-          price: "15 euros",
-          duration: "1h",
+          price: "Me contacter",
+          duration: "",
         },
         {
           name: "Atelier aromathérapie",
           description:
             "Découvrir les huiles essentielles doTERRA et apprendre à les utiliser au quotidien pour ton bien-être.",
-          price: "30 euros",
-          duration: "1h30",
+          price: "Me contacter",
+          duration: "",
         },
         {
           name: "Stage développement spirituel",
@@ -325,13 +325,6 @@ export const serviceCategories: ServiceCategoryContent = {
             "Un soin énergétique d'une grande douceur qui agit en profondeur sur le corps, les émotions et le champ énergétique.",
           price: "60 euros",
           duration: "45 min",
-        },
-        {
-          name: "Décodage quantique",
-          description:
-            "Une lecture intuitive et énergétique pour éclairer les mécanismes inconscients qui se rejouent dans ta vie.",
-          price: "60 euros",
-          duration: "1h",
         },
       ],
       image: {
@@ -526,7 +519,6 @@ export const practicalInfo: PracticalInfoContent = {
     "Cabinet situé au 1er étage, sans accès PMR",
     "Merci de venir seul(e), sauf pour les mineurs qui doivent être accompagnés",
     "Pas d'animaux dans le cabinet",
-    "Parking gratuit à proximité",
   ],
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.1!2d-0.4367!3d45.4464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5+avenue+Chanzy+17500+Jonzac!5e0!3m2!1sfr!2sfr",

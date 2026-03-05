@@ -21,7 +21,7 @@ export function ServiceDetailSection({ services, layout = 'grid' }: ServiceDetai
                   alt={service.image.alt}
                   width={service.image.width}
                   height={service.image.height}
-                  className="object-cover object-[center_30%] w-full h-full"
+                  className="object-cover object-top w-full h-full"
                   sizes="(max-width: 1024px) 100vw, 280px"
                 />
               </div>
@@ -61,7 +61,7 @@ export function ServiceDetailSection({ services, layout = 'grid' }: ServiceDetai
                 alt={service.image.alt}
                 width={service.image.width}
                 height={service.image.height}
-                className="object-cover object-[center_30%] w-full h-full"
+                className="object-cover object-top w-full h-full"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>

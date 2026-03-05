@@ -34,6 +34,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/',
       },
     ],
-    sitemap: 'https://clemence-reznicek.fr/sitemap.xml',
+    sitemap: 'https://clemencereznicek.com/sitemap.xml',
   };
 }

@@ -137,7 +137,7 @@ export function EntryPointsSection() {
                   alt={card.image.alt}
                   width={card.image.width}
                   height={card.image.height}
-                  className="object-cover object-[center_30%] w-full h-full transition-transform duration-700 ease-[var(--ease-default)] group-hover:scale-[1.04]"
+                  className="object-cover object-top w-full h-full transition-transform duration-700 ease-[var(--ease-default)] group-hover:scale-[1.04]"
                   sizes="(max-width: 1024px) 100vw, 33vw"
                 />
               </div>

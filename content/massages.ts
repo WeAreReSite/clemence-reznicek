@@ -54,6 +54,7 @@ export const massagesPage: MassagesPageContent = {
         alt: "Huiles essentielles doTERRA utilisées pour le soin Aromatouch",
         width: 640,
         height: 427,
+        objectPosition: "center 85%",
       },
     },
   ],

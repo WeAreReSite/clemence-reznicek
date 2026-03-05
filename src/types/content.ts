@@ -10,6 +10,7 @@ export interface ImageData {
   alt: string;
   width: number;
   height: number;
+  objectPosition?: string;
 }
 
 export interface LinkData {

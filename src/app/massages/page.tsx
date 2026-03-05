@@ -56,7 +56,8 @@ export default function MassagesPage() {
                       alt={service.image.alt}
                       width={service.image.width}
                       height={service.image.height}
-                      className="object-cover object-[center_30%] w-full h-full"
+                      className="object-cover w-full h-full"
+                      style={{ objectPosition: service.image.objectPosition ?? 'center top' }}
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>

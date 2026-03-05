@@ -52,7 +52,7 @@ export default function TemoignagesPage() {
               ))}
             </div>
             <p className="font-heading text-xl font-semibold text-neutral-800">
-              59 avis · Note de 5/5
+              58 avis · Note de 5/5
             </p>
             <p className="font-body text-sm text-neutral-500">sur Google</p>
             <Link

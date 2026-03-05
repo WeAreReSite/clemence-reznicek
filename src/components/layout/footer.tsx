@@ -156,6 +156,16 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="font-body text-xs text-neutral-500">
               &copy; {currentYear} {footer.copyright}
+              {' · '}
+              Site par{' '}
+              <a
+                href="https://www.weareresite.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-neutral-200 transition-colors duration-200"
+              >
+                ReSite
+              </a>
             </p>
             <nav aria-label="Liens légaux">
               <ul className="flex items-center gap-4">

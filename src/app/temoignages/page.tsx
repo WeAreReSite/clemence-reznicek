@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { StarIcon } from '@phosphor-icons/react/dist/ssr';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { testimonialsPage } from '../../../content/testimonials';
+import { getBreadcrumbSchema } from '@/lib/schema';
 import { InnerPageHero } from '@/components/sections';
 import { Section, SectionHeader, Button, Card } from '@/components/ui';
 
@@ -10,6 +11,9 @@ export const metadata: Metadata = {
   title: siteMetadata.testimonials.title,
   description: siteMetadata.testimonials.description,
   keywords: siteMetadata.testimonials.keywords,
+  alternates: {
+    canonical: 'https://clemencereznicek.com/temoignages',
+  },
   openGraph: {
     title: siteMetadata.testimonials.title,
     description: siteMetadata.testimonials.description,
@@ -19,7 +23,7 @@ export const metadata: Metadata = {
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex items-center gap-0.5" aria-label={`${rating} étoiles sur 5`}>
+    <div className="flex items-center gap-0.5" role="img" aria-label={`${rating} étoiles sur 5`}>
       {Array.from({ length: 5 }, (_, i) => (
         <StarIcon
           key={i}
@@ -33,9 +37,15 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
+const temBC = JSON.stringify(
+  getBreadcrumbSchema([{ name: 'Temoignages', url: 'https://clemencereznicek.com/temoignages' }])
+);
+
 export default function TemoignagesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: temBC }} />
+
       {/* Hero */}
       <InnerPageHero
         title={testimonialsPage.heroTitle}
@@ -46,7 +56,7 @@ export default function TemoignagesPage() {
       <Section background="warmWhite">
         <div className="text-center">
           <div className="inline-flex flex-col items-center gap-3 p-6 rounded-2xl border border-neutral-200 bg-neutral-50">
-            <div className="flex items-center gap-1" aria-label="5 étoiles sur 5">
+            <div className="flex items-center gap-1" role="img" aria-label="5 étoiles sur 5">
               {Array.from({ length: 5 }, (_, i) => (
                 <StarIcon key={i} size={24} weight="fill" className="text-secondary-400" aria-hidden="true" />
               ))}
@@ -54,7 +64,7 @@ export default function TemoignagesPage() {
             <p className="font-heading text-xl font-semibold text-neutral-800">
               58 avis · Note de 5/5
             </p>
-            <p className="font-body text-sm text-neutral-500">sur Google</p>
+            <p className="font-body text-sm text-neutral-600">sur Google</p>
             <Link
               href={testimonialsPage.googleReviewsCTA.href}
               target="_blank"
@@ -89,14 +99,14 @@ export default function TemoignagesPage() {
                   {testimonial.name}
                 </cite>
                 {testimonial.service && (
-                  <span className="font-body text-xs text-neutral-500">
+                  <span className="font-body text-xs text-neutral-600">
                     {testimonial.service}
                   </span>
                 )}
                 {testimonial.date && (
                   <time
                     dateTime={testimonial.date}
-                    className="font-body text-xs text-neutral-400"
+                    className="font-body text-xs text-neutral-600"
                   >
                     {new Date(testimonial.date + '-01').toLocaleDateString('fr-FR', {
                       month: 'long',

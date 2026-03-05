@@ -36,16 +36,26 @@ export function PromotionsSection() {
             ease: EASE_WELLNESS_FLOW,
           });
 
-          // Start shimmer loop after entrance
+          // Start shimmer loop after entrance (paused when off-screen)
           if (shimmer) {
             gsap.set(shimmer, { x: '-100%' });
-            gsap.to(shimmer, {
+            const shimmerTween = gsap.to(shimmer, {
               x: '200%',
               duration: 1.5,
               ease: EASE_BREATHE,
               repeat: -1,
               repeatDelay: 3,
               delay: 0.8,
+            });
+
+            ScrollTrigger.create({
+              trigger: box,
+              start: 'top bottom',
+              end: 'bottom top',
+              onEnter: () => shimmerTween.play(),
+              onLeave: () => shimmerTween.pause(),
+              onEnterBack: () => shimmerTween.play(),
+              onLeaveBack: () => shimmerTween.pause(),
             });
           }
         },

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { soinsPage } from '../../../content/soins';
+import { getBreadcrumbSchema, getServiceSchema } from '@/lib/schema';
 import {
   InnerPageHero,
   SoinsCategoryNav,
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   title: siteMetadata.soins.title,
   description: siteMetadata.soins.description,
   keywords: siteMetadata.soins.keywords,
+  alternates: {
+    canonical: 'https://clemencereznicek.com/soins',
+  },
   openGraph: {
     title: siteMetadata.soins.title,
     description: siteMetadata.soins.description,
@@ -35,9 +39,24 @@ const categoryTabs = soinsPage.categories.map((cat) => ({
   label: cat.title,
 }));
 
+const soinsBC = JSON.stringify(
+  getBreadcrumbSchema([{ name: 'Soins et accompagnements', url: 'https://clemencereznicek.com/soins' }])
+);
+const allSoinsServices = soinsPage.categories.flatMap((cat) => cat.services);
+const soinsServiceData = getServiceSchema(
+  allSoinsServices,
+  'https://clemencereznicek.com/soins'
+).map((s) => JSON.stringify(s));
+
 export default function SoinsPage() {
   return (
     <>
+      {/* JSON-LD: Breadcrumb + Service schemas */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: soinsBC }} />
+      {soinsServiceData.map((json, i) => (
+        <script key={`svc-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />
+      ))}
+
       {/* Hero */}
       <InnerPageHero
         title={soinsPage.heroTitle}

@@ -11,8 +11,8 @@ export const metadata: Metadata = {
     canonical: 'https://clemencereznicek.com/mentions-legales',
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 

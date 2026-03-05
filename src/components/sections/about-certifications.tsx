@@ -25,7 +25,7 @@ export function AboutCertifications({ title, certifications }: AboutCertificatio
       <div className="text-center mb-8 md:mb-12">
         <div className="inline-flex items-center gap-2 mb-4">
           <CertificateIcon size={18} weight="light" className="text-secondary-500" />
-          <span className="font-body text-xs font-medium text-secondary-600 tracking-[var(--tracking-all-caps)] uppercase">
+          <span className="font-body text-xs font-medium text-secondary-800 tracking-[var(--tracking-all-caps)] uppercase">
             {certifications.length}+ formations certifiantes
           </span>
         </div>

@@ -39,7 +39,7 @@ export function BentoContactGrid() {
             <PhoneIcon size={28} weight="light" />
           </span>
           <div>
-            <p className="font-body text-xs uppercase tracking-[var(--tracking-all-caps)] text-neutral-300 mb-1">
+            <p className="font-body text-xs uppercase tracking-[var(--tracking-all-caps)] text-neutral-200 mb-1">
               Téléphone
             </p>
             <p className="font-heading text-xl md:text-2xl font-semibold">
@@ -62,7 +62,7 @@ export function BentoContactGrid() {
             <EnvelopeSimpleIcon size={24} weight="light" className="text-primary-700" />
           </span>
           <div className="min-w-0">
-            <p className="font-body text-xs uppercase tracking-[var(--tracking-all-caps)] text-neutral-500 mb-1">
+            <p className="font-body text-xs uppercase tracking-[var(--tracking-all-caps)] text-neutral-700 mb-1">
               Email
             </p>
             <p className="font-body text-sm font-medium truncate">
@@ -84,7 +84,7 @@ export function BentoContactGrid() {
             >
               <ClockIcon size={20} weight="light" className="text-indigo-500" />
             </span>
-            <p className="font-body text-xs uppercase tracking-[var(--tracking-all-caps)] text-neutral-500">
+            <p className="font-body text-xs uppercase tracking-[var(--tracking-all-caps)] text-neutral-600">
               Horaires
             </p>
           </div>
@@ -115,7 +115,7 @@ export function BentoContactGrid() {
               >
                 <MapPinIcon size={20} weight="light" className="text-indigo-500" />
               </span>
-              <p className="font-body text-xs uppercase tracking-[var(--tracking-all-caps)] text-neutral-500">
+              <p className="font-body text-xs uppercase tracking-[var(--tracking-all-caps)] text-neutral-600">
                 Adresse
               </p>
             </div>
@@ -124,7 +124,7 @@ export function BentoContactGrid() {
               <br />
               {siteConfig.address.postalCode} {siteConfig.address.city}
               <br />
-              <span className="text-neutral-500">{siteConfig.address.region}</span>
+              <span className="text-neutral-600">{siteConfig.address.region}</span>
             </p>
           </address>
         </a>
@@ -132,7 +132,7 @@ export function BentoContactGrid() {
         <div
           className={`md:w-1/3 rounded-2xl bg-secondary-50 p-6 ${cardHover}`}
         >
-          <p className="font-body text-xs uppercase tracking-[var(--tracking-all-caps)] text-neutral-500 mb-4">
+          <p className="font-body text-xs uppercase tracking-[var(--tracking-all-caps)] text-neutral-600 mb-4">
             Réseaux sociaux
           </p>
           <div className="flex items-center gap-3">

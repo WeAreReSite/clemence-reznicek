@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { massagesPage } from '../../../content/massages';
+import { getBreadcrumbSchema, getServiceSchema } from '@/lib/schema';
 import { InnerPageHero } from '@/components/sections';
 import { Section, SectionHeader, Button } from '@/components/ui';
 
@@ -10,6 +11,9 @@ export const metadata: Metadata = {
   title: siteMetadata.massages.title,
   description: siteMetadata.massages.description,
   keywords: siteMetadata.massages.keywords,
+  alternates: {
+    canonical: 'https://clemencereznicek.com/massages',
+  },
   openGraph: {
     title: siteMetadata.massages.title,
     description: siteMetadata.massages.description,
@@ -17,9 +21,23 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbSchema = JSON.stringify(
+  getBreadcrumbSchema([{ name: 'Massages', url: 'https://clemencereznicek.com/massages' }])
+);
+const serviceSchemaData = getServiceSchema(
+  massagesPage.services,
+  'https://clemencereznicek.com/massages'
+).map((s) => JSON.stringify(s));
+
 export default function MassagesPage() {
   return (
     <>
+      {/* JSON-LD: Breadcrumb + Service schemas */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbSchema }} />
+      {serviceSchemaData.map((json, i) => (
+        <script key={`service-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />
+      ))}
+
       {/* Hero */}
       <InnerPageHero
         title={massagesPage.heroTitle}
@@ -75,7 +93,7 @@ export default function MassagesPage() {
                 <div className="flex items-center flex-wrap gap-4 font-body text-sm">
                   <span className="font-semibold text-indigo-500">{service.price}</span>
                   <span className="text-neutral-400" aria-hidden="true">·</span>
-                  <span className="text-neutral-500">{service.duration}</span>
+                  <span className="text-neutral-600">{service.duration}</span>
                 </div>
               </div>
             </div>

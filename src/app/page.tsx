@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { metadata as siteMetadata } from '../../content/metadata';
+import { getFAQSchema } from '@/lib/schema';
 import {
   HeroSection,
   TrustBarSection,
@@ -20,6 +21,9 @@ export const metadata: Metadata = {
   title: siteMetadata.home.title,
   description: siteMetadata.home.description,
   keywords: siteMetadata.home.keywords,
+  alternates: {
+    canonical: 'https://clemencereznicek.com',
+  },
   openGraph: {
     title: siteMetadata.home.title,
     description: siteMetadata.home.description,
@@ -27,9 +31,17 @@ export const metadata: Metadata = {
   },
 };
 
+const faqSchema = JSON.stringify(getFAQSchema());
+
 export default function HomePage() {
   return (
     <>
+      {/* JSON-LD: FAQPage schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: faqSchema }}
+      />
+
       {/* 1. Hero */}
       <HeroSection />
 

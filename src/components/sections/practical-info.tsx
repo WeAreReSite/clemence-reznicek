@@ -1,11 +1,60 @@
+'use client';
+
+import { useState } from 'react';
 import {
   MapPinIcon,
   PhoneIcon,
   EnvelopeIcon,
   ClockIcon,
-} from '@phosphor-icons/react/dist/ssr';
+} from '@phosphor-icons/react';
 import { practicalInfo } from '../../../content/homepage';
 import { Section, SectionHeader, ScrollReveal } from '@/components/ui';
+
+function MapFacade() {
+  const [isMapLoaded, setIsMapLoaded] = useState(false);
+
+  if (isMapLoaded) {
+    return (
+      <iframe
+        src={practicalInfo.mapEmbedUrl}
+        width="100%"
+        height="100%"
+        style={{ border: 0, minHeight: '400px' }}
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+        title={`Carte — ${practicalInfo.address.full}`}
+        className="rounded-lg"
+      />
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={() => setIsMapLoaded(true)}
+      className="w-full h-full flex flex-col items-center justify-center gap-4 cursor-pointer rounded-lg transition-colors duration-200 hover:bg-primary-100/60"
+      style={{
+        minHeight: '400px',
+        backgroundColor: 'oklch(0.955 0.012 75.4)',
+        border: '1px solid oklch(0.900 0.020 75.4)',
+      }}
+      aria-label={`Charger la carte — ${practicalInfo.address.full}`}
+    >
+      <span
+        className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-indigo-500/10"
+        aria-hidden="true"
+      >
+        <MapPinIcon size={32} weight="light" className="text-indigo-500" />
+      </span>
+      <span className="font-heading text-base font-semibold text-indigo-500">
+        Voir sur Google Maps
+      </span>
+      <span className="font-body text-xs text-neutral-500">
+        {practicalInfo.address.full}
+      </span>
+    </button>
+  );
+}
 
 export function PracticalInfoSection() {
   return (
@@ -46,7 +95,7 @@ export function PracticalInfoSection() {
               </h3>
               <a
                 href={practicalInfo.phone.link}
-                className="font-body text-sm text-indigo-500 hover:text-indigo-600 transition-colors underline-offset-2 hover:underline"
+                className="font-body text-sm text-indigo-500 hover:text-indigo-600 transition-colors underline underline-offset-2"
               >
                 {practicalInfo.phone.display}
               </a>
@@ -64,7 +113,7 @@ export function PracticalInfoSection() {
               </h3>
               <a
                 href={`mailto:${practicalInfo.email}`}
-                className="font-body text-sm text-indigo-500 hover:text-indigo-600 transition-colors underline-offset-2 hover:underline"
+                className="font-body text-sm text-indigo-500 hover:text-indigo-600 transition-colors underline underline-offset-2"
               >
                 {practicalInfo.email}
               </a>
@@ -109,17 +158,7 @@ export function PracticalInfoSection() {
 
         {/* Map column (right) */}
         <ScrollReveal delay={150} className="relative overflow-hidden rounded-lg shadow-[var(--shadow-2)]">
-          <iframe
-            src={practicalInfo.mapEmbedUrl}
-            width="100%"
-            height="100%"
-            style={{ border: 0, minHeight: '400px' }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title={`Carte — ${practicalInfo.address.full}`}
-            className="rounded-lg"
-          />
+          <MapFacade />
         </ScrollReveal>
       </div>
     </Section>

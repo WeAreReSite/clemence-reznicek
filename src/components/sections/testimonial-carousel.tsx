@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex items-center gap-0.5" aria-label={`${rating} étoiles sur 5`}>
+    <div className="flex items-center gap-0.5" role="img" aria-label={`${rating} étoiles sur 5`}>
       {Array.from({ length: 5 }, (_, i) => (
         <StarIcon
           key={i}
@@ -123,7 +123,7 @@ export function TestimonialCarousel() {
       </div>
 
       {/* Pagination dots */}
-      <div className="flex items-center justify-center gap-2 mt-6" aria-hidden="true">
+      <div className="flex items-center justify-center gap-1 mt-6">
         {testimonials.map((_, index) => (
           <button
             key={`dot-${index}`}
@@ -131,13 +131,19 @@ export function TestimonialCarousel() {
             onClick={() => scrollToIndex(index)}
             aria-label={`Aller au témoignage ${index + 1}`}
             className={cn(
-              'rounded-full transition-all duration-[200ms] ease-[var(--ease-default)]',
-              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400',
-              index === activeIndex
-                ? 'w-3 h-3 bg-secondary-400'
-                : 'w-2 h-2 bg-secondary-400/40'
+              'flex items-center justify-center w-7 h-7',
+              'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-400 rounded-full',
             )}
-          />
+          >
+            <span
+              className={cn(
+                'block rounded-full transition-all duration-[200ms] ease-[var(--ease-default)]',
+                index === activeIndex
+                  ? 'w-3 h-3 bg-secondary-400'
+                  : 'w-2 h-2 bg-secondary-400/40'
+              )}
+            />
+          </button>
         ))}
       </div>
     </div>

@@ -119,6 +119,7 @@ function AnimatedBadge({ badge, index }: { badge: typeof trustBar.badges[number]
       <span
         ref={valueRef}
         className="font-heading text-lg font-semibold text-indigo-500"
+        role="status"
         aria-label={badge.value}
       >
         {displayed ? badge.value : '\u00A0'}

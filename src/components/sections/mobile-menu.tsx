@@ -321,7 +321,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                 href={child.href}
                                 onClick={onClose}
                                 className={cn(
-                                  'block py-2',
+                                  'block py-3 min-h-[44px] flex items-center',
                                   'font-body text-base text-neutral-500',
                                   'tracking-[0.02em]',
                                   'transition-colors duration-[200ms] ease-[var(--ease-default)]',

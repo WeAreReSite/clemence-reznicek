@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { CheckCircleIcon, StarIcon } from '@phosphor-icons/react/dist/ssr';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { rmdPage } from '../../../content/rmd';
+import { getBreadcrumbSchema } from '@/lib/schema';
 import { InnerPageHero } from '@/components/sections';
 import { Section, SectionHeader, Button, Card, Badge } from '@/components/ui';
 
@@ -10,6 +11,9 @@ export const metadata: Metadata = {
   title: siteMetadata.rmd.title,
   description: siteMetadata.rmd.description,
   keywords: siteMetadata.rmd.keywords,
+  alternates: {
+    canonical: 'https://clemencereznicek.com/rmd',
+  },
   openGraph: {
     title: siteMetadata.rmd.title,
     description: siteMetadata.rmd.description,
@@ -17,9 +21,31 @@ export const metadata: Metadata = {
   },
 };
 
+const rmdBreadcrumb = JSON.stringify(
+  getBreadcrumbSchema([{ name: 'Programme RMD Signature', url: 'https://clemencereznicek.com/rmd' }])
+);
+const rmdService = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: rmdPage.heroTitle,
+  description: rmdPage.introduction[0],
+  provider: { '@id': 'https://clemencereznicek.com/#localbusiness' },
+  url: 'https://clemencereznicek.com/rmd',
+  offers: {
+    '@type': 'Offer',
+    price: '1333',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+  },
+  areaServed: { '@type': 'City', name: 'Jonzac' },
+});
+
 export default function RMDPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: rmdBreadcrumb }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: rmdService }} />
+
       {/* Hero */}
       <InnerPageHero
         title={rmdPage.heroTitle}
@@ -112,7 +138,7 @@ export default function RMDPage() {
           <p className="font-heading text-4xl lg:text-5xl font-bold text-indigo-500 mb-2">
             {rmdPage.price}
           </p>
-          <p className="font-body text-sm text-neutral-500 mb-8">{rmdPage.priceDetail}</p>
+          <p className="font-body text-sm text-neutral-700 mb-8">{rmdPage.priceDetail}</p>
           <Link href={rmdPage.cta.href}>
             <Button variant="warm" size="lg">
               {rmdPage.cta.label}
@@ -126,7 +152,7 @@ export default function RMDPage() {
         <Section background="indigoDeep">
           <div className="mx-auto max-w-[640px] text-center">
             {/* Stars */}
-            <div className="flex items-center justify-center gap-1 mb-6" aria-label="5 étoiles sur 5">
+            <div className="flex items-center justify-center gap-1 mb-6" role="img" aria-label="5 étoiles sur 5">
               {Array.from({ length: 5 }, (_, i) => (
                 <StarIcon key={i} size={20} weight="fill" className="text-secondary-400" aria-hidden="true" />
               ))}

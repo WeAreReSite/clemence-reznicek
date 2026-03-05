@@ -141,10 +141,10 @@ export function CTAFinalSection() {
         </div>
 
         {/* Phone number visible */}
-        <p className="font-body text-sm text-neutral-500 mb-6">
+        <p className="font-body text-sm text-neutral-600 mb-6">
           <a
             href={siteConfig.phone.link}
-            className="text-indigo-500 hover:text-indigo-600 transition-colors underline-offset-2 hover:underline"
+            className="text-indigo-500 hover:text-indigo-600 transition-colors underline underline-offset-2"
           >
             {siteConfig.phone.display}
           </a>

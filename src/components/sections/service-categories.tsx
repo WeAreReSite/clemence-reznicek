@@ -143,14 +143,14 @@ export function ServiceCategoriesSection() {
                   </CardHeader>
 
                   <CardContent className="flex-1">
-                    <div className="flex items-center flex-wrap gap-3 text-sm text-neutral-500 mb-2">
+                    <div className="flex items-center flex-wrap gap-3 text-sm text-neutral-600 mb-2">
                       <span className="font-medium text-neutral-700">
                         {category.services.length} soin{category.services.length > 1 ? 's' : ''}
                       </span>
                       {category.services.length > 0 && (
                         <>
                           <span aria-hidden="true">&middot;</span>
-                          <span className="text-xs text-neutral-500 truncate">
+                          <span className="text-xs text-neutral-600 truncate">
                             {category.services[0].price}
                           </span>
                         </>

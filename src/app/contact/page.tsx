@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { contactPage } from '../../../content/contact';
+import { getBreadcrumbSchema } from '@/lib/schema';
 import { InnerPageHero, BentoContactGrid } from '@/components/sections';
 import { Section } from '@/components/ui';
 
@@ -8,6 +9,9 @@ export const metadata: Metadata = {
   title: siteMetadata.contact.title,
   description: siteMetadata.contact.description,
   keywords: siteMetadata.contact.keywords,
+  alternates: {
+    canonical: 'https://clemencereznicek.com/contact',
+  },
   openGraph: {
     title: siteMetadata.contact.title,
     description: siteMetadata.contact.description,
@@ -15,9 +19,14 @@ export const metadata: Metadata = {
   },
 };
 
+const cBC = JSON.stringify(
+  getBreadcrumbSchema([{ name: 'Contact', url: 'https://clemencereznicek.com/contact' }])
+);
+
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: cBC }} />
       <InnerPageHero
         title={contactPage.heroTitle}
         subtitle={contactPage.heroSubtitle}

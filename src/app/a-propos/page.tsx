@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { aboutPage } from '../../../content/about';
+import { getBreadcrumbSchema } from '@/lib/schema';
 import {
   InnerPageHero,
   AboutStory,
@@ -14,6 +15,9 @@ export const metadata: Metadata = {
   title: siteMetadata.about.title,
   description: siteMetadata.about.description,
   keywords: siteMetadata.about.keywords,
+  alternates: {
+    canonical: 'https://clemencereznicek.com/a-propos',
+  },
   openGraph: {
     title: siteMetadata.about.title,
     description: siteMetadata.about.description,
@@ -21,9 +25,18 @@ export const metadata: Metadata = {
   },
 };
 
+const aboutBC = JSON.stringify(
+  getBreadcrumbSchema([{ name: 'A propos', url: 'https://clemencereznicek.com/a-propos' }])
+);
+
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: aboutBC }}
+      />
+
       {/* Hero */}
       <InnerPageHero
         title={aboutPage.heroTitle}

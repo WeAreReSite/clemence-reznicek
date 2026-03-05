@@ -3,9 +3,9 @@ import Link from 'next/link';
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-4">
-      <h2 className="font-heading text-3xl font-semibold text-indigo-500">
+      <h1 className="font-heading text-3xl font-semibold text-indigo-500">
         Page introuvable
-      </h2>
+      </h1>
       <p className="text-neutral-600">
         La page que tu cherches n&apos;existe pas ou a été déplacée.
       </p>

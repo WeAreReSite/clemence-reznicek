@@ -6,10 +6,9 @@ import type { MetadataContent } from "@/types/content";
 
 export const metadata: MetadataContent = {
   home: {
-    title:
-      "Clémence Reznicek | Bien-être holistique à Jonzac - Massages, Soins, Coaching",
+    title: "Bien-être holistique à Jonzac",
     description:
-      "Accompagnement en bien-être holistique à Jonzac. Massages Shambala et Solar, soins énergétiques LaHoChi, coaching émotionnel et régulation somatique. 58 avis 5/5 sur Google. Prends rendez-vous.",
+      "Massages Shambala et Solar, soins énergétiques LaHoChi, coaching émotionnel et régulation somatique à Jonzac. 58 avis 5/5 sur Google.",
     keywords: [
       "bien-être Jonzac",
       "massage Jonzac",
@@ -31,9 +30,9 @@ export const metadata: MetadataContent = {
     ogImage: "/images/work/DSC02941.jpg",
   },
   massages: {
-    title: "Massages bien-être à Jonzac | Shambala, Solar, Aromatouch",
+    title: "Massages Shambala, Solar et Aromatouch",
     description:
-      "Découvre les massages bien-être proposés par Clémence Reznicek à Jonzac : massage Shambala, Solar et Aromatouch doTERRA. Des soins enveloppants pour déposer les tensions et retrouver la douceur.",
+      "Massages Shambala, Solar et Aromatouch doTERRA à Jonzac par Clémence Reznicek. Des soins enveloppants pour déposer les tensions et retrouver la douceur.",
     keywords: [
       "massage Jonzac",
       "massage Shambala",
@@ -46,9 +45,9 @@ export const metadata: MetadataContent = {
   },
   soins: {
     title:
-      "Soins et accompagnements holistiques à Jonzac | Clémence Reznicek",
+      "Soins et accompagnements holistiques | Jonzac",
     description:
-      "Soins énergétiques LaHoChi, coaching émotionnel, régulation somatique, aromathérapie doTERRA, médiumnité et constellations familiales. Un accompagnement sur mesure pour ta transformation intérieure.",
+      "LaHoChi, coaching émotionnel, régulation somatique, aromathérapie doTERRA et constellations familiales à Jonzac. Accompagnement sur mesure.",
     keywords: [
       "soin énergétique Jonzac",
       "LaHoChi",
@@ -62,10 +61,9 @@ export const metadata: MetadataContent = {
     ogImage: "/images/work/DSC02550.jpg",
   },
   rmd: {
-    title:
-      "Programme RMD Signature | Transformation profonde en 9 séances",
+    title: "Programme RMD Signature | 9 séances",
     description:
-      "Le programme RMD Signature de Clémence Reznicek : 9 séances pour une réorganisation profonde et durable. Un parcours sur mesure alliant somatique, énergétique et coaching. À Jonzac ou en visio.",
+      "Le programme RMD Signature : 9 séances pour une réorganisation profonde et durable. Parcours sur mesure alliant somatique, énergétique et coaching.",
     keywords: [
       "RMD Signature",
       "programme transformation",
@@ -77,9 +75,9 @@ export const metadata: MetadataContent = {
     ogImage: "/images/work/DSC02979.jpg",
   },
   about: {
-    title: "À propos de Clémence Reznicek | 10 ans au service du bien-être",
+    title: "À propos | Praticienne bien-être à Jonzac",
     description:
-      "Découvre le parcours de Clémence Reznicek, praticienne en bien-être holistique à Jonzac. 10 ans d'expérience, 11 certifications, une approche unique alliant intuition, somatique et vision systémique.",
+      "Parcours de Clémence Reznicek, praticienne en bien-être holistique à Jonzac. 10 ans d'expérience, 11 certifications, intuition et vision systémique.",
     keywords: [
       "Clémence Reznicek",
       "praticienne bien-être",
@@ -91,9 +89,9 @@ export const metadata: MetadataContent = {
     ogImage: "/images/team/DSC02967.jpg",
   },
   testimonials: {
-    title: "Témoignages | Avis clients de Clémence Reznicek",
+    title: "Témoignages et avis clients",
     description:
-      "Découvre les témoignages des personnes accompagnées par Clémence Reznicek. 58 avis Google avec une note de 5/5. Des transformations douces, profondes et durables.",
+      "Témoignages des personnes accompagnées par Clémence Reznicek. 58 avis Google, note de 5/5. Des transformations profondes et durables.",
     keywords: [
       "témoignages Clémence Reznicek",
       "avis bien-être Jonzac",
@@ -103,9 +101,9 @@ export const metadata: MetadataContent = {
     ogImage: "/images/establishment/DSC02924.jpg",
   },
   contact: {
-    title: "Contact et rendez-vous | Clémence Reznicek à Jonzac",
+    title: "Contact et rendez-vous | Jonzac",
     description:
-      "Prends rendez-vous avec Clémence Reznicek à Jonzac. Cabinet au 5 avenue Chanzy, 17500 Jonzac. Téléphone : 06 32 18 52 59. Du lundi au vendredi de 9h à 18h15.",
+      "Rendez-vous avec Clémence Reznicek à Jonzac. Cabinet au 5 avenue Chanzy, 17500 Jonzac. Tél : 06 32 18 52 59. Du lundi au vendredi de 9h à 18h15.",
     keywords: [
       "contact Clémence Reznicek",
       "rendez-vous Jonzac",
@@ -115,7 +113,7 @@ export const metadata: MetadataContent = {
     ogImage: "/images/establishment/DSC02779.jpg",
   },
   legal: {
-    title: "Mentions légales | Clémence Reznicek",
+    title: "Mentions légales",
     description:
       "Mentions légales du site clemencereznicek.com. Informations sur l'éditeur, l'hébergeur et la politique de confidentialité.",
   },

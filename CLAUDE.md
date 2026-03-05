@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Marketing website for Clemence Reznicek, a holistic wellness practitioner in Jonzac, France. Built with Next.js 15 (App Router), React 19, Tailwind CSS v4, and TypeScript. The site is in French.
 
-Production domain: `clemence-reznicek.fr`
+Production domain: `clemencereznicek.com`
 
 ## Commands
 

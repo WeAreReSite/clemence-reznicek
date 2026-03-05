@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useEffect, Fragment } from 'react';
-import gsap from 'gsap';
+import { gsap, ScrollTrigger } from '@/lib/gsap-setup';
 import Image from 'next/image';
 import Link from 'next/link';
 import { hero } from '../../../content/homepage';
@@ -116,10 +116,10 @@ export function HeroSection() {
         1.3
       );
 
-      // === CONTINUOUS AMBIENT ANIMATIONS ===
+      // === CONTINUOUS AMBIENT ANIMATIONS (paused when off-screen) ===
 
       // Breathing aura: soft scale + opacity pulse (like meditation breathing)
-      gsap.to(auraRef.current, {
+      const auraTween = gsap.to(auraRef.current, {
         scale: 1.1,
         opacity: 0.65,
         duration: 4,
@@ -127,16 +127,29 @@ export function HeroSection() {
         yoyo: true,
         ease: 'sine.inOut',
         delay: 2.5,
+        paused: true,
       });
 
       // Subtle continuous background drift (living image feel)
-      gsap.to(imageRef.current, {
+      const driftTween = gsap.to(imageRef.current, {
         scale: 1.04,
         duration: 20,
         ease: 'none',
         repeat: -1,
         yoyo: true,
         delay: 2.8,
+        paused: true,
+      });
+
+      // Pause infinite animations when hero is off-screen
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: 'top bottom',
+        end: 'bottom top',
+        onEnter: () => { auraTween.play(); driftTween.play(); },
+        onLeave: () => { auraTween.pause(); driftTween.pause(); },
+        onEnterBack: () => { auraTween.play(); driftTween.play(); },
+        onLeaveBack: () => { auraTween.pause(); driftTween.pause(); },
       });
     }, sectionRef);
 

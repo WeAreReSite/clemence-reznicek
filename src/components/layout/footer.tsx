@@ -45,9 +45,9 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-10 lg:mb-12">
           {/* Column 1: Soins */}
           <div>
-            <h3 className="font-heading text-base font-semibold text-neutral-100 mb-4 tracking-wide uppercase text-xs">
+            <h2 className="font-heading text-base font-semibold text-neutral-100 mb-4 tracking-wide uppercase text-xs">
               {footer.columns[0].title}
-            </h3>
+            </h2>
             <ul className="flex flex-col gap-2">
               {footer.columns[0].links.map((link) => (
                 <li key={link.href + link.label}>
@@ -64,9 +64,9 @@ export function Footer() {
 
           {/* Column 2: Informations */}
           <div>
-            <h3 className="font-heading text-base font-semibold text-neutral-100 mb-4 tracking-wide uppercase text-xs">
+            <h2 className="font-heading text-base font-semibold text-neutral-100 mb-4 tracking-wide uppercase text-xs">
               {footer.columns[1].title}
-            </h3>
+            </h2>
             <ul className="flex flex-col gap-2">
               {footer.columns[1].links.map((link) => (
                 <li key={link.href + link.label}>
@@ -83,9 +83,9 @@ export function Footer() {
 
           {/* Column 3: Contact */}
           <div>
-            <h3 className="font-heading text-base font-semibold text-neutral-100 mb-4 tracking-wide uppercase text-xs">
+            <h2 className="font-heading text-base font-semibold text-neutral-100 mb-4 tracking-wide uppercase text-xs">
               {footer.columns[2].title}
-            </h3>
+            </h2>
             <ul className="flex flex-col gap-3">
               <li>
                 <a
@@ -120,7 +120,7 @@ export function Footer() {
               <li className="mt-2">
                 <ul className="flex flex-col gap-1">
                   {siteConfig.openingHours.map((slot) => (
-                    <li key={slot.days} className="flex justify-between gap-4 font-body text-xs text-neutral-400">
+                    <li key={slot.days} className="flex justify-between gap-4 font-body text-xs text-neutral-300">
                       <span>{slot.days}</span>
                       <span>{slot.hours}</span>
                     </li>
@@ -154,7 +154,7 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-neutral-700 pt-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="font-body text-xs text-neutral-500">
+            <p className="font-body text-xs text-neutral-400">
               &copy; {currentYear} {footer.copyright}
               {' · '}
               Site par{' '}
@@ -162,7 +162,7 @@ export function Footer() {
                 href="https://www.weareresite.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-400 hover:text-neutral-200 transition-colors duration-200"
+                className="text-neutral-300 underline underline-offset-2 decoration-neutral-500 hover:text-neutral-200 transition-colors duration-200"
               >
                 ReSite
               </a>
@@ -173,7 +173,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="font-body text-xs text-neutral-500 hover:text-neutral-300 transition-colors duration-200"
+                      className="font-body text-xs text-neutral-400 hover:text-neutral-200 transition-colors duration-200"
                     >
                       {link.label}
                     </Link>

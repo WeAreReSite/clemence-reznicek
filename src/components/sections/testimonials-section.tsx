@@ -18,7 +18,7 @@ const FLOAT_Y = [6, 8, 5];
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex items-center gap-0.5" aria-label={`${rating} etoiles sur 5`}>
+    <div className="flex items-center gap-0.5" role="img" aria-label={`${rating} etoiles sur 5`}>
       {Array.from({ length: 5 }, (_, i) => (
         <StarIcon
           key={i}
@@ -71,13 +71,23 @@ export function TestimonialsSection() {
               ease: EASE_WELLNESS_FLOW,
               delay: i * 0.15,
               onComplete: () => {
-                // Continuous float after entrance
-                gsap.to(card, {
+                // Continuous float after entrance (paused when off-screen)
+                const floatTween = gsap.to(card, {
                   y: FLOAT_Y[i] || 6,
                   duration: FLOAT_DURATIONS[i] || 3,
                   ease: EASE_BREATHE,
                   yoyo: true,
                   repeat: -1,
+                });
+
+                ScrollTrigger.create({
+                  trigger: el,
+                  start: 'top bottom',
+                  end: 'bottom top',
+                  onEnter: () => floatTween.play(),
+                  onLeave: () => floatTween.pause(),
+                  onEnterBack: () => floatTween.play(),
+                  onLeaveBack: () => floatTween.pause(),
                 });
               },
             });
@@ -101,7 +111,7 @@ export function TestimonialsSection() {
 
       {/* Google review badge */}
       <div className="flex items-center justify-center gap-3 mb-10">
-        <div className="flex items-center gap-0.5" aria-label="5 etoiles sur 5">
+        <div className="flex items-center gap-0.5" role="img" aria-label="5 etoiles sur 5">
           {Array.from({ length: 5 }, (_, i) => (
             <StarIcon key={i} size={20} weight="fill" className="text-secondary-400" />
           ))}

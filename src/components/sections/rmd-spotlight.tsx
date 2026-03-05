@@ -154,7 +154,7 @@ export function RMDSpotlightSection() {
             <span className="font-body text-sm font-medium text-neutral-700">
               {rmdSpotlight.sessions}
             </span>
-            <span className="font-body text-xs text-neutral-500">
+            <span className="font-body text-xs text-neutral-600">
               {rmdSpotlight.priceDetail}
             </span>
           </div>

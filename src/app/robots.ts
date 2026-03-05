@@ -8,30 +8,33 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: '/api/',
       },
-      // Restrict AI training crawlers
       {
         userAgent: 'GPTBot',
-        disallow: '/',
+        allow: ['/', '/llms.txt', '/llms-full.txt'],
       },
       {
         userAgent: 'ChatGPT-User',
-        disallow: '/',
-      },
-      {
-        userAgent: 'Google-Extended',
-        disallow: '/',
-      },
-      {
-        userAgent: 'anthropic-ai',
-        disallow: '/',
+        allow: ['/', '/llms.txt', '/llms-full.txt'],
       },
       {
         userAgent: 'ClaudeBot',
-        disallow: '/',
+        allow: ['/', '/llms.txt', '/llms-full.txt'],
       },
       {
-        userAgent: 'Omgilibot',
-        disallow: '/',
+        userAgent: 'anthropic-ai',
+        allow: ['/', '/llms.txt', '/llms-full.txt'],
+      },
+      {
+        userAgent: 'PerplexityBot',
+        allow: ['/', '/llms.txt', '/llms-full.txt'],
+      },
+      {
+        userAgent: 'Google-Extended',
+        allow: ['/', '/llms.txt', '/llms-full.txt'],
+      },
+      {
+        userAgent: 'Applebot-Extended',
+        allow: ['/', '/llms.txt', '/llms-full.txt'],
       },
     ],
     sitemap: 'https://clemencereznicek.com/sitemap.xml',

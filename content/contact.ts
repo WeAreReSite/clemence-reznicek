@@ -33,7 +33,7 @@ export const contactPage: ContactPageContent = {
   heroSubtitle:
     "Un premier pas vers toi-même commence ici",
   introText:
-    "Que tu aies une question, une hésitation ou simplement l'envie d'en savoir plus, n'hésite pas à me contacter. Je réponds personnellement à chaque message. Tu peux aussi m'appeler directement — parfois une voix rassure plus qu'un écran. Et si tu sais déjà ce que tu cherches, prends rendez-vous en ligne. Je t'accueille avec plaisir.",
+    "Que tu aies une question, une hésitation ou simplement l'envie d'en savoir plus, n'hésite pas à me contacter. Je réponds personnellement à chaque message. Tu peux aussi m'appeler directement. Parfois une voix rassure plus qu'un écran. Et si tu sais déjà ce que tu cherches, prends rendez-vous en ligne. Je t'accueille avec plaisir.",
   phone: {
     display: "06 32 18 52 59",
     link: "tel:+33632185259",

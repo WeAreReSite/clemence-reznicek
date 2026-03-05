@@ -21,9 +21,9 @@ export const aboutPage: AboutPageContent = {
       "Depuis plus de 10 ans, je me forme, j'explore et j'affine ma pratique. Massage, soins énergétiques, travail somatique, constellations familiales, aromathérapie, médiumnité, décodage quantique : chaque outil que j'ai intégré est venu répondre à un besoin réel rencontré sur le terrain, dans l'accompagnement de personnes comme toi.",
       "Mon accompagnement se distingue par la qualité de présence que j'offre. Je crée un espace où l'on peut déposer ce qui est lourd, être entendu sans jugement et regarder une problématique sous un angle nouveau. J'allie intuition, somatique et vision systémique pour éclairer ce qui se joue en profondeur, apaiser le corps et clarifier les ressentis. Avec moi, on se sent vraiment vu, compris et soutenu dans toute sa complexité, ce qui ouvre la voie à des transformations douces, profondes et durables.",
       "Aujourd'hui, je reçois dans mon cabinet à Jonzac, en Charente-Maritime. Un lieu chaleureux et enveloppant, à l'image de ma pratique. Un espace sacré où la douceur et la profondeur cohabitent naturellement. C'est ici que je t'invite à venir déposer ce qui pèse et retrouver la clarté qui t'habite déjà.",
-      "Ma mission est d'offrir des espaces où l'on peut se déposer, se comprendre et se réorganiser en profondeur. J'accompagne les personnes à retrouver de la clarté, de la sécurité intérieure et une direction plus juste, en éclairant ce qui se joue derrière leurs blocages, leurs réactions ou leurs répétitions.",
-      "Je mets au service de chacun ma présence, mon intuition, ma lecture des dynamiques invisibles et ma compréhension somatique pour transformer l'angle de vue d'une problématique et ouvrir de nouvelles possibilités.",
-      "Ma mission est de permettre à l'être de se retrouver, de se rassembler et de se redéployer, avec douceur, précision et intégrité.",
+      "Je guide celles et ceux qui ont perdu leur élan à retrouver l'envie de vivre pleinement. Ma présence ouvre un espace où la joie revient, où la lumière se rallume, où la respiration se fait plus large. J'accompagne chacun à reprendre sa place dans sa propre vie, à accueillir ses émotions, à lâcher le contrôle et à retrouver confiance dans le mouvement naturel de l'existence.",
+      "Mon rôle est de réactiver la vie là où elle s'était figée. J'aide à transformer la peur en ouverture, la confusion en clarté, la lourdeur en légèreté. Je rappelle que la joie n'est pas un luxe : c'est une force de transformation profonde. À travers ma douceur, ma lumière et ma liberté intérieure, j'invite chaque être à se reconnecter à son essence, à savourer sa vie, à se sentir soutenu par la vie elle-même.",
+      "Je ne pousse pas : j'illumine. Je ne force pas : j'ouvre. Je ne transforme pas : je réveille. Je suis celle qui rallume l'envie de vivre.",
     ],
     image: {
       src: "/images/team/DSC02967.jpg",
@@ -108,7 +108,7 @@ export const aboutPage: AboutPageContent = {
         description: "Formation certifiante en massage Symphonie des Cellules",
       },
       {
-        name: "Formation Lise Bourbeau – Les 5 blessures de l'âme",
+        name: "Formation Lise Bourbeau, Les 5 blessures de l'âme",
         description:
           "Formation approfondie sur les 5 blessures de l'âme selon Lise Bourbeau",
       },

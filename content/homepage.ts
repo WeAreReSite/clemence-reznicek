@@ -145,9 +145,9 @@ export const introduction: IntroductionContent = {
   sectionTitle: "Qui suis-je",
   headline: "Clémence, praticienne en bien-être holistique",
   paragraphs: [
-    "J'accompagne les personnes vers plus de clarté, de sécurité intérieure et d'ancrage. Mon travail offre un éclairage qui permet de changer l'angle de vue sur une problématique, d'en comprendre les racines et d'ouvrir de nouvelles possibilités. À travers la médiumnité, la régulation somatique et les constellations familiales, j'aide à apaiser le corps, clarifier les ressentis et révéler les dynamiques invisibles qui influencent les choix. Cet accompagnement soutient des transformations profondes, douces et durables.",
-    "Mon accompagnement se distingue par la qualité de présence que j'offre. Je crée un espace où l'on peut déposer ce qui est lourd, être entendu sans jugement et regarder une problématique sous un angle nouveau. J'allie intuition, somatique et vision systémique pour éclairer ce qui se joue en profondeur, apaiser le corps et clarifier les ressentis. Avec moi, on se sent vraiment vu, compris et soutenu dans toute sa complexité, ce qui ouvre la voie à des transformations douces, profondes et durables.",
-    "Mon cabinet à Jonzac est un espace chaleureux, pensé pour que tu puisses te déposer pleinement. Un lieu où la douceur et la profondeur cohabitent naturellement.",
+    "Je guide celles et ceux qui ont perdu leur élan à retrouver l'envie de vivre pleinement. Ma présence ouvre un espace où la joie revient, où la lumière se rallume, où la respiration se fait plus large. J'accompagne chacun à reprendre sa place dans sa propre vie, à accueillir ses émotions, à lâcher le contrôle et à retrouver confiance dans le mouvement naturel de l'existence.",
+    "Mon rôle est de réactiver la vie là où elle s'était figée. J'aide à transformer la peur en ouverture, la confusion en clarté, la lourdeur en légèreté. Je rappelle que la joie n'est pas un luxe : c'est une force de transformation profonde.",
+    "Je ne pousse pas : j'illumine. Je ne force pas : j'ouvre. Je ne transforme pas : je réveille. Je suis celle qui rallume l'envie de vivre.",
   ],
   image: {
     src: "/images/team/DSC02967.jpg",
@@ -348,7 +348,7 @@ export const serviceCategories: ServiceCategoryContent = {
 
 export const rmdSpotlight: RMDContent = {
   sectionTitle: "Le programme signature",
-  headline: "RMD — Réorganisation en profondeur",
+  headline: "RMD : Réorganisation en profondeur",
   description:
     "Un parcours de 9 séances pour aller au cœur de tes mécanismes, libérer ce qui ne te sert plus et poser les fondations d'un nouveau rapport à toi-même. Le RMD est né de 10 ans de pratique et de recherche. C'est le chemin le plus complet que je propose pour une transformation profonde et durable.",
   highlights: [

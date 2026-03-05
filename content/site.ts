@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
   businessName: "Clémence Reznicek",
   tagline: "Bien-être holistique et émotionnel",
   description:
-    "J'accompagne les personnes vers plus de clarté, de sécurité intérieure et d'ancrage. Mon travail offre un éclairage qui permet de changer l'angle de vue sur une problématique, d'en comprendre les racines et d'ouvrir de nouvelles possibilités. À travers la médiumnité, la régulation somatique et les constellations familiales, j'aide à apaiser le corps, clarifier les ressentis et révéler les dynamiques invisibles qui influencent les choix. Cet accompagnement soutient des transformations profondes, douces et durables.",
+    "Je guide celles et ceux qui ont perdu leur élan à retrouver l'envie de vivre pleinement. Ma présence ouvre un espace où la joie revient, où la lumière se rallume, où la respiration se fait plus large. J'accompagne chacun à reprendre sa place dans sa propre vie, à accueillir ses émotions, à lâcher le contrôle et à retrouver confiance dans le mouvement naturel de l'existence.",
   businessType: "HealthAndBeautyBusiness",
   phone: {
     display: "06 32 18 52 59",
@@ -137,5 +137,5 @@ export const footer: FooterContent = {
   ],
   socialLinks: siteConfig.socialLinks,
   description:
-    "J'accompagne les personnes vers plus de clarté, de sécurité intérieure et d'ancrage. À travers la médiumnité, la régulation somatique et les constellations familiales, j'aide à apaiser le corps, clarifier les ressentis et révéler les dynamiques invisibles qui influencent les choix.",
+    "Je guide celles et ceux qui ont perdu leur élan à retrouver l'envie de vivre pleinement. J'accompagne chacun à reprendre sa place dans sa propre vie, à accueillir ses émotions et à retrouver confiance dans le mouvement naturel de l'existence.",
 };

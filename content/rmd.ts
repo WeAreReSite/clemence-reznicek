@@ -18,7 +18,7 @@ export const rmdPage: RMDPageContent = {
     "C'est ma signature parce qu'il rassemble tout ce qui fait la singularité de ma présence et de mon regard. J'y unis l'intuition, la lecture fine des dynamiques invisibles, la compréhension somatique et une approche profondément humaine. C'est l'espace où toutes mes compétences se rencontrent pour offrir un éclairage juste, transformer l'angle de vue d'une problématique et accompagner une réorganisation intérieure durable. C'est là que mon travail prend toute sa cohérence, sa profondeur et sa force.",
     "Le RMD est né de 10 ans de pratique, de recherche et d'accompagnement. C'est la synthèse de tout ce que j'ai appris, expérimenté et affiné au fil des années. Ce programme est le chemin le plus complet que je propose pour aller au cœur de ce qui se joue en toi.",
     "En 9 séances, on traverse ensemble les différentes couches de ton être : le corps, les émotions, les schémas de pensée, les mémoires familiales, le champ énergétique. L'objectif n'est pas de tout résoudre, mais de créer les conditions pour qu'une réorganisation profonde puisse se faire, à ton rythme, dans la sécurité.",
-    "Ce programme s'adresse à celles et ceux qui sentent qu'il est temps d'aller plus loin. Pas pour se réparer — tu n'es pas cassé. Mais pour te connaître dans toutes tes dimensions et trouver une nouvelle façon d'habiter ta vie.",
+    "Ce programme s'adresse à celles et ceux qui sentent qu'il est temps d'aller plus loin. Pas pour se réparer, tu n'es pas cassé. Mais pour te connaître dans toutes tes dimensions et trouver une nouvelle façon d'habiter ta vie.",
   ],
   forWhom: {
     title: "Ce programme est pour toi si",

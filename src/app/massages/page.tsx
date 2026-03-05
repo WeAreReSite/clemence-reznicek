@@ -121,7 +121,7 @@ export default function MassagesPage() {
           </div>
 
           {/* Image */}
-          <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
+          <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden">
             <Image
               src={massagesPage.approachImage.src}
               alt={massagesPage.approachImage.alt}

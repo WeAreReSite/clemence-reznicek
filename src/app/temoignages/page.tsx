@@ -118,6 +118,19 @@ export default function TemoignagesPage() {
             </Card>
           ))}
         </div>
+
+        {/* Link to all Google reviews */}
+        <div className="mt-10 text-center">
+          <Link
+            href={testimonialsPage.googleReviewsCTA.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="secondary" size="md">
+              Voir tous les avis sur Google
+            </Button>
+          </Link>
+        </div>
       </Section>
 
       {/* CTA */}

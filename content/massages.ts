@@ -21,8 +21,8 @@ export const massagesPage: MassagesPageContent = {
       name: "Massage Shambala",
       description:
         "Le Shambala est un massage profond et enveloppant qui allie mouvements fluides, pressions intuitives et travail énergétique. Il invite le corps à lâcher en profondeur, couche après couche. C'est un soin complet qui agit autant sur les tensions physiques que sur l'état émotionnel. Beaucoup de personnes décrivent cette expérience comme un voyage intérieur, un moment où le temps suspend son cours.",
-      price: "75 euros / 1h — 120 euros / 1h30",
-      duration: "1h ou 1h30",
+      price: "100 euros",
+      duration: "1h30",
       image: {
         src: "/images/work/DSC02664.jpg",
         alt: "Massage Shambala en cours au cabinet",
@@ -34,8 +34,8 @@ export const massagesPage: MassagesPageContent = {
       name: "Massage Solar",
       description:
         "Le Solar est un massage chaleureux, centré sur la libération des tensions musculaires profondes et le retour à un état de calme intérieur. Les mouvements sont enveloppants, les pressions adaptées à tes besoins. Ce massage est particulièrement indiqué quand le corps porte beaucoup de fatigue accumulée ou quand tu as besoin de te reconnecter à la chaleur de ton propre corps.",
-      price: "75 euros",
-      duration: "1h",
+      price: "120 euros",
+      duration: "2h",
       image: {
         src: "/images/work/DSC02636.jpg",
         alt: "Massage Solar avec des gestes chaleureux et précis",
@@ -44,11 +44,11 @@ export const massagesPage: MassagesPageContent = {
       },
     },
     {
-      name: "Aromatouch doTERRA",
+      name: "Massage Aromatouch",
       description:
         "L'Aromatouch est un protocole spécifique aux huiles essentielles doTERRA, appliquées le long de la colonne vertébrale et sur les pieds. Huit huiles sont utilisées en séquence, chacune choisie pour ses propriétés de soutien du système immunitaire, d'apaisement du stress et de rééquilibrage énergétique. C'est un soin court mais puissant, idéal comme première approche ou en complément d'un autre accompagnement.",
-      price: "45 euros",
-      duration: "45 min",
+      price: "75 euros",
+      duration: "1h",
       image: {
         src: "/images/product/DSC02925.jpg",
         alt: "Huiles essentielles doTERRA utilisées pour le soin Aromatouch",

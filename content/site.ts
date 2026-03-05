@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
   businessName: "Clémence Reznicek",
   tagline: "Bien-être holistique et émotionnel",
   description:
-    "Accompagnement en bien-être holistique à Jonzac. Massages, soins énergétiques, coaching émotionnel et régulation somatique. Un espace de douceur pour retrouver ta clarté intérieure.",
+    "J'accompagne les personnes vers plus de clarté, de sécurité intérieure et d'ancrage. Mon travail offre un éclairage qui permet de changer l'angle de vue sur une problématique, d'en comprendre les racines et d'ouvrir de nouvelles possibilités. À travers la médiumnité, la régulation somatique et les constellations familiales, j'aide à apaiser le corps, clarifier les ressentis et révéler les dynamiques invisibles qui influencent les choix. Cet accompagnement soutient des transformations profondes, douces et durables.",
   businessType: "HealthAndBeautyBusiness",
   phone: {
     display: "06 32 18 52 59",
@@ -35,22 +35,22 @@ export const siteConfig: SiteConfig = {
   socialLinks: [
     {
       platform: "facebook",
-      url: "https://www.facebook.com/clemence.reznicek",
+      url: "https://www.facebook.com/clemencereznicek",
       label: "Suivre sur Facebook",
     },
     {
       platform: "instagram",
-      url: "https://www.instagram.com/clemence.reznicek",
+      url: "https://www.instagram.com/clemence_reznicek/",
       label: "Suivre sur Instagram",
     },
     {
       platform: "youtube",
-      url: "https://www.youtube.com/@clemencereznicek",
+      url: "https://www.youtube.com/@clemencereznicek111",
       label: "Voir les vidéos sur YouTube",
     },
     {
       platform: "google",
-      url: "https://g.co/kgs/clemencereznicek",
+      url: "https://share.google/5AokZamfqtL3yUJWZ",
       label: "Voir les avis Google",
     },
   ],
@@ -60,7 +60,7 @@ export const siteConfig: SiteConfig = {
     width: 180,
     height: 60,
   },
-  url: "https://clemence-reznicek.fr",
+  url: "https://clemencereznicek.com",
 };
 
 // =============================================================================
@@ -103,7 +103,7 @@ export const footer: FooterContent = {
         { label: "Massages", href: "/massages" },
         { label: "Soins énergétiques", href: "/soins" },
         { label: "RMD Signature", href: "/rmd" },
-        { label: "Coaching émotionnel", href: "/soins" },
+        { label: "Accompagnements", href: "/soins" },
       ],
     },
     {
@@ -137,5 +137,5 @@ export const footer: FooterContent = {
   ],
   socialLinks: siteConfig.socialLinks,
   description:
-    "Accompagnement en bien-être holistique à Jonzac. Un espace de douceur et de présence pour retrouver ta clarté intérieure.",
+    "J'accompagne les personnes vers plus de clarté, de sécurité intérieure et d'ancrage. À travers la médiumnité, la régulation somatique et les constellations familiales, j'aide à apaiser le corps, clarifier les ressentis et révéler les dynamiques invisibles qui influencent les choix.",
 };

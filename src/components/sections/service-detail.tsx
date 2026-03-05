@@ -35,7 +35,7 @@ export function ServiceDetailSection({ services, layout = 'grid' }: ServiceDetai
                 <p className="text-sm text-neutral-600 leading-relaxed mb-4">
                   {service.description}
                 </p>
-                <div className="flex items-center gap-3 text-sm">
+                <div className="flex items-center flex-wrap gap-3 text-sm">
                   <span className="font-medium text-neutral-800">{service.price}</span>
                   <span className="text-neutral-400" aria-hidden="true">·</span>
                   <span className="text-neutral-500">{service.duration}</span>
@@ -75,7 +75,7 @@ export function ServiceDetailSection({ services, layout = 'grid' }: ServiceDetai
               <p className="text-sm text-neutral-600 leading-relaxed mb-4">
                 {service.description}
               </p>
-              <div className="flex items-center gap-3 text-sm">
+              <div className="flex items-center flex-wrap gap-3 text-sm">
                 <span className="font-medium text-neutral-800">{service.price}</span>
                 <span className="text-neutral-400" aria-hidden="true">·</span>
                 <span className="text-neutral-500">{service.duration}</span>

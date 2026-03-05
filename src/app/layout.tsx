@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${headingFont.variable} ${bodyFont.variable}`}>
+    <html lang="fr" data-scroll-behavior="smooth" className={`${headingFont.variable} ${bodyFont.variable}`}>
       <body className="font-body text-neutral-800 bg-bg-cream antialiased">
         <StickyHeader />
         <main id="main-content">{children}</main>

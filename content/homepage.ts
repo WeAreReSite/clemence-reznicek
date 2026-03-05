@@ -18,7 +18,7 @@ import type {
 
 export const hero: HeroContent = {
   headline: "Se connaître et s'aimer dans toutes nos dimensions",
-  subtitle: "Espace sacré de bien-être holistique",
+  subtitle: "Espace sacré",
   description:
     "Un lieu de douceur et de présence à Jonzac, où tu peux déposer ce qui pèse et retrouver ta clarté intérieure. Massages, soins énergétiques, coaching émotionnel.",
   primaryCTA: {
@@ -81,8 +81,8 @@ export const entryPoints: EntryPointContent = {
       title: "Massage",
       description:
         "Un moment pour déposer les tensions, lâcher le mental et laisser le corps se réorganiser en douceur. Shambala, Solar ou Aromatouch : chaque massage est un voyage.",
-      price: "À partir de 45 euros",
-      duration: "45 min à 1h30",
+      price: "À partir de 75 euros",
+      duration: "1h à 2h",
       image: {
         src: "/images/work/DSC02663.jpg",
         alt: "Massage bien-être au cabinet de Clémence à Jonzac",
@@ -101,7 +101,7 @@ export const entryPoints: EntryPointContent = {
       description:
         "Le LaHoChi Multidimensionnel est un soin d'une grande douceur qui agit en profondeur. Il aide à libérer les tensions inscrites dans le corps et à retrouver un ancrage intérieur.",
       price: "60 euros",
-      duration: "1h",
+      duration: "45 min",
       image: {
         src: "/images/work/DSC02550.jpg",
         alt: "Soin énergétique LaHoChi dans un cadre apaisant",
@@ -145,8 +145,8 @@ export const introduction: IntroductionContent = {
   sectionTitle: "Qui suis-je",
   headline: "Clémence, praticienne en bien-être holistique",
   paragraphs: [
-    "Depuis plus de 10 ans, j'accompagne des femmes et des hommes vers une meilleure connaissance d'eux-mêmes. Mon approche allie intuition, travail somatique et vision systémique pour des transformations qui durent.",
-    "Ce qui me guide, c'est la justesse. Chaque personne est unique, et chaque séance se déploie selon ce qui se présente, dans un cadre de sécurité intérieure et de bienveillance. Ici, tu n'as rien à prouver. Juste à te laisser accueillir.",
+    "J'accompagne les personnes vers plus de clarté, de sécurité intérieure et d'ancrage. Mon travail offre un éclairage qui permet de changer l'angle de vue sur une problématique, d'en comprendre les racines et d'ouvrir de nouvelles possibilités. À travers la médiumnité, la régulation somatique et les constellations familiales, j'aide à apaiser le corps, clarifier les ressentis et révéler les dynamiques invisibles qui influencent les choix. Cet accompagnement soutient des transformations profondes, douces et durables.",
+    "Mon accompagnement se distingue par la qualité de présence que j'offre. Je crée un espace où l'on peut déposer ce qui est lourd, être entendu sans jugement et regarder une problématique sous un angle nouveau. J'allie intuition, somatique et vision systémique pour éclairer ce qui se joue en profondeur, apaiser le corps et clarifier les ressentis. Avec moi, on se sent vraiment vu, compris et soutenu dans toute sa complexité, ce qui ouvre la voie à des transformations douces, profondes et durables.",
     "Mon cabinet à Jonzac est un espace chaleureux, pensé pour que tu puisses te déposer pleinement. Un lieu où la douceur et la profondeur cohabitent naturellement.",
   ],
   image: {
@@ -182,22 +182,22 @@ export const serviceCategories: ServiceCategoryContent = {
           name: "Massage Shambala",
           description:
             "Un massage profond et enveloppant qui allie mouvements fluides, pressions intuitives et travail énergétique.",
-          price: "75 euros / 1h — 120 euros / 1h30",
-          duration: "1h ou 1h30",
+          price: "100 euros",
+          duration: "1h30",
         },
         {
           name: "Massage Solar",
           description:
             "Un massage chaleureux centré sur la libération des tensions musculaires et le retour à soi.",
-          price: "75 euros",
-          duration: "1h",
+          price: "120 euros",
+          duration: "2h",
         },
         {
-          name: "Aromatouch doTERRA",
+          name: "Massage Aromatouch",
           description:
             "Un protocole aux huiles essentielles doTERRA appliquées le long de la colonne vertébrale et sur les pieds.",
-          price: "45 euros",
-          duration: "45 min",
+          price: "75 euros",
+          duration: "1h",
         },
       ],
       image: {
@@ -213,60 +213,27 @@ export const serviceCategories: ServiceCategoryContent = {
       },
     },
     {
-      title: "Soins énergétiques",
-      description:
-        "Des approches subtiles qui agissent sur les plans émotionnel et énergétique pour retrouver harmonie et ancrage.",
-      icon: "sparkles",
-      services: [
-        {
-          name: "LaHoChi Multidimensionnel",
-          description:
-            "Un soin énergétique d'une grande douceur qui agit en profondeur sur le corps, les émotions et le champ énergétique.",
-          price: "60 euros",
-          duration: "1h",
-        },
-        {
-          name: "Décodage quantique",
-          description:
-            "Une lecture intuitive et énergétique pour éclairer les mécanismes inconscients qui se rejouent dans ta vie.",
-          price: "60 euros",
-          duration: "1h",
-        },
-      ],
-      image: {
-        src: "/images/work/DSC02550.jpg",
-        alt: "Soin énergétique dans le cabinet",
-        width: 640,
-        height: 427,
-      },
-      cta: {
-        label: "Découvrir les soins",
-        href: "/soins",
-        variant: "outline",
-      },
-    },
-    {
       title: "Accompagnement émotionnel",
       description:
         "Un travail en profondeur pour comprendre, accueillir et transformer ce qui se vit à l'intérieur.",
       icon: "heart",
       services: [
         {
-          name: "Coaching émotionnel",
+          name: "Coaching-accompagnement mieux-être",
           description:
             "Un accompagnement structuré pour explorer tes schémas et trouver de nouvelles façons de te relier à toi-même.",
-          price: "60 euros",
-          duration: "1h",
+          price: "150 euros",
+          duration: "1h30",
         },
         {
           name: "Régulation émotionnelle et somatique",
           description:
             "Un travail par le corps pour apprendre à accueillir et réguler tes émotions dans la sécurité.",
-          price: "60 euros",
-          duration: "1h",
+          price: "150 euros",
+          duration: "1h30",
         },
         {
-          name: "Médiumnité",
+          name: "Médiumnité-oracle-pendule-décodage quantique",
           description:
             "Un éclairage intuitif au service de ta compréhension. Non pas pour prédire, mais pour éclairer ce qui demande de l'attention.",
           price: "60 euros",
@@ -286,7 +253,7 @@ export const serviceCategories: ServiceCategoryContent = {
       },
     },
     {
-      title: "Ateliers et constellations",
+      title: "Constellations familiales",
       description:
         "Des espaces collectifs pour explorer, partager et transformer ensemble dans un cadre contenant.",
       icon: "users",
@@ -319,6 +286,20 @@ export const serviceCategories: ServiceCategoryContent = {
           price: "30 euros",
           duration: "1h30",
         },
+        {
+          name: "Stage développement spirituel",
+          description:
+            "Un stage de deux jours pour explorer ta dimension spirituelle et approfondir ta connexion à toi-même.",
+          price: "100 euros / journée",
+          duration: "2 jours",
+        },
+        {
+          name: "Décodage quantique Cosmo",
+          description:
+            "Un parcours approfondi de décodage quantique pour explorer les mémoires et mécanismes profonds qui influencent ta vie.",
+          price: "333 euros",
+          duration: "Parcours complet",
+        },
       ],
       image: {
         src: "/images/work/DSC02714.jpg",
@@ -328,6 +309,39 @@ export const serviceCategories: ServiceCategoryContent = {
       },
       cta: {
         label: "Découvrir les ateliers",
+        href: "/soins",
+        variant: "outline",
+      },
+    },
+    {
+      title: "Soins énergétiques",
+      description:
+        "Des approches subtiles qui agissent sur les plans émotionnel et énergétique pour retrouver harmonie et ancrage.",
+      icon: "sparkles",
+      services: [
+        {
+          name: "LaHoChi Multidimensionnel",
+          description:
+            "Un soin énergétique d'une grande douceur qui agit en profondeur sur le corps, les émotions et le champ énergétique.",
+          price: "60 euros",
+          duration: "45 min",
+        },
+        {
+          name: "Décodage quantique",
+          description:
+            "Une lecture intuitive et énergétique pour éclairer les mécanismes inconscients qui se rejouent dans ta vie.",
+          price: "60 euros",
+          duration: "1h",
+        },
+      ],
+      image: {
+        src: "/images/work/DSC02550.jpg",
+        alt: "Soin énergétique dans le cabinet",
+        width: 640,
+        height: 427,
+      },
+      cta: {
+        label: "Découvrir les soins",
         href: "/soins",
         variant: "outline",
       },
@@ -365,7 +379,7 @@ export const rmdSpotlight: RMDContent = {
     },
   ],
   price: "1 333 euros",
-  priceDetail: "Paiement échelonné possible",
+  priceDetail: "Règlement en plusieurs fois",
   sessions: "9 séances",
   image: {
     src: "/images/work/DSC02979.jpg",
@@ -391,21 +405,21 @@ export const values: ValueContent = {
   values: [
     {
       icon: "eye",
-      title: "Présence et écoute",
+      title: "Présence",
       description:
-        "Être là, pleinement. T'offrir un espace où tu peux te montrer tel que tu es, sans jugement, sans attente. Cette qualité de présence est le socle de chaque soin.",
+        "J'offre une présence fine, stable et profondément engagée. Je suis là, vraiment, avec écoute et justesse, pour accueillir ce qui se présente sans masque ni détour.",
     },
     {
       icon: "shield",
       title: "Sécurité intérieure",
       description:
-        "Avant toute transformation, il faut se sentir en sécurité. Je crée un cadre contenant où ton système nerveux peut se relâcher et où les choses peuvent se déposer naturellement.",
+        "Je soutiens la régulation, l'apaisement, l'ancrage. Je crée des espaces où le corps peut se relâcher et où les émotions peuvent circuler sans débordement.",
     },
     {
       icon: "flame",
       title: "Transformation douce",
       description:
-        "Pas de révolution brutale. Les changements les plus profonds arrivent quand on respecte le rythme du corps et de l'âme. Ici, chaque transformation est accompagnée avec douceur.",
+        "Je crois aux transformations profondes mais non violentes. J'accompagne des réorganisations intérieures qui respectent le rythme de chacun.",
     },
   ],
 };
@@ -416,15 +430,15 @@ export const values: ValueContent = {
 
 export const promotions: PromotionContent = {
   sectionTitle: "Actualités",
-  headline: "Offre découverte : ta première séance à 45 euros",
+  headline: "Ateliers méditation et aromathérapie",
   description:
-    "Pour te permettre de découvrir l'accompagnement en toute sérénité, je te propose une première rencontre à tarif réduit. Un moment pour se connaître, explorer ce qui se vit et voir si le courant passe.",
+    "Retrouve-moi pour des ateliers collectifs de méditation et d'aromathérapie doTERRA. Des moments de partage, de présence et de découverte dans un cadre chaleureux. Cartes cadeaux disponibles pour offrir un soin à un proche.",
   cta: {
-    label: "En profiter",
+    label: "Me contacter",
     href: "/contact",
     variant: "primary",
   },
-  badge: "Offre découverte",
+  badge: "Nouveauté",
   active: true,
 };
 
@@ -438,52 +452,49 @@ export const faq: FAQContent = {
     "Les réponses aux questions que tu te poses peut-être avant de prendre rendez-vous",
   items: [
     {
-      question: "Comment se passe une première séance ?",
+      question: "Comment se déroule une séance avec toi ?",
       answer:
-        "La première séance est un moment d'écoute et d'exploration. On prend le temps de se connaître, de comprendre ce qui t'amène et ce que tu traverses. Je t'explique ma façon de travailler, et ensemble on choisit le chemin le plus juste pour toi. Il n'y a aucune obligation de s'engager après cette première rencontre. C'est un espace libre, sans pression.",
+        "Chaque séance commence par un temps d'échange pour comprendre ce qui t'amène. Ensuite, je t'accompagne avec les outils les plus adaptés : somatique, systémie, intuition, lecture des dynamiques invisibles, massages ou soins énergétiques selon le cadre choisi. La séance se termine par une intégration pour que tu repartes ancré et clair. À partir de là, je t'indique combien de séances seront nécessaires pour accompagner ton processus de manière juste, respectueuse de ton rythme et cohérente avec ton objectif.",
     },
     {
-      question:
-        "Qu'est-ce que la médiumnité dans ta pratique ?",
+      question: "Dois-je savoir ce que je veux travailler avant de venir ?",
       answer:
-        "Dans ma pratique, la médiumnité est un outil de clarté, pas de prédiction. Elle me permet de percevoir des informations qui ne sont pas toujours accessibles par le mental : des dynamiques familiales, des mémoires inscrites dans le corps, des schémas qui se répètent. Je m'en sers pour éclairer ce qui demande de l'attention, toujours avec respect et dans un cadre éthique.",
+        "Non. Certaines personnes arrivent avec une problématique précise, d'autres avec une sensation diffuse. Les deux sont parfaitement accueillis. Mon rôle est d'éclairer ce qui se joue et de t'aider à trouver le bon angle.",
     },
     {
-      question: "Est-ce que tu fais des prédictions ?",
+      question: "Est-ce que tu fais de la médiumnité ?",
       answer:
-        "Non, je ne fais pas de prédictions. Mon travail n'est pas de te dire ce qui va se passer, mais de t'aider à comprendre ce qui se joue maintenant. L'avenir se construit à partir de la clarté que tu gagnes sur toi-même et de tes choix. Mon rôle est de t'accompagner dans cette clarté, pas de te donner des certitudes sur demain.",
+        "Oui, mais toujours dans un cadre éthique, ancré et non prédictif. Je lis les dynamiques, les mouvements, les mémoires, jamais l'avenir. Mon intention est d'apporter de la clarté, pas de créer de la dépendance.",
     },
     {
-      question:
-        "Quelle est la différence entre un massage et un soin ?",
+      question: "Quelle est la différence entre une séance RMD et un massage ?",
       answer:
-        "Le massage agit principalement par le toucher et le corps physique : il libère les tensions musculaires, fluidifie la circulation et invite le système nerveux à se relâcher. Le soin énergétique, lui, travaille sur un plan plus subtil : les émotions, le champ énergétique, les mémoires inscrites dans le corps. Les deux sont complémentaires et peuvent se combiner selon tes besoins.",
+        "RMD travaille sur toutes les dimensions de l'être : émotionnelle, somatique, transgénérationnelle, énergétique. Le massage, lui, agit principalement par le corps, mais il peut aussi libérer des mémoires et soutenir la régulation. Les deux approches se complètent, mais n'ont pas la même profondeur ni le même objectif.",
     },
     {
-      question: "C'est quoi le RMD ?",
+      question: "Combien de séances sont nécessaires ?",
       answer:
-        "Le RMD (Réorganisation Multi-Dimensionnelle) est le programme signature que j'ai créé après 10 ans de pratique. C'est un parcours de 9 séances qui combine tous mes outils : somatique, énergétique, coaching, constellations. L'idée est de ne pas rester en surface, mais d'aller au cœur des mécanismes qui se répètent pour les transformer en profondeur. C'est le chemin le plus complet que je propose.",
+        "Cela dépend de ton rythme et de ce que tu traverses. Certaines personnes sentent un changement dès la première séance, d'autres préfèrent un accompagnement plus régulier. Je ne pousse jamais à la consommation : c'est ton corps et ton vécu qui guident.",
     },
     {
-      question: "Est-ce que ça marche en visio ?",
+      question: "Est-ce que tu accompagnes aussi en ligne ?",
       answer:
-        "Oui, certains accompagnements fonctionnent très bien en visio : le coaching émotionnel, la médiumnité, le décodage quantique et les constellations individuelles. La distance ne diminue pas la qualité de la connexion ni la profondeur du travail. Les massages et soins énergétiques en présentiel nécessitent bien sûr ta présence au cabinet à Jonzac.",
+        "Oui. Les séances RMD, la lecture intuitive, la systémie et la régulation somatique se font très bien à distance. Les massages, évidemment, se font uniquement en présentiel.",
     },
     {
-      question: "Combien de séances faut-il ?",
+      question: "Est-ce que je dois préparer quelque chose avant la séance ?",
       answer:
-        "Il n'y a pas de réponse universelle. Certaines personnes viennent pour un seul massage et repartent apaisées. D'autres ont besoin d'un accompagnement sur plusieurs mois. On définit ensemble ce qui te convient, à ton rythme. Le programme RMD de 9 séances est la formule la plus complète pour un travail en profondeur.",
+        "Rien de particulier. Viens comme tu es, avec ce que tu vis. L'essentiel est d'arriver disponible pour toi.",
     },
     {
-      question: "Tu travailles avec les enfants ?",
+      question: "Est-ce que c'est pour moi si je ne suis pas spirituel·le ?",
       answer:
-        "Oui, j'accompagne aussi les enfants et les adolescents, avec une approche adaptée à leur âge et à leur sensibilité. Les soins énergétiques et le travail somatique sont particulièrement indiqués pour les jeunes qui traversent des périodes difficiles. J'implique toujours les parents dans le processus pour que l'accompagnement soit cohérent.",
+        "Oui. Mon approche est humaine avant tout. Je travaille avec le corps, les émotions, les dynamiques familiales et les mémoires. Tu n'as besoin d'adhérer à aucune croyance.",
     },
     {
-      question:
-        "Je ne suis pas du tout spirituel, c'est pour moi quand même ?",
+      question: "Est-ce que tu fais des diagnostics ou des prédictions ?",
       answer:
-        "Absolument. Tu n'as besoin de croire en rien de particulier pour bénéficier de ces accompagnements. Mon approche est ancrée dans le corps et dans l'expérience concrète. Ce qui compte, c'est ta disponibilité à t'écouter et à accueillir ce qui se présente. Les outils que j'utilise fonctionnent que tu sois spirituel ou non. Viens comme tu es.",
+        "Non. Je ne remplace ni un médecin ni un thérapeute. Je t'accompagne dans la compréhension de ce que tu vis, dans la régulation et dans la transformation intérieure.",
     },
   ],
 };
@@ -512,10 +523,10 @@ export const practicalInfo: PracticalInfoContent = {
     { days: "Dimanche", hours: "Fermé" },
   ],
   accessDetails: [
-    "Cabinet situé au rez-de-chaussée, accessible aux personnes à mobilité réduite",
+    "Cabinet situé au 1er étage, sans accès PMR",
+    "Merci de venir seul(e), sauf pour les mineurs qui doivent être accompagnés",
+    "Pas d'animaux dans le cabinet",
     "Parking gratuit à proximité",
-    "À 5 minutes à pied du centre-ville de Jonzac",
-    "À 1h de Bordeaux, 45 min de Saintes, 30 min de Cognac",
   ],
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.1!2d-0.4367!3d45.4464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5+avenue+Chanzy+17500+Jonzac!5e0!3m2!1sfr!2sfr",

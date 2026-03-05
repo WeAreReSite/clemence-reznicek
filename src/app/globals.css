@@ -262,6 +262,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background-color: oklch(0.980 0.0062 75.4);
   color: oklch(0.336 0.0187 63.8);
   font-family: var(--font-body);

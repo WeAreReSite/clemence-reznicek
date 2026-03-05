@@ -71,7 +71,7 @@ export default function MassagesPage() {
                 <p className="font-body text-base text-neutral-600 leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <div className="flex items-center gap-4 font-body text-sm">
+                <div className="flex items-center flex-wrap gap-4 font-body text-sm">
                   <span className="font-semibold text-indigo-500">{service.price}</span>
                   <span className="text-neutral-400" aria-hidden="true">·</span>
                   <span className="text-neutral-500">{service.duration}</span>

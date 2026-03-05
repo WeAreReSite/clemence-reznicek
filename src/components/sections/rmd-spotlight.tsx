@@ -146,7 +146,7 @@ export function RMDSpotlightSection() {
 
       {/* Price + CTA — centered below both columns */}
       <div className="mt-10 text-center">
-        <div className="flex items-center justify-center gap-4 mb-6">
+        <div className="flex items-center justify-center flex-wrap gap-4 mb-6">
           <Badge variant="accent" className="text-base px-4 py-2">
             {rmdSpotlight.price}
           </Badge>

@@ -182,7 +182,7 @@ export const testimonialSection: TestimonialSectionContent = {
   sectionSubtitle:
     "Des mots qui témoignent de transformations douces et durables",
   featured: [allTestimonials[0], allTestimonials[1], allTestimonials[2]],
-  googleBadgeLabel: "59 avis sur Google",
+  googleBadgeLabel: "58 avis sur Google",
   cta: {
     label: "Lire tous les témoignages",
     href: "/temoignages",
@@ -200,8 +200,8 @@ export const testimonialsPage: TestimonialsPageContent = {
     "Chaque parcours est unique. Voici les mots de celles et ceux qui ont choisi de se faire accompagner.",
   testimonials: allTestimonials,
   googleReviewsCTA: {
-    label: "Voir les 59 avis sur Google",
-    href: "https://g.co/kgs/clemencereznicek",
+    label: "Voir les 58 avis sur Google",
+    href: "https://share.google/5AokZamfqtL3yUJWZ",
     variant: "secondary",
   },
   contactCTA: {

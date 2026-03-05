@@ -153,7 +153,7 @@ export function EntryPointsSection() {
                   <p className="text-sm text-neutral-600 leading-relaxed mb-4">
                     {card.description}
                   </p>
-                  <div className="flex items-center gap-3 text-sm text-neutral-500">
+                  <div className="flex items-center flex-wrap gap-3 text-sm text-neutral-500">
                     <span className="font-medium text-neutral-700">{card.price}</span>
                     <span aria-hidden="true">&middot;</span>
                     <span>{card.duration}</span>

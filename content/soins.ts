@@ -27,7 +27,7 @@ export const soinsPage: SoinsPageContent = {
           description:
             "Le LaHoChi est un soin énergétique d'une grande douceur. Par imposition des mains, il agit sur les différentes couches de l'être : physique, émotionnelle, mentale et énergétique. C'est un moment de profonde relaxation où le corps peut libérer des tensions anciennes et retrouver son équilibre naturel. Beaucoup de personnes ressentent une chaleur apaisante et un sentiment de paix profonde.",
           price: "60 euros",
-          duration: "1h",
+          duration: "45 min",
         },
         {
           name: "Décodage quantique",
@@ -50,21 +50,28 @@ export const soinsPage: SoinsPageContent = {
         "Un travail en profondeur qui passe par le corps et les émotions pour transformer ce qui se vit à l'intérieur. Pour celles et ceux qui veulent aller au-delà du symptôme.",
       services: [
         {
-          name: "Coaching émotionnel",
+          name: "1ère séance individuelle",
           description:
-            "Un accompagnement structuré pour explorer tes schémas, comprendre tes fonctionnements et trouver de nouvelles façons de te relier à toi-même et aux autres. Le coaching se fait dans un cadre de sécurité et de bienveillance, à ton rythme.",
+            "Un espace de parole et d'écoute pour faire connaissance et explorer ce qui se vit en toi. Ensemble, on éclaire ce qui demande de l'attention et on pose les premières bases de ton accompagnement. C'est le point de départ pour tous les parcours d'accompagnement.",
           price: "60 euros",
           duration: "1h",
+        },
+        {
+          name: "Coaching-accompagnement mieux-être",
+          description:
+            "Un accompagnement structuré pour explorer tes schémas, comprendre tes fonctionnements et trouver de nouvelles façons de te relier à toi-même et aux autres. Le coaching se fait dans un cadre de sécurité et de bienveillance, à ton rythme.",
+          price: "150 euros",
+          duration: "1h30",
         },
         {
           name: "Régulation émotionnelle et somatique",
           description:
             "Un travail par le corps pour apprendre à accueillir et réguler tes émotions. En écoutant les sensations physiques, on dénoue ce qui est resté bloqué et on retrouve une capacité naturelle de régulation. C'est un outil puissant pour les personnes qui portent beaucoup de stress ou d'anxiété.",
-          price: "60 euros",
-          duration: "1h",
+          price: "150 euros",
+          duration: "1h30",
         },
         {
-          name: "Médiumnité",
+          name: "Médiumnité-oracle-pendule-décodage quantique",
           description:
             "Un éclairage intuitif au service de ta compréhension. La médiumnité, dans ma pratique, n'est pas une boule de cristal. C'est la capacité à percevoir des informations au-delà du visible pour éclairer ce qui demande de l'attention dans ta vie, avec respect et éthique.",
           price: "60 euros",
@@ -130,6 +137,20 @@ export const soinsPage: SoinsPageContent = {
             "Un atelier pour découvrir les huiles essentielles doTERRA, apprendre à les utiliser au quotidien et créer tes propres synergies. Un moment convivial et enrichissant.",
           price: "30 euros",
           duration: "1h30",
+        },
+        {
+          name: "Stage développement spirituel",
+          description:
+            "Un stage de deux jours pour explorer ta dimension spirituelle, affiner tes perceptions et approfondir ta connexion à toi-même dans un cadre sécurisant et bienveillant.",
+          price: "100 euros / journée (stage 2 jours)",
+          duration: "2 jours",
+        },
+        {
+          name: "Décodage quantique Cosmo",
+          description:
+            "Un parcours approfondi de décodage quantique pour explorer les mémoires et les mécanismes profonds qui influencent ta vie, et ouvrir de nouvelles possibilités de transformation.",
+          price: "333 euros",
+          duration: "Parcours complet",
         },
       ],
       image: {

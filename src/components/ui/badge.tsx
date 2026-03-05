@@ -9,7 +9,7 @@ const badgeVariants = cva(
     'px-3 py-1',
     'text-xs font-medium font-body',
     'tracking-[0.04em]',
-    'whitespace-nowrap',
+    'text-center',
   ],
   {
     variants: {

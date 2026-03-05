@@ -10,7 +10,7 @@ export const legalPage: LegalPageContent = {
     {
       title: "Éditeur du site",
       content:
-        "Ce site est édité par Clémence Reznicek, praticienne en bien-être holistique.\n\nAdresse : 5 avenue Chanzy, 17500 Jonzac, Charente-Maritime, France\nTéléphone : 06 32 18 52 59\nEmail : clemence.reznicek@gmail.com\n\nActivité : Bien-être holistique et émotionnel — massages, soins énergétiques, coaching, constellations familiales.\n\nNuméro SIRET : [À compléter]\nCode APE : 9609Z — Autres services personnels n.c.a.",
+        "Ce site est édité par Clémence Reznicek, praticienne en bien-être holistique.\n\nAdresse : 5 avenue Chanzy, 17500 Jonzac, Charente-Maritime, France\nTéléphone : 06 32 18 52 59\nEmail : clemence.reznicek@gmail.com\n\nActivité : Bien-être holistique et émotionnel — massages, soins énergétiques, coaching, constellations familiales.\n\nNuméro SIRET : 538 397 142 00075\nCode APE : 9609Z — Autres services personnels n.c.a.",
     },
     {
       title: "Hébergement",

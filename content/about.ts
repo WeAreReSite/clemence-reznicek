@@ -19,8 +19,11 @@ export const aboutPage: AboutPageContent = {
     paragraphs: [
       "Tout a commencé par un appel. Pas un appel spectaculaire, mais cette sensation tenace que quelque chose de plus juste m'attendait. Après des années dans un quotidien qui ne me ressemblait plus, j'ai fait le choix de me tourner vers ce qui faisait vibrer mon cœur : l'accompagnement de l'humain.",
       "Depuis plus de 10 ans, je me forme, j'explore et j'affine ma pratique. Massage, soins énergétiques, travail somatique, constellations familiales, aromathérapie, médiumnité, décodage quantique : chaque outil que j'ai intégré est venu répondre à un besoin réel rencontré sur le terrain, dans l'accompagnement de personnes comme toi.",
-      "Ce qui me définit le plus, c'est peut-être ma qualité de présence. Être là, pleinement, pour ce qui se présente. Sans jugement, sans agenda caché. Mon intuition me guide, mais elle est toujours au service de la justesse — jamais de l'esbroufe. Chaque personne que j'accueille reçoit un espace où elle peut se montrer telle qu'elle est.",
+      "Mon accompagnement se distingue par la qualité de présence que j'offre. Je crée un espace où l'on peut déposer ce qui est lourd, être entendu sans jugement et regarder une problématique sous un angle nouveau. J'allie intuition, somatique et vision systémique pour éclairer ce qui se joue en profondeur, apaiser le corps et clarifier les ressentis. Avec moi, on se sent vraiment vu, compris et soutenu dans toute sa complexité, ce qui ouvre la voie à des transformations douces, profondes et durables.",
       "Aujourd'hui, je reçois dans mon cabinet à Jonzac, en Charente-Maritime. Un lieu chaleureux et enveloppant, à l'image de ma pratique. Un espace sacré où la douceur et la profondeur cohabitent naturellement. C'est ici que je t'invite à venir déposer ce qui pèse et retrouver la clarté qui t'habite déjà.",
+      "Ma mission est d'offrir des espaces où l'on peut se déposer, se comprendre et se réorganiser en profondeur. J'accompagne les personnes à retrouver de la clarté, de la sécurité intérieure et une direction plus juste, en éclairant ce qui se joue derrière leurs blocages, leurs réactions ou leurs répétitions.",
+      "Je mets au service de chacun ma présence, mon intuition, ma lecture des dynamiques invisibles et ma compréhension somatique pour transformer l'angle de vue d'une problématique et ouvrir de nouvelles possibilités.",
+      "Ma mission est de permettre à l'être de se retrouver, de se rassembler et de se redéployer, avec douceur, précision et intégrité.",
     ],
     image: {
       src: "/images/team/DSC02967.jpg",
@@ -36,49 +39,49 @@ export const aboutPage: AboutPageContent = {
         icon: "eye",
         title: "Présence",
         description:
-          "Être là, pleinement, à chaque instant de la séance. Cette qualité d'attention est le fondement de tout ce que je propose.",
+          "J'offre une présence fine, stable et profondément engagée. Je suis là, vraiment, avec écoute et justesse, pour accueillir ce qui se présente sans masque ni détour.",
       },
       {
         icon: "heart",
         title: "Humanité",
         description:
-          "Avant les techniques, il y a la rencontre. Je t'accueille dans ta totalité, avec ce qui va et ce qui va moins bien.",
+          "J'accompagne sans surplomb, sans dogme, sans posture de \"sachante\". Je rencontre l'autre dans toute sa complexité, avec douceur, respect et humilité.",
       },
       {
         icon: "sun",
         title: "Clarté",
         description:
-          "Mon rôle est de t'aider à y voir plus clair. Pas de te donner des réponses, mais d'éclairer le chemin pour que tu trouves les tiennes.",
+          "J'aide à éclairer ce qui était flou, à comprendre ce qui se joue en profondeur, à changer d'angle. La clarté est un fil essentiel dans tout ce que je transmets.",
       },
       {
         icon: "shield",
         title: "Sécurité intérieure",
         description:
-          "Avant de pouvoir changer, il faut se sentir en sécurité. Je crée un cadre contenant où ton système peut se relâcher.",
+          "Je soutiens la régulation, l'apaisement, l'ancrage. Je crée des espaces où le corps peut se relâcher et où les émotions peuvent circuler sans débordement.",
       },
       {
         icon: "feather",
         title: "Transformation douce",
         description:
-          "Les changements les plus profonds arrivent sans forcer. Je respecte le rythme de ton corps et de ton âme.",
+          "Je crois aux transformations profondes mais non violentes. J'accompagne des réorganisations intérieures qui respectent le rythme de chacun.",
       },
       {
         icon: "sparkles",
         title: "Intuition éclairée",
         description:
-          "Mon intuition est un outil précieux, mais elle est toujours mise au service de la justesse et de l'éthique.",
+          "Mon intuition s'appuie sur mon expérience, ma sensibilité, ma lecture des dynamiques invisibles et ma compréhension du vivant. Elle est ancrée, précise et au service de l'autre.",
       },
       {
         icon: "network",
         title: "Vision systémique",
         description:
-          "Tu n'existes pas en isolation. Je prends en compte les dynamiques familiales et relationnelles qui te traversent.",
+          "Je ne regarde jamais un symptôme isolé. J'observe les liens, les héritages, les mouvements, les interactions. Cette vision large permet une compréhension plus juste et plus profonde.",
       },
       {
         icon: "scale",
         title: "Éthique",
         description:
-          "Transparence, respect des limites, honnêteté intellectuelle. Pas de promesses impossibles, pas de dépendance.",
+          "Je tiens une ligne claire : pas de promesses, pas de projections, pas de manipulation. J'accompagne avec intégrité, responsabilité et discernement.",
       },
       {
         icon: "bird",
@@ -92,55 +95,55 @@ export const aboutPage: AboutPageContent = {
     title: "Formations et certifications",
     items: [
       {
-        name: "Massage Shambala",
-        description: "Formation certifiante en massage holistique Shambala",
+        name: "Massage des 5 Continents",
+        description: "Formation certifiante en massage holistique des 5 Continents",
       },
       {
-        name: "Massage Solar",
-        description: "Formation certifiante en massage bien-être Solar",
-      },
-      {
-        name: "Aromatouch doTERRA",
+        name: "Massage AromaTouch",
         description:
-          "Certification au protocole Aromatouch aux huiles essentielles doTERRA",
+          "Certification au protocole AromaTouch aux huiles essentielles doTERRA",
       },
       {
-        name: "LaHoChi Multidimensionnel",
+        name: "Massage Symphonie des Cellules",
+        description: "Formation certifiante en massage Symphonie des Cellules",
+      },
+      {
+        name: "Formation Lise Bourbeau – Les 5 blessures de l'âme",
         description:
-          "Formation certifiante en soin énergétique LaHoChi Multidimensionnel",
+          "Formation approfondie sur les 5 blessures de l'âme selon Lise Bourbeau",
       },
       {
-        name: "Coaching émotionnel",
-        description: "Formation en coaching émotionnel et accompagnement",
-      },
-      {
-        name: "Régulation émotionnelle et somatique",
+        name: "Formation LaHoChi",
         description:
-          "Certification en régulation émotionnelle par le corps et le système nerveux",
+          "Formation certifiante en soin énergétique LaHoChi",
       },
       {
-        name: "Aromathérapie doTERRA",
+        name: "Formation en magnétisme",
+        description:
+          "Formation en magnétisme et soins énergétiques",
+      },
+      {
+        name: "Formation en développement spirituel avec Havona",
+        description: "Formation en développement spirituel et éveil de conscience avec Havona",
+      },
+      {
+        name: "Formation TFT",
+        description:
+          "Formation en Thought Field Therapy (TFT), technique de libération émotionnelle",
+      },
+      {
+        name: "Formation en décodage quantique",
+        description: "Formation en décodage et lecture quantique",
+      },
+      {
+        name: "Formation en aromathérapie doTERRA",
         description:
           "Formation en aromathérapie et utilisation des huiles essentielles doTERRA",
       },
       {
-        name: "Constellations familiales et systémiques",
+        name: "Formation praticienne en constellations familiales",
         description:
           "Formation approfondie en constellations familiales et travail systémique",
-      },
-      {
-        name: "Médiumnité",
-        description:
-          "Formation et développement des capacités intuitives et médiumniques",
-      },
-      {
-        name: "Décodage quantique",
-        description: "Certification en décodage et lecture quantique",
-      },
-      {
-        name: "Accompagnement somatique",
-        description:
-          "Formation en approches somatiques et travail avec le système nerveux",
       },
     ],
   },

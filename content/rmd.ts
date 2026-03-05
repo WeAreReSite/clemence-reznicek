@@ -15,6 +15,7 @@ export const rmdPage: RMDPageContent = {
     height: 1080,
   },
   introduction: [
+    "C'est ma signature parce qu'il rassemble tout ce qui fait la singularité de ma présence et de mon regard. J'y unis l'intuition, la lecture fine des dynamiques invisibles, la compréhension somatique et une approche profondément humaine. C'est l'espace où toutes mes compétences se rencontrent pour offrir un éclairage juste, transformer l'angle de vue d'une problématique et accompagner une réorganisation intérieure durable. C'est là que mon travail prend toute sa cohérence, sa profondeur et sa force.",
     "Le RMD est né de 10 ans de pratique, de recherche et d'accompagnement. C'est la synthèse de tout ce que j'ai appris, expérimenté et affiné au fil des années. Ce programme est le chemin le plus complet que je propose pour aller au cœur de ce qui se joue en toi.",
     "En 9 séances, on traverse ensemble les différentes couches de ton être : le corps, les émotions, les schémas de pensée, les mémoires familiales, le champ énergétique. L'objectif n'est pas de tout résoudre, mais de créer les conditions pour qu'une réorganisation profonde puisse se faire, à ton rythme, dans la sécurité.",
     "Ce programme s'adresse à celles et ceux qui sentent qu'il est temps d'aller plus loin. Pas pour se réparer — tu n'es pas cassé. Mais pour te connaître dans toutes tes dimensions et trouver une nouvelle façon d'habiter ta vie.",
@@ -66,14 +67,14 @@ export const rmdPage: RMDPageContent = {
   },
   price: "1 333 euros",
   priceDetail:
-    "Paiement échelonné possible. On en discute ensemble lors de la première rencontre.",
+    "Règlement en plusieurs fois. On en discute ensemble lors de la première rencontre.",
   testimonial: {
-    id: "rmd-testimonial",
-    name: "Nathalie P.",
-    text: "Le programme RMD a transformé ma façon de me relier à moi-même. Séance après séance, j'ai appris à écouter mon corps, à accueillir mes émotions au lieu de les fuir. Clémence accompagne avec une profondeur et une sécurité qui permettent d'aller vraiment au cœur des choses.",
+    id: "testimonial-1",
+    name: "Salomon D.",
+    text: "Clémence est d'une douceur infini et d'une incroyable justesse, elle est très professionnelle et m'a mis très facilement à l'aise. Le travail que nous avons fait ensemble ces six derniers mois est allé chercher en profondeur, des peurs et des blocages qui m'empêchaient d'avancer. Je me sens aujourd'hui libérée d'un poid, plus alignée et optimiste. Je ne peux que la recommander les yeux fermer.",
     rating: 5,
-    date: "2025-12",
-    service: "RMD Signature",
+    date: "2026-01",
+    service: "Accompagnement holistique",
   },
   cta: {
     label: "Prendre rendez-vous pour en discuter",

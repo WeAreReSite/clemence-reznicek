@@ -57,7 +57,7 @@ export function ServiceMenuItem({
       >
         {/* Name + dotted leader + price/duration */}
         <span className="flex flex-1 items-center gap-2 md:gap-3 min-w-0 flex-wrap md:flex-nowrap">
-          <span className="font-heading text-base md:text-lg font-semibold text-indigo-500 shrink-0">
+          <span className="font-heading text-base md:text-lg font-semibold text-indigo-500">
             {name}
           </span>
 
@@ -68,7 +68,7 @@ export function ServiceMenuItem({
           />
 
           {/* Price + duration row */}
-          <span className="flex items-center gap-2 md:gap-3 shrink-0">
+          <span className="flex items-center gap-2 md:gap-3 flex-wrap">
             <span className="font-body text-sm md:text-base font-semibold text-neutral-800">
               {price}
             </span>

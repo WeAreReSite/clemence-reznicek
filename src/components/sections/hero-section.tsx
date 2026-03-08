@@ -34,7 +34,7 @@ export function HeroSection() {
           descriptionRef.current,
           ctaRef.current,
           auraRef.current,
-        ],
+        ].filter(Boolean),
         { opacity: 1, y: 0 }
       );
       gsap.set(imageRef.current, { scale: 1 });
@@ -48,7 +48,7 @@ export function HeroSection() {
 
       // Set initial states
       gsap.set(
-        [subtitleRef.current, descriptionRef.current, ctaRef.current],
+        [subtitleRef.current, descriptionRef.current, ctaRef.current].filter(Boolean),
         { opacity: 0, y: 30 }
       );
       gsap.set(overlayRef.current, { opacity: 0 });
@@ -81,11 +81,13 @@ export function HeroSection() {
       );
 
       // Subtitle slides up
-      tl.to(
-        subtitleRef.current,
-        { opacity: 1, y: 0, duration: 0.8 },
-        0.4
-      );
+      if (subtitleRef.current) {
+        tl.to(
+          subtitleRef.current,
+          { opacity: 1, y: 0, duration: 0.8 },
+          0.4
+        );
+      }
 
       // Headline: word-by-word reveal (the signature animation)
       if (wordEls) {
@@ -212,13 +214,15 @@ export function HeroSection() {
       <div className="relative z-[2] w-full px-[clamp(1.25rem,4vw,3rem)] py-[clamp(2rem,4vw,3rem)]">
         <div className="mx-auto max-w-[720px] text-center">
           {/* Subtitle */}
-          <p
-            ref={subtitleRef}
-            className="font-body text-sm uppercase tracking-[0.08em] text-neutral-200 mb-4"
-            style={{ textShadow: '0 1px 3px oklch(0 0 0 / 0.3)' }}
-          >
-            {hero.subtitle}
-          </p>
+          {hero.subtitle && (
+            <p
+              ref={subtitleRef}
+              className="font-body text-sm uppercase tracking-[0.08em] text-neutral-200 mb-4"
+              style={{ textShadow: '0 1px 3px oklch(0 0 0 / 0.3)' }}
+            >
+              {hero.subtitle}
+            </p>
+          )}
 
           {/* Headline — word-by-word split for staggered reveal */}
           <h1

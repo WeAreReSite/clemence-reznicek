@@ -17,10 +17,10 @@ import type {
 // =============================================================================
 
 export const hero: HeroContent = {
-  headline: "Se connaître et s'aimer dans toutes nos dimensions",
-  subtitle: "Espace sacré",
+  headline: "Vous méritez d'aller mieux. Vraiment.",
+  subtitle: "",
   description:
-    "Un lieu de douceur et de présence à Jonzac, où tu peux déposer ce qui pèse et retrouver ta clarté intérieure. Massages, soins énergétiques, coaching émotionnel.",
+    "Je suis Clémence, thérapeute holistique et praticienne en massage à Jonzac. Je vous accompagne vers un mieux-être concret et durable, à travers le corps, les émotions et les dynamiques familiales. Téléconsultation possible en France et en Europe.",
   primaryCTA: {
     label: "Prendre rendez-vous",
     href: "/contact",

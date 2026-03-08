@@ -23,9 +23,9 @@ export const siteConfig: SiteConfig = {
     street: "5 avenue Chanzy",
     postalCode: "17500",
     city: "Jonzac",
-    region: "Charente-Maritime",
+    region: "",
     country: "France",
-    full: "5 avenue Chanzy, 17500 Jonzac, Charente-Maritime",
+    full: "5 avenue Chanzy, 17500 Jonzac",
   },
   openingHours: [
     { days: "Lundi - Vendredi", hours: "9h - 18h15" },

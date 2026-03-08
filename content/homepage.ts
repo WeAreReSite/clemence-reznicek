@@ -20,14 +20,14 @@ export const hero: HeroContent = {
   headline: "Vous méritez d'aller mieux. Vraiment.",
   subtitle: "",
   description:
-    "Je suis Clémence, thérapeute holistique et praticienne en massage à Jonzac. Je vous accompagne vers un mieux-être concret et durable, à travers le corps, les émotions et les dynamiques familiales. Téléconsultation possible en France et en Europe.",
+    "Je suis Clémence, thérapeute holistique et praticienne en massage à Jonzac. Je vous accompagne vers un mieux-être concret et durable, à travers le corps, les émotions et les dynamiques familiales. Visioconsultation possible en France et en Europe.",
   primaryCTA: {
     label: "Prendre rendez-vous",
     href: "/contact",
     variant: "primary",
   },
   secondaryCTA: {
-    label: "Découvrir les soins",
+    label: "Découvrir mes pratiques",
     href: "/soins",
     variant: "secondary",
   },
@@ -47,7 +47,7 @@ export const trustBar: TrustBarContent = {
   badges: [
     {
       icon: "star",
-      value: "58 avis",
+      value: "59 avis",
       label: "5/5 sur Google",
     },
     {
@@ -63,7 +63,7 @@ export const trustBar: TrustBarContent = {
     {
       icon: "mapPin",
       value: "Jonzac",
-      label: "Charente-Maritime",
+      label: "& visioconsultation partout en France",
     },
   ],
 };
@@ -73,57 +73,18 @@ export const trustBar: TrustBarContent = {
 // =============================================================================
 
 export const entryPoints: EntryPointContent = {
-  sectionTitle: "Trois portes pour commencer",
-  sectionSubtitle:
-    "Choisis le chemin qui te parle. Chaque soin est une invitation à te retrouver.",
+  sectionTitle: "Trois approches, un seul but : votre mieux-être",
+  sectionSubtitle: "",
   cards: [
     {
-      title: "Massage",
+      title: "Séance découverte",
       description:
-        "Un moment pour déposer les tensions, lâcher le mental et laisser le corps se réorganiser en douceur. Shambala, Solar ou Aromatouch : chaque massage est un voyage.",
-      price: "À partir de 75 euros",
-      duration: "1h à 2h",
-      image: {
-        src: "/images/work/DSC02663.jpg",
-        alt: "Massage bien-être au cabinet de Clémence à Jonzac",
-        width: 640,
-        height: 427,
-      },
-      cta: {
-        label: "Découvrir les massages",
-        href: "/massages",
-        variant: "outline",
-      },
-      slug: "massages",
-    },
-    {
-      title: "Soin énergétique",
-      description:
-        "Le LaHoChi Multidimensionnel est un soin d'une grande douceur qui agit en profondeur. Il aide à libérer les tensions inscrites dans le corps et à retrouver un ancrage intérieur.",
-      price: "60 euros",
-      duration: "45 min",
-      image: {
-        src: "/images/work/DSC02550.jpg",
-        alt: "Soin énergétique LaHoChi dans un cadre apaisant",
-        width: 640,
-        height: 427,
-      },
-      cta: {
-        label: "En savoir plus",
-        href: "/soins",
-        variant: "outline",
-      },
-      slug: "soins-energetiques",
-    },
-    {
-      title: "Première séance",
-      description:
-        "Un espace de parole et d'écoute pour explorer ce qui se vit en toi. Ensemble, on éclaire ce qui demande de l'attention et on pose les premières bases de ton accompagnement.",
+        "Un temps d'écoute et d'échange pour comprendre ce que vous traversez et identifier votre problématique de fond. À partir de là, nous construisons ensemble un accompagnement sur mesure, à votre rythme. En cabinet à Jonzac ou à distance.",
       price: "60 euros",
       duration: "1h",
       image: {
-        src: "/images/work/DSC02979.jpg",
-        alt: "Première rencontre et exploration dans le cabinet",
+        src: "/images/work/seance-decouverte.jpg",
+        alt: "Séance découverte au cabinet de Clémence à Jonzac",
         width: 640,
         height: 427,
       },
@@ -132,7 +93,45 @@ export const entryPoints: EntryPointContent = {
         href: "/contact",
         variant: "outline",
       },
-      slug: "premiere-seance",
+      slug: "seance-decouverte",
+    },
+    {
+      title: "Massages énergétiques",
+      description:
+        "Quatre approches complémentaires pour libérer les tensions physiques et émotionnelles, rééquilibrer l'énergie et retrouver un ancrage profond. L'Aromatouch applique huit huiles essentielles en séquence le long de la colonne vertébrale, idéal en première approche. Le Shambala agit sur une problématique ciblée avec mantras et son. Le Solar associe massage et soin énergétique LaHoChi pour une régénération globale. Le Massage des 5 Continents traverse corps et mémoires en trois phases pour une transformation en profondeur.",
+      price: "À partir de 75 euros",
+      duration: "1h à 2h",
+      image: {
+        src: "/images/work/DSC02663.jpg",
+        alt: "Massage énergétique au cabinet de Clémence à Jonzac",
+        width: 640,
+        height: 427,
+      },
+      cta: {
+        label: "Découvrir les massages",
+        href: "/massages",
+        variant: "outline",
+      },
+      slug: "massages-energetiques",
+    },
+    {
+      title: "Formations holistiques",
+      description:
+        "Des formations en présentiel à Jonzac ou à distance pour développer votre autonomie énergétique et spirituelle. Trois niveaux d'engagement : les stages thématiques pour acquérir des outils concrets, Cosmo pour un décodage quantique intensif, et Quantique 111, un parcours complet en 6 modules pour maîtriser l'énergétique en profondeur.",
+      price: "À partir de 100 euros",
+      duration: "",
+      image: {
+        src: "/images/work/formations-holistiques.jpg",
+        alt: "Formation holistique avec Clémence Reznicek",
+        width: 640,
+        height: 427,
+      },
+      cta: {
+        label: "En savoir plus",
+        href: "/soins",
+        variant: "outline",
+      },
+      slug: "formations-holistiques",
     },
   ],
 };
@@ -143,11 +142,11 @@ export const entryPoints: EntryPointContent = {
 
 export const introduction: IntroductionContent = {
   sectionTitle: "Qui suis-je",
-  headline: "Clémence, praticienne en bien-être holistique",
+  headline: "Clémence, thérapeute holistique et praticienne en massage",
   paragraphs: [
-    "Je guide celles et ceux qui ont perdu leur élan à retrouver l'envie de vivre pleinement. Ma présence ouvre un espace où la joie revient, où la lumière se rallume, où la respiration se fait plus large. J'accompagne chacun à reprendre sa place dans sa propre vie, à accueillir ses émotions, à lâcher le contrôle et à retrouver confiance dans le mouvement naturel de l'existence.",
-    "Mon rôle est de réactiver la vie là où elle s'était figée. J'aide à transformer la peur en ouverture, la confusion en clarté, la lourdeur en légèreté. Je rappelle que la joie n'est pas un luxe : c'est une force de transformation profonde.",
-    "Je ne pousse pas : j'illumine. Je ne force pas : j'ouvre. Je ne transforme pas : je réveille. Je suis celle qui rallume l'envie de vivre.",
+    "Je reçois des personnes qui se sentent bloquées, épuisées ou déconnectées d'elles-mêmes, celles qui savent qu'il est temps de changer quelque chose mais ne savent pas par où commencer.",
+    "Mon approche est à la fois concrète et profonde. Je travaille avec le corps, les émotions et les dynamiques familiales pour identifier ce qui freine, libérer ce qui pèse et retrouver un rapport à soi plus juste et plus libre.",
+    "En cabinet à Jonzac ou à distance, j'accompagne chaque personne à son rythme, avec rigueur et bienveillance.",
   ],
   image: {
     src: "/images/team/DSC02967.jpg",
@@ -502,7 +501,7 @@ export const practicalInfo: PracticalInfoContent = {
     street: "5 avenue Chanzy",
     postalCode: "17500",
     city: "Jonzac",
-    region: "Charente-Maritime",
+    region: "",
     full: "5 avenue Chanzy, 17500 Jonzac",
   },
   phone: {
@@ -519,6 +518,7 @@ export const practicalInfo: PracticalInfoContent = {
     "Cabinet situé au 1er étage, sans accès PMR",
     "Merci de venir seul(e), sauf pour les mineurs qui doivent être accompagnés",
     "Pas d'animaux dans le cabinet",
+    "Les rendez-vous se prennent facilement : par SMS, via WhatsApp, par appel téléphonique, via l'onglet contact du site ou via Messenger",
   ],
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2808.1!2d-0.4367!3d45.4464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5+avenue+Chanzy+17500+Jonzac!5e0!3m2!1sfr!2sfr",

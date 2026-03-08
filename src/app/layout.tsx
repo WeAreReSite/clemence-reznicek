@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   keywords: [
     'bien-être Jonzac',
     'massage Jonzac',
-    'soin énergétique Charente-Maritime',
+    'soin énergétique Jonzac',
     'coaching émotionnel',
     'LaHoChi',
     'Clémence Reznicek',

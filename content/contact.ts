@@ -39,7 +39,7 @@ export const contactPage: ContactPageContent = {
     link: "tel:+33632185259",
   },
   email: "clemence.reznicek@gmail.com",
-  address: "5 avenue Chanzy, 17500 Jonzac, Charente-Maritime",
+  address: "5 avenue Chanzy, 17500 Jonzac",
   openingHours: [
     { days: "Lundi - Vendredi", hours: "9h - 18h15" },
     { days: "Samedi", hours: "10h - 12h30" },

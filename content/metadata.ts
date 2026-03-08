@@ -8,11 +8,11 @@ export const metadata: MetadataContent = {
   home: {
     title: "Bien-être holistique à Jonzac",
     description:
-      "Massages Shambala et Solar, soins énergétiques LaHoChi, coaching émotionnel et régulation somatique à Jonzac. 58 avis 5/5 sur Google.",
+      "Massages Shambala et Solar, soins énergétiques LaHoChi, coaching émotionnel et régulation somatique à Jonzac. 59 avis 5/5 sur Google.",
     keywords: [
       "bien-être Jonzac",
       "massage Jonzac",
-      "soin énergétique Charente-Maritime",
+      "soin énergétique Jonzac",
       "coaching émotionnel",
       "LaHoChi",
       "massage Shambala",
@@ -38,7 +38,7 @@ export const metadata: MetadataContent = {
       "massage Shambala",
       "massage Solar",
       "Aromatouch doTERRA",
-      "massage bien-être Charente-Maritime",
+      "massage bien-être Jonzac",
       "massage relaxant",
     ],
     ogImage: "/images/work/DSC02663.jpg",
@@ -91,7 +91,7 @@ export const metadata: MetadataContent = {
   testimonials: {
     title: "Témoignages et avis clients",
     description:
-      "Témoignages des personnes accompagnées par Clémence Reznicek. 58 avis Google, note de 5/5. Des transformations profondes et durables.",
+      "Témoignages des personnes accompagnées par Clémence Reznicek. 59 avis Google, note de 5/5. Des transformations profondes et durables.",
     keywords: [
       "témoignages Clémence Reznicek",
       "avis bien-être Jonzac",

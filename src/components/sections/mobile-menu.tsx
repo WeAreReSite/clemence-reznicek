@@ -247,7 +247,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           )}
         >
           <p className="font-body text-[0.65rem] uppercase tracking-[0.16em] text-neutral-400">
-            Espace sacr&eacute;
+            Bien-&ecirc;tre holistique
           </p>
         </div>
 

@@ -132,12 +132,23 @@ export function EntryPointsSection() {
             >
               {/* Card image with clip-path reveal */}
               <div className="relative aspect-[4/3] w-full overflow-hidden" data-clip-reveal>
+                {card.slug === 'formations-holistiques' && (
+                  <Image
+                    src={card.image.src}
+                    alt=""
+                    width={card.image.width}
+                    height={card.image.height}
+                    className="absolute inset-0 w-full h-full object-cover scale-[1.2] blur-[24px] saturate-[1.2] brightness-[1.05]"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    aria-hidden="true"
+                  />
+                )}
                 <Image
                   src={card.image.src}
                   alt={card.image.alt}
                   width={card.image.width}
                   height={card.image.height}
-                  className="object-cover object-top w-full h-full transition-transform duration-700 ease-[var(--ease-default)] group-hover:scale-[1.04]"
+                  className={`relative w-full h-full transition-transform duration-700 ease-[var(--ease-default)] group-hover:scale-[1.04] ${card.slug === 'formations-holistiques' ? 'object-contain' : 'object-cover object-top'}`}
                   sizes="(max-width: 1024px) 100vw, 33vw"
                 />
               </div>

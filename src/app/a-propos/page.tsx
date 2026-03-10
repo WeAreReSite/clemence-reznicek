@@ -79,21 +79,43 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            {aboutPage.affiliations.items.map((item) => (
-              <div
-                key={item.name}
-                className="text-center p-6 rounded-2xl bg-bg-cream border border-neutral-200"
-              >
-                <p className="font-heading text-base font-semibold text-neutral-800 mb-1">
-                  {item.name}
-                </p>
-                {item.description && (
-                  <p className="font-body text-sm text-neutral-600">
-                    {item.description}
+            {aboutPage.affiliations.items.map((item) => {
+              const inner = (
+                <>
+                  <p className="font-heading text-base font-semibold text-neutral-800 mb-1">
+                    {item.name}
                   </p>
-                )}
-              </div>
-            ))}
+                  {item.description && (
+                    <p className="font-body text-sm text-neutral-600">
+                      {item.description}
+                    </p>
+                  )}
+                  {item.url && (
+                    <p className="font-body text-xs text-indigo-500 mt-2 underline underline-offset-2">
+                      Voir le site →
+                    </p>
+                  )}
+                </>
+              );
+              return item.url ? (
+                <a
+                  key={item.name}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center p-6 rounded-2xl bg-bg-cream border border-neutral-200 hover:border-indigo-300 hover:shadow-[var(--shadow-2)] transition-[border-color,box-shadow] duration-200 block"
+                >
+                  {inner}
+                </a>
+              ) : (
+                <div
+                  key={item.name}
+                  className="text-center p-6 rounded-2xl bg-bg-cream border border-neutral-200"
+                >
+                  {inner}
+                </div>
+              );
+            })}
           </div>
         </Section>
       )}

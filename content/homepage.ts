@@ -57,8 +57,8 @@ export const trustBar: TrustBarContent = {
     },
     {
       icon: "award",
-      value: "11",
-      label: "certifications",
+      value: "18",
+      label: "formations certifiantes",
     },
     {
       icon: "mapPin",
@@ -73,28 +73,9 @@ export const trustBar: TrustBarContent = {
 // =============================================================================
 
 export const entryPoints: EntryPointContent = {
-  sectionTitle: "Trois approches, un seul but : votre mieux-être",
+  sectionTitle: "Quatre pratiques, un seul but : votre mieux-être",
   sectionSubtitle: "",
   cards: [
-    {
-      title: "Séance découverte",
-      description:
-        "Un temps d'écoute et d'échange pour comprendre ce que vous traversez et identifier votre problématique de fond. À partir de là, nous construisons ensemble un accompagnement sur mesure, à votre rythme. En cabinet à Jonzac ou à distance.",
-      price: "60 euros",
-      duration: "1h",
-      image: {
-        src: "/images/work/seance-decouverte.jpg",
-        alt: "Séance découverte au cabinet de Clémence à Jonzac",
-        width: 640,
-        height: 427,
-      },
-      cta: {
-        label: "Prendre rendez-vous",
-        href: "tel:+33632185259",
-        variant: "outline",
-      },
-      slug: "seance-decouverte",
-    },
     {
       title: "Massages énergétiques",
       description:
@@ -113,6 +94,44 @@ export const entryPoints: EntryPointContent = {
         variant: "outline",
       },
       slug: "massages-energetiques",
+    },
+    {
+      title: "Accompagnements émotionnels",
+      description:
+        "Un travail en profondeur pour comprendre, accueillir et transformer ce qui se vit à l'intérieur. Régulation du système nerveux, constellations familiales, décodage quantique, médiumnité : chaque séance mobilise les outils les plus justes pour vous. En cabinet à Jonzac ou à distance.",
+      price: "À partir de 60 euros",
+      duration: "1h à 1h30",
+      image: {
+        src: "/images/work/DSC02384.jpg",
+        alt: "Accompagnement émotionnel au cabinet de Clémence à Jonzac",
+        width: 640,
+        height: 427,
+      },
+      cta: {
+        label: "Découvrir les accompagnements",
+        href: "/accompagnements",
+        variant: "outline",
+      },
+      slug: "accompagnements-emotionnels",
+    },
+    {
+      title: "SE CHOISIR — Parcours RMD",
+      description:
+        "Un parcours de 9 séances pour aller au cœur de vos mécanismes, libérer ce qui ne vous sert plus et poser de nouvelles fondations. Né de 10 ans de pratique, le RMD est le chemin le plus complet que je propose pour une transformation profonde et durable.",
+      price: "1 333 euros",
+      duration: "9 séances",
+      image: {
+        src: "/images/team/DSC02996.jpg",
+        alt: "Programme SE CHOISIR — Parcours RMD Signature de Clémence Reznicek",
+        width: 640,
+        height: 427,
+      },
+      cta: {
+        label: "Découvrir le parcours",
+        href: "/rmd",
+        variant: "outline",
+      },
+      slug: "se-choisir-rmd",
     },
     {
       title: "Formations holistiques",

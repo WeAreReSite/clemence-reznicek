@@ -71,7 +71,7 @@ export const navigation: NavigationContent = {
   items: [
     { label: "Accueil", href: "/" },
     {
-      label: "Soins",
+      label: "Accompagnements",
       href: "/accompagnements",
       children: [
         { label: "Massages énergétiques", href: "/massages" },
@@ -99,7 +99,7 @@ export const navigation: NavigationContent = {
 export const footer: FooterContent = {
   columns: [
     {
-      title: "Soins",
+      title: "Accompagnements",
       links: [
         { label: "Massages énergétiques", href: "/massages" },
         { label: "Accompagnements émotionnels", href: "/accompagnements" },

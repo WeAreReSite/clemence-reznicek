@@ -114,9 +114,9 @@ export const aboutPage: AboutPageContent = {
   affiliations: {
     title: "Affiliations & Certifications",
     items: [
-      { name: "Membre FFPCS", description: "Fédération Française des Praticiens en Constellations Systémiques" },
+      { name: "Membre FFPCS", description: "Fédération Française des Praticiens en Constellations Systémiques", url: "https://ffpcs.fr/" },
       { name: "Conseillère doTERRA", description: "Aromathérapie émotionnelle et énergétique" },
-      { name: "Praticienne certifiée Massage des 5 Continents" },
+      { name: "Praticienne certifiée Massage des 5 Continents", url: "https://massagedes5continents.com/membres/8906/prev/" },
     ],
   },
   blog: {

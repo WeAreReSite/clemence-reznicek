@@ -136,7 +136,7 @@ export function ServiceMenuItem({
                     size="sm"
                     iconTrailing={<ArrowRightIcon size={16} />}
                   >
-                    Réserver ce soin
+                    Prendre rendez-vous
                   </Button>
                 </a>
               </div>

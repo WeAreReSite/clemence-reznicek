@@ -17,6 +17,10 @@ import {
 } from '@/components/ui';
 
 const borderColors: Record<string, string> = {
+  'massages-energetiques': 'border-t-primary-400',
+  'accompagnements-emotionnels': 'border-t-plum-400',
+  'se-choisir-rmd': 'border-t-indigo-400',
+  'formations-holistiques': 'border-t-secondary-400',
   massages: 'border-t-primary-400',
   'soins-energetiques': 'border-t-plum-400',
   'premiere-seance': 'border-t-indigo-400',
@@ -124,7 +128,7 @@ export function EntryPointsSection() {
         animated
       />
 
-      <div ref={sectionRef} className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div ref={sectionRef} className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
         {entryPoints.cards.map((card) => (
           <div key={card.slug} data-card className="h-full group">
             <Card

@@ -372,6 +372,7 @@ export interface AboutPageContent {
     items: Array<{
       name: string;
       description?: string;
+      url?: string;
     }>;
   };
   photographerCredit?: string;

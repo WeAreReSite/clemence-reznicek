@@ -55,7 +55,7 @@ export const legalPage: LegalPageContent = {
     {
       title: "Crédits",
       content:
-        "Conception et développement : ReSite\nDesign et intégration : ReSite",
+        "Conception et développement : ReSite\nDesign et intégration : ReSite\nPhotographies : Lucas Poisson",
     },
   ],
 };

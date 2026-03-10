@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteMetadata.home.title,
     description: siteMetadata.home.description,
-    images: [{ url: siteMetadata.home.ogImage ?? '/images/work/DSC02941.jpg' }],
+    images: [{ url: siteMetadata.home.ogImage ?? '/images/team/DSC02909.jpg' }],
   },
 };
 

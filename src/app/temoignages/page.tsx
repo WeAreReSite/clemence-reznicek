@@ -156,6 +156,27 @@ export default function TemoignagesPage() {
         </Section>
       )}
 
+      {/* Laisser un témoignage */}
+      <Section background="warmWhite">
+        <div className="text-center max-w-lg mx-auto">
+          <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-800 mb-4">
+            Vous avez vécu une séance avec moi ?
+          </h2>
+          <p className="font-body text-base text-neutral-600 mb-8">
+            Votre témoignage peut aider d&apos;autres personnes à franchir le pas. Partagez votre expérience en quelques mots sur Google.
+          </p>
+          <a
+            href={testimonialsPage.googleReviewsCTA.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="secondary" size="lg">
+              Laisser un avis sur Google
+            </Button>
+          </a>
+        </div>
+      </Section>
+
       {/* CTA */}
       <Section background="indigoDeep">
         <div className="text-center">

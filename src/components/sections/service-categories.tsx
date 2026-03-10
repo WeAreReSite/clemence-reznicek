@@ -30,6 +30,13 @@ const iconMap = {
   users: UsersIcon,
 } as const;
 
+const borderColors: Record<string, string> = {
+  hand: 'border-t-primary-400',
+  heart: 'border-t-plum-400',
+  users: 'border-t-indigo-400',
+  sparkles: 'border-t-secondary-400',
+};
+
 export function ServiceCategoriesSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -113,16 +120,27 @@ export function ServiceCategoriesSection() {
             <div key={category.title} data-card className="h-full group">
               <Card
                 interactive
-                className="overflow-hidden !p-0 flex flex-col h-full transition-[transform,box-shadow] duration-[400ms] ease-[var(--ease-default)] hover:-translate-y-1 hover:shadow-[var(--shadow-3)]"
+                className={`border-t-4 ${borderColors[category.icon] ?? 'border-t-primary-400'} overflow-hidden !p-0 flex flex-col h-full transition-[transform,box-shadow] duration-[400ms] ease-[var(--ease-default)] hover:-translate-y-1 hover:shadow-[var(--shadow-3)]`}
               >
                 {/* Category image */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden" data-clip-reveal>
+                  {/* Blurred background layer — matches image edges */}
+                  <Image
+                    src={category.image.src}
+                    alt=""
+                    width={category.image.width}
+                    height={category.image.height}
+                    className="absolute inset-0 w-full h-full object-cover scale-[1.2] blur-[24px] saturate-[1.2] brightness-[1.05]"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    aria-hidden="true"
+                  />
+                  {/* Actual image — fully visible */}
                   <Image
                     src={category.image.src}
                     alt={category.image.alt}
                     width={category.image.width}
                     height={category.image.height}
-                    className="object-cover object-top w-full h-full transition-transform duration-700 ease-[var(--ease-default)] group-hover:scale-[1.04]"
+                    className="relative w-full h-full object-contain transition-transform duration-700 ease-[var(--ease-default)] group-hover:scale-[1.04]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>

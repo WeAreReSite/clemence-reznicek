@@ -10,7 +10,7 @@ import {
 } from '@phosphor-icons/react/dist/ssr';
 import { rmdSpotlight } from '../../../content/homepage';
 import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW } from '@/lib/gsap-setup';
-import { Section, SectionHeader, Button, Badge } from '@/components/ui';
+import { Section, SectionHeader, Button } from '@/components/ui';
 
 const iconMap = {
   compass: CompassIcon,
@@ -144,20 +144,15 @@ export function RMDSpotlightSection() {
         </div>
       </div>
 
-      {/* Price + CTA — centered below both columns */}
+      {/* CTA — centered below both columns */}
       <div className="mt-10 text-center">
-        <div className="flex items-center justify-center flex-wrap gap-4 mb-6">
-          <Badge variant="accent" className="text-base px-4 py-2">
-            {rmdSpotlight.price}
-          </Badge>
-          <div className="flex flex-col">
-            <span className="font-body text-sm font-medium text-neutral-700">
-              {rmdSpotlight.sessions}
-            </span>
-            <span className="font-body text-xs text-neutral-600">
-              {rmdSpotlight.priceDetail}
-            </span>
-          </div>
+        <div className="mb-6">
+          <span className="font-body text-sm font-medium text-neutral-700 block mb-1">
+            {rmdSpotlight.sessions}
+          </span>
+          <span className="font-body text-sm text-neutral-600 italic">
+            {rmdSpotlight.priceDetail}
+          </span>
         </div>
         <Link href={rmdSpotlight.cta.href}>
           <Button variant="warm" size="lg" data-magnetic>

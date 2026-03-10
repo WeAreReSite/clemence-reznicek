@@ -389,9 +389,9 @@ export const rmdSpotlight: RMDContent = {
         "L'objectif n'est pas un mieux-être passager, mais une réorganisation profonde qui s'inscrit durablement dans votre quotidien.",
     },
   ],
-  price: "1 333 euros",
-  priceDetail: "Règlement en plusieurs fois possible",
-  sessions: "9 séances",
+  price: "Devis personnalisé",
+  priceDetail: "Un premier appel offert — 10 minutes pour faire connaissance, sans engagement.",
+  sessions: "9 séances sur mesure",
   image: {
     src: "/images/team/DSC02996.jpg",
     alt: "Programme RMD Signature de Clémence Reznicek",

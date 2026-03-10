@@ -186,7 +186,7 @@ export function HeroSection() {
         aria-hidden="true"
         style={{
           background:
-            'linear-gradient(to bottom, oklch(0.756 0.0624 9.7 / 0.10) 0%, oklch(0.270 0.0850 278.0 / 0.35) 40%, oklch(0.270 0.0850 278.0 / 0.65) 70%, oklch(0.980 0.0062 75.4 / 0.95) 100%)',
+            'linear-gradient(to bottom, oklch(0.756 0.0624 9.7 / 0.15) 0%, oklch(0.270 0.0850 278.0 / 0.55) 35%, oklch(0.270 0.0850 278.0 / 0.75) 65%, oklch(0.980 0.0062 75.4 / 0.95) 100%)',
         }}
       />
 
@@ -227,8 +227,8 @@ export function HeroSection() {
           {/* Headline — word-by-word split for staggered reveal */}
           <h1
             ref={headlineRef}
-            className="font-heading text-4xl lg:text-5xl font-semibold text-neutral-50 leading-tight mb-6"
-            style={{ textShadow: '0 2px 8px oklch(0 0 0 / 0.25)' }}
+            className="font-heading text-4xl lg:text-5xl font-bold text-neutral-50 leading-tight mb-6"
+            style={{ textShadow: '0 2px 12px oklch(0 0 0 / 0.45)' }}
           >
             {headlineWords.map((word, i) => (
               <Fragment key={i}>
@@ -246,7 +246,7 @@ export function HeroSection() {
             className={cn(
               'font-body text-md text-neutral-200 leading-relaxed mb-8 max-w-[600px] mx-auto'
             )}
-            style={{ textShadow: '0 1px 3px oklch(0 0 0 / 0.25)' }}
+            style={{ textShadow: '0 1px 4px oklch(0 0 0 / 0.4)' }}
           >
             {hero.description}
           </p>

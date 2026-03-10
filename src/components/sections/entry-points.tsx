@@ -128,32 +128,32 @@ export function EntryPointsSection() {
         animated
       />
 
-      <div ref={sectionRef} className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+      <div ref={sectionRef} className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
         {entryPoints.cards.map((card) => (
           <div key={card.slug} data-card className="h-full group">
             <Card
               className={`border-t-4 ${borderColors[card.slug] ?? 'border-t-primary-400'} overflow-hidden !p-0 flex flex-col h-full transition-[transform,box-shadow] duration-[400ms] ease-[var(--ease-default)] hover:-translate-y-1 hover:shadow-[var(--shadow-3)]`}
             >
               {/* Card image with clip-path reveal */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden" data-clip-reveal>
-                {card.slug === 'formations-holistiques' && (
-                  <Image
-                    src={card.image.src}
-                    alt=""
-                    width={card.image.width}
-                    height={card.image.height}
-                    className="absolute inset-0 w-full h-full object-cover scale-[1.2] blur-[24px] saturate-[1.2] brightness-[1.05]"
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    aria-hidden="true"
-                  />
-                )}
+              <div className="relative aspect-[16/9] w-full overflow-hidden" data-clip-reveal>
+                {/* Blurred background layer — matches image edges */}
+                <Image
+                  src={card.image.src}
+                  alt=""
+                  width={card.image.width}
+                  height={card.image.height}
+                  className="absolute inset-0 w-full h-full object-cover scale-[1.2] blur-[24px] saturate-[1.2] brightness-[1.05]"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  aria-hidden="true"
+                />
+                {/* Actual image — fully visible */}
                 <Image
                   src={card.image.src}
                   alt={card.image.alt}
                   width={card.image.width}
                   height={card.image.height}
-                  className={`relative w-full h-full transition-transform duration-700 ease-[var(--ease-default)] group-hover:scale-[1.04] ${card.slug === 'formations-holistiques' ? 'object-contain' : 'object-cover object-top'}`}
-                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="relative w-full h-full object-contain transition-transform duration-700 ease-[var(--ease-default)] group-hover:scale-[1.04]"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
                 />
               </div>
 
@@ -165,15 +165,20 @@ export function EntryPointsSection() {
                 </CardHeader>
 
                 <CardContent className="flex-1">
-                  <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                  <p className="text-sm text-neutral-600 leading-relaxed">
                     {card.description}
                   </p>
-                  <div className="flex items-center flex-wrap gap-3 text-sm text-neutral-600">
-                    <span className="font-medium text-neutral-700">{card.price}</span>
-                    <span aria-hidden="true">&middot;</span>
-                    <span>{card.duration}</span>
-                  </div>
                 </CardContent>
+
+                <div className="px-6 pb-2 flex items-center flex-wrap gap-3 text-sm text-neutral-600">
+                  <span className="font-medium text-neutral-700">{card.price}</span>
+                  {card.duration && (
+                    <>
+                      <span aria-hidden="true">&middot;</span>
+                      <span>{card.duration}</span>
+                    </>
+                  )}
+                </div>
 
                 <CardFooter className="mt-auto">
                   {card.cta.href.startsWith('tel:') ? (

@@ -125,18 +125,18 @@ export function CTAFinalSection() {
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <div data-cta-button>
-            <Link href={ctaFinal.primaryCTA.href}>
+            <a href={ctaFinal.primaryCTA.href}>
               <Button variant="warm" size="lg" data-magnetic>
                 {ctaFinal.primaryCTA.label}
               </Button>
-            </Link>
+            </a>
           </div>
           <div data-cta-button>
-            <a href={ctaFinal.secondaryCTA.href}>
+            <Link href={ctaFinal.secondaryCTA.href}>
               <Button variant="secondary" size="md" data-magnetic>
                 {ctaFinal.secondaryCTA.label}
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
 

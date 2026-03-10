@@ -23,12 +23,12 @@ export const hero: HeroContent = {
     "Je suis Clémence, thérapeute holistique et praticienne en massage à Jonzac. Je vous accompagne vers un mieux-être concret et durable, à travers le corps, les émotions et les dynamiques familiales. Visioconsultation possible en France et en Europe.",
   primaryCTA: {
     label: "Prendre rendez-vous",
-    href: "/contact",
+    href: "tel:+33632185259",
     variant: "primary",
   },
   secondaryCTA: {
     label: "Découvrir mes pratiques",
-    href: "/soins",
+    href: "/accompagnements",
     variant: "secondary",
   },
   backgroundImage: {
@@ -90,7 +90,7 @@ export const entryPoints: EntryPointContent = {
       },
       cta: {
         label: "Prendre rendez-vous",
-        href: "/contact",
+        href: "tel:+33632185259",
         variant: "outline",
       },
       slug: "seance-decouverte",
@@ -128,7 +128,7 @@ export const entryPoints: EntryPointContent = {
       },
       cta: {
         label: "En savoir plus",
-        href: "/soins",
+        href: "/formations",
         variant: "outline",
       },
       slug: "formations-holistiques",
@@ -169,7 +169,7 @@ export const introduction: IntroductionContent = {
 export const serviceCategories: ServiceCategoryContent = {
   sectionTitle: "Tous les soins",
   sectionSubtitle:
-    "Un éventail d'accompagnements pour répondre à ce qui vit en toi, là où tu en es.",
+    "Un éventail d'accompagnements pour répondre à ce que vous vivez, là où vous en êtes.",
   categories: [
     {
       title: "Massages bien-être",
@@ -220,21 +220,21 @@ export const serviceCategories: ServiceCategoryContent = {
         {
           name: "Coaching-accompagnement mieux-être",
           description:
-            "Un accompagnement structuré pour explorer tes schémas et trouver de nouvelles façons de te relier à toi-même.",
+            "Un accompagnement structuré pour explorer vos schémas et trouver de nouvelles façons de vous relier à vous-même.",
           price: "150 euros",
           duration: "1h30",
         },
         {
           name: "Régulation émotionnelle et somatique",
           description:
-            "Un travail par le corps pour apprendre à accueillir et réguler tes émotions dans la sécurité.",
+            "Un travail par le corps pour apprendre à accueillir et réguler vos émotions dans la sécurité.",
           price: "150 euros",
           duration: "1h30",
         },
         {
           name: "Médiumnité-oracle-pendule-décodage quantique",
           description:
-            "Un éclairage intuitif au service de ta compréhension. Non pas pour prédire, mais pour éclairer ce qui demande de l'attention.",
+            "Un éclairage intuitif au service de votre compréhension. Non pas pour prédire, mais pour éclairer ce qui demande de l'attention.",
           price: "60 euros",
           duration: "1h",
         },
@@ -247,7 +247,7 @@ export const serviceCategories: ServiceCategoryContent = {
       },
       cta: {
         label: "En savoir plus",
-        href: "/soins",
+        href: "/accompagnements",
         variant: "outline",
       },
     },
@@ -260,7 +260,7 @@ export const serviceCategories: ServiceCategoryContent = {
         {
           name: "Constellations familiales individuelles",
           description:
-            "Un travail systémique pour éclairer les dynamiques familiales qui influencent ta vie.",
+            "Un travail systémique pour éclairer les dynamiques familiales qui influencent votre vie.",
           price: "Me contacter",
           duration: "",
         },
@@ -281,21 +281,21 @@ export const serviceCategories: ServiceCategoryContent = {
         {
           name: "Atelier aromathérapie",
           description:
-            "Découvrir les huiles essentielles doTERRA et apprendre à les utiliser au quotidien pour ton bien-être.",
+            "Découvrir les huiles essentielles et apprendre à les utiliser au quotidien pour votre bien-être.",
           price: "Me contacter",
           duration: "",
         },
         {
           name: "Stage développement spirituel",
           description:
-            "Un stage de deux jours pour explorer ta dimension spirituelle et approfondir ta connexion à toi-même.",
+            "Un stage de deux jours pour explorer votre dimension spirituelle et approfondir votre connexion à vous-même.",
           price: "100 euros / journée",
           duration: "2 jours",
         },
         {
           name: "Décodage quantique Cosmo",
           description:
-            "Un parcours approfondi de décodage quantique pour explorer les mémoires et mécanismes profonds qui influencent ta vie.",
+            "Un parcours approfondi de décodage quantique pour explorer les mémoires et mécanismes profonds qui influencent votre vie.",
           price: "333 euros",
           duration: "Parcours complet",
         },
@@ -307,8 +307,8 @@ export const serviceCategories: ServiceCategoryContent = {
         height: 427,
       },
       cta: {
-        label: "Découvrir les ateliers",
-        href: "/soins",
+        label: "En savoir plus",
+        href: "/accompagnements",
         variant: "outline",
       },
     },
@@ -334,7 +334,7 @@ export const serviceCategories: ServiceCategoryContent = {
       },
       cta: {
         label: "Découvrir les soins",
-        href: "/soins",
+        href: "/accompagnements",
         variant: "outline",
       },
     },
@@ -346,41 +346,41 @@ export const serviceCategories: ServiceCategoryContent = {
 // =============================================================================
 
 export const rmdSpotlight: RMDContent = {
-  sectionTitle: "Le programme signature",
-  headline: "RMD : Réorganisation en profondeur",
+  sectionTitle: "Le parcours signature",
+  headline: "RMD — Résurrection Multi-Dimensionnelle",
   description:
-    "Un parcours de 9 séances pour aller au cœur de tes mécanismes, libérer ce qui ne te sert plus et poser les fondations d'un nouveau rapport à toi-même. Le RMD est né de 10 ans de pratique et de recherche. C'est le chemin le plus complet que je propose pour une transformation profonde et durable.",
+    "Parce qu'il est temps de vous choisir.\n\nUn parcours de 9 séances pour aller au cœur de vos mécanismes, libérer ce qui ne vous sert plus et poser de nouvelles fondations. Né de 10 ans de pratique et de recherche, le RMD est le chemin le plus complet que je propose pour une transformation profonde et durable.",
   highlights: [
     {
       icon: "compass",
       title: "Sur mesure",
       description:
-        "Chaque parcours est adapté à ton histoire, tes besoins et ton rythme. Rien n'est imposé, tout se co-crée.",
+        "Chaque parcours est adapté à votre histoire, vos besoins et votre rythme. Rien n'est imposé, tout se co-crée.",
     },
     {
       icon: "layers",
       title: "Multi-dimensionnel",
       description:
-        "Somatique, énergétique, émotionnel et systémique : chaque séance mobilise les outils les plus justes pour toi.",
+        "Somatique, énergétique, émotionnel et systémique : chaque séance mobilise les outils les plus justes pour vous.",
     },
     {
       icon: "anchor",
       title: "Durable",
       description:
-        "L'objectif n'est pas un mieux-être passager, mais une réorganisation profonde qui s'inscrit dans ton quotidien.",
+        "L'objectif n'est pas un mieux-être passager, mais une réorganisation profonde qui s'inscrit durablement dans votre quotidien.",
     },
   ],
   price: "1 333 euros",
-  priceDetail: "Règlement en plusieurs fois",
+  priceDetail: "Règlement en plusieurs fois possible",
   sessions: "9 séances",
   image: {
-    src: "/images/work/DSC02979.jpg",
+    src: "/images/team/DSC02996.jpg",
     alt: "Programme RMD Signature de Clémence Reznicek",
     width: 640,
     height: 427,
   },
   cta: {
-    label: "Découvrir le programme RMD",
+    label: "Découvrir le parcours RMD",
     href: "/rmd",
     variant: "primary",
   },
@@ -399,19 +399,19 @@ export const values: ValueContent = {
       icon: "eye",
       title: "Présence",
       description:
-        "J'offre une présence fine, stable et profondément engagée. Je suis là, vraiment, avec écoute et justesse, pour accueillir ce qui se présente sans masque ni détour.",
+        "Être là, vraiment. Pas en façade, pas en posture. J'accueille ce qui se présente avec écoute, stabilité et justesse, sans masque ni détour.",
     },
     {
       icon: "shield",
       title: "Sécurité intérieure",
       description:
-        "Je soutiens la régulation, l'apaisement, l'ancrage. Je crée des espaces où le corps peut se relâcher et où les émotions peuvent circuler sans débordement.",
+        "Avant d'aller en profondeur, je crée les conditions pour que vous puissiez vous y rendre sans vous perdre. Un espace où le corps se relâche et où les émotions peuvent circuler librement.",
     },
     {
       icon: "flame",
       title: "Transformation douce",
       description:
-        "Je crois aux transformations profondes mais non violentes. J'accompagne des réorganisations intérieures qui respectent le rythme de chacun.",
+        "Je ne force rien. Je crois aux réorganisations profondes qui respectent votre rythme, celles qui durent parce qu'elles ont été intégrées, pas imposées.",
     },
   ],
 };
@@ -421,13 +421,13 @@ export const values: ValueContent = {
 // =============================================================================
 
 export const promotions: PromotionContent = {
-  sectionTitle: "Actualités",
-  headline: "Ateliers méditation et aromathérapie",
+  sectionTitle: "Nouveauté",
+  headline: "Ateliers méditation & aromathérapie",
   description:
-    "Retrouve-moi pour des ateliers collectifs de méditation et d'aromathérapie doTERRA. Des moments de partage, de présence et de découverte dans un cadre chaleureux. Cartes cadeaux disponibles pour offrir un soin à un proche.",
+    "Rejoignez-moi pour des moments collectifs de présence, de partage et de découverte. Méditation guidée et huiles essentielles, dans un cadre chaleureux et bienveillant. Cartes cadeaux disponibles pour offrir un atelier à un proche.",
   cta: {
     label: "Me contacter",
-    href: "/contact",
+    href: "tel:+33632185259",
     variant: "primary",
   },
   badge: "Nouveauté",
@@ -441,52 +441,47 @@ export const promotions: PromotionContent = {
 export const faq: FAQContent = {
   sectionTitle: "Questions fréquentes",
   sectionSubtitle:
-    "Les réponses aux questions que tu te poses peut-être avant de prendre rendez-vous",
+    "Les réponses aux questions que vous vous posez peut-être avant de prendre rendez-vous",
   items: [
-    {
-      question: "Comment se déroule une séance avec toi ?",
-      answer:
-        "Chaque séance commence par un temps d'échange pour comprendre ce qui t'amène. Ensuite, je t'accompagne avec les outils les plus adaptés : somatique, systémie, intuition, lecture des dynamiques invisibles, massages ou soins énergétiques selon le cadre choisi. La séance se termine par une intégration pour que tu repartes ancré et clair. À partir de là, je t'indique combien de séances seront nécessaires pour accompagner ton processus de manière juste, respectueuse de ton rythme et cohérente avec ton objectif.",
-    },
     {
       question: "Dois-je savoir ce que je veux travailler avant de venir ?",
       answer:
-        "Non. Certaines personnes arrivent avec une problématique précise, d'autres avec une sensation diffuse. Les deux sont parfaitement accueillis. Mon rôle est d'éclairer ce qui se joue et de t'aider à trouver le bon angle.",
+        "Non. Certaines personnes arrivent avec une problématique précise, d'autres avec une sensation diffuse que quelque chose ne va pas. Les deux sont parfaitement accueillis. Mon rôle est justement d'éclairer ce qui se joue et de trouver le bon angle avec vous.",
     },
     {
-      question: "Est-ce que tu fais de la médiumnité ?",
+      question: "Comment se déroule une séance avec vous ?",
       answer:
-        "Oui, mais toujours dans un cadre éthique, ancré et non prédictif. Je lis les dynamiques, les mouvements, les mémoires, jamais l'avenir. Mon intention est d'apporter de la clarté, pas de créer de la dépendance.",
-    },
-    {
-      question: "Quelle est la différence entre une séance RMD et un massage ?",
-      answer:
-        "RMD travaille sur toutes les dimensions de l'être : émotionnelle, somatique, transgénérationnelle, énergétique. Le massage, lui, agit principalement par le corps, mais il peut aussi libérer des mémoires et soutenir la régulation. Les deux approches se complètent, mais n'ont pas la même profondeur ni le même objectif.",
+        "Chaque séance commence par un temps d'échange pour comprendre ce que vous traversez. J'adapte ensuite les outils les plus justes à ce qui se présente : somatique, énergétique, systémique, coaching. La séance se termine par un temps d'intégration pour que vous repartiez ancré·e et clair·e.",
     },
     {
       question: "Combien de séances sont nécessaires ?",
       answer:
-        "Cela dépend de ton rythme et de ce que tu traverses. Certaines personnes sentent un changement dès la première séance, d'autres préfèrent un accompagnement plus régulier. Je ne pousse jamais à la consommation : c'est ton corps et ton vécu qui guident.",
+        "Cela dépend de ce que vous traversez et de votre rythme. Certaines personnes ressentent un changement dès la première séance. D'autres ont besoin d'un accompagnement plus régulier. Je ne pousse jamais à la consommation. C'est votre vécu qui guide.",
     },
     {
-      question: "Est-ce que tu accompagnes aussi en ligne ?",
+      question: "Proposez-vous des séances à distance ?",
       answer:
-        "Oui. Les séances RMD, la lecture intuitive, la systémie et la régulation somatique se font très bien à distance. Les massages, évidemment, se font uniquement en présentiel.",
+        "Oui. La grande majorité des accompagnements se fait aussi bien à distance qu'en présentiel : régulation du système nerveux, constellations familiales, bilan énergétique et spirituel, formations. Les massages se font uniquement en cabinet à Jonzac.",
     },
     {
-      question: "Est-ce que je dois préparer quelque chose avant la séance ?",
+      question: "Votre approche est-elle pour moi si je ne suis pas spirituelle ?",
       answer:
-        "Rien de particulier. Viens comme tu es, avec ce que tu vis. L'essentiel est d'arriver disponible pour toi.",
+        "Oui, tout à fait. Mon approche est avant tout humaine. Je travaille avec le corps, les émotions et les dynamiques familiales. Vous n'avez besoin d'adhérer à aucune croyance pour bénéficier de cet accompagnement.",
     },
     {
-      question: "Est-ce que c'est pour moi si je ne suis pas spirituel·le ?",
+      question: "Comment savoir quel accompagnement me correspond ?",
       answer:
-        "Oui. Mon approche est humaine avant tout. Je travaille avec le corps, les émotions, les dynamiques familiales et les mémoires. Tu n'as besoin d'adhérer à aucune croyance.",
+        "La séance découverte est faite pour ça. En une heure, nous faisons le point sur votre situation et définissons ensemble le chemin le plus adapté. C'est le meilleur point de départ.",
     },
     {
-      question: "Est-ce que tu fais des diagnostics ou des prédictions ?",
+      question: "Puis-je offrir une séance à un proche ?",
       answer:
-        "Non. Je ne remplace ni un médecin ni un thérapeute. Je t'accompagne dans la compréhension de ce que tu vis, dans la régulation et dans la transformation intérieure.",
+        "Oui, vous pouvez offrir une séance découverte ou un massage énergétique. Une carte cadeau au format PDF vous sera envoyée, à imprimer directement si vous le souhaitez. Les autres accompagnements ne sont pas disponibles en carte cadeau. Ils nécessitent le consentement et la démarche personnelle de celui ou celle qui les vit.",
+    },
+    {
+      question: "Travaillez-vous aussi avec les enfants ?",
+      answer:
+        "Oui, dès la naissance. Les massages se font en présentiel au cabinet à Jonzac. Les bilans énergétiques pour les enfants se font à distance, avec un compte rendu téléphonique aux parents.",
     },
   ],
 };
@@ -535,18 +530,18 @@ export const practicalInfo: PracticalInfoContent = {
 // =============================================================================
 
 export const ctaFinal: CTAFinalContent = {
-  headline: "Offre-toi cet espace",
+  headline: "Offrez-vous cet espace",
   description:
-    "Un premier pas vers toi-même. Que ce soit pour un massage, un soin ou simplement une conversation, je suis là pour t'accueillir avec douceur.",
+    "Un premier pas vers vous-même. Que ce soit pour un massage, un accompagnement ou simplement une conversation, je suis là pour vous accueillir avec douceur.",
   primaryCTA: {
     label: "Prendre rendez-vous",
-    href: "/contact",
+    href: "tel:+33632185259",
     variant: "primary",
   },
   secondaryCTA: {
     label: "Me contacter",
-    href: "tel:+33632185259",
-    variant: "outline",
+    href: "/contact",
+    variant: "secondary",
   },
   backgroundImage: {
     src: "/images/establishment/DSC02924.jpg",

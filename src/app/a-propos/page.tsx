@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { aboutPage } from '../../../content/about';
 import { getBreadcrumbSchema } from '@/lib/schema';
@@ -8,6 +7,7 @@ import {
   AboutStory,
   AboutValues,
   AboutCertifications,
+  BlogSpotlight,
 } from '@/components/sections';
 import { Section, Button } from '@/components/ui';
 
@@ -50,7 +50,7 @@ export default function AboutPage() {
           title={aboutPage.story.title}
           paragraphs={aboutPage.story.paragraphs}
           image={aboutPage.story.image}
-          pullQuote="Ce qui me définit le plus, c'est peut-être ma qualité de présence. Être là, pleinement, pour ce qui se présente."
+          pullQuote="Mon rôle est simple : vous offrir un espace suffisamment sécurisé pour que vous osiez vous retrouver."
         />
       </Section>
 
@@ -70,6 +70,37 @@ export default function AboutPage() {
         />
       </Section>
 
+      {/* Affiliations */}
+      {aboutPage.affiliations && (
+        <Section background="warmWhite">
+          <div className="text-center mb-8">
+            <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-800 tracking-[var(--tracking-headings)]">
+              {aboutPage.affiliations.title}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            {aboutPage.affiliations.items.map((item) => (
+              <div
+                key={item.name}
+                className="text-center p-6 rounded-2xl bg-bg-cream border border-neutral-200"
+              >
+                <p className="font-heading text-base font-semibold text-neutral-800 mb-1">
+                  {item.name}
+                </p>
+                {item.description && (
+                  <p className="font-body text-sm text-neutral-600">
+                    {item.description}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Blog */}
+      <BlogSpotlight />
+
       {/* CTA */}
       <Section background="indigoDeep">
         <div className="text-center">
@@ -77,15 +108,24 @@ export default function AboutPage() {
             Et si on se rencontrait ?
           </h2>
           <p className="font-body text-base text-neutral-200 mb-8 max-w-lg mx-auto">
-            La meilleure façon de savoir si mon accompagnement est fait pour toi, c&apos;est de le vivre. Prends rendez-vous pour une première séance.
+            La meilleure façon de savoir si mon accompagnement vous correspond, c&apos;est d&apos;en faire l&apos;expérience. Prenez rendez-vous pour une séance découverte. Ensemble, nous ferons le point sur votre situation et définirons le chemin le plus adapté pour vous.
           </p>
-          <Link href={aboutPage.cta.href}>
+          <a href={aboutPage.cta.href}>
             <Button variant="warm" size="lg">
               {aboutPage.cta.label}
             </Button>
-          </Link>
+          </a>
         </div>
       </Section>
+
+      {/* Crédit photographe */}
+      {aboutPage.photographerCredit && (
+        <div className="text-center py-4 bg-bg-cream">
+          <p className="font-body text-xs text-neutral-400">
+            {aboutPage.photographerCredit}
+          </p>
+        </div>
+      )}
     </>
   );
 }

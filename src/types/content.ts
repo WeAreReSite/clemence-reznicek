@@ -288,10 +288,18 @@ export interface RMDPageContent {
   heroTitle: string;
   heroSubtitle: string;
   heroImage: ImageData;
+  quote: string;
   introduction: string[];
+  introImage?: ImageData;
   forWhom: {
     title: string;
     items: string[];
+    image?: ImageData;
+  };
+  dimensions: {
+    title: string;
+    items: string[];
+    movement: string;
   };
   process: {
     title: string;
@@ -299,6 +307,7 @@ export interface RMDPageContent {
       number: number;
       title: string;
       description: string;
+      image?: ImageData;
     }>;
   };
   includes: {
@@ -307,7 +316,28 @@ export interface RMDPageContent {
   };
   price: string;
   priceDetail: string;
+  faq?: FAQItem[];
   testimonial?: Testimonial;
+  cta: CTAButton;
+}
+
+// --- Formations Page ---
+
+export interface FormationService {
+  name: string;
+  description: string;
+  price: string;
+  duration: string;
+  modules?: string[];
+  image?: ImageData;
+}
+
+export interface FormationsPageContent {
+  heroTitle: string;
+  heroSubtitle: string;
+  heroImage: ImageData;
+  introduction: string;
+  formations: FormationService[];
   cta: CTAButton;
 }
 
@@ -332,6 +362,19 @@ export interface AboutPageContent {
       description?: string;
     }>;
   };
+  blog?: {
+    text: string;
+    url: string;
+    label: string;
+  };
+  affiliations?: {
+    title: string;
+    items: Array<{
+      name: string;
+      description?: string;
+    }>;
+  };
+  photographerCredit?: string;
   cta: CTAButton;
 }
 
@@ -340,12 +383,15 @@ export interface TestimonialsPageContent {
   heroSubtitle: string;
   testimonials: Testimonial[];
   googleReviewsCTA: CTAButton;
+  youtubeCTA?: CTAButton;
   contactCTA: CTAButton;
 }
 
 export interface ContactFormContent {
   fields: {
     prenom: { label: string; placeholder?: string };
+    nom: { label: string; placeholder?: string };
+    email: { label: string; placeholder?: string };
     telephone: { label: string; placeholder?: string };
     typeSoin: {
       label: string;
@@ -354,15 +400,20 @@ export interface ContactFormContent {
     };
     message: { label: string };
   };
+  consentLabel: string;
   submitLabel: string;
   successTitle: string;
   successMessage: string;
   validation: {
     prenomRequired: string;
     prenomMinLength: string;
-    telephoneRequired: string;
+    nomRequired: string;
+    nomMinLength: string;
+    emailRequired: string;
+    emailInvalid: string;
     telephoneInvalid: string;
     typeSoinRequired: string;
+    consentRequired: string;
   };
 }
 
@@ -370,12 +421,14 @@ export interface ContactPageContent {
   heroTitle: string;
   heroSubtitle: string;
   introText: string;
+  introImage?: ImageData;
   phone: {
     display: string;
     link: string;
   };
   email: string;
   address: string;
+  siret?: string;
   openingHours: OpeningHours[];
   mapEmbedUrl: string;
   form?: ContactFormContent;
@@ -405,6 +458,7 @@ export interface MetadataContent {
   massages: PageMetadata;
   soins: PageMetadata;
   rmd: PageMetadata;
+  formations: PageMetadata;
   about: PageMetadata;
   testimonials: PageMetadata;
   contact: PageMetadata;

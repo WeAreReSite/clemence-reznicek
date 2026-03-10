@@ -197,16 +197,21 @@ export const testimonialSection: TestimonialSectionContent = {
 export const testimonialsPage: TestimonialsPageContent = {
   heroTitle: "Témoignages",
   heroSubtitle:
-    "Chaque parcours est unique. Voici les mots de celles et ceux qui ont choisi de se faire accompagner.",
+    "Chaque parcours est unique. Voici leurs mots.",
   testimonials: allTestimonials,
   googleReviewsCTA: {
     label: "Voir les 59 avis sur Google",
     href: "https://share.google/5AokZamfqtL3yUJWZ",
     variant: "secondary",
   },
+  youtubeCTA: {
+    label: "Voir mes vidéos sur YouTube",
+    href: "https://www.youtube.com/@clemencereznicek111",
+    variant: "outline",
+  },
   contactCTA: {
     label: "Prendre rendez-vous",
-    href: "/contact",
+    href: "tel:+33632185259",
     variant: "primary",
   },
 };

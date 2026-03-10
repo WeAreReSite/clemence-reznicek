@@ -373,11 +373,11 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <MenuDivider />
 
           {/* CTA button */}
-          <Link href={navigation.cta.href} onClick={onClose} className="w-full max-w-[280px]">
+          <a href={navigation.cta.href} onClick={onClose} className="w-full max-w-[280px]">
             <Button variant="warm" size="md" fullWidth>
               {navigation.cta.label}
             </Button>
-          </Link>
+          </a>
 
           {/* Phone */}
           <a

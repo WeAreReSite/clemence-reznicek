@@ -82,7 +82,7 @@ export function AboutCertifications({ title, certifications }: AboutCertificatio
         {certifications.map((cert) => (
           <li key={cert.name}>
             {cert.name}
-            {cert.description ? ` — ${cert.description}` : ''}
+            {cert.description ? `, ${cert.description}` : ''}
           </li>
         ))}
       </ul>

@@ -241,18 +241,18 @@ export function StickyHeader() {
           {/* Right section */}
           <div className="flex items-center gap-2">
             {/* Desktop CTA */}
-            <Link href={navigation.cta.href} className="hidden lg:block">
+            <a href={navigation.cta.href} className="hidden lg:block">
               <Button variant="warm" size="sm">
                 {navigation.cta.label}
               </Button>
-            </Link>
+            </a>
 
             {/* Tablet CTA — visible md to lg */}
-            <Link href={navigation.cta.href} className="hidden md:block lg:hidden">
+            <a href={navigation.cta.href} className="hidden md:block lg:hidden">
               <Button variant="warm" size="sm">
                 {navigation.cta.label}
               </Button>
-            </Link>
+            </a>
 
             {/* Mobile phone icon */}
             <a

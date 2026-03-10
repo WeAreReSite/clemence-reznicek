@@ -7,7 +7,7 @@ import type { AboutPageContent } from "@/types/content";
 export const aboutPage: AboutPageContent = {
   heroTitle: "À propos",
   heroSubtitle:
-    "10 ans de présence au service de ta transformation",
+    "10 ans de présence au service de votre transformation",
   heroImage: {
     src: "/images/team/DSC02960.jpg",
     alt: "Clémence Reznicek dans son cabinet à Jonzac",
@@ -42,7 +42,7 @@ export const aboutPage: AboutPageContent = {
         icon: "heart",
         title: "Humanité",
         description:
-          "J'accompagne sans surplomb, sans dogme, sans posture de \"sachante\". Je rencontre l'autre dans toute sa complexité, avec douceur, respect et humilité.",
+          "J'accompagne sans surplomb, sans dogme, sans posture d'experte. Je rencontre l'autre dans toute sa complexité, avec douceur, respect et humilité.",
       },
       {
         icon: "sun",
@@ -84,69 +84,50 @@ export const aboutPage: AboutPageContent = {
         icon: "bird",
         title: "Liberté",
         description:
-          "Mon objectif est que tu n'aies plus besoin de moi. Chaque accompagnement vise ton autonomie et ta souveraineté.",
+          "Mon objectif est que vous n'ayez plus besoin de moi. Chaque accompagnement vise votre autonomie et votre souveraineté.",
       },
     ],
   },
   certifications: {
-    title: "Formations et certifications",
+    title: "Certifications & Formations",
     items: [
-      {
-        name: "Massage des 5 Continents",
-        description: "Formation certifiante en massage holistique des 5 Continents",
-      },
-      {
-        name: "Massage AromaTouch",
-        description:
-          "Certification au protocole AromaTouch aux huiles essentielles doTERRA",
-      },
-      {
-        name: "Massage Symphonie des Cellules",
-        description: "Formation certifiante en massage Symphonie des Cellules",
-      },
-      {
-        name: "Formation Lise Bourbeau, Les 5 blessures de l'âme",
-        description:
-          "Formation approfondie sur les 5 blessures de l'âme selon Lise Bourbeau",
-      },
-      {
-        name: "Formation LaHoChi",
-        description:
-          "Formation certifiante en soin énergétique LaHoChi",
-      },
-      {
-        name: "Formation en magnétisme",
-        description:
-          "Formation en magnétisme et soins énergétiques",
-      },
-      {
-        name: "Formation en développement spirituel avec Havona",
-        description: "Formation en développement spirituel et éveil de conscience avec Havona",
-      },
-      {
-        name: "Formation TFT",
-        description:
-          "Formation en Thought Field Therapy (TFT), technique de libération émotionnelle",
-      },
-      {
-        name: "Formation en décodage quantique",
-        description: "Formation en décodage et lecture quantique",
-      },
-      {
-        name: "Formation en aromathérapie doTERRA",
-        description:
-          "Formation en aromathérapie et utilisation des huiles essentielles doTERRA",
-      },
-      {
-        name: "Formation praticienne en constellations familiales",
-        description:
-          "Formation approfondie en constellations familiales et travail systémique",
-      },
+      { name: "Constellations familiales · 2 ans", description: "Michèle Duhamel / FFPCS" },
+      { name: "Systémie · 2 ans" },
+      { name: "Accompagnement en parentalité · 3 week-ends", description: "Isabelle Filliozat" },
+      { name: "Généalogie & décodage des prénoms · 6 mois" },
+      { name: "Certification Montessori 0-6 ans · 2 semaines", description: "Le potentiel de l'enfant, Papachapito" },
+      { name: "Ennéagramme & déblocage · 20h", description: "Isabelle Thomas, psychologue en Gestalt thérapie" },
+      { name: "Blessures d'âme · 14h", description: "Lise Bourbeau" },
+      { name: "Écho Quantique — Décodage du champ informationnel · 72h", description: "Aurélie Surmely" },
+      { name: "Développement spirituel & énergétique Havona · 18 jours" },
+      { name: "Massage des 5 Continents · 2 jours" },
+      { name: "Massage Aromatouch · 2 jours" },
+      { name: "Massage SOC — Symphonie of the Cells · 2 jours" },
+      { name: "Numérologie quantique · 2 jours", description: "Bénédicte Graft" },
+      { name: "Aromathérapie émotionnelle et énergétique · 7h" },
+      { name: "LaHoChi · 5h", description: "Morgane Louis" },
+      { name: "TFT — Thérapie du Champ Mental · 5h", description: "Sophie Magenta" },
+      { name: "Magnétisme · 3h", description: "Madelrieux" },
+      { name: "Allaitement au travail", description: "Université de Bordeaux" },
     ],
   },
+  affiliations: {
+    title: "Affiliations & Certifications",
+    items: [
+      { name: "Membre FFPCS", description: "Fédération Française des Praticiens en Constellations Systémiques" },
+      { name: "Conseillère doTERRA", description: "Aromathérapie émotionnelle et énergétique" },
+      { name: "Praticienne certifiée Massage des 5 Continents" },
+    ],
+  },
+  blog: {
+    text: "Je partage régulièrement mes réflexions, outils et découvertes sur mon blog.",
+    url: "https://www.formationquantique.fr",
+    label: "Lire le blog",
+  },
+  photographerCredit: "Photos : Lucas Poisson",
   cta: {
     label: "Prendre rendez-vous",
-    href: "/contact",
+    href: "tel:+33632185259",
     variant: "primary",
   },
 };

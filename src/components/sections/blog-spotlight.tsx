@@ -1,16 +1,16 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
-import { promotions } from '../../../content/homepage';
+import { aboutPage } from '../../../content/about';
 import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW, EASE_BREATHE } from '@/lib/gsap-setup';
 import { Section, Button, Badge } from '@/components/ui';
 
-export function PromotionsSection() {
+export function BlogSpotlight() {
   const boxRef = useRef<HTMLDivElement>(null);
   const shimmerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!promotions.active) return;
+    if (!aboutPage.blog) return;
 
     const box = boxRef.current;
     const shimmer = shimmerRef.current;
@@ -35,7 +35,7 @@ export function PromotionsSection() {
             ease: EASE_WELLNESS_FLOW,
           });
 
-          // Start shimmer loop after entrance (paused when off-screen)
+          // Start shimmer loop after entrance
           if (shimmer) {
             gsap.set(shimmer, { x: '-100%' });
             const shimmerTween = gsap.to(shimmer, {
@@ -64,7 +64,7 @@ export function PromotionsSection() {
     return () => ctx.revert();
   }, []);
 
-  if (!promotions.active) {
+  if (!aboutPage.blog) {
     return null;
   }
 
@@ -91,37 +91,23 @@ export function PromotionsSection() {
             }}
           />
 
-          {/* Optional badge */}
-          {promotions.badge && (
-            <Badge variant="accent" className="mb-6">
-              {promotions.badge}
-            </Badge>
-          )}
-
-          <h2 className="font-heading text-2xl font-semibold text-neutral-50 mb-4">
-            {promotions.headline}
-          </h2>
+          <Badge variant="accent" className="mb-6">
+            Blog
+          </Badge>
 
           <p className="font-body text-base text-neutral-200 leading-relaxed mb-8">
-            {promotions.description}
+            {aboutPage.blog.text}
           </p>
 
-          <div className="flex items-center justify-center flex-wrap gap-4">
-            <a
-              href="https://www.formationquantique.fr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body text-sm font-medium text-secondary-300 underline underline-offset-4 hover:text-secondary-200 transition-colors"
-            >
-              Voir les dates
-            </a>
-            <span className="text-neutral-500 text-sm" aria-hidden="true">·</span>
-            <a href="tel:+33632185259">
-              <Button variant="warmOnDark" size="lg" data-magnetic>
-                Me contacter
-              </Button>
-            </a>
-          </div>
+          <a
+            href={aboutPage.blog.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="warmOnDark" size="lg" data-magnetic>
+              {aboutPage.blog.label}
+            </Button>
+          </a>
         </div>
       </div>
     </Section>

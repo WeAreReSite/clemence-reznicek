@@ -22,7 +22,7 @@ export function SoinsCategoryBlock({
   description,
   services,
   image,
-  ctaHref = '/contact',
+  ctaHref = 'tel:+33632185259',
 }: SoinsCategoryBlockProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -106,6 +106,7 @@ export function SoinsCategoryBlock({
             isOpen={openIndex === index}
             onToggle={() => handleToggle(index)}
             ctaHref={ctaHref}
+            image={service.image}
           />
         ))}
       </div>

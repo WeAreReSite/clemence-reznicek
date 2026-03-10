@@ -172,11 +172,19 @@ export function EntryPointsSection() {
                 </CardContent>
 
                 <CardFooter className="mt-auto">
-                  <Link href={card.cta.href} className="w-full">
-                    <Button variant="secondary" size="sm" fullWidth data-magnetic>
-                      {card.cta.label}
-                    </Button>
-                  </Link>
+                  {card.cta.href.startsWith('tel:') ? (
+                    <a href={card.cta.href} className="w-full">
+                      <Button variant="secondary" size="sm" fullWidth data-magnetic>
+                        {card.cta.label}
+                      </Button>
+                    </a>
+                  ) : (
+                    <Link href={card.cta.href} className="w-full">
+                      <Button variant="secondary" size="sm" fullWidth data-magnetic>
+                        {card.cta.label}
+                      </Button>
+                    </Link>
+                  )}
                 </CardFooter>
               </div>
             </Card>

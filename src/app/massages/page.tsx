@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { massagesPage } from '../../../content/massages';
 import { getBreadcrumbSchema, getServiceSchema } from '@/lib/schema';
@@ -68,15 +67,15 @@ export default function MassagesPage() {
               {/* Image */}
               {service.image && (
                 <div className="w-full lg:w-1/2 shrink-0">
-                  <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
+                  <div className="relative aspect-[3/4] w-full max-w-[480px] mx-auto rounded-2xl overflow-hidden">
                     <Image
                       src={service.image.src}
                       alt={service.image.alt}
                       width={service.image.width}
                       height={service.image.height}
                       className="object-cover w-full h-full"
-                      style={{ objectPosition: service.image.objectPosition ?? 'center top' }}
-                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      style={{ objectPosition: service.image.objectPosition ?? 'center' }}
+                      sizes="(max-width: 1024px) 100vw, 480px"
                     />
                   </div>
                 </div>
@@ -141,13 +140,13 @@ export default function MassagesPage() {
             Prêt·e pour un massage ?
           </h2>
           <p className="font-body text-base text-neutral-200 mb-8 max-w-lg mx-auto">
-            Réserve ta séance et offre-toi un moment de douceur et de reconnexion.
+            Réservez votre séance et offrez-vous un moment de douceur et de reconnexion.
           </p>
-          <Link href={massagesPage.cta.href}>
+          <a href={massagesPage.cta.href}>
             <Button variant="warm" size="lg">
               {massagesPage.cta.label}
             </Button>
-          </Link>
+          </a>
         </div>
       </Section>
     </>

@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
   businessName: "Clémence Reznicek",
   tagline: "Bien-être holistique et émotionnel",
   description:
-    "Je guide celles et ceux qui ont perdu leur élan à retrouver l'envie de vivre pleinement. Ma présence ouvre un espace où la joie revient, où la lumière se rallume, où la respiration se fait plus large. J'accompagne chacun à reprendre sa place dans sa propre vie, à accueillir ses émotions, à lâcher le contrôle et à retrouver confiance dans le mouvement naturel de l'existence.",
+    "J'accompagne celles et ceux qui se sentent bloqués, épuisés ou déconnectés d'eux-mêmes à retrouver un mieux-être concret et durable. Ensemble, nous travaillons à comprendre ce qui freine, libérer ce qui pèse et retrouver confiance en soi et en la vie.",
   businessType: "HealthAndBeautyBusiness",
   phone: {
     display: "06 32 18 52 59",
@@ -72,11 +72,12 @@ export const navigation: NavigationContent = {
     { label: "Accueil", href: "/" },
     {
       label: "Soins",
-      href: "/soins",
+      href: "/accompagnements",
       children: [
-        { label: "Massages", href: "/massages" },
-        { label: "Soins et accompagnements", href: "/soins" },
-        { label: "RMD Signature", href: "/rmd" },
+        { label: "Massages énergétiques", href: "/massages" },
+        { label: "Accompagnements émotionnels", href: "/accompagnements" },
+        { label: "SE CHOISIR", href: "/rmd" },
+        { label: "Formations holistiques", href: "/formations" },
       ],
     },
     { label: "À propos", href: "/a-propos" },
@@ -85,7 +86,7 @@ export const navigation: NavigationContent = {
   ],
   cta: {
     label: "Prendre rendez-vous",
-    href: "/contact",
+    href: "tel:+33632185259",
     variant: "primary",
   },
   mobileMenuLabel: "Menu",
@@ -100,10 +101,10 @@ export const footer: FooterContent = {
     {
       title: "Soins",
       links: [
-        { label: "Massages", href: "/massages" },
-        { label: "Soins énergétiques", href: "/soins" },
-        { label: "RMD Signature", href: "/rmd" },
-        { label: "Accompagnements", href: "/soins" },
+        { label: "Massages énergétiques", href: "/massages" },
+        { label: "Accompagnements émotionnels", href: "/accompagnements" },
+        { label: "SE CHOISIR", href: "/rmd" },
+        { label: "Formations holistiques", href: "/formations" },
       ],
     },
     {
@@ -113,6 +114,7 @@ export const footer: FooterContent = {
         { label: "Témoignages", href: "/temoignages" },
         { label: "Contact", href: "/contact" },
         { label: "Mentions légales", href: "/mentions-legales" },
+        { label: "CGV", href: "/cgv" },
       ],
     },
     {
@@ -133,9 +135,10 @@ export const footer: FooterContent = {
   copyright: "Clémence Reznicek. Tous droits réservés.",
   legalLinks: [
     { label: "Mentions légales", href: "/mentions-legales" },
+    { label: "CGV", href: "/cgv" },
     { label: "Politique de confidentialité", href: "/mentions-legales#confidentialite" },
   ],
   socialLinks: siteConfig.socialLinks,
   description:
-    "Je guide celles et ceux qui ont perdu leur élan à retrouver l'envie de vivre pleinement. J'accompagne chacun à reprendre sa place dans sa propre vie, à accueillir ses émotions et à retrouver confiance dans le mouvement naturel de l'existence.",
+    "J'accompagne celles et ceux qui se sentent bloqués, épuisés ou déconnectés d'eux-mêmes à retrouver un mieux-être concret et durable. Ensemble, nous travaillons à comprendre ce qui freine, libérer ce qui pèse et retrouver confiance en soi et en la vie.",
 };

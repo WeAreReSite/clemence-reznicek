@@ -62,8 +62,6 @@ export function IntroductionSection() {
       <SectionHeader
         title={introduction.sectionTitle}
         decorative
-        align="left"
-        className="lg:hidden"
         animated
       />
 
@@ -84,13 +82,6 @@ export function IntroductionSection() {
 
         {/* Text -- 60% on desktop */}
         <div className="w-full lg:w-[60%]" data-intro-text>
-          <SectionHeader
-            title={introduction.sectionTitle}
-            decorative
-            align="left"
-            className="hidden lg:block"
-            animated
-          />
 
           <h3 className="font-heading text-xl font-semibold text-indigo-500 mb-6">
             {introduction.headline}

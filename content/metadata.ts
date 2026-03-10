@@ -45,9 +45,9 @@ export const metadata: MetadataContent = {
   },
   soins: {
     title:
-      "Soins et accompagnements holistiques | Jonzac",
+      "Accompagnements holistiques | Jonzac",
     description:
-      "LaHoChi, coaching émotionnel, régulation somatique, aromathérapie doTERRA et constellations familiales à Jonzac. Accompagnement sur mesure.",
+      "Régulation du système nerveux, blessures d'âme, constellations familiales, ateliers méditation et aromathérapie à Jonzac. Accompagnement sur mesure.",
     keywords: [
       "soin énergétique Jonzac",
       "LaHoChi",
@@ -73,6 +73,22 @@ export const metadata: MetadataContent = {
       "coaching transformation",
     ],
     ogImage: "/images/work/DSC02979.jpg",
+  },
+  formations: {
+    title: "Formations holistiques | Jonzac et à distance",
+    description:
+      "Formations en énergétique, décodage quantique et développement spirituel à Jonzac ou à distance. Cosmo, Quantique 111, stages thématiques.",
+    keywords: [
+      "formation holistique Jonzac",
+      "formation énergétique",
+      "décodage quantique",
+      "développement spirituel",
+      "formation à distance",
+      "Quantique 111",
+      "Cosmo décodage",
+      "LaHoChi formation",
+    ],
+    ogImage: "/images/work/DSC02941.jpg",
   },
   about: {
     title: "À propos | Praticienne bien-être à Jonzac",

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { contactPage } from '../../../content/contact';
 import { getBreadcrumbSchema } from '@/lib/schema';
@@ -33,16 +34,39 @@ export default function ContactPage() {
       />
 
       <Section background="warmWhite">
-        <div className="mx-auto max-w-[720px] text-center">
-          <p className="font-body text-base text-neutral-600 leading-relaxed">
-            {contactPage.introText}
-          </p>
+        <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div>
+            <p className="font-body text-base text-neutral-600 leading-relaxed">
+              {contactPage.introText}
+            </p>
+          </div>
+          {contactPage.introImage && (
+            <div className="relative aspect-[2/3] w-full max-w-[380px] mx-auto rounded-2xl overflow-hidden">
+              <Image
+                src={contactPage.introImage.src}
+                alt={contactPage.introImage.alt}
+                width={contactPage.introImage.width}
+                height={contactPage.introImage.height}
+                className="object-cover w-full h-full"
+                sizes="(max-width: 1024px) 100vw, 380px"
+              />
+            </div>
+          )}
         </div>
       </Section>
 
-      <Section background="cream">
+      <Section background="warmWhite">
         <BentoContactGrid />
       </Section>
+
+      {/* SIRET */}
+      {contactPage.siret && (
+        <div className="text-center py-4 bg-bg-cream">
+          <p className="font-body text-xs text-neutral-400">
+            SIRET : {contactPage.siret}
+          </p>
+        </div>
+      )}
     </>
   );
 }

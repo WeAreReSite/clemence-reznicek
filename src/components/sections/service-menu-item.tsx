@@ -1,10 +1,11 @@
 'use client';
 
 import { useId, useCallback } from 'react';
+import Image from 'next/image';
 import { CaretDownIcon, ArrowRightIcon } from '@phosphor-icons/react';
-import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { Badge, Button } from '@/components/ui';
+import type { ImageData } from '@/types/content';
 
 interface ServiceMenuItemProps {
   name: string;
@@ -14,6 +15,7 @@ interface ServiceMenuItemProps {
   isOpen: boolean;
   onToggle: () => void;
   ctaHref?: string;
+  image?: ImageData;
 }
 
 export function ServiceMenuItem({
@@ -23,7 +25,8 @@ export function ServiceMenuItem({
   duration,
   isOpen,
   onToggle,
-  ctaHref = '/contact',
+  ctaHref = 'tel:+33632185259',
+  image,
 }: ServiceMenuItemProps) {
   const baseId = useId();
   const triggerId = `${baseId}-trigger`;
@@ -110,18 +113,34 @@ export function ServiceMenuItem({
               isOpen ? 'opacity-100' : 'opacity-0'
             )}
           >
-            <p className="font-body text-base text-neutral-600 leading-relaxed max-w-[600px] mb-4">
-              {description}
-            </p>
-            <Link href={ctaHref}>
-              <Button
-                variant="ghost"
-                size="sm"
-                iconTrailing={<ArrowRightIcon size={16} />}
-              >
-                Réserver ce soin
-              </Button>
-            </Link>
+            <div className={cn(image ? 'flex flex-col sm:flex-row gap-5' : '')}>
+              {image && (
+                <div className="shrink-0 w-full sm:w-[240px]">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={image.width}
+                    height={image.height}
+                    className="w-full h-auto rounded-xl"
+                    sizes="(max-width: 640px) 100vw, 240px"
+                  />
+                </div>
+              )}
+              <div className="flex-1">
+                <p className="font-body text-base text-neutral-600 leading-relaxed max-w-[600px] mb-4">
+                  {description}
+                </p>
+                <a href={ctaHref}>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    iconTrailing={<ArrowRightIcon size={16} />}
+                  >
+                    Réserver ce soin
+                  </Button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

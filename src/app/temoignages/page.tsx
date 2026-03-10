@@ -133,20 +133,43 @@ export default function TemoignagesPage() {
         </div>
       </Section>
 
+      {/* YouTube */}
+      {testimonialsPage.youtubeCTA && (
+        <Section background="warmWhite">
+          <div className="text-center">
+            <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-800 mb-4">
+              Découvrez aussi mes vidéos
+            </h2>
+            <p className="font-body text-base text-neutral-600 mb-8 max-w-lg mx-auto">
+              Retrouvez des partages, des réflexions et des outils concrets sur ma chaîne YouTube.
+            </p>
+            <a
+              href={testimonialsPage.youtubeCTA.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="secondary" size="lg">
+                {testimonialsPage.youtubeCTA.label}
+              </Button>
+            </a>
+          </div>
+        </Section>
+      )}
+
       {/* CTA */}
       <Section background="indigoDeep">
         <div className="text-center">
           <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-50 mb-4">
-            Prête à vivre ta propre expérience ?
+            Prêt(e) à vivre votre propre expérience ?
           </h2>
           <p className="font-body text-base text-neutral-200 mb-8 max-w-lg mx-auto">
-            Rejoins les personnes qui ont choisi de se faire accompagner. Ta transformation commence ici.
+            Rejoignez les personnes qui ont choisi de prendre soin d&apos;elles. Votre transformation commence ici.
           </p>
-          <Link href={testimonialsPage.contactCTA.href}>
+          <a href={testimonialsPage.contactCTA.href}>
             <Button variant="warm" size="lg">
               {testimonialsPage.contactCTA.label}
             </Button>
-          </Link>
+          </a>
         </div>
       </Section>
     </>

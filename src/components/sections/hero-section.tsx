@@ -256,11 +256,11 @@ export function HeroSection() {
             ref={ctaRef}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link href={hero.primaryCTA.href}>
+            <a href={hero.primaryCTA.href}>
               <Button variant="warm" size="lg">
                 {hero.primaryCTA.label}
               </Button>
-            </Link>
+            </a>
             <Link href={hero.secondaryCTA.href}>
               <Button
                 variant="ghost"

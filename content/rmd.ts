@@ -1,73 +1,113 @@
 import type { RMDPageContent } from "@/types/content";
 
 // =============================================================================
-// RMD Signature Program Page Content
+// RMD — Résurrection Multi-Dimensionnelle Page Content
 // =============================================================================
 
 export const rmdPage: RMDPageContent = {
-  heroTitle: "Programme RMD Signature",
+  heroTitle: "RMD — Résurrection Multi-Dimensionnelle",
   heroSubtitle:
-    "Réorganisation Multi-Dimensionnelle : le chemin vers une transformation profonde et durable",
+    "Parce qu'il est temps de vous choisir.",
   heroImage: {
-    src: "/images/work/DSC02979.jpg",
-    alt: "Accompagnement RMD Signature par Clémence Reznicek",
+    src: "/images/work/DSC02264.jpg",
+    alt: "RMD — Clémence Reznicek et le phénix, symbole de résurrection",
     width: 1920,
     height: 1080,
   },
+  quote:
+    "Je ne cherche pas à vous transformer. Je crée un espace suffisamment sécurisé pour que vous osiez vous retrouver.",
   introduction: [
-    "C'est ma signature parce qu'il rassemble tout ce qui fait la singularité de ma présence et de mon regard. J'y unis l'intuition, la lecture fine des dynamiques invisibles, la compréhension somatique et une approche profondément humaine. C'est l'espace où toutes mes compétences se rencontrent pour offrir un éclairage juste, transformer l'angle de vue d'une problématique et accompagner une réorganisation intérieure durable. C'est là que mon travail prend toute sa cohérence, sa profondeur et sa force.",
-    "Le RMD est né de 10 ans de pratique, de recherche et d'accompagnement. C'est la synthèse de tout ce que j'ai appris, expérimenté et affiné au fil des années. Ce programme est le chemin le plus complet que je propose pour aller au cœur de ce qui se joue en toi.",
-    "En 9 séances, on traverse ensemble les différentes couches de ton être : le corps, les émotions, les schémas de pensée, les mémoires familiales, le champ énergétique. L'objectif n'est pas de tout résoudre, mais de créer les conditions pour qu'une réorganisation profonde puisse se faire, à ton rythme, dans la sécurité.",
-    "Ce programme s'adresse à celles et ceux qui sentent qu'il est temps d'aller plus loin. Pas pour se réparer, tu n'es pas cassé. Mais pour te connaître dans toutes tes dimensions et trouver une nouvelle façon d'habiter ta vie.",
+    "Le RMD est la synthèse de 10 ans de pratique, de recherche et d'accompagnement. Il rassemble tout ce qui fait la singularité de mon regard : l'intuition, la lecture des dynamiques invisibles, le travail somatique, les mémoires familiales et une présence profondément humaine.",
+    "En 9 séances, nous traversons ensemble les différentes couches de votre être : le corps, les émotions, les schémas de pensée, les mémoires familiales, le champ énergétique. L'objectif n'est pas de tout résoudre, mais de créer les conditions pour qu'une réorganisation profonde puisse se faire, à votre rythme, en sécurité.",
   ],
+  introImage: {
+    src: "/images/team/DSC02996.jpg",
+    alt: "Le phénix — symbole du parcours RMD, renaître de ses cendres",
+    width: 640,
+    height: 960,
+  },
   forWhom: {
-    title: "Ce programme est pour toi si",
+    title: "Ce parcours est pour vous si...",
     items: [
-      "Tu sens que certains schémas se répètent dans ta vie et tu veux comprendre pourquoi",
-      "Tu portes un poids émotionnel qui ne se libère pas malgré tes efforts",
-      "Tu cherches un accompagnement profond et structuré, pas juste un soin ponctuel",
-      "Tu es prêt à te rencontrer avec honnêteté et bienveillance",
-      "Tu veux retrouver un sentiment de clarté et d'ancrage dans ton quotidien",
-      "Tu sens qu'il est temps de poser les armes et de te laisser accompagner",
+      "Vous voulez apprendre à vous sentir en sécurité en toutes circonstances",
+      "Vous souhaitez réguler vos émotions sans être débordée par elles",
+      "Vous aspirez à une autonomie et une maturité émotionnelles durables",
+      "Vous cherchez plus de clarté dans vos choix et vos relations",
+      "Vous avez besoin d'un ancrage et d'un enracinement profonds",
+      "Vous sentez qu'il est temps de vous choisir, vraiment",
     ],
+    image: {
+      src: "/images/work/DSC02273.jpg",
+      alt: "Parcours RMD — génogramme et figurines systémiques",
+      width: 640,
+      height: 960,
+    },
+  },
+  dimensions: {
+    title: "Le travail s'articule sur trois plans",
+    items: [
+      "Transgénérationnel · ce qui se transmet de génération en génération",
+      "Gestationnel · ce qui s'est joué avant même la naissance",
+      "Infantile · ce qui s'est construit dans la petite enfance",
+    ],
+    movement: "De soi à l'autre · De l'autre à soi · De soi à soi",
   },
   process: {
-    title: "Le déroulement",
+    title: "Les trois temps du parcours",
     steps: [
       {
         number: 1,
-        title: "Rencontre et exploration",
+        title: "Sécuriser",
         description:
-          "Une première séance pour faire connaissance, poser ton intention et dessiner ensemble les contours de ton parcours. On identifie ce qui demande de l'attention et on définit le rythme qui te convient.",
+          "Les premières séances posent les fondations. Dès la première rencontre, nous élaborons ensemble votre génogramme, une cartographie de votre histoire familiale qui éclaire ce qui se transmet et se répète. Nous créons un espace de sécurité intérieure indispensable pour aller en profondeur sans se perdre.",
+        image: {
+          src: "/images/work/DSC02251.jpg",
+          alt: "Sécuriser — cliente en introspection lors des premières séances",
+          width: 640,
+          height: 960,
+        },
       },
       {
         number: 2,
-        title: "Traversée des couches",
+        title: "Libérer",
         description:
-          "Au fil des séances, on explore les différentes dimensions : le corps et ses mémoires, les émotions retenues, les schémas familiaux, les croyances qui te limitent. Chaque séance mobilise les outils les plus justes pour ce qui se présente.",
+          "Au cœur du parcours, nous traversons les couches : mémoires du corps, émotions retenues, schémas familiaux, croyances héritées. Ce qui était figé commence à bouger.",
       },
       {
         number: 3,
-        title: "Intégration et ancrage",
+        title: "Poser de nouvelles fondations",
         description:
-          "Les dernières séances sont consacrées à l'intégration de ce qui a bougé. On consolide les changements, on pose de nouveaux repères et on s'assure que la transformation s'inscrit durablement dans ton quotidien.",
+          "Les dernières séances sont consacrées à la construction. Grâce au coaching, nous ancrons de nouveaux repères, de nouvelles façons d'être et d'agir, pour que la transformation s'inscrive durablement dans votre vie.",
       },
     ],
   },
   includes: {
-    title: "Ce que comprend le programme",
+    title: "Ce que comprend le parcours",
     items: [
-      "9 séances individuelles d'1 heure",
-      "Un accompagnement sur mesure combinant somatique, énergétique, coaching et systémique",
+      "6 séances d'1h30 : travail en profondeur sur les trois plans",
+      "3 séances de 30 minutes : intégration et exercices de coaching",
+      "Dès la première séance : élaboration de votre génogramme pour cartographier votre histoire familiale",
+      "Des exercices de coaching à réaliser entre chaque séance pour ancrer les transformations dans votre quotidien",
       "Un suivi entre les séances par message",
-      "Des exercices et des pratiques à intégrer dans ton quotidien",
-      "La possibilité de faire certaines séances en visio",
-      "Un rythme adapté à tes disponibilités (généralement une séance toutes les 2 à 3 semaines)",
+      "La possibilité de faire certaines séances à distance",
+      "Un rythme d'une séance par mois pour une intégration profonde et durable",
     ],
   },
-  price: "1 333 euros",
+  price: "1 333 €",
   priceDetail:
-    "Règlement en plusieurs fois. On en discute ensemble lors de la première rencontre.",
+    "Parcours complet · 9 mois · 9 séances\nRèglement en plusieurs fois possible. Nous en parlons ensemble lors de la première rencontre.",
+  faq: [
+    {
+      question: "Quelle est la différence entre le parcours RMD et une séance individuelle ?",
+      answer:
+        "Une séance individuelle répond à un besoin ponctuel : une tension, une question, un moment difficile. Le parcours RMD est un travail en profondeur sur 9 mois, structuré en trois temps : sécuriser, libérer, poser de nouvelles fondations. Il s'adresse à celles et ceux qui veulent une transformation durable, pas juste un soulagement passager.",
+    },
+    {
+      question: "Comment se passe le règlement en plusieurs fois pour le parcours RMD ?",
+      answer:
+        "Le parcours RMD peut être réglé en 9 fois, à raison d'un règlement par mois. Nous en parlons ensemble lors de la première rencontre pour trouver les modalités les plus adaptées à votre situation.",
+    },
+  ],
   testimonial: {
     id: "testimonial-1",
     name: "Salomon D.",
@@ -77,8 +117,8 @@ export const rmdPage: RMDPageContent = {
     service: "Accompagnement holistique",
   },
   cta: {
-    label: "Prendre rendez-vous pour en discuter",
-    href: "/contact",
+    label: "Je veux me choisir",
+    href: "tel:+33632185259",
     variant: "primary",
   },
 };

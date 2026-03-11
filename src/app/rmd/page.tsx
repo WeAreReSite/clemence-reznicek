@@ -33,8 +33,6 @@ const rmdService = JSON.stringify({
   url: 'https://clemencereznicek.com/rmd',
   offers: {
     '@type': 'Offer',
-    price: '1333',
-    priceCurrency: 'EUR',
     availability: 'https://schema.org/InStock',
   },
   areaServed: { '@type': 'City', name: 'Jonzac' },
@@ -217,11 +215,11 @@ export default function RMDPage() {
         </div>
       </Section>
 
-      {/* Prix */}
+      {/* CTA — Invitation à échanger */}
       <Section background="roseTint">
         <div className="mx-auto max-w-[560px] text-center">
-          <p className="font-heading text-4xl lg:text-5xl font-bold text-indigo-500 mb-2">
-            {rmdPage.price}
+          <p className="font-heading text-2xl lg:text-3xl font-semibold text-indigo-500 mb-3">
+            Envie d&apos;en savoir plus ?
           </p>
           {rmdPage.priceDetail.split('\n').map((line, i) => (
             <p key={i} className="font-body text-sm text-neutral-700">

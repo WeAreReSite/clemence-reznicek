@@ -93,9 +93,9 @@ export const rmdPage: RMDPageContent = {
       "Un rythme d'une séance par mois pour une intégration profonde et durable",
     ],
   },
-  price: "1 333 €",
+  price: "Sur échange uniquement",
   priceDetail:
-    "Parcours complet · 9 mois · 9 séances\nRèglement en plusieurs fois possible. Nous en parlons ensemble lors de la première rencontre.",
+    "Parcours complet · 9 mois · 9 séances\nContactez-moi pour en discuter ensemble. Je vous présente le programme lors d'un premier appel, sans engagement.",
   faq: [
     {
       question: "Quelle est la différence entre le parcours RMD et une séance individuelle ?",
@@ -103,9 +103,9 @@ export const rmdPage: RMDPageContent = {
         "Une séance individuelle répond à un besoin ponctuel : une tension, une question, un moment difficile. Le parcours RMD est un travail en profondeur sur 9 mois, structuré en trois temps : sécuriser, libérer, poser de nouvelles fondations. Il s'adresse à celles et ceux qui veulent une transformation durable, pas juste un soulagement passager.",
     },
     {
-      question: "Comment se passe le règlement en plusieurs fois pour le parcours RMD ?",
+      question: "Comment connaître le tarif du parcours RMD ?",
       answer:
-        "Le parcours RMD peut être réglé en 9 fois, à raison d'un règlement par mois. Nous en parlons ensemble lors de la première rencontre pour trouver les modalités les plus adaptées à votre situation.",
+        "Le tarif et les modalités de règlement sont présentés lors d'un premier échange téléphonique. Cela me permet de vous expliquer le programme en détail et de répondre à toutes vos questions. Appelez-moi, c'est sans engagement.",
     },
   ],
   testimonial: {

@@ -45,7 +45,7 @@ Pour les massages et séances individuelles, la réservation se fait par télép
       title: "Tarifs",
       content: `Parcours RMD — Résurrection Multi-Dimensionnelle
 9 séances individuelles (6 séances d'1h30 + 3 séances de 30 minutes) en présentiel et/ou à distance : somatique, énergétique, coaching et systémique. Durée : 9 mois, une séance par mois.
-1 333 € TTC — Règlement en 9 fois : 1 × 133 € + 8 × 150 €
+Tarif communiqué lors d'un premier échange téléphonique — Règlement en plusieurs fois possible
 
 Séance découverte
 60 € TTC · 1h · En cabinet ou à distance

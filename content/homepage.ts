@@ -73,7 +73,7 @@ export const trustBar: TrustBarContent = {
 // =============================================================================
 
 export const entryPoints: EntryPointContent = {
-  sectionTitle: "Quatre pratiques, un seul but : votre mieux-être",
+  sectionTitle: "Trois pratiques, un seul but : votre mieux-être",
   sectionSubtitle: "",
   cards: [
     {
@@ -113,25 +113,6 @@ export const entryPoints: EntryPointContent = {
         variant: "outline",
       },
       slug: "accompagnements-emotionnels",
-    },
-    {
-      title: "SE CHOISIR — Parcours RMD",
-      description:
-        "Un parcours de 9 séances pour aller au cœur de vos mécanismes, libérer ce qui ne vous sert plus et poser de nouvelles fondations. Né de 10 ans de pratique, le RMD est le chemin le plus complet que je propose pour une transformation profonde et durable.",
-      price: "1 333 euros",
-      duration: "9 séances",
-      image: {
-        src: "/images/team/DSC02996.jpg",
-        alt: "Programme SE CHOISIR — Parcours RMD Signature de Clémence Reznicek",
-        width: 640,
-        height: 427,
-      },
-      cta: {
-        label: "Découvrir le parcours",
-        href: "/rmd",
-        variant: "outline",
-      },
-      slug: "se-choisir-rmd",
     },
     {
       title: "Formations holistiques",

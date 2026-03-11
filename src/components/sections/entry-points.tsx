@@ -128,7 +128,7 @@ export function EntryPointsSection() {
         animated
       />
 
-      <div ref={sectionRef} className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+      <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
         {entryPoints.cards.map((card) => (
           <div key={card.slug} data-card className="h-full group">
             <Card
@@ -170,12 +170,12 @@ export function EntryPointsSection() {
                   </p>
                 </CardContent>
 
-                <div className="px-6 pb-2 flex items-center flex-wrap gap-3 text-sm text-neutral-600">
-                  <span className="font-medium text-neutral-700">{card.price}</span>
+                <div className="px-6 pb-2 pt-3 mt-2 border-t border-neutral-200 flex items-center flex-wrap gap-3">
+                  <span className="font-heading text-base font-semibold text-indigo-500">{card.price}</span>
                   {card.duration && (
                     <>
-                      <span aria-hidden="true">&middot;</span>
-                      <span>{card.duration}</span>
+                      <span className="text-neutral-400" aria-hidden="true">&middot;</span>
+                      <span className="text-sm text-neutral-600">{card.duration}</span>
                     </>
                   )}
                 </div>

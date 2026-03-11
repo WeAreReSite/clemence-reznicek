@@ -73,7 +73,7 @@ export const trustBar: TrustBarContent = {
 // =============================================================================
 
 export const entryPoints: EntryPointContent = {
-  sectionTitle: "Trois pratiques, un seul but : votre mieux-être",
+  sectionTitle: "Trois portes, un seul but : votre mieux-être",
   sectionSubtitle: "",
   cards: [
     {

@@ -35,10 +35,10 @@ export function ServiceDetailSection({ services, layout = 'grid' }: ServiceDetai
                 <p className="text-sm text-neutral-600 leading-relaxed mb-4">
                   {service.description}
                 </p>
-                <div className="flex items-center flex-wrap gap-3 text-sm">
-                  <span className="font-medium text-neutral-800">{service.price}</span>
-                  <span className="text-neutral-500" aria-hidden="true">·</span>
-                  <span className="text-neutral-600">{service.duration}</span>
+                <div className="pt-3 mt-3 border-t border-neutral-200 flex items-center flex-wrap gap-3">
+                  <span className="font-heading text-base font-semibold text-indigo-500">{service.price}</span>
+                  <span className="text-neutral-400" aria-hidden="true">·</span>
+                  <span className="text-sm text-neutral-600">{service.duration}</span>
                 </div>
               </CardContent>
             </div>
@@ -75,10 +75,10 @@ export function ServiceDetailSection({ services, layout = 'grid' }: ServiceDetai
               <p className="text-sm text-neutral-600 leading-relaxed mb-4">
                 {service.description}
               </p>
-              <div className="flex items-center flex-wrap gap-3 text-sm">
-                <span className="font-medium text-neutral-800">{service.price}</span>
-                <span className="text-neutral-500" aria-hidden="true">·</span>
-                <span className="text-neutral-600">{service.duration}</span>
+              <div className="pt-3 mt-3 border-t border-neutral-200 flex items-center flex-wrap gap-3">
+                <span className="font-heading text-base font-semibold text-indigo-500">{service.price}</span>
+                <span className="text-neutral-400" aria-hidden="true">·</span>
+                <span className="text-sm text-neutral-600">{service.duration}</span>
               </div>
             </CardContent>
           </div>

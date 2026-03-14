@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { headingFont, bodyFont } from '@/lib/fonts';
 import { StickyHeader } from '@/components/sections';
 import { Footer } from '@/components/layout/footer';
-import { CustomCursor } from '@/components/ui/custom-cursor';
+import { LazyCustomCursor } from '@/components/ui/lazy-custom-cursor';
 import { getLocalBusinessSchema, getWebSiteSchema } from '@/lib/schema';
 import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
@@ -74,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StickyHeader />
         <main id="main-content">{children}</main>
         <Footer />
-        <CustomCursor />
+        <LazyCustomCursor />
         {isVercel && <Analytics />}
       </body>
     </html>

@@ -46,9 +46,9 @@ export function HeroSection() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
 
-      // Set initial states
+      // Set initial states (exclude descriptionRef — it's the LCP element, must stay visible)
       gsap.set(
-        [subtitleRef.current, descriptionRef.current, ctaRef.current].filter(Boolean),
+        [subtitleRef.current, ctaRef.current].filter(Boolean),
         { opacity: 0, y: 30 }
       );
       gsap.set(overlayRef.current, { opacity: 0 });
@@ -104,11 +104,12 @@ export function HeroSection() {
         );
       }
 
-      // Description fades in
-      tl.to(
+      // Description — already visible as LCP element, no initial hide
+      tl.fromTo(
         descriptionRef.current,
-        { opacity: 1, y: 0, duration: 0.8 },
-        1.1
+        { y: 10 },
+        { y: 0, duration: 0.6 },
+        0.8
       );
 
       // CTAs spring up with overshoot
@@ -173,9 +174,10 @@ export function HeroSection() {
           alt={hero.backgroundImage.alt}
           fill
           priority
+          fetchPriority="high"
           className="object-cover object-top sm:object-[center_30%]"
           sizes="100vw"
-          quality={85}
+          quality={80}
         />
       </div>
 

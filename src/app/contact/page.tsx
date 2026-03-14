@@ -49,6 +49,9 @@ export default function ContactPage() {
                 height={contactPage.introImage.height}
                 className="object-cover w-full h-full"
                 sizes="(max-width: 1024px) 100vw, 380px"
+                priority
+                fetchPriority="high"
+                quality={75}
               />
             </div>
           )}

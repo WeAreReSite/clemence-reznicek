@@ -136,14 +136,15 @@ export function EntryPointsSection() {
             >
               {/* Card image with clip-path reveal */}
               <div className="relative aspect-[16/9] w-full overflow-hidden" data-clip-reveal>
-                {/* Blurred background layer — matches image edges */}
+                {/* Blurred background layer — matches image edges, uses tiny size since heavily blurred */}
                 <Image
                   src={card.image.src}
                   alt=""
                   width={card.image.width}
                   height={card.image.height}
                   className="absolute inset-0 w-full h-full object-cover scale-[1.2] blur-[24px] saturate-[1.2] brightness-[1.05]"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  sizes="256px"
+                  quality={75}
                   aria-hidden="true"
                 />
                 {/* Actual image — fully visible */}

@@ -22,9 +22,10 @@ export function InnerPageHero({ title, subtitle, backgroundImage }: InnerPageHer
             alt={backgroundImage.alt}
             fill
             priority
+            fetchPriority="high"
             className="object-cover object-top sm:object-[center_30%]"
             sizes="100vw"
-            quality={80}
+            quality={75}
           />
           <div
             className="absolute inset-0 z-[1]"

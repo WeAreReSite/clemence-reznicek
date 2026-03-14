@@ -110,7 +110,6 @@ export function AboutStory({ title, paragraphs, image, pullQuote }: AboutStoryPr
                 height={image.height}
                 className="object-cover object-top w-full h-full"
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                priority
               />
             </div>
           </div>

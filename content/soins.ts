@@ -5,7 +5,7 @@ import type { SoinsPageContent } from "@/types/content";
 // =============================================================================
 
 export const soinsPage: SoinsPageContent = {
-  heroTitle: "Accompagnements",
+  heroTitle: "Accompagnements holistiques",
   heroSubtitle:
     "Comprendre ce qui freine. Libérer ce qui pèse. Avancer autrement.",
   heroImage: {
@@ -15,7 +15,23 @@ export const soinsPage: SoinsPageContent = {
     height: 1080,
   },
   introduction:
-    "Je ne travaille pas sur des symptômes isolés. Je regarde la personne dans sa globalité : son corps, ses émotions, son histoire familiale, ses mémoires. Chaque accompagnement est construit sur mesure, à partir de ce que vous vivez réellement. Nous choisissons ensemble les outils les plus justes pour vous, à votre rythme.",
+    "Thérapeute holistique à Jonzac (Charente-Maritime), j'accompagne en cabinet et en visioconsultation les personnes qui se sentent bloquées, épuisées ou déconnectées d'elles-mêmes. Je ne travaille pas sur des symptômes isolés. Je regarde la personne dans sa globalité : son corps, ses émotions, son histoire familiale, ses mémoires. Chaque accompagnement est construit sur mesure, à partir de ce que vous vivez réellement. Que vous soyez à Jonzac, Royan, Saintes ou partout en France en visio, nous choisissons ensemble les outils les plus justes pour vous, à votre rythme.",
+  whyHolistic: {
+    title: "Pourquoi un accompagnement holistique ?",
+    paragraphs: [
+      "Vous avez peut-être déjà fait de la psychothérapie, du coaching, ou essayé différentes approches. Mais quelque chose reste bloqué. Les mêmes schémas reviennent. Les mêmes difficultés se répètent.",
+    ],
+    listIntro: "C'est normal. Parce que certains blocages ne sont pas uniquement dans votre mental. Ils sont aussi dans :",
+    listItems: [
+      "Votre corps (tensions, mémoires corporelles)",
+      "Votre système nerveux (état d'alerte permanent)",
+      "Votre énergie (circulation bloquée)",
+      "Votre lignée familiale (dynamiques transgénérationnelles)",
+    ],
+    emphasis: "L'accompagnement holistique travaille sur tous ces plans à la fois.",
+    closing: "C'est pour ça qu'il permet des transformations profondes et durables là où la parole seule ne suffit plus.",
+    disclaimer: "Mon approche n'est pas là pour remplacer un suivi psychologique si vous en avez besoin, mais pour aller chercher ce que les mots ne peuvent pas atteindre.",
+  },
   categories: [
     {
       title: "Accompagnements individuels",
@@ -64,7 +80,7 @@ export const soinsPage: SoinsPageContent = {
         {
           name: "Constellations familiales",
           description:
-            "Nous portons tous, sans le savoir, des dynamiques héritées de notre famille : des loyautés invisibles, des places mal occupées, des histoires non résolues. Pour éclairer ce qui se transmet, je m'appuie sur la généalogie, l'origine des prénoms, les grandes dates de l'histoire collective et les dates clés de votre propre famille, la vision de Salomon Sellam sur les maladies, la systémie appliquée, les répétitions des schémas transgénérationnels, la boucle de la vie, la roue chamanique et les positions perceptuelles. Un travail d'une grande précision, souvent d'une intensité inattendue, qui permet une réorganisation en profondeur.",
+            "Nous portons tous, sans le savoir, des dynamiques héritées de notre famille : des loyautés invisibles, des places mal occupées, des histoires non résolues. Praticienne en constellations familiales à Jonzac (Charente-Maritime) et en visioconsultation, je vous accompagne pour éclairer ce qui se transmet. Je m'appuie sur la généalogie, l'origine des prénoms, les grandes dates de l'histoire collective et les dates clés de votre propre famille, la vision de Salomon Sellam sur les maladies, la systémie appliquée, les répétitions des schémas transgénérationnels, la boucle de la vie, la roue chamanique et les positions perceptuelles. Un travail d'une grande précision, souvent d'une intensité inattendue, qui permet une réorganisation en profondeur.",
           price: "150 euros",
           duration: "Individuel : 1h30 · En vision : 1h30 · Groupe : nous contacter",
           image: {
@@ -91,14 +107,14 @@ export const soinsPage: SoinsPageContent = {
           name: "Méditation",
           description:
             "Un moment de présence partagée pour se retrouver, respirer et se recentrer. Courte mais suffisamment profonde pour favoriser une détente réelle, cette méditation se pratique assis, sans expérience préalable. Simplicité et bienveillance garanties.",
-          price: "Nous contacter",
+          price: "Voir les dates",
           duration: "45 min · Voir les dates",
         },
         {
           name: "Atelier aromathérapie",
           description:
             "Un atelier convivial et enrichissant pour découvrir les huiles essentielles et apprendre à les utiliser au quotidien. Plusieurs thématiques proposées au fil des saisons : huiles essentielles et émotions, huiles essentielles et enfants, huiles essentielles et concentration, huiles essentielles et énergétique...",
-          price: "Nous contacter",
+          price: "Voir les dates",
           duration: "1h · Voir les dates",
           image: {
             src: "/images/work/DSC03006.jpg",
@@ -111,7 +127,7 @@ export const soinsPage: SoinsPageContent = {
           name: "Constellation familiale en groupe",
           description:
             "Une journée en groupe pour un travail systémique en profondeur. Le groupe crée un champ de résonance puissant qui amplifie le travail. Chaque participant est à la fois témoin et acteur. Une expérience humaine unique, dans un cadre sécurisant et bienveillant.",
-          price: "Nous contacter",
+          price: "Voir les dates",
           duration: "Journée complète · Voir les dates",
         },
       ],

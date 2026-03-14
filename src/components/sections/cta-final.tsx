@@ -8,6 +8,7 @@ import {
   InstagramLogoIcon,
   YoutubeLogoIcon,
   GoogleLogoIcon,
+  ArrowRightIcon,
 } from '@phosphor-icons/react/dist/ssr';
 import { ctaFinal } from '../../../content/homepage';
 import { siteConfig } from '../../../content/site';
@@ -138,6 +139,17 @@ export function CTAFinalSection() {
               </Button>
             </Link>
           </div>
+        </div>
+
+        {/* RMD CTA */}
+        <div data-cta-button className="mb-6">
+          <Link
+            href="/rmd"
+            className="inline-flex items-center gap-2 font-heading text-base font-semibold text-indigo-500 hover:text-indigo-600 transition-colors"
+          >
+            Je me choisis
+            <ArrowRightIcon size={18} weight="bold" aria-hidden="true" />
+          </Link>
         </div>
 
         {/* Phone number visible */}

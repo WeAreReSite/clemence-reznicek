@@ -15,6 +15,8 @@ interface ServiceMenuItemProps {
   isOpen: boolean;
   onToggle: () => void;
   ctaHref?: string;
+  ctaLabel?: string;
+  ctaExternal?: boolean;
   image?: ImageData;
 }
 
@@ -26,6 +28,8 @@ export function ServiceMenuItem({
   isOpen,
   onToggle,
   ctaHref = 'tel:+33632185259',
+  ctaLabel = 'Prendre rendez-vous',
+  ctaExternal = false,
   image,
 }: ServiceMenuItemProps) {
   const baseId = useId();
@@ -130,13 +134,13 @@ export function ServiceMenuItem({
                 <p className="font-body text-base text-neutral-600 leading-relaxed max-w-[600px] mb-4">
                   {description}
                 </p>
-                <a href={ctaHref}>
+                <a href={ctaHref} {...(ctaExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
                   <Button
                     variant="ghost"
                     size="sm"
                     iconTrailing={<ArrowRightIcon size={16} />}
                   >
-                    Prendre rendez-vous
+                    {ctaLabel}
                   </Button>
                 </a>
               </div>

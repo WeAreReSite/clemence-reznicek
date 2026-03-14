@@ -4,7 +4,7 @@ import { metadata as siteMetadata } from '../../../content/metadata';
 import { formationsPage } from '../../../content/formations';
 import { getBreadcrumbSchema } from '@/lib/schema';
 import { InnerPageHero } from '@/components/sections';
-import { Section, SectionHeader, Button, Badge } from '@/components/ui';
+import { Section, SectionHeader, Button, Badge, YouTubeEmbed } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: siteMetadata.formations.title,
@@ -123,6 +123,16 @@ export default function FormationsPage() {
                         </li>
                       ))}
                     </ol>
+                  </div>
+                )}
+
+                {/* Video Quantique 111 */}
+                {formation.name === 'Quantique 111' && (
+                  <div className="mt-6">
+                    <YouTubeEmbed
+                      videoId="UuYiI8AcR2s"
+                      title="Découvrir la formation Quantique 111"
+                    />
                   </div>
                 )}
               </div>

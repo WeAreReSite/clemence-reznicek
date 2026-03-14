@@ -68,23 +68,64 @@ export default function AccompagnementsPage() {
         </div>
       </Section>
 
+      {/* Pourquoi un accompagnement holistique */}
+      {soinsPage.whyHolistic && (
+        <Section background="cream">
+          <div className="mx-auto max-w-[720px]">
+            <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-indigo-500 mb-6 text-center">
+              {soinsPage.whyHolistic.title}
+            </h2>
+            {soinsPage.whyHolistic.paragraphs.map((p, i) => (
+              <p key={i} className="font-body text-base text-neutral-600 leading-relaxed mb-4">
+                {p}
+              </p>
+            ))}
+            <p className="font-body text-base text-neutral-700 leading-relaxed font-semibold mb-3">
+              {soinsPage.whyHolistic.listIntro}
+            </p>
+            <ul className="flex flex-col gap-2 mb-6" role="list">
+              {soinsPage.whyHolistic.listItems.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="text-secondary-500 mt-0.5 shrink-0" aria-hidden="true">&#10022;</span>
+                  <span className="font-body text-base text-neutral-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="font-heading text-lg font-semibold text-indigo-500 mb-4">
+              {soinsPage.whyHolistic.emphasis}
+            </p>
+            <p className="font-body text-base text-neutral-600 leading-relaxed mb-4">
+              {soinsPage.whyHolistic.closing}
+            </p>
+            <p className="font-body text-sm text-neutral-500 italic">
+              {soinsPage.whyHolistic.disclaimer}
+            </p>
+          </div>
+        </Section>
+      )}
+
       <SoinsCategoryNav categories={categoryTabs} />
 
-      {soinsPage.categories.map((category, index) => (
-        <Section
-          key={category.title}
-          background={index % 2 === 0 ? 'cream' : 'roseTint'}
-        >
-          <SoinsCategoryBlock
-            id={slugify(category.title)}
-            title={category.title}
-            description={category.description}
-            services={category.services}
-            image={category.image}
-            ctaHref={soinsPage.cta.href}
-          />
-        </Section>
-      ))}
+      {soinsPage.categories.map((category, index) => {
+        const isAteliers = category.title.toLowerCase().includes('atelier');
+        return (
+          <Section
+            key={category.title}
+            background={index % 2 === 0 ? 'cream' : 'roseTint'}
+          >
+            <SoinsCategoryBlock
+              id={slugify(category.title)}
+              title={category.title}
+              description={category.description}
+              services={category.services}
+              image={category.image}
+              ctaHref={isAteliers ? 'https://www.formationquantique.fr' : soinsPage.cta.href}
+              ctaLabel={isAteliers ? 'Voir les dates' : undefined}
+              ctaExternal={isAteliers}
+            />
+          </Section>
+        );
+      })}
 
       <Section background="indigoDeep">
         <div className="text-center">

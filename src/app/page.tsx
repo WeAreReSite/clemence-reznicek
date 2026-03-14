@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import { metadata as siteMetadata } from '../../content/metadata';
 import { getFAQSchema } from '@/lib/schema';
+import Link from 'next/link';
 import {
   HeroSection,
   TrustBarSection,
   EntryPointsSection,
   IntroductionSection,
   TestimonialsSection,
-  ServiceCategoriesSection,
   RMDSpotlightSection,
   ValuesSection,
   PromotionsSection,
@@ -16,6 +16,7 @@ import {
   CTAFinalSection,
   TestimonialCarousel,
 } from '@/components/sections';
+import { Button } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: siteMetadata.home.title,
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteMetadata.home.title,
     description: siteMetadata.home.description,
-    images: [{ url: siteMetadata.home.ogImage ?? '/images/team/DSC02909.jpg' }],
+    images: [{ url: siteMetadata.home.ogImage ?? '/images/team/DSC02823.jpg' }],
   },
 };
 
@@ -66,8 +67,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Service Categories */}
-      <ServiceCategoriesSection />
+      {/* CTA — Je me choisis (post-testimonials) */}
+      <div className="bg-bg-warm-white py-10 lg:py-14 text-center">
+        <p className="font-heading text-xl lg:text-2xl font-semibold text-indigo-500 mb-3">
+          Prêt·e à vous choisir ?
+        </p>
+        <p className="font-body text-base text-neutral-600 mb-6 max-w-md mx-auto px-5">
+          Le parcours RMD est le chemin le plus complet que je propose pour une transformation profonde et durable.
+        </p>
+        <Link href="/rmd">
+          <Button variant="warm" size="lg">
+            Je me choisis
+          </Button>
+        </Link>
+      </div>
 
       {/* 7. RMD Spotlight */}
       <RMDSpotlightSection />

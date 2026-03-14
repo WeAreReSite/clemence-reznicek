@@ -4,7 +4,7 @@ import { metadata as siteMetadata } from '../../../content/metadata';
 import { massagesPage } from '../../../content/massages';
 import { getBreadcrumbSchema, getServiceSchema } from '@/lib/schema';
 import { InnerPageHero } from '@/components/sections';
-import { Section, SectionHeader, Button } from '@/components/ui';
+import { Section, SectionHeader, Button, YouTubeEmbed } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: siteMetadata.massages.title,
@@ -53,6 +53,25 @@ export default function MassagesPage() {
         </div>
       </Section>
 
+      {/* Video presentation */}
+      <Section background="roseTint">
+        <SectionHeader title="Bienvenue au cabinet" decorative />
+        <div className="mx-auto max-w-[900px]">
+          <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-3)]">
+            <video
+              className="w-full h-auto"
+              controls
+              preload="metadata"
+              playsInline
+              poster="/videos/massage-presentation-poster.jpg"
+            >
+              <source src="/videos/massage-presentation.mp4" type="video/mp4" />
+              Votre navigateur ne prend pas en charge la lecture vidéo.
+            </video>
+          </div>
+        </div>
+      </Section>
+
       {/* Service cards */}
       <Section background="cream">
         <SectionHeader title="Les massages" decorative />
@@ -94,6 +113,16 @@ export default function MassagesPage() {
                   <span className="text-neutral-400" aria-hidden="true">·</span>
                   <span className="text-neutral-600">{service.duration}</span>
                 </div>
+
+                {/* Video Solar */}
+                {service.name === 'Massage-soin Solar' && (
+                  <div className="mt-6">
+                    <YouTubeEmbed
+                      videoId="uzAgE6g28c0"
+                      title="Découvrir le massage-soin Solar"
+                    />
+                  </div>
+                )}
               </div>
             </div>
           ))}

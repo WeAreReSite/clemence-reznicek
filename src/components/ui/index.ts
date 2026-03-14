@@ -39,3 +39,5 @@ export { SectionHeader, sectionHeaderVariants } from './section-header';
 export type { SectionHeaderProps } from './section-header';
 
 export { ScrollReveal } from './scroll-reveal';
+
+export { YouTubeEmbed } from './youtube-embed';

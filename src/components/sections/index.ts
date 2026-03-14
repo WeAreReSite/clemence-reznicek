@@ -23,3 +23,4 @@ export { AboutStory } from './about-story';
 export { AboutValues } from './about-values';
 export { AboutCertifications } from './about-certifications';
 export { BlogSpotlight } from './blog-spotlight';
+export { RMDFAQAccordion } from './rmd-faq-accordion';

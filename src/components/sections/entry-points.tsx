@@ -200,6 +200,21 @@ export function EntryPointsSection() {
           </div>
         ))}
       </div>
+
+      {/* Contact CTA */}
+      <div className="mt-10 lg:mt-14 text-center">
+        <p className="font-heading text-xl lg:text-2xl font-semibold text-neutral-800 mb-3">
+          Une question ?
+        </p>
+        <p className="font-body text-base text-neutral-600 mb-6">
+          Je suis disponible pour échanger et vous guider vers l&#39;accompagnement qui vous correspond.
+        </p>
+        <a href="tel:+33632185259">
+          <Button variant="warm" size="lg" data-magnetic>
+            Contactez-moi
+          </Button>
+        </a>
+      </div>
     </Section>
   );
 }

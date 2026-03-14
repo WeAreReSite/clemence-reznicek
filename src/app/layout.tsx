@@ -33,9 +33,9 @@ export const metadata: Metadata = {
       'Accompagnement en bien-être holistique à Jonzac. Massages, soins énergétiques, coaching émotionnel.',
     images: [
       {
-        url: '/images/work/DSC02941.jpg',
-        width: 1920,
-        height: 1080,
+        url: '/images/team/DSC02823.jpg',
+        width: 1200,
+        height: 1800,
         alt: 'Clémence Reznicek — Bien-être holistique à Jonzac',
       },
     ],

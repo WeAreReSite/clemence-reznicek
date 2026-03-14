@@ -275,6 +275,15 @@ export interface SoinsPageContent {
   heroSubtitle: string;
   heroImage: ImageData;
   introduction: string;
+  whyHolistic?: {
+    title: string;
+    paragraphs: string[];
+    listIntro: string;
+    listItems: string[];
+    emphasis: string;
+    closing: string;
+    disclaimer: string;
+  };
   categories: Array<{
     title: string;
     description: string;
@@ -284,40 +293,146 @@ export interface SoinsPageContent {
   cta: CTAButton;
 }
 
+export interface RMDTestimonial {
+  name: string;
+  text: string;
+  afterText?: string;
+  source: string;
+}
+
+export interface RMDDimension {
+  title: string;
+  description: string;
+  method: string;
+}
+
+export interface RMDTimelineStep {
+  label: string;
+  title: string;
+  description: string;
+}
+
+export interface RMDDifferentiator {
+  title: string;
+  paragraphs: string[];
+  testimonialQuote?: string;
+  listItems?: string[];
+}
+
 export interface RMDPageContent {
   heroTitle: string;
   heroSubtitle: string;
   heroImage: ImageData;
-  quote: string;
-  introduction: string[];
-  introImage?: ImageData;
+  trustBadges: string[];
+  painPoint: {
+    title: string;
+    paragraphs: string[];
+    question: string;
+    answer: string;
+    closingLine: string;
+  };
   forWhom: {
     title: string;
     items: string[];
     image?: ImageData;
   };
-  dimensions: {
+  whyRMD: {
     title: string;
-    items: string[];
-    movement: string;
+    classical: {
+      title: string;
+      intro: string;
+      limitations: string[];
+      result: string[];
+    };
+    holistic: {
+      title: string;
+      intro: string;
+      levels: string[];
+      closingLines: string[];
+    };
+  };
+  testimonials: {
+    title: string;
+    items: RMDTestimonial[];
+    appreciations: {
+      title: string;
+      items: string[];
+    };
   };
   process: {
     title: string;
-    steps: Array<{
-      number: number;
+    acronym: string;
+    intro: string;
+    dimensionsTitle: string;
+    dimensionsIntro: string[];
+    dimensions: RMDDimension[];
+    customNote: string[];
+    timeline: {
       title: string;
-      description: string;
-      image?: ImageData;
-    }>;
+      steps: RMDTimelineStep[];
+    };
+    betweenSessions: {
+      title: string;
+      paragraphs: string[];
+    };
+    image?: ImageData;
   };
-  includes: {
+  location: {
     title: string;
-    items: string[];
+    cabinet: {
+      title: string;
+      address: string[];
+      advantages: string[];
+    };
+    visio: {
+      title: string;
+      advantages: string[];
+      testimonial: string;
+    };
   };
-  price: string;
-  priceDetail: string;
-  faq?: FAQItem[];
-  testimonial?: Testimonial;
+  duration: {
+    title: string;
+    summary: string;
+    rhythm: string;
+    rhythmExplanation: string[];
+    sessionDuration: string;
+  };
+  investment: {
+    title: string;
+    price: string;
+    paymentNote: string;
+    whyTitle: string;
+    whyParagraphs: string[];
+    reimbursement: {
+      question: string;
+      answer: string;
+    };
+  };
+  unique: {
+    title: string;
+    items: RMDDifferentiator[];
+  };
+  faq: {
+    title: string;
+    items: FAQItem[];
+  };
+  discoveryCall: {
+    title: string;
+    subtitle: string;
+    description: string[];
+    benefits: string[];
+    closing: string[];
+    phone: string;
+    email: string;
+  };
+  finalCTA: {
+    title: string;
+    paragraphs: string[];
+    closingLines: string[];
+    buttonLabel: string;
+    phone: string;
+    email: string;
+  };
   cta: CTAButton;
 }
 

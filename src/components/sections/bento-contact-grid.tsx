@@ -42,7 +42,7 @@ export function BentoContactGrid() {
             <p className="font-body text-xs uppercase tracking-[var(--tracking-all-caps)] text-neutral-200 mb-1">
               Téléphone
             </p>
-            <p className="font-body text-2xl md:text-3xl font-bold tracking-wide">
+            <p className="font-body text-xl md:text-2xl font-bold tracking-wide">
               {contactPage.phone.display}
             </p>
             <p className="font-body text-sm text-neutral-300 mt-1">

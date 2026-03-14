@@ -380,7 +380,7 @@ export const rmdSpotlight: RMDContent = {
     height: 427,
   },
   cta: {
-    label: "Découvrir le parcours RMD",
+    label: "Je me choisis",
     href: "/rmd",
     variant: "primary",
   },
@@ -482,6 +482,42 @@ export const faq: FAQContent = {
       question: "Travaillez-vous aussi avec les enfants ?",
       answer:
         "Oui, dès la naissance. Les massages se font en présentiel au cabinet à Jonzac. Les bilans énergétiques pour les enfants se font à distance, avec un compte rendu téléphonique aux parents.",
+    },
+    {
+      question: "Quelle est la différence entre un thérapeute holistique et un psychologue ?",
+      answer: `Je suis thérapeute holistique, pas psychologue.
+Les différences principales :
+Formation et cadre légal :
+
+Un psychologue possède un diplôme d'État (Master 2, Bac+5) et un numéro ADELI. C'est un titre protégé par la loi.
+Un thérapeute holistique suit des formations privées en bien-être et accompagnement global (massage, énergétique, systémie, etc.). Ce n'est pas un titre réglementé.
+
+Approche et méthodes :
+
+Le psychologue travaille principalement par la parole, l'analyse des pensées et des comportements. Son approche est psychologique et scientifique.
+Le thérapeute holistique (comme moi) accompagne la personne dans sa globalité : corps, émotions, énergie et dynamiques familiales. J'utilise le massage énergétique, les constellations familiales, le décodage quantique, la régulation du système nerveux et d'autres outils somatiques et énergétiques.
+
+Ce que je ne fais pas :
+
+Je ne pose pas de diagnostic médical ou psychologique
+Je ne prends pas en charge les troubles psychiatriques (dépression sévère, troubles bipolaires, schizophrénie, etc.)
+Je ne remplace pas un suivi médical ou psychiatrique si nécessaire
+
+Quand consulter un psychologue plutôt que moi ?
+
+Si vous avez besoin d'un diagnostic psychologique
+Si vous souffrez d'un trouble psychiatrique avéré
+Si vous voulez un suivi remboursé par la Sécurité sociale (dispositif MonPsy)
+
+Quand mon approche est particulièrement adaptée ?
+
+Si vous ressentez des blocages physiques et émotionnels entremêlés
+Si vous avez déjà fait de la psychothérapie sans résultats durables
+Si vous cherchez une transformation profonde corps-esprit
+Si vous êtes ouvert(e) à une approche incluant la dimension énergétique et systémique
+Si vous voulez comprendre les schémas familiaux inconscients qui vous influencent
+
+Les deux approches peuvent être complémentaires. Certaines personnes me consultent en parallèle d'un suivi psychologique, et c'est tout à fait possible.`,
     },
   ],
 };

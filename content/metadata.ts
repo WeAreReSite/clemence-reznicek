@@ -27,7 +27,7 @@ export const metadata: MetadataContent = {
       "libération émotionnelle",
       "spiritualité",
     ],
-    ogImage: "/images/team/DSC02909.jpg",
+    ogImage: "/images/team/DSC02823.jpg",
   },
   massages: {
     title: "Massages Shambala, Solar et Aromatouch",

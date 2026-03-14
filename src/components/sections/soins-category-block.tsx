@@ -14,6 +14,8 @@ interface SoinsCategoryBlockProps {
   services: Service[];
   image?: ImageData;
   ctaHref?: string;
+  ctaLabel?: string;
+  ctaExternal?: boolean;
 }
 
 export function SoinsCategoryBlock({
@@ -23,6 +25,8 @@ export function SoinsCategoryBlock({
   services,
   image,
   ctaHref = 'tel:+33632185259',
+  ctaLabel,
+  ctaExternal,
 }: SoinsCategoryBlockProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -106,6 +110,8 @@ export function SoinsCategoryBlock({
             isOpen={openIndex === index}
             onToggle={() => handleToggle(index)}
             ctaHref={ctaHref}
+            ctaLabel={ctaLabel}
+            ctaExternal={ctaExternal}
             image={service.image}
           />
         ))}

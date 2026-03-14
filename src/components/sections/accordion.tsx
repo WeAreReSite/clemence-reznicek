@@ -87,7 +87,7 @@ function AccordionItem({
         <div className="overflow-hidden">
           <div
             className={cn(
-              'pb-4 font-body text-base text-neutral-600 leading-relaxed',
+              'pb-4 font-body text-base text-neutral-600 leading-relaxed whitespace-pre-line',
               'transition-opacity duration-[200ms] ease-[var(--ease-default)]',
               isOpen ? 'opacity-100' : 'opacity-0'
             )}

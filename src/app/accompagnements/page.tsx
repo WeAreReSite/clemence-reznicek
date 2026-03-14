@@ -4,10 +4,10 @@ import { soinsPage } from '../../../content/soins';
 import { getBreadcrumbSchema, getServiceSchema } from '@/lib/schema';
 import {
   InnerPageHero,
-  SoinsCategoryNav,
   SoinsCategoryBlock,
+  CTAFinalSection,
 } from '@/components/sections';
-import { Section, Button } from '@/components/ui';
+import { Section } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: siteMetadata.soins.title,
@@ -31,11 +31,6 @@ function slugify(text: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
 }
-
-const categoryTabs = soinsPage.categories.map((cat) => ({
-  id: slugify(cat.title),
-  label: cat.title,
-}));
 
 const accompBC = JSON.stringify(
   getBreadcrumbSchema([{ name: 'Accompagnements', url: 'https://clemencereznicek.com/accompagnements' }])
@@ -104,8 +99,6 @@ export default function AccompagnementsPage() {
         </Section>
       )}
 
-      <SoinsCategoryNav categories={categoryTabs} />
-
       {soinsPage.categories.map((category, index) => {
         const isAteliers = category.title.toLowerCase().includes('atelier');
         return (
@@ -127,21 +120,7 @@ export default function AccompagnementsPage() {
         );
       })}
 
-      <Section background="indigoDeep">
-        <div className="text-center">
-          <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-50 mb-4">
-            Quel accompagnement vous correspond ?
-          </h2>
-          <p className="font-body text-base text-neutral-200 mb-8 max-w-lg mx-auto">
-            Si vous ne savez pas par où commencer, contactez-moi. Nous trouverons ensemble l&apos;accompagnement le plus juste pour vous.
-          </p>
-          <a href={soinsPage.cta.href}>
-            <Button variant="warm" size="lg">
-              {soinsPage.cta.label}
-            </Button>
-          </a>
-        </div>
-      </Section>
+      <CTAFinalSection />
     </>
   );
 }

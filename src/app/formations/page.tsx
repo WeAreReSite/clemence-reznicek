@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { formationsPage } from '../../../content/formations';
 import { getBreadcrumbSchema } from '@/lib/schema';
-import { InnerPageHero } from '@/components/sections';
+import { InnerPageHero, CTAFinalSection } from '@/components/sections';
 import { Section, SectionHeader, Button, Badge, YouTubeEmbed } from '@/components/ui';
 
 export const metadata: Metadata = {
@@ -204,26 +204,7 @@ export default function FormationsPage() {
         </Section>
       )}
 
-      {/* CTA */}
-      <Section background="indigoDeep">
-        <div className="text-center">
-          <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-50 mb-4">
-            {`Prêt·e à vous former ?`}
-          </h2>
-          <p className="font-body text-base text-neutral-200 mb-8 max-w-lg mx-auto">
-            Retrouvez les dates des prochaines formations et inscrivez-vous directement.
-          </p>
-          <a
-            href="https://www.formationquantique.fr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant="warm" size="lg">
-              Voir les dates sur formationquantique.fr
-            </Button>
-          </a>
-        </div>
-      </Section>
+      <CTAFinalSection />
     </>
   );
 }

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { contactPage } from '../../../content/contact';
 import { getBreadcrumbSchema } from '@/lib/schema';
-import { InnerPageHero, BentoContactGrid } from '@/components/sections';
+import { InnerPageHero, BentoContactGrid, CTAFinalSection } from '@/components/sections';
 import { Section } from '@/components/ui';
 
 export const metadata: Metadata = {
@@ -58,6 +58,8 @@ export default function ContactPage() {
       <Section background="warmWhite">
         <BentoContactGrid />
       </Section>
+
+      <CTAFinalSection />
 
       {/* SIRET */}
       {contactPage.siret && (

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { metadata as siteMetadata } from '../../content/metadata';
 import { getFAQSchema } from '@/lib/schema';
 import Link from 'next/link';
+import { midPageCTA } from '../../content/homepage';
 import {
   HeroSection,
   TrustBarSection,
@@ -70,14 +71,14 @@ export default function HomePage() {
       {/* CTA — Je me choisis (post-testimonials) */}
       <div className="bg-bg-warm-white py-10 lg:py-14 text-center">
         <p className="font-heading text-xl lg:text-2xl font-semibold text-indigo-500 mb-3">
-          Prêt·e à vous choisir ?
+          {midPageCTA.headline}
         </p>
         <p className="font-body text-base text-neutral-600 mb-6 max-w-md mx-auto px-5">
-          Le parcours RMD est le chemin le plus complet que je propose pour une transformation profonde et durable.
+          {midPageCTA.description}
         </p>
-        <Link href="/rmd">
+        <Link href={midPageCTA.cta.href}>
           <Button variant="warm" size="lg">
-            Je me choisis
+            {midPageCTA.cta.label}
           </Button>
         </Link>
       </div>

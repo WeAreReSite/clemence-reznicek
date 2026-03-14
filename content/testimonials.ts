@@ -2,6 +2,7 @@ import type {
   Testimonial,
   TestimonialSectionContent,
   TestimonialsPageContent,
+  YouTubeVideo,
 } from "@/types/content";
 
 // =============================================================================
@@ -84,14 +85,6 @@ export const allTestimonials: Testimonial[] = [
     service: "Massage bien-être",
   },
   {
-    id: "testimonial-10",
-    name: "Aurélien B.",
-    text: "Rien à redire, Clémence est très accueillante, sympathique, extrêmement douée, elle a énormément de talent, un relationnel extraordinaire, et des mains de fée pour le massage ! 😌 Personnellement je reviendrais, mais je recommande vivement, parce que je dois avouer que ce rendez vous a changé quelque chose ! À bientôt Clémence et merci encore 😊",
-    rating: 5,
-    date: "2024-04",
-    service: "Massage bien-être",
-  },
-  {
     id: "testimonial-11",
     name: "Véronique F.",
     text: "Des le premier rendez-vous avec Clémence, j'ai senti qu'elle allait bousculer ma vie. Très bienveillante, toujours souriante et passionnée par ce qu'elle fait. Quelle belle rencontre! Il ne faut pas hésiter à passer la porte de son cabinet, on ressort ressourcé!!!",
@@ -106,14 +99,6 @@ export const allTestimonials: Testimonial[] = [
     rating: 5,
     date: "2024-09",
     service: "LaHoChi Multidimensionnel",
-  },
-  {
-    id: "testimonial-13",
-    name: "Clarisse M.",
-    text: "Clémence a effectué un bilan énergétique avec bienveillance elle est très investie. J'ai été extrêmement satisfaite de son travail. Cette femme a beaucoup de connaissances elle est passionnante. Merci Clémence je suis heureuse de vous avoir rencontrée.",
-    rating: 5,
-    date: "2024-03",
-    service: "Bilan énergétique",
   },
   {
     id: "testimonial-14",
@@ -132,36 +117,12 @@ export const allTestimonials: Testimonial[] = [
     service: "Médiumnité",
   },
   {
-    id: "testimonial-16",
-    name: "Fanny G.",
-    text: "Clémence est une personne solaire et généreuse. J'ai eu l'occasion de la rencontrer à plusieurs reprise lors de séances en cabinet et lors d'une méditation aquatique collective. Des moments hors du temps, qui nous recentre sur nous-mêmes et nous aide à prendre du recul sur nos expériences vécues. Merci ✨",
-    rating: 5,
-    date: "2023-08",
-    service: "Méditation aquatique",
-  },
-  {
     id: "testimonial-17",
     name: "Maria S.",
     text: "La 1ère fois que j'ai rencontré Clémence c'était pour des méditations aux Antilles, c'était génial. C'est une personne qui déborde de joie de vivre, travaille avec bienveillance et à l'écoute. J'adore la rencontrer, sa joie est communicative. Je vous la recommande sans hésitation.",
     rating: 5,
     date: "2024-04",
     service: "Méditation",
-  },
-  {
-    id: "testimonial-18",
-    name: "Bénédicte R.",
-    text: "Clémence est une personne tellement bienveillante et à l'écoute. Elle déborde de bonne humeur, de joie de vivre. Il suffit de l'écouter pour se sentir déjà quelque peu apaisée. Merci pour votre écoute vos conseils et votre chaleur humaine.",
-    rating: 5,
-    date: "2023-11",
-    service: "Accompagnement holistique",
-  },
-  {
-    id: "testimonial-19",
-    name: "Florence C.",
-    text: "Clémence est une personne très à l'écoute avec une pêche d'enfer qui est communicative! Ses soins sont efficaces, elle a sens inné pour dénicher ce qui gratouille et chatouille mais toujours avec une grande bienveillance. On se confie facilement car on ne se sent en confiance! Je lui souhaite le meilleur !! et je referai appel à ses services avec plaisir :)",
-    rating: 5,
-    date: "2023-07",
-    service: "Soins énergétiques",
   },
   {
     id: "testimonial-20",
@@ -204,8 +165,27 @@ export const testimonialsPage: TestimonialsPageContent = {
     href: "https://share.google/5AokZamfqtL3yUJWZ",
     variant: "secondary",
   },
+  youtubeSection: {
+    title: "Découvrez aussi mes vidéos",
+    subtitle:
+      "Retrouvez des partages, des réflexions et des outils concrets sur ma chaîne YouTube.",
+    videos: [
+      {
+        videoId: "MTevBTILWoY",
+        title: "Massage AROMATOUCH",
+      },
+      {
+        videoId: "bN_BL8OSYyc",
+        title: "Présentation de Clémence Reznicek",
+      },
+      {
+        videoId: "hEYF9iVuxss",
+        title: "Présentation des massages",
+      },
+    ],
+  },
   youtubeCTA: {
-    label: "Voir mes vidéos sur YouTube",
+    label: "Voir toutes les vidéos sur YouTube",
     href: "https://www.youtube.com/@clemencereznicek111",
     variant: "outline",
   },

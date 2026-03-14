@@ -2,6 +2,9 @@ import type { SoinsPageContent } from "@/types/content";
 
 // =============================================================================
 // Accompagnements Page Content
+// Note: This file is named "soins.ts" for historical reasons.
+// The page route is /accompagnements (with /soins redirecting to it).
+// The type is SoinsPageContent — renaming would require updating types too.
 // =============================================================================
 
 export const soinsPage: SoinsPageContent = {

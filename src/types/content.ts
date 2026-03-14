@@ -256,6 +256,17 @@ export interface CTAFinalContent {
   backgroundImage?: ImageData;
 }
 
+export interface YouTubeVideo {
+  videoId: string;
+  title: string;
+}
+
+export interface MidPageCTAContent {
+  headline: string;
+  description: string;
+  cta: CTAButton;
+}
+
 // --- Inner Pages ---
 
 export interface MassagesPageContent {
@@ -499,6 +510,11 @@ export interface TestimonialsPageContent {
   heroSubtitle: string;
   testimonials: Testimonial[];
   googleReviewsCTA: CTAButton;
+  youtubeSection?: {
+    title: string;
+    subtitle: string;
+    videos: YouTubeVideo[];
+  };
   youtubeCTA?: CTAButton;
   contactCTA: CTAButton;
 }

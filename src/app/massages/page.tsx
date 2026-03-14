@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { massagesPage } from '../../../content/massages';
 import { getBreadcrumbSchema, getServiceSchema } from '@/lib/schema';
-import { InnerPageHero } from '@/components/sections';
-import { Section, SectionHeader, Button, YouTubeEmbed } from '@/components/ui';
+import { InnerPageHero, VideoAmbient, CTAFinalSection } from '@/components/sections';
+import { Section, SectionHeader, YouTubeEmbed } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: siteMetadata.massages.title,
@@ -56,20 +56,22 @@ export default function MassagesPage() {
       {/* Video presentation */}
       <Section background="roseTint">
         <SectionHeader title="Bienvenue au cabinet" decorative />
-        <div className="mx-auto max-w-[900px]">
-          <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-3)]">
-            <video
-              className="w-full h-auto"
-              controls
-              preload="metadata"
-              playsInline
-              poster="/videos/massage-presentation-poster.jpg"
-            >
-              <source src="/videos/massage-presentation.mp4" type="video/mp4" />
-              Votre navigateur ne prend pas en charge la lecture vidéo.
-            </video>
+        <VideoAmbient>
+          <div className="mx-auto max-w-[320px] sm:max-w-[360px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-3)]">
+              <video
+                className="w-full h-auto"
+                controls
+                preload="metadata"
+                playsInline
+                poster="/videos/massage-presentation-poster.jpg"
+              >
+                <source src="/videos/massage-presentation.mp4" type="video/mp4" />
+                Votre navigateur ne prend pas en charge la lecture vidéo.
+              </video>
+            </div>
           </div>
-        </div>
+        </VideoAmbient>
       </Section>
 
       {/* Service cards */}
@@ -162,22 +164,7 @@ export default function MassagesPage() {
         </div>
       </Section>
 
-      {/* CTA */}
-      <Section background="indigoDeep">
-        <div className="text-center">
-          <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-50 mb-4">
-            Prêt·e pour un massage ?
-          </h2>
-          <p className="font-body text-base text-neutral-200 mb-8 max-w-lg mx-auto">
-            Réservez votre séance et offrez-vous un moment de douceur et de reconnexion.
-          </p>
-          <a href={massagesPage.cta.href}>
-            <Button variant="warm" size="lg">
-              {massagesPage.cta.label}
-            </Button>
-          </a>
-        </div>
-      </Section>
+      <CTAFinalSection />
     </>
   );
 }

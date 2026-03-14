@@ -91,7 +91,7 @@ export const metadata: MetadataContent = {
     ogImage: "/images/work/DSC02941.jpg",
   },
   about: {
-    title: "À propos | Praticienne bien-être à Jonzac",
+    title: "À propos | Thérapeute holistique à Jonzac",
     description:
       "Parcours de Clémence Reznicek, praticienne en bien-être holistique à Jonzac. 10 ans d'expérience, 11 certifications, intuition et vision systémique.",
     keywords: [

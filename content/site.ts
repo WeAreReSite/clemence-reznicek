@@ -55,7 +55,7 @@ export const siteConfig: SiteConfig = {
     },
   ],
   logo: {
-    src: "/images/logos/infinity tech.png",
+    src: "/images/logos/infinity-tech.png",
     alt: "Clémence Reznicek - Bien-être holistique",
     width: 180,
     height: 60,
@@ -76,7 +76,7 @@ export const navigation: NavigationContent = {
       children: [
         { label: "Massages énergétiques", href: "/massages" },
         { label: "Accompagnements émotionnels", href: "/accompagnements" },
-        { label: "SE CHOISIR", href: "/rmd" },
+        { label: "Se choisir", href: "/rmd" },
         { label: "Formations holistiques", href: "/formations" },
       ],
     },
@@ -103,7 +103,7 @@ export const footer: FooterContent = {
       links: [
         { label: "Massages énergétiques", href: "/massages" },
         { label: "Accompagnements émotionnels", href: "/accompagnements" },
-        { label: "SE CHOISIR", href: "/rmd" },
+        { label: "Se choisir", href: "/rmd" },
         { label: "Formations holistiques", href: "/formations" },
       ],
     },

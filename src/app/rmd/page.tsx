@@ -4,7 +4,7 @@ import { StarIcon, MapPinIcon, VideoIcon, ClockIcon, PhoneIcon, EnvelopeSimpleIc
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { rmdPage } from '../../../content/rmd';
 import { getBreadcrumbSchema } from '@/lib/schema';
-import { InnerPageHero, RMDFAQAccordion } from '@/components/sections';
+import { InnerPageHero, RMDFAQAccordion, CTAFinalSection } from '@/components/sections';
 import { Section, SectionHeader, Button } from '@/components/ui';
 
 export const metadata: Metadata = {
@@ -693,47 +693,7 @@ export default function RMDPage() {
         </div>
       </Section>
 
-      {/* ================================================================
-          FINAL CTA
-      ================================================================ */}
-      <Section background="indigoDeep">
-        <div className="mx-auto max-w-[640px] text-center">
-          <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-50 mb-6">
-            {rmdPage.finalCTA.title}
-          </h2>
-
-          <div className="flex flex-col gap-3 mb-6">
-            {rmdPage.finalCTA.paragraphs.map((p, i) => (
-              <p key={i} className="font-body text-base text-neutral-200 leading-relaxed">
-                {p}
-              </p>
-            ))}
-          </div>
-
-          <div className="flex flex-col gap-1 mb-8">
-            {rmdPage.finalCTA.closingLines.map((line, i) => (
-              <p key={i} className="font-heading text-lg text-neutral-50 italic">
-                {line}
-              </p>
-            ))}
-          </div>
-
-          <a href={rmdPage.cta.href}>
-            <Button variant="warmOnDark" size="lg">
-              {rmdPage.finalCTA.buttonLabel}
-            </Button>
-          </a>
-
-          <div className="mt-6 flex flex-col gap-1">
-            <p className="font-body text-sm text-neutral-300">
-              T&#233;l&#233;phone : {rmdPage.finalCTA.phone}
-            </p>
-            <p className="font-body text-sm text-neutral-300">
-              Email : {rmdPage.finalCTA.email}
-            </p>
-          </div>
-        </div>
-      </Section>
+      <CTAFinalSection />
     </>
   );
 }

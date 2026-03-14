@@ -10,6 +10,7 @@ import type {
   FAQContent,
   PracticalInfoContent,
   CTAFinalContent,
+  MidPageCTAContent,
 } from "@/types/content";
 
 // =============================================================================
@@ -558,6 +559,21 @@ export const practicalInfo: PracticalInfoContent = {
     alt: "Cabinet de Clémence Reznicek à Jonzac",
     width: 640,
     height: 427,
+  },
+};
+
+// =============================================================================
+// 11.5. Mid-Page CTA (between Testimonials and RMD Spotlight)
+// =============================================================================
+
+export const midPageCTA: MidPageCTAContent = {
+  headline: "Prêt·e à vous choisir ?",
+  description:
+    "Le parcours RMD est le chemin le plus complet que je propose pour une transformation profonde et durable.",
+  cta: {
+    label: "Je me choisis",
+    href: "/rmd",
+    variant: "primary",
   },
 };
 

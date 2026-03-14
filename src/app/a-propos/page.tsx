@@ -8,8 +8,9 @@ import {
   AboutValues,
   AboutCertifications,
   BlogSpotlight,
+  CTAFinalSection,
 } from '@/components/sections';
-import { Section, Button } from '@/components/ui';
+import { Section } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: siteMetadata.about.title,
@@ -123,22 +124,7 @@ export default function AboutPage() {
       {/* Blog */}
       <BlogSpotlight />
 
-      {/* CTA */}
-      <Section background="indigoDeep">
-        <div className="text-center">
-          <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-50 mb-4">
-            Et si on se rencontrait ?
-          </h2>
-          <p className="font-body text-base text-neutral-200 mb-8 max-w-lg mx-auto">
-            La meilleure façon de savoir si mon accompagnement vous correspond, c&apos;est d&apos;en faire l&apos;expérience. Prenez rendez-vous pour une séance découverte. Ensemble, nous ferons le point sur votre situation et définirons le chemin le plus adapté pour vous.
-          </p>
-          <a href={aboutPage.cta.href}>
-            <Button variant="warm" size="lg">
-              {aboutPage.cta.label}
-            </Button>
-          </a>
-        </div>
-      </Section>
+      <CTAFinalSection />
 
       {/* Crédit photographe */}
       {aboutPage.photographerCredit && (

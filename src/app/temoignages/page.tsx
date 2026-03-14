@@ -4,8 +4,8 @@ import { StarIcon } from '@phosphor-icons/react/dist/ssr';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { testimonialsPage } from '../../../content/testimonials';
 import { getBreadcrumbSchema } from '@/lib/schema';
-import { InnerPageHero } from '@/components/sections';
-import { Section, SectionHeader, Button, Card } from '@/components/ui';
+import { InnerPageHero, CTAFinalSection } from '@/components/sections';
+import { Section, SectionHeader, Button, Card, YouTubeEmbed } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: siteMetadata.testimonials.title,
@@ -133,29 +133,6 @@ export default function TemoignagesPage() {
         </div>
       </Section>
 
-      {/* YouTube */}
-      {testimonialsPage.youtubeCTA && (
-        <Section background="warmWhite">
-          <div className="text-center">
-            <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-800 mb-4">
-              Découvrez aussi mes vidéos
-            </h2>
-            <p className="font-body text-base text-neutral-600 mb-8 max-w-lg mx-auto">
-              Retrouvez des partages, des réflexions et des outils concrets sur ma chaîne YouTube.
-            </p>
-            <a
-              href={testimonialsPage.youtubeCTA.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="secondary" size="lg">
-                {testimonialsPage.youtubeCTA.label}
-              </Button>
-            </a>
-          </div>
-        </Section>
-      )}
-
       {/* Laisser un témoignage */}
       <Section background="warmWhite">
         <div className="text-center max-w-lg mx-auto">
@@ -177,22 +154,41 @@ export default function TemoignagesPage() {
         </div>
       </Section>
 
-      {/* CTA */}
-      <Section background="indigoDeep">
-        <div className="text-center">
-          <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-neutral-50 mb-4">
-            Prêt(e) à vivre votre propre expérience ?
-          </h2>
-          <p className="font-body text-base text-neutral-200 mb-8 max-w-lg mx-auto">
-            Rejoignez les personnes qui ont choisi de prendre soin d&apos;elles. Votre transformation commence ici.
-          </p>
-          <a href={testimonialsPage.contactCTA.href}>
-            <Button variant="warm" size="lg">
-              {testimonialsPage.contactCTA.label}
-            </Button>
-          </a>
-        </div>
-      </Section>
+      {/* YouTube video previews */}
+      {testimonialsPage.youtubeSection && (
+        <Section background="cream">
+          <SectionHeader
+            title={testimonialsPage.youtubeSection.title}
+            subtitle={testimonialsPage.youtubeSection.subtitle}
+            decorative
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {testimonialsPage.youtubeSection.videos.map((video) => (
+              <div key={video.videoId}>
+                <YouTubeEmbed videoId={video.videoId} title={video.title} />
+                <p className="font-heading text-base font-semibold text-neutral-800 mt-3 px-1">
+                  {video.title}
+                </p>
+              </div>
+            ))}
+          </div>
+          {testimonialsPage.youtubeCTA && (
+            <div className="mt-10 text-center">
+              <a
+                href={testimonialsPage.youtubeCTA.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="secondary" size="lg">
+                  {testimonialsPage.youtubeCTA.label}
+                </Button>
+              </a>
+            </div>
+          )}
+        </Section>
+      )}
+
+      <CTAFinalSection />
     </>
   );
 }

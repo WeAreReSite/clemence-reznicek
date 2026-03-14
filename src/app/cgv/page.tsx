@@ -23,7 +23,7 @@ export default function CGVPage() {
         <h1 className="font-heading text-3xl lg:text-4xl font-semibold text-neutral-800 mb-2">
           {cgvPage.title}
         </h1>
-        <p className="font-body text-sm text-neutral-400 mb-10">
+        <p className="font-body text-sm text-neutral-600 mb-10">
           Actualisées le {cgvPage.lastUpdated}
         </p>
 

@@ -52,7 +52,7 @@ export function AboutCertifications({ title, certifications }: AboutCertificatio
                   {cert.name}
                 </p>
                 {cert.description && (
-                  <p className="font-body text-sm text-neutral-500 mt-0.5">
+                  <p className="font-body text-sm text-neutral-600 mt-0.5">
                     {cert.description}
                   </p>
                 )}
@@ -60,7 +60,7 @@ export function AboutCertifications({ title, certifications }: AboutCertificatio
 
               {/* Index number — subtle */}
               <span
-                className="font-body text-xs text-neutral-300 tabular-nums mt-1 shrink-0"
+                className="font-body text-xs text-neutral-600 tabular-nums mt-1 shrink-0"
                 aria-hidden="true"
               >
                 {String(index + 1).padStart(2, '0')}

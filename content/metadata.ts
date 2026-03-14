@@ -75,7 +75,7 @@ export const metadata: MetadataContent = {
     ogImage: "/images/work/DSC02979.jpg",
   },
   formations: {
-    title: "Formations holistiques | Jonzac et à distance",
+    title: "Formations holistiques à Jonzac",
     description:
       "Formations en énergétique, décodage quantique et développement spirituel à Jonzac ou à distance. Cosmo, Quantique 111, stages thématiques.",
     keywords: [
@@ -91,9 +91,9 @@ export const metadata: MetadataContent = {
     ogImage: "/images/work/DSC02941.jpg",
   },
   about: {
-    title: "À propos | Thérapeute holistique à Jonzac",
+    title: "À propos | Thérapeute holistique",
     description:
-      "Parcours de Clémence Reznicek, praticienne en bien-être holistique à Jonzac. 10 ans d'expérience, 11 certifications, intuition et vision systémique.",
+      "Parcours de Clémence Reznicek, praticienne en bien-être holistique à Jonzac. 10 ans d'expérience, 18 certifications, intuition et vision systémique.",
     keywords: [
       "Clémence Reznicek",
       "praticienne bien-être",

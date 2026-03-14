@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { StarIcon, MapPinIcon, VideoIcon, ClockIcon, PhoneIcon, EnvelopeSimpleIcon } from '@phosphor-icons/react/dist/ssr';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { rmdPage } from '../../../content/rmd';
-import { getBreadcrumbSchema } from '@/lib/schema';
+import { getBreadcrumbSchema, getRMDFAQSchema } from '@/lib/schema';
 import { InnerPageHero, RMDFAQAccordion, CTAFinalSection } from '@/components/sections';
 import { Section, SectionHeader, Button } from '@/components/ui';
 
@@ -31,12 +31,9 @@ const rmdService = JSON.stringify({
   description: rmdPage.heroSubtitle,
   provider: { '@id': 'https://clemencereznicek.com/#localbusiness' },
   url: 'https://clemencereznicek.com/rmd',
-  offers: {
-    '@type': 'Offer',
-    availability: 'https://schema.org/InStock',
-  },
   areaServed: { '@type': 'City', name: 'Jonzac' },
 });
+const rmdFAQ = JSON.stringify(getRMDFAQSchema());
 
 function JsonLd({ data }: { data: string }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: data }} />;
@@ -47,6 +44,7 @@ export default function RMDPage() {
     <>
       <JsonLd data={rmdBreadcrumb} />
       <JsonLd data={rmdService} />
+      <JsonLd data={rmdFAQ} />
 
       {/* ================================================================
           HERO
@@ -315,7 +313,7 @@ export default function RMDPage() {
                         {dim.description}
                       </p>
                       <div className="border-t border-neutral-200/40 pt-3">
-                        <p className="font-body text-sm text-secondary-600 italic flex items-start gap-2">
+                        <p className="font-body text-sm text-secondary-800 italic flex items-start gap-2">
                           <span className="text-secondary-500 shrink-0 mt-0.5" aria-hidden="true">&#8594;</span>
                           {dim.method}
                         </p>
@@ -370,7 +368,7 @@ export default function RMDPage() {
           const stepColors = [
             { bg: 'bg-indigo-50', border: 'border-t-indigo-400', badge: 'bg-indigo-500' },
             { bg: 'bg-plum-50', border: 'border-t-plum-400', badge: 'bg-plum-500' },
-            { bg: 'bg-secondary-50', border: 'border-t-secondary-400', badge: 'bg-secondary-600 text-neutral-50' },
+            { bg: 'bg-secondary-50', border: 'border-t-secondary-400', badge: 'bg-secondary-800 text-neutral-50' },
           ];
           return (
             <div className="mx-auto max-w-[900px] grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -386,9 +384,9 @@ export default function RMDPage() {
                     >
                       {step.label}
                     </span>
-                    <h4 className="font-heading text-lg font-semibold text-indigo-500 mb-3">
+                    <h3 className="font-heading text-lg font-semibold text-indigo-500 mb-3">
                       {step.title}
-                    </h4>
+                    </h3>
                     <p className="font-body text-sm text-neutral-600 leading-relaxed whitespace-pre-line flex-1">
                       {step.description}
                     </p>
@@ -571,7 +569,7 @@ export default function RMDPage() {
           const uniqueColors = [
             { card: 'bg-primary-50 border-t-4 border-t-primary-300', badge: 'bg-primary-500' },
             { card: 'bg-indigo-50 border-t-4 border-t-indigo-300', badge: 'bg-indigo-500' },
-            { card: 'bg-secondary-50 border-t-4 border-t-secondary-300', badge: 'bg-secondary-600' },
+            { card: 'bg-secondary-50 border-t-4 border-t-secondary-300', badge: 'bg-secondary-800' },
             { card: 'bg-plum-50 border-t-4 border-t-plum-300', badge: 'bg-plum-500' },
             { card: 'bg-primary-50 border-t-4 border-t-primary-300', badge: 'bg-primary-500' },
             { card: 'bg-indigo-50 border-t-4 border-t-indigo-300', badge: 'bg-indigo-500' },
@@ -646,7 +644,7 @@ export default function RMDPage() {
             <h2 className="font-heading text-2xl lg:text-3xl font-semibold text-indigo-500 mb-2">
               {rmdPage.discoveryCall.title}
             </h2>
-            <p className="font-heading text-lg text-secondary-600 font-semibold mb-6">
+            <p className="font-heading text-lg text-secondary-800 font-semibold mb-6">
               {rmdPage.discoveryCall.subtitle}
             </p>
 

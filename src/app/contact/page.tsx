@@ -64,7 +64,7 @@ export default function ContactPage() {
       {/* SIRET */}
       {contactPage.siret && (
         <div className="text-center py-4 bg-bg-cream">
-          <p className="font-body text-xs text-neutral-400">
+          <p className="font-body text-xs text-neutral-600">
             SIRET : {contactPage.siret}
           </p>
         </div>

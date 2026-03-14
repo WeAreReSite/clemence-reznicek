@@ -1,5 +1,8 @@
 import { siteConfig } from '../../content/site';
 import { faq } from '../../content/homepage';
+import { rmdPage } from '../../content/rmd';
+import { aboutPage } from '../../content/about';
+import { allTestimonials } from '../../content/testimonials';
 
 const BASE_URL = 'https://clemencereznicek.com';
 
@@ -177,4 +180,148 @@ export function getServiceSchema(
 
       return schema;
     });
+}
+
+// =============================================================================
+// FAQPage Schema (for RMD page)
+// =============================================================================
+
+export function getRMDFAQSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: rmdPage.faq.items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+}
+
+// =============================================================================
+// Person Schema (for Clemence Reznicek)
+// =============================================================================
+
+export function getPersonSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${BASE_URL}/#person`,
+    name: siteConfig.businessName,
+    url: `${BASE_URL}/a-propos`,
+    image: `${BASE_URL}${aboutPage.story.image.src}`,
+    jobTitle: 'Praticienne en bien-être holistique',
+    description: aboutPage.heroSubtitle,
+    telephone: siteConfig.phone.link.replace('tel:', ''),
+    email: siteConfig.email,
+    worksFor: {
+      '@id': `${BASE_URL}/#localbusiness`,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: siteConfig.address.street,
+      addressLocality: siteConfig.address.city,
+      addressRegion: siteConfig.address.region,
+      postalCode: siteConfig.address.postalCode,
+      addressCountry: 'FR',
+    },
+    sameAs: siteConfig.socialLinks
+      .filter((link) => link.platform !== 'google')
+      .map((link) => link.url),
+    knowsAbout: aboutPage.certifications.items.map((cert) => cert.name),
+    areaServed: {
+      '@type': 'City',
+      name: 'Jonzac',
+    },
+  };
+}
+
+// =============================================================================
+// Review Schemas (for testimonials page)
+// =============================================================================
+
+export function getReviewSchemas() {
+  return allTestimonials.map((testimonial) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    author: {
+      '@type': 'Person',
+      name: testimonial.name,
+    },
+    reviewBody: testimonial.text,
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: testimonial.rating.toString(),
+      bestRating: '5',
+      worstRating: '1',
+    },
+    itemReviewed: {
+      '@id': `${BASE_URL}/#localbusiness`,
+    },
+    ...(testimonial.date
+      ? { datePublished: `${testimonial.date}-01` }
+      : {}),
+  }));
+}
+
+// =============================================================================
+// Course Schemas (for formations page)
+// =============================================================================
+
+interface FormationInput {
+  name: string;
+  description: string;
+  price: string;
+  duration: string;
+  modules?: string[];
+}
+
+export function getCourseSchemas(formations: FormationInput[]) {
+  return formations.map((formation) => {
+    const priceMatch = formation.price.match(/(\d+)/);
+    const price = priceMatch ? priceMatch[1] : undefined;
+
+    const schema: Record<string, unknown> = {
+      '@context': 'https://schema.org',
+      '@type': 'Course',
+      name: formation.name,
+      description: formation.description,
+      provider: {
+        '@id': `${BASE_URL}/#localbusiness`,
+      },
+      url: `${BASE_URL}/formations`,
+      inLanguage: 'fr',
+      hasCourseInstance: {
+        '@type': 'CourseInstance',
+        courseMode: formation.duration.includes('distance')
+          ? 'Mixed'
+          : 'InPerson',
+        location: {
+          '@type': 'Place',
+          name: 'Cabinet Clémence Reznicek',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: siteConfig.address.street,
+            addressLocality: siteConfig.address.city,
+            postalCode: siteConfig.address.postalCode,
+            addressCountry: 'FR',
+          },
+        },
+      },
+    };
+
+    if (price) {
+      schema.offers = {
+        '@type': 'Offer',
+        price,
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+      };
+    }
+
+    return schema;
+  });
 }

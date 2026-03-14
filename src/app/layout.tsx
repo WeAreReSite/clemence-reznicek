@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       {
         url: '/images/team/DSC02823.jpg',
         width: 1200,
-        height: 1800,
+        height: 630,
         alt: 'Clémence Reznicek — Bien-être holistique à Jonzac',
       },
     ],
@@ -55,6 +55,7 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = JSON.stringify(getLocalBusinessSchema());
 const webSiteSchema = JSON.stringify(getWebSiteSchema());
+const isVercel = process.env.VERCEL === '1';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -74,7 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main-content">{children}</main>
         <Footer />
         <CustomCursor />
-        <Analytics />
+        {isVercel && <Analytics />}
       </body>
     </html>
   );

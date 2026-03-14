@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { aboutPage } from '../../../content/about';
-import { getBreadcrumbSchema } from '@/lib/schema';
+import { getBreadcrumbSchema, getPersonSchema } from '@/lib/schema';
 import {
   InnerPageHero,
   AboutStory,
@@ -29,6 +29,7 @@ export const metadata: Metadata = {
 const aboutBC = JSON.stringify(
   getBreadcrumbSchema([{ name: 'A propos', url: 'https://clemencereznicek.com/a-propos' }])
 );
+const personSchema = JSON.stringify(getPersonSchema());
 
 export default function AboutPage() {
   return (
@@ -36,6 +37,10 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: aboutBC }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: personSchema }}
       />
 
       {/* Hero */}
@@ -129,7 +134,7 @@ export default function AboutPage() {
       {/* Crédit photographe */}
       {aboutPage.photographerCredit && (
         <div className="text-center py-4 bg-bg-cream">
-          <p className="font-body text-xs text-neutral-400">
+          <p className="font-body text-xs text-neutral-600">
             {aboutPage.photographerCredit}
           </p>
         </div>

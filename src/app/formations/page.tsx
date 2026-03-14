@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { formationsPage } from '../../../content/formations';
-import { getBreadcrumbSchema } from '@/lib/schema';
+import { getBreadcrumbSchema, getCourseSchemas } from '@/lib/schema';
 import { InnerPageHero, CTAFinalSection } from '@/components/sections';
 import { Section, SectionHeader, Button, Badge, YouTubeEmbed } from '@/components/ui';
 
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 const breadcrumbSchema = JSON.stringify(
   getBreadcrumbSchema([{ name: 'Formations holistiques', url: 'https://clemencereznicek.com/formations' }])
 );
+const courseSchemas = JSON.stringify(getCourseSchemas(formationsPage.formations));
 
 /* Split formations into featured (Cosmo, Quantique 111) and stages */
 const featured = formationsPage.formations.filter((f) => !f.name.startsWith('Stage'));
@@ -32,6 +33,7 @@ export default function FormationsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbSchema }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: courseSchemas }} />
 
       {/* Hero */}
       <InnerPageHero
@@ -95,7 +97,7 @@ export default function FormationsPage() {
                 {/* Price + duration */}
                 <div className="flex items-center flex-wrap gap-3 mb-5">
                   <Badge variant="accent">{formation.price}</Badge>
-                  <span className="font-body text-sm text-neutral-500">{formation.duration}</span>
+                  <span className="font-body text-sm text-neutral-600">{formation.duration}</span>
                 </div>
 
                 <p className="font-body text-base text-neutral-600 leading-relaxed mb-5">
@@ -195,7 +197,7 @@ export default function FormationsPage() {
 
                   <div className="flex items-center gap-3 pt-3 border-t border-neutral-200/60">
                     <Badge variant="accent">{stage.price}</Badge>
-                    <span className="font-body text-xs text-neutral-500">{stage.duration}</span>
+                    <span className="font-body text-xs text-neutral-600">{stage.duration}</span>
                   </div>
                 </div>
               );

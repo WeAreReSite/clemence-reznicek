@@ -92,7 +92,7 @@ export default function AccompagnementsPage() {
             <p className="font-body text-base text-neutral-600 leading-relaxed mb-4">
               {soinsPage.whyHolistic.closing}
             </p>
-            <p className="font-body text-sm text-neutral-500 italic">
+            <p className="font-body text-sm text-neutral-600 italic">
               {soinsPage.whyHolistic.disclaimer}
             </p>
           </div>

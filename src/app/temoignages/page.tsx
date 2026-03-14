@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { StarIcon } from '@phosphor-icons/react/dist/ssr';
 import { metadata as siteMetadata } from '../../../content/metadata';
 import { testimonialsPage } from '../../../content/testimonials';
-import { getBreadcrumbSchema } from '@/lib/schema';
+import { getBreadcrumbSchema, getReviewSchemas } from '@/lib/schema';
 import { InnerPageHero, CTAFinalSection } from '@/components/sections';
 import { Section, SectionHeader, Button, Card, YouTubeEmbed } from '@/components/ui';
 
@@ -40,11 +40,13 @@ function StarRating({ rating }: { rating: number }) {
 const temBC = JSON.stringify(
   getBreadcrumbSchema([{ name: 'Temoignages', url: 'https://clemencereznicek.com/temoignages' }])
 );
+const reviewSchemas = JSON.stringify(getReviewSchemas());
 
 export default function TemoignagesPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: temBC }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: reviewSchemas }} />
 
       {/* Hero */}
       <InnerPageHero

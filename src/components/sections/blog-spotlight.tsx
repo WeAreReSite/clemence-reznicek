@@ -3,7 +3,8 @@
 import { useRef, useEffect } from 'react';
 import { aboutPage } from '../../../content/about';
 import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW, EASE_BREATHE } from '@/lib/gsap-setup';
-import { Section, Button, Badge } from '@/components/ui';
+import { Section, Badge, buttonVariants } from '@/components/ui';
+import { cn } from '@/lib/utils';
 
 export function BlogSpotlight() {
   const boxRef = useRef<HTMLDivElement>(null);
@@ -103,10 +104,10 @@ export function BlogSpotlight() {
             href={aboutPage.blog.url}
             target="_blank"
             rel="noopener noreferrer"
+            className={cn(buttonVariants({ variant: 'warmOnDark', size: 'lg' }))}
+            data-magnetic
           >
-            <Button variant="warmOnDark" size="lg" data-magnetic>
-              {aboutPage.blog.label}
-            </Button>
+            {aboutPage.blog.label}
           </a>
         </div>
       </div>

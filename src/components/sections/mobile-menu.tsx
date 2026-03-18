@@ -12,7 +12,7 @@ import {
   YoutubeLogoIcon,
 } from '@phosphor-icons/react';
 import { navigation, siteConfig } from '../../../content/site';
-import { Button } from '@/components/ui';
+import { buttonVariants } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 interface MobileMenuProps {
@@ -373,10 +373,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <MenuDivider />
 
           {/* CTA button */}
-          <a href={navigation.cta.href} onClick={onClose} className="w-full max-w-[280px]">
-            <Button variant="warm" size="md" fullWidth>
-              {navigation.cta.label}
-            </Button>
+          <a href={navigation.cta.href} onClick={onClose} className={cn(buttonVariants({ variant: 'warm', size: 'md', fullWidth: true }), 'max-w-[280px]')}>
+            {navigation.cta.label}
           </a>
 
           {/* Phone */}

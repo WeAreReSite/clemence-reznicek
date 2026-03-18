@@ -17,7 +17,8 @@ import {
   CTAFinalSection,
   TestimonialCarousel,
 } from '@/components/sections';
-import { Button } from '@/components/ui';
+import { buttonVariants } from '@/components/ui';
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: siteMetadata.home.title,
@@ -76,10 +77,8 @@ export default function HomePage() {
         <p className="font-body text-base text-neutral-600 mb-6 max-w-md mx-auto px-5">
           {midPageCTA.description}
         </p>
-        <Link href={midPageCTA.cta.href}>
-          <Button variant="warm" size="lg">
-            {midPageCTA.cta.label}
-          </Button>
+        <Link href={midPageCTA.cta.href} className={cn(buttonVariants({ variant: 'warm', size: 'lg' }))}>
+          {midPageCTA.cta.label}
         </Link>
       </div>
 

@@ -14,7 +14,9 @@ import {
   CardContent,
   CardFooter,
   Button,
+  buttonVariants,
 } from '@/components/ui';
+import { cn } from '@/lib/utils';
 
 const borderColors: Record<string, string> = {
   'massages-energetiques': 'border-t-primary-400',
@@ -183,16 +185,12 @@ export function EntryPointsSection() {
 
                 <CardFooter className="mt-auto">
                   {card.cta.href.startsWith('tel:') ? (
-                    <a href={card.cta.href} className="w-full">
-                      <Button variant="secondary" size="sm" fullWidth data-magnetic>
-                        {card.cta.label}
-                      </Button>
+                    <a href={card.cta.href} className={cn(buttonVariants({ variant: 'secondary', size: 'sm', fullWidth: true }), 'w-full')} data-magnetic>
+                      {card.cta.label}
                     </a>
                   ) : (
-                    <Link href={card.cta.href} className="w-full">
-                      <Button variant="secondary" size="sm" fullWidth data-magnetic>
-                        {card.cta.label}
-                      </Button>
+                    <Link href={card.cta.href} className={cn(buttonVariants({ variant: 'secondary', size: 'sm', fullWidth: true }), 'w-full')} data-magnetic>
+                      {card.cta.label}
                     </Link>
                   )}
                 </CardFooter>
@@ -210,10 +208,8 @@ export function EntryPointsSection() {
         <p className="font-body text-base text-neutral-600 mb-6">
           Je suis disponible pour échanger et vous guider vers l&#39;accompagnement qui vous correspond.
         </p>
-        <a href="tel:+33632185259">
-          <Button variant="warm" size="lg" data-magnetic>
-            Contactez-moi
-          </Button>
+        <a href="tel:+33632185259" className={cn(buttonVariants({ variant: 'warm', size: 'lg' }))} data-magnetic>
+          Contactez-moi
         </a>
       </div>
     </Section>

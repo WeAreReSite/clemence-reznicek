@@ -10,7 +10,7 @@ import {
 } from '@phosphor-icons/react';
 import { navigation, siteConfig } from '../../../content/site';
 import { MobileMenu } from './mobile-menu';
-import { Button } from '@/components/ui';
+import { buttonVariants } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 export function StickyHeader() {
@@ -241,17 +241,13 @@ export function StickyHeader() {
           {/* Right section */}
           <div className="flex items-center gap-2">
             {/* Desktop CTA */}
-            <a href={navigation.cta.href} className="hidden lg:block">
-              <Button variant="warm" size="sm">
-                {navigation.cta.label}
-              </Button>
+            <a href={navigation.cta.href} className={cn(buttonVariants({ variant: 'warm', size: 'sm' }), 'hidden lg:inline-flex')}>
+              {navigation.cta.label}
             </a>
 
             {/* Tablet CTA — visible md to lg */}
-            <a href={navigation.cta.href} className="hidden md:block lg:hidden">
-              <Button variant="warm" size="sm">
-                {navigation.cta.label}
-              </Button>
+            <a href={navigation.cta.href} className={cn(buttonVariants({ variant: 'warm', size: 'sm' }), 'hidden md:inline-flex lg:hidden')}>
+              {navigation.cta.label}
             </a>
 
             {/* Mobile phone icon */}

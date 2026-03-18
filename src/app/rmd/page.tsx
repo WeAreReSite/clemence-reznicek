@@ -5,7 +5,8 @@ import { metadata as siteMetadata } from '../../../content/metadata';
 import { rmdPage } from '../../../content/rmd';
 import { getBreadcrumbSchema, getRMDFAQSchema } from '@/lib/schema';
 import { InnerPageHero, RMDFAQAccordion, CTAFinalSection } from '@/components/sections';
-import { Section, SectionHeader, Button } from '@/components/ui';
+import { Section, SectionHeader, buttonVariants } from '@/components/ui';
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: siteMetadata.rmd.title,
@@ -550,10 +551,8 @@ export default function RMDPage() {
           </div>
 
           <div className="text-center">
-            <a href={rmdPage.cta.href}>
-              <Button variant="warm" size="lg">
-                {rmdPage.cta.label}
-              </Button>
+            <a href={rmdPage.cta.href} className={cn(buttonVariants({ variant: 'warm', size: 'lg' }))}>
+              {rmdPage.cta.label}
             </a>
           </div>
         </div>
@@ -674,17 +673,13 @@ export default function RMDPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href={`tel:${rmdPage.discoveryCall.phone.replace(/\s/g, '')}`} className="inline-flex items-center gap-2">
-                <Button variant="warm" size="lg">
-                  <PhoneIcon size={18} weight="bold" />
-                  {rmdPage.discoveryCall.phone}
-                </Button>
+              <a href={`tel:${rmdPage.discoveryCall.phone.replace(/\s/g, '')}`} className={cn(buttonVariants({ variant: 'warm', size: 'lg' }))}>
+                <PhoneIcon size={18} weight="bold" />
+                {rmdPage.discoveryCall.phone}
               </a>
-              <a href={`mailto:${rmdPage.discoveryCall.email}`} className="inline-flex items-center gap-2">
-                <Button variant="secondary" size="lg">
-                  <EnvelopeSimpleIcon size={18} weight="bold" />
-                  {rmdPage.discoveryCall.email}
-                </Button>
+              <a href={`mailto:${rmdPage.discoveryCall.email}`} className={cn(buttonVariants({ variant: 'secondary', size: 'lg' }))}>
+                <EnvelopeSimpleIcon size={18} weight="bold" />
+                {rmdPage.discoveryCall.email}
               </a>
             </div>
           </div>

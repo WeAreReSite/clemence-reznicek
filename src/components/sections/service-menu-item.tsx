@@ -4,7 +4,7 @@ import { useId, useCallback } from 'react';
 import Image from 'next/image';
 import { CaretDownIcon, ArrowRightIcon } from '@phosphor-icons/react';
 import { cn } from '@/lib/utils';
-import { Badge, Button } from '@/components/ui';
+import { Badge, buttonVariants } from '@/components/ui';
 import type { ImageData } from '@/types/content';
 
 interface ServiceMenuItemProps {
@@ -134,14 +134,15 @@ export function ServiceMenuItem({
                 <p className="font-body text-base text-neutral-600 leading-relaxed max-w-[600px] mb-4">
                   {description}
                 </p>
-                <a href={ctaHref} {...(ctaExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    iconTrailing={<ArrowRightIcon size={16} />}
-                  >
-                    {ctaLabel}
-                  </Button>
+                <a
+                  href={ctaHref}
+                  className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }))}
+                  {...(ctaExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                >
+                  {ctaLabel}
+                  <span className="shrink-0" aria-hidden="true">
+                    <ArrowRightIcon size={16} />
+                  </span>
                 </a>
               </div>
             </div>

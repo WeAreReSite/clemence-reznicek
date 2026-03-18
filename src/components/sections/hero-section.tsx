@@ -5,7 +5,7 @@ import { gsap, ScrollTrigger } from '@/lib/gsap-setup';
 import Image from 'next/image';
 import Link from 'next/link';
 import { hero } from '../../../content/homepage';
-import { Button } from '@/components/ui';
+import { buttonVariants } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 export function HeroSection() {
@@ -258,19 +258,11 @@ export function HeroSection() {
             ref={ctaRef}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <a href={hero.primaryCTA.href}>
-              <Button variant="warm" size="lg">
-                {hero.primaryCTA.label}
-              </Button>
+            <a href={hero.primaryCTA.href} className={cn(buttonVariants({ variant: 'warm', size: 'lg' }))}>
+              {hero.primaryCTA.label}
             </a>
-            <Link href={hero.secondaryCTA.href}>
-              <Button
-                variant="ghost"
-                size="lg"
-                className="text-neutral-100 hover:text-neutral-50"
-              >
-                {hero.secondaryCTA.label}
-              </Button>
+            <Link href={hero.secondaryCTA.href} className={cn(buttonVariants({ variant: 'ghost', size: 'lg' }), 'text-neutral-100 hover:text-neutral-50')}>
+              {hero.secondaryCTA.label}
             </Link>
           </div>
         </div>

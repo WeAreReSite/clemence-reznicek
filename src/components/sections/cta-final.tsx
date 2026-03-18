@@ -13,7 +13,8 @@ import {
 import { ctaFinal } from '../../../content/homepage';
 import { siteConfig } from '../../../content/site';
 import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW, EASE_SETTLE } from '@/lib/gsap-setup';
-import { Button } from '@/components/ui';
+import { buttonVariants } from '@/components/ui';
+import { cn } from '@/lib/utils';
 import type { SocialLink } from '@/types/content';
 
 const socialIconMap = {
@@ -126,17 +127,13 @@ export function CTAFinalSection() {
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <div data-cta-button>
-            <a href={ctaFinal.primaryCTA.href}>
-              <Button variant="warm" size="lg" data-magnetic>
-                {ctaFinal.primaryCTA.label}
-              </Button>
+            <a href={ctaFinal.primaryCTA.href} className={cn(buttonVariants({ variant: 'warm', size: 'lg' }))} data-magnetic>
+              {ctaFinal.primaryCTA.label}
             </a>
           </div>
           <div data-cta-button>
-            <Link href={ctaFinal.secondaryCTA.href}>
-              <Button variant="secondary" size="md" data-magnetic>
-                {ctaFinal.secondaryCTA.label}
-              </Button>
+            <Link href={ctaFinal.secondaryCTA.href} className={cn(buttonVariants({ variant: 'secondary', size: 'md' }))} data-magnetic>
+              {ctaFinal.secondaryCTA.label}
             </Link>
           </div>
         </div>

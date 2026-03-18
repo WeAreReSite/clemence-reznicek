@@ -3,7 +3,8 @@
 import { useRef, useEffect } from 'react';
 import { promotions } from '../../../content/homepage';
 import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW, EASE_BREATHE } from '@/lib/gsap-setup';
-import { Section, Button, Badge } from '@/components/ui';
+import { Section, Badge, buttonVariants } from '@/components/ui';
+import { cn } from '@/lib/utils';
 
 export function PromotionsSection() {
   const boxRef = useRef<HTMLDivElement>(null);
@@ -116,10 +117,8 @@ export function PromotionsSection() {
               Voir les dates
             </a>
             <span className="text-neutral-500 text-sm" aria-hidden="true">·</span>
-            <a href="tel:+33632185259">
-              <Button variant="warmOnDark" size="lg" data-magnetic>
-                Me contacter
-              </Button>
+            <a href="tel:+33632185259" className={cn(buttonVariants({ variant: 'warmOnDark', size: 'lg' }))} data-magnetic>
+              Me contacter
             </a>
           </div>
         </div>

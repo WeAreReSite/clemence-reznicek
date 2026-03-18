@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { StarIcon } from '@phosphor-icons/react/dist/ssr';
 import { testimonialSection } from '../../../content/testimonials';
 import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW, EASE_BREATHE } from '@/lib/gsap-setup';
-import { Section, SectionHeader, Card, Button } from '@/components/ui';
+import { Section, SectionHeader, Card, buttonVariants } from '@/components/ui';
+import { cn } from '@/lib/utils';
 
 const CARD_ENTRANCES = [
   { y: 80, rotateZ: -2, scale: 0.95 },
@@ -153,10 +154,8 @@ export function TestimonialsSection() {
 
       {/* CTA */}
       <div className="text-center">
-        <Link href={testimonialSection.cta.href}>
-          <Button variant="warmOnDark" size="lg" data-magnetic>
-            {testimonialSection.cta.label}
-          </Button>
+        <Link href={testimonialSection.cta.href} className={cn(buttonVariants({ variant: 'warmOnDark', size: 'lg' }))} data-magnetic>
+          {testimonialSection.cta.label}
         </Link>
       </div>
     </Section>

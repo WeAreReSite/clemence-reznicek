@@ -5,7 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { introduction } from '../../../content/homepage';
 import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW } from '@/lib/gsap-setup';
-import { Section, SectionHeader, Button } from '@/components/ui';
+import { Section, SectionHeader, buttonVariants } from '@/components/ui';
+import { cn } from '@/lib/utils';
 
 export function IntroductionSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -102,10 +103,8 @@ export function IntroductionSection() {
           </p>
 
           {/* CTA */}
-          <Link href={introduction.cta.href}>
-            <Button variant="secondary" size="md" data-magnetic>
-              {introduction.cta.label}
-            </Button>
+          <Link href={introduction.cta.href} className={cn(buttonVariants({ variant: 'secondary', size: 'md' }))} data-magnetic>
+            {introduction.cta.label}
           </Link>
         </div>
       </div>

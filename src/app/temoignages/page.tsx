@@ -5,7 +5,8 @@ import { metadata as siteMetadata } from '../../../content/metadata';
 import { testimonialsPage } from '../../../content/testimonials';
 import { getBreadcrumbSchema, getReviewSchemas } from '@/lib/schema';
 import { InnerPageHero, CTAFinalSection } from '@/components/sections';
-import { Section, SectionHeader, Button, Card, YouTubeEmbed } from '@/components/ui';
+import { Section, SectionHeader, Card, YouTubeEmbed, buttonVariants } from '@/components/ui';
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: siteMetadata.testimonials.title,
@@ -71,10 +72,9 @@ export default function TemoignagesPage() {
               href={testimonialsPage.googleReviewsCTA.href}
               target="_blank"
               rel="noopener noreferrer"
+              className={cn(buttonVariants({ variant: 'secondary', size: 'sm' }))}
             >
-              <Button variant="secondary" size="sm">
-                {testimonialsPage.googleReviewsCTA.label}
-              </Button>
+              {testimonialsPage.googleReviewsCTA.label}
             </Link>
           </div>
         </div>
@@ -127,10 +127,9 @@ export default function TemoignagesPage() {
             href={testimonialsPage.googleReviewsCTA.href}
             target="_blank"
             rel="noopener noreferrer"
+            className={cn(buttonVariants({ variant: 'secondary', size: 'md' }))}
           >
-            <Button variant="secondary" size="md">
-              Voir tous les avis sur Google
-            </Button>
+            Voir tous les avis sur Google
           </Link>
         </div>
       </Section>
@@ -148,10 +147,9 @@ export default function TemoignagesPage() {
             href={testimonialsPage.googleReviewsCTA.href}
             target="_blank"
             rel="noopener noreferrer"
+            className={cn(buttonVariants({ variant: 'secondary', size: 'lg' }))}
           >
-            <Button variant="secondary" size="lg">
-              Laisser un avis sur Google
-            </Button>
+            Laisser un avis sur Google
           </a>
         </div>
       </Section>
@@ -180,10 +178,9 @@ export default function TemoignagesPage() {
                 href={testimonialsPage.youtubeCTA.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                className={cn(buttonVariants({ variant: 'secondary', size: 'lg' }))}
               >
-                <Button variant="secondary" size="lg">
-                  {testimonialsPage.youtubeCTA.label}
-                </Button>
+                {testimonialsPage.youtubeCTA.label}
               </a>
             </div>
           )}

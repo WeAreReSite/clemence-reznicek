@@ -4,7 +4,8 @@ import { metadata as siteMetadata } from '../../../content/metadata';
 import { formationsPage } from '../../../content/formations';
 import { getBreadcrumbSchema, getCourseSchemas } from '@/lib/schema';
 import { InnerPageHero, CTAFinalSection } from '@/components/sections';
-import { Section, SectionHeader, Button, Badge, YouTubeEmbed } from '@/components/ui';
+import { Section, SectionHeader, Badge, YouTubeEmbed, buttonVariants } from '@/components/ui';
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: siteMetadata.formations.title,
@@ -52,10 +53,9 @@ export default function FormationsPage() {
             href="https://www.formationquantique.fr"
             target="_blank"
             rel="noopener noreferrer"
+            className={cn(buttonVariants({ variant: 'secondary', size: 'md' }))}
           >
-            <Button variant="secondary" size="md">
-              Voir les dates sur formationquantique.fr
-            </Button>
+            Voir les dates sur formationquantique.fr
           </a>
         </div>
       </Section>

@@ -10,7 +10,8 @@ import {
 } from '@phosphor-icons/react/dist/ssr';
 import { rmdSpotlight } from '../../../content/homepage';
 import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW } from '@/lib/gsap-setup';
-import { Section, SectionHeader, Button } from '@/components/ui';
+import { Section, SectionHeader, buttonVariants } from '@/components/ui';
+import { cn } from '@/lib/utils';
 
 const iconMap = {
   compass: CompassIcon,
@@ -154,10 +155,8 @@ export function RMDSpotlightSection() {
             {rmdSpotlight.priceDetail}
           </span>
         </div>
-        <Link href={rmdSpotlight.cta.href}>
-          <Button variant="warm" size="lg" data-magnetic>
-            {rmdSpotlight.cta.label}
-          </Button>
+        <Link href={rmdSpotlight.cta.href} className={cn(buttonVariants({ variant: 'warm', size: 'lg' }))} data-magnetic>
+          {rmdSpotlight.cta.label}
         </Link>
       </div>
     </Section>

@@ -1,0 +1,121 @@
+name: Claude - Retour Client
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  implement-retour:
+    if: |
+      contains(github.event.issue.labels.*.name, 'retour-client') &&
+      contains(github.event.issue.labels.*.name, 'claude')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Claude Code - Implement Retour
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          label_trigger: "claude"
+          branch_prefix: "retour/"
+          timeout_minutes: 30
+          prompt: |
+            Tu es l'agent d'implementation automatique de retours clients pour WeAreReSite.
+
+            ## Instructions
+
+            1. **Lis CLAUDE.md en premier** — il contient l'architecture du projet et le mapping content/component.
+
+            2. **Parse les "## Feedback Items"** de l'issue GitHub ci-dessus.
+
+            3. **Pour CHAQUE item, dans l'ordre** :
+               a. Identifie le type de changement :
+                  - **content** : texte a modifier -> fichier `content/{section}.ts`
+                  - **image** : image a remplacer/ajouter -> `content/{section}.ts` + `public/images/`
+                  - **style** : changement visuel -> `src/components/sections/{section}.tsx`
+                  - **layout** : restructuration -> composant + `src/app/page.tsx`
+                  - **new-section** : nouvelle section -> creer content + component + update page
+                  - **bug** : correction -> localiser via description
+
+               b. Localise les fichiers exacts en utilisant le mapping dans CLAUDE.md.
+                  Si CLAUDE.md a une section "Retour Client", utilise la table de routage.
+
+               c. Implemente le changement. Regles :
+                  - Ne JAMAIS hardcoder du texte dans les composants TSX
+                  - Toujours passer par les fichiers content/
+                  - Pour les images : telecharger l'URL dans public/images/, mettre a jour le content
+
+               d. Verifie que le TypeScript compile : `npx tsc --noEmit`
+                  Si erreur, corrige avant de passer a l'item suivant.
+
+            4. **Apres tous les items** : lance `npx next build` pour verifier le build complet.
+               - Si le build echoue, tente de corriger (max 3 essais).
+               - Si toujours en echec apres 3 essais, ajoute le label `needs-manual-fix`.
+
+            5. **Cree le PR** avec :
+               - Titre : "Retour #{numero} - {domain} ({nb} items)"
+               - Body avec un tableau recapitulatif :
+
+               | Item | Type | Fichiers modifies | Status |
+               |------|------|-------------------|--------|
+               | 1    | content | content/hero.ts | OK |
+               | 2    | image | content/about.ts, public/images/profile.jpg | OK |
+
+               - Mentionne l'issue source avec "Closes #{issue_number}"
+
+      - name: Notify completion
+        if: always()
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
+          JOB_STATUS: ${{ job.status }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          if [ "$JOB_STATUS" = "success" ]; then
+            SUBJECT="[ReSite] PR pret - $REPO_NAME"
+            BODY="Le retour client a ete traite avec succes.\n\nIssue: $ISSUE_URL\nRepo: $REPO_NAME\n\nVerifiez le PR dans le repo."
+          else
+            SUBJECT="[ReSite] ERREUR - $REPO_NAME"
+            BODY="Erreur lors du traitement du retour client.\n\nIssue: $ISSUE_URL\nRepo: $REPO_NAME\nStatus: $JOB_STATUS\n\nVerifiez les logs GitHub Actions."
+          fi
+
+          # Send email via Python (available on ubuntu-latest)
+          python3 -c "
+          import smtplib
+          from email.mime.text import MIMEText
+          from email.mime.multipart import MIMEMultipart
+          import os
+
+          msg = MIMEMultipart()
+          msg['From'] = os.environ['GMAIL_USER']
+          msg['To'] = os.environ['NOTIFICATION_EMAIL']
+          msg['Subject'] = '$SUBJECT'
+          msg['X-Priority'] = '1'
+          msg['Importance'] = 'high'
+          msg.attach(MIMEText('$BODY', 'plain'))
+
+          with smtplib.SMTP('smtp.gmail.com', 587) as s:
+              s.starttls()
+              s.login(os.environ['GMAIL_USER'], os.environ['GMAIL_APP_PASSWORD'])
+              s.send_message(msg)
+          print('Email sent')
+          "

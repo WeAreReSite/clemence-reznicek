@@ -59,3 +59,44 @@ GSAP with ScrollTrigger for scroll-driven animations. Use the `useGsap` hook fro
 ### Design Spec
 
 The full design specification is in `docs/design-spec.json`. QA report at `docs/qa-report.md`.
+
+---
+
+## Retour Client - Table de Routage
+
+Quand tu traites un retour client (issue avec label `retour-client`), utilise cette table pour localiser les fichiers a modifier :
+
+| Type de feedback | Fichiers a modifier |
+|-----------------|-------------------|
+| content (texte) | `content/{section}.ts` |
+| image | `content/{section}.ts` + `public/images/` |
+| style (visuel) | `src/components/sections/{section}.tsx` |
+| layout (structure) | `src/components/sections/{section}.tsx` + `src/app/page.tsx` |
+| new-section | Creer `content/{nom}.ts` + `src/components/sections/{nom}.tsx` + update `src/app/page.tsx` |
+| bug | Localiser via la description du feedback |
+
+### Mapping des sections (aliases francais -> fichiers)
+
+Les clients utilisent des noms en francais. Voici les correspondances courantes :
+
+| Nom client | Fichier content | Composant |
+|-----------|----------------|-----------|
+| Accueil / Hero | `content/hero.ts` | `sections/hero.tsx` |
+| A propos / Presentation | `content/about.ts` | `sections/about.tsx` |
+| Services / Prestations | `content/services.ts` | `sections/services.tsx` |
+| Tarifs / Prix | `content/pricing.ts` | `sections/pricing.tsx` |
+| Contact | `content/contact.ts` | `sections/contact.tsx` |
+| Temoignages / Avis | `content/testimonials.ts` | `sections/testimonials.tsx` |
+| Galerie / Photos | `content/gallery.ts` | `sections/gallery.tsx` |
+| FAQ | `content/faq.ts` | `sections/faq.tsx` |
+| Footer / Pied de page | `content/footer.ts` | `sections/footer.tsx` |
+| Header / Navigation | `content/header.ts` | `sections/header.tsx` |
+
+> Si un nom ne correspond pas, cherche dans `content/` et `src/components/sections/` pour trouver le bon fichier.
+
+### Regles
+
+- **Ne JAMAIS hardcoder du texte** dans les composants TSX. Toujours passer par `content/`.
+- Chaque section a un fichier content qui exporte un objet type avec toutes les strings.
+- Les composants importent depuis content/ et rendent les donnees dynamiquement.
+- Pour les images : placer dans `public/images/`, referencer dans le content avec le chemin relatif.

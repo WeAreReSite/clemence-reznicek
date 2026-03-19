@@ -14,10 +14,6 @@ jobs:
       contents: write
       pull-requests: write
       issues: write
-    env:
-      ISSUE_BODY: ${{ github.event.issue.body }}
-      ISSUE_NUMBER: ${{ github.event.issue.number }}
-      ISSUE_TITLE: ${{ github.event.issue.title }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,21 +31,23 @@ jobs:
       - name: Create branch
         id: branch
         run: |
-          BRANCH_NAME="retour/${ISSUE_NUMBER}"
+          BRANCH_NAME="retour/${{ github.event.issue.number }}"
           git checkout -b "$BRANCH_NAME"
           echo "branch=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
 
+      - name: Prepare workspace
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          mkdir -p .retour/tasks .retour/logs .retour/prompts .retour/answers
+          printf '%s' "$ISSUE_BODY" > .retour/issue-body.md
+
       # ══════════════════════════════════════════════
-      # AGENT 1 : PARSER — Split issue into tasks
+      # AGENT 1 : PARSER
       # ══════════════════════════════════════════════
       - name: "Agent 1: Parse & Plan"
         run: |
-          mkdir -p .retour/tasks
-
-          # Write issue body to a temp file for claude to read
-          echo "$ISSUE_BODY" > .retour/issue-body.md
-
-          claude --dangerously-skip-permissions --verbose -p "$(cat <<'PROMPT'
+          cat > .retour/prompts/parser.txt << 'EOF'
           Tu es l'agent PARSER du pipeline retour client WeAreReSite.
 
           ## Ta mission
@@ -67,6 +65,7 @@ jobs:
           - "Modifier le texte du parcours + ajouter une phrase" = 1 tache (content)
           - "Ajouter un bouton offrir un massage" = 1 tache (layout)
           - "Changer les tarifs massage holistique" = 1 tache (content)
+          - "Question du client" = 1 tache (question) — pas de code a modifier
 
           Ne regroupe PAS plusieurs changements dans une tache, meme s'ils sont dans le meme paragraphe du retour client.
 
@@ -76,11 +75,11 @@ jobs:
 
           {
             "id": 1,
-            "type": "content|image|style|layout|new-section|bug",
+            "type": "content|image|style|layout|new-section|bug|question",
             "section": "hero|about|services|pricing|contact|testimonials|gallery|faq|footer|header|gift-card|other",
             "title": "Description courte de la tache",
             "description": "Description EXACTE telle que le client l'a ecrite, avec le contexte necessaire pour implementer",
-            "targetFiles": ["content/hero.ts", "src/components/sections/hero.tsx"],
+            "targetFiles": ["content/hero.ts"],
             "images": [{"name": "mur-terre.jpeg", "url": "https://..."}],
             "clientQuote": "Le texte exact du client pour ce point"
           }
@@ -98,15 +97,16 @@ jobs:
           ## Important
 
           - Chaque tache doit etre INDEPENDANTE et implementable sans contexte des autres
-          - Inclus TOUJOURS les images associees a la tache (URLs GitHub depuis l'issue)
-          - Si le client pose une QUESTION (pas un changement), cree quand meme une tache de type "question" mais ne l'assigne pas a un fichier
+          - Inclus TOUJOURS les images associees (URLs GitHub depuis l'issue, pas les URLs Tally)
+          - Si le client pose une QUESTION (pas un changement), cree une tache type "question"
           - Preserve le texte EXACT du client dans clientQuote
           - Utilise le mapping CLAUDE.md pour determiner les targetFiles
-          PROMPT
-          )"
+          EOF
+
+          claude --dangerously-skip-permissions --verbose -p "$(cat .retour/prompts/parser.txt)"
 
       # ══════════════════════════════════════════════
-      # AGENT 2 : IMPLEMENTERS — Parallel execution
+      # AGENT 2 : IMPLEMENTERS (parallel)
       # ══════════════════════════════════════════════
       - name: "Agent 2: Implement tasks (parallel)"
         run: |
@@ -115,23 +115,17 @@ jobs:
             exit 1
           fi
 
-          TOTAL=$(cat .retour/tasks/manifest.json | python3 -c "import sys,json; print(json.load(sys.stdin)['totalTasks'])")
-          echo "Total tasks to implement: $TOTAL"
-
-          # Filter out question-type tasks
-          IMPL_TASKS=$(cat .retour/tasks/manifest.json | python3 -c "
-          import sys,json
-          data = json.load(sys.stdin)
+          # Get implementable task IDs (skip questions)
+          IMPL_TASKS=$(python3 -c "
+          import json
+          data = json.load(open('.retour/tasks/manifest.json'))
           impl = [t for t in data['tasks'] if t['type'] != 'question']
           print(' '.join(str(t['id']) for t in impl))
           ")
 
-          echo "Implementation tasks: $IMPL_TASKS"
+          echo "Tasks to implement: $IMPL_TASKS"
 
-          # Track background PIDs
           PIDS=()
-          LOGS_DIR=".retour/logs"
-          mkdir -p "$LOGS_DIR"
 
           for TASK_ID in $IMPL_TASKS; do
             TASK_FILE=".retour/tasks/task-${TASK_ID}.json"
@@ -143,159 +137,125 @@ jobs:
             TASK_TITLE=$(python3 -c "import json; print(json.load(open('$TASK_FILE'))['title'])")
             echo "Starting task $TASK_ID: $TASK_TITLE"
 
-            # Each task runs in its own claude session with focused context
-            (
-              claude --dangerously-skip-permissions --verbose -p "$(cat <<TASKPROMPT
+            # Write focused prompt for this task
+            PROMPT_FILE=".retour/prompts/impl-${TASK_ID}.txt"
+            cat > "$PROMPT_FILE" << IMPLEOF
           Tu es l'agent IMPLEMENTER du pipeline retour client WeAreReSite.
+          Implemente UNE SEULE tache. Lis le fichier $TASK_FILE pour connaitre ta tache.
 
-          ## Ta mission unique
-
-          Implemente UNE SEULE tache. Voici ta tache :
-
-          $(cat "$TASK_FILE")
-
-          ## Instructions
-
+          Instructions :
           1. Lis CLAUDE.md pour comprendre l'architecture
-          2. Lis les fichiers cibles indiques dans targetFiles
+          2. Lis les fichiers cibles indiques dans targetFiles de ta tache
           3. Implemente le changement demande
-          4. Verifie avec npx tsc --noEmit que ca compile
+          4. Verifie avec npx tsc --noEmit
 
-          ## Regles strictes
+          Regles :
+          - Ne JAMAIS hardcoder du texte dans les composants TSX, toujours content/*.ts
+          - Pour les images : telecharge l'URL dans public/images/, mets a jour le content
+          - Ne touche PAS aux fichiers hors de targetFiles sauf si necessaire
+          - Si type=question, ecris ta reponse dans .retour/answers/answer-${TASK_ID}.md sans modifier de code
+          - Commite avec : git add -A && git commit -m "retour: task ${TASK_ID} - ${TASK_TITLE}"
+          IMPLEOF
 
-          - Ne JAMAIS hardcoder du texte dans les composants TSX → toujours content/*.ts
-          - Pour les images : telecharge l'URL dans public/images/, mets a jour le fichier content
-          - Ne touche PAS aux fichiers qui ne sont pas dans targetFiles sauf si absolument necessaire
-          - Si la tache est de type 'question', ecris la reponse dans .retour/answers/answer-${TASK_ID}.md et ne modifie aucun code
-          - Commite tes changements avec le message : "retour: task ${TASK_ID} - \$TITLE"
-
-          ## Context minimal
-
-          Tu ne connais que ta tache. Ne cherche pas a comprendre les autres taches.
-          Concentre-toi uniquement sur ce qui est demande.
-          TASKPROMPT
-              )"
-            ) > "$LOGS_DIR/task-${TASK_ID}.log" 2>&1 &
-
+            # Launch in background
+            claude --dangerously-skip-permissions --verbose -p "$(cat "$PROMPT_FILE")" \
+              > ".retour/logs/task-${TASK_ID}.log" 2>&1 &
             PIDS+=($!)
-            echo "  -> PID $! started for task $TASK_ID"
+            echo "  -> PID $! for task $TASK_ID"
 
-            # Limit parallel sessions to 3 at a time to avoid overload
+            # Batch of 3 max
             if [ ${#PIDS[@]} -ge 3 ]; then
-              echo "Waiting for batch of 3 to complete..."
+              echo "Waiting for batch..."
               for PID in "${PIDS[@]}"; do
-                wait "$PID" || echo "WARN: Task PID $PID failed"
+                wait "$PID" || echo "WARN: PID $PID failed"
               done
               PIDS=()
             fi
           done
 
-          # Wait for remaining tasks
-          if [ ${#PIDS[@]} -gt 0 ]; then
-            echo "Waiting for final batch..."
-            for PID in "${PIDS[@]}"; do
-              wait "$PID" || echo "WARN: Task PID $PID failed"
-            done
-          fi
+          # Wait for remaining
+          for PID in "${PIDS[@]}"; do
+            wait "$PID" || echo "WARN: PID $PID failed"
+          done
 
-          echo "All implementation tasks completed."
+          echo "All tasks completed."
 
       # ══════════════════════════════════════════════
-      # AGENT 3 : QA — Build check & PR summary
+      # AGENT 3 : QA
       # ══════════════════════════════════════════════
       - name: "Agent 3: QA & Build"
         run: |
-          mkdir -p .retour/answers
-
-          claude --dangerously-skip-permissions --verbose -p "$(cat <<'PROMPT'
+          cat > .retour/prompts/qa.txt << 'EOF'
           Tu es l'agent QA du pipeline retour client WeAreReSite.
 
-          ## Ta mission
+          1. Verifie la compilation : npx tsc --noEmit (corrige si erreur, max 3 tentatives)
+          2. Verifie le build : npx next build (corrige si erreur, max 3 tentatives)
+          3. Lis les fichiers .retour/tasks/task-*.json pour voir ce qui etait demande
+          4. Regarde git diff pour voir ce qui a ete modifie
+          5. Lis .retour/answers/answer-*.md s'ils existent (reponses aux questions client)
 
-          1. Verifie que le projet compile : npx tsc --noEmit
-             - Si erreur, corrige (max 3 tentatives)
+          Genere .retour/pr-summary.md avec :
 
-          2. Verifie le build : npx next build
-             - Si erreur, corrige (max 3 tentatives)
-
-          3. Lis tous les fichiers .retour/tasks/task-*.json pour comprendre ce qui a ete demande
-          4. Verifie que chaque tache a bien ete implementee en regardant les fichiers modifies (git diff)
-          5. Lis les fichiers .retour/answers/answer-*.md s'ils existent (reponses aux questions client)
-
-          6. Genere un fichier .retour/pr-summary.md avec :
-
-          ## Retour Client — Resume d'implementation
+          ## Retour Client - Resume
 
           | # | Type | Section | Description | Status |
           |---|------|---------|-------------|--------|
-          | 1 | content | hero | Changer le slogan | OK |
-          | 2 | image | services | Nouvelle photo massage | OK |
-          ...
+          | 1 | content | hero | ... | OK/FAILED |
 
           ### Questions du client
-
-          - **Question**: "Est-ce que les avis Google evoluent ?"
-            **Reponse**: [ta reponse basee sur le code]
+          - **Q**: "..." / **R**: "..."
 
           ### Notes techniques
+          [Problemes rencontres]
 
-          [Tout probleme rencontre ou decision prise]
+          Si le build echoue apres 3 tentatives, marque NEEDS_MANUAL_FIX.
+          Ne modifie le code QUE pour corriger des erreurs de compilation/build.
+          Commite les fixes avec : git add -A && git commit -m "retour: qa fixes"
+          EOF
 
-          ## Important
-
-          - Si le build echoue apres 3 tentatives, ecris NEEDS_MANUAL_FIX dans le resume
-          - Ne modifie PAS le code sauf pour corriger des erreurs de compilation/build
-          - Le resume doit etre en francais
-          PROMPT
-          )"
+          claude --dangerously-skip-permissions --verbose -p "$(cat .retour/prompts/qa.txt)"
 
       # ══════════════════════════════════════════════
-      # Push, PR, Notify
+      # Push + PR + Notify
       # ══════════════════════════════════════════════
-      - name: Commit all changes
+      - name: Push and create PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
         run: |
-          # Stage all modified/new files except .retour internals
-          git add -A
-          git reset -- .retour/logs/ .retour/issue-body.md
+          BRANCH="${{ steps.branch.outputs.branch }}"
 
-          if [ -z "$(git diff --cached --name-only)" ]; then
-            echo "No changes to commit"
-            echo "HAS_CHANGES=false" >> "$GITHUB_ENV"
+          # Check if there are uncommitted changes left
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git reset -- .retour/logs/ .retour/prompts/
+            git commit -m "retour: remaining changes" || true
+          fi
+
+          # Check if we have any commits beyond the base
+          DEFAULT_BRANCH=$(gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name')
+          COMMIT_COUNT=$(git rev-list --count "${DEFAULT_BRANCH}..HEAD")
+
+          if [ "$COMMIT_COUNT" -eq 0 ]; then
+            echo "No commits to push"
             exit 0
           fi
 
-          # Count implemented tasks
-          TASK_COUNT=$(git diff --cached --name-only | wc -l | tr -d ' ')
-          git commit -m "feat: implement retour client #${ISSUE_NUMBER} (${TASK_COUNT} files changed)"
-          echo "HAS_CHANGES=true" >> "$GITHUB_ENV"
-
-      - name: Push and create PR
-        if: env.HAS_CHANGES == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          BRANCH="${{ steps.branch.outputs.branch }}"
           git push origin "$BRANCH"
 
-          # Use PR summary if available
-          PR_BODY=""
+          PR_BODY="Implementation automatique du retour #${ISSUE_NUMBER}."
           if [ -f .retour/pr-summary.md ]; then
             PR_BODY=$(cat .retour/pr-summary.md)
-          else
-            PR_BODY="Implementation automatique du retour client #${ISSUE_NUMBER}."
           fi
-
-          PR_BODY="${PR_BODY}
-
-          ---
-          Closes #${ISSUE_NUMBER}
-          *Genere automatiquement par Claude Code (multi-agent pipeline)*"
-
-          DEFAULT_BRANCH=$(gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name')
 
           gh pr create \
             --title "Retour #${ISSUE_NUMBER} - $(echo "$ISSUE_TITLE" | sed 's/\[Retour #[0-9]*\] //')" \
-            --body "$PR_BODY" \
+            --body "${PR_BODY}
+
+          ---
+          Closes #${ISSUE_NUMBER}
+          *Pipeline multi-agent Claude Code*" \
             --head "$BRANCH" \
             --base "$DEFAULT_BRANCH"
 
@@ -303,9 +263,10 @@ jobs:
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           gh issue edit "$ISSUE_NUMBER" --add-label "needs-manual-fix" 2>/dev/null || true
-          gh issue comment "$ISSUE_NUMBER" --body "L'implementation automatique a echoue. Verifiez les [logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})." 2>/dev/null || true
+          gh issue comment "$ISSUE_NUMBER" --body "L'implementation automatique a echoue. [Logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})" 2>/dev/null || true
 
       - name: Notify
         if: always()
@@ -318,31 +279,33 @@ jobs:
           REPO_NAME: ${{ github.event.repository.name }}
         run: |
           if [ -z "$GMAIL_USER" ] || [ -z "$GMAIL_APP_PASSWORD" ] || [ -z "$NOTIFICATION_EMAIL" ]; then
-            echo "Email credentials not configured, skipping"
+            echo "Email not configured, skipping"
             exit 0
           fi
 
-          if [ "$JOB_STATUS" = "success" ]; then
-            SUBJECT="[ReSite] PR pret - $REPO_NAME"
-            BODY="Le retour client a ete traite avec succes.\n\nIssue: $ISSUE_URL\nRepo: $REPO_NAME\n\nVerifiez le PR dans le repo."
-          else
-            SUBJECT="[ReSite] ERREUR - $REPO_NAME"
-            BODY="Erreur lors du traitement du retour client.\n\nIssue: $ISSUE_URL\nRepo: $REPO_NAME\nStatus: $JOB_STATUS\n\nVerifiez les logs GitHub Actions."
-          fi
-
-          python3 << PYEOF
-          import smtplib
+          python3 << 'PYEOF'
+          import smtplib, os
           from email.mime.text import MIMEText
           from email.mime.multipart import MIMEMultipart
-          import os
+
+          status = os.environ['JOB_STATUS']
+          repo = os.environ['REPO_NAME']
+          issue_url = os.environ['ISSUE_URL']
+
+          if status == 'success':
+              subject = f'[ReSite] PR pret - {repo}'
+              body = f'Retour client traite avec succes.\n\nIssue: {issue_url}\nVerifiez le PR.'
+          else:
+              subject = f'[ReSite] ERREUR - {repo}'
+              body = f'Erreur traitement retour.\n\nIssue: {issue_url}\nStatus: {status}'
 
           msg = MIMEMultipart()
           msg['From'] = os.environ['GMAIL_USER']
           msg['To'] = os.environ['NOTIFICATION_EMAIL']
-          msg['Subject'] = """$SUBJECT"""
+          msg['Subject'] = subject
           msg['X-Priority'] = '1'
           msg['Importance'] = 'high'
-          msg.attach(MIMEText("""$BODY""", 'plain'))
+          msg.attach(MIMEText(body, 'plain'))
 
           with smtplib.SMTP('smtp.gmail.com', 587) as s:
               s.starttls()

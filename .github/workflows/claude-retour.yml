@@ -9,7 +9,7 @@ jobs:
     if: |
       contains(github.event.issue.labels.*.name, 'retour-client') &&
       contains(github.event.issue.labels.*.name, 'claude')
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, resite]
     permissions:
       contents: write
       pull-requests: write
@@ -24,61 +24,109 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
+      - name: Create branch
+        id: branch
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          BRANCH_NAME="retour/${ISSUE_NUMBER}-$(echo '${{ github.event.issue.title }}' | sed 's/[^a-zA-Z0-9-]/-/g' | cut -c1-50)"
+          git checkout -b "$BRANCH_NAME"
+          echo "branch=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
+
       - name: Claude Code - Implement Retour
-        uses: anthropics/claude-code-action@v1
-        with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          label_trigger: "claude"
-          branch_prefix: "retour/"
-          timeout_minutes: 30
-          prompt: |
-            Tu es l'agent d'implementation automatique de retours clients pour WeAreReSite.
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          claude --print --verbose <<'PROMPT'
+          Tu es l'agent d'implementation automatique de retours clients pour WeAreReSite.
 
-            ## Instructions
+          ## Issue a traiter
 
-            1. **Lis CLAUDE.md en premier** — il contient l'architecture du projet et le mapping content/component.
+          Titre: $ISSUE_TITLE
+          Numero: #$ISSUE_NUMBER
 
-            2. **Parse les "## Feedback Items"** de l'issue GitHub ci-dessus.
+          Body:
+          $ISSUE_BODY
 
-            3. **Pour CHAQUE item, dans l'ordre** :
-               a. Identifie le type de changement :
-                  - **content** : texte a modifier -> fichier `content/{section}.ts`
-                  - **image** : image a remplacer/ajouter -> `content/{section}.ts` + `public/images/`
-                  - **style** : changement visuel -> `src/components/sections/{section}.tsx`
-                  - **layout** : restructuration -> composant + `src/app/page.tsx`
-                  - **new-section** : nouvelle section -> creer content + component + update page
-                  - **bug** : correction -> localiser via description
+          ## Instructions
 
-               b. Localise les fichiers exacts en utilisant le mapping dans CLAUDE.md.
-                  Si CLAUDE.md a une section "Retour Client", utilise la table de routage.
+          1. **Lis CLAUDE.md en premier** — il contient l'architecture du projet et le mapping content/component.
 
-               c. Implemente le changement. Regles :
-                  - Ne JAMAIS hardcoder du texte dans les composants TSX
-                  - Toujours passer par les fichiers content/
-                  - Pour les images : telecharger l'URL dans public/images/, mettre a jour le content
+          2. **Parse les "## Feedback Items"** du body ci-dessus.
 
-               d. Verifie que le TypeScript compile : `npx tsc --noEmit`
-                  Si erreur, corrige avant de passer a l'item suivant.
+          3. **Pour CHAQUE item, dans l'ordre** :
+             a. Identifie le type de changement :
+                - **content** : texte a modifier -> fichier `content/{section}.ts`
+                - **image** : image a remplacer/ajouter -> `content/{section}.ts` + `public/images/`
+                - **style** : changement visuel -> `src/components/sections/{section}.tsx`
+                - **layout** : restructuration -> composant + `src/app/page.tsx`
+                - **new-section** : nouvelle section -> creer content + component + update page
+                - **bug** : correction -> localiser via description
 
-            4. **Apres tous les items** : lance `npx next build` pour verifier le build complet.
-               - Si le build echoue, tente de corriger (max 3 essais).
-               - Si toujours en echec apres 3 essais, ajoute le label `needs-manual-fix`.
+             b. Localise les fichiers exacts en utilisant le mapping dans CLAUDE.md.
+                Si CLAUDE.md a une section "Retour Client", utilise la table de routage.
 
-            5. **Cree le PR** avec :
-               - Titre : "Retour #{numero} - {domain} ({nb} items)"
-               - Body avec un tableau recapitulatif :
+             c. Implemente le changement. Regles :
+                - Ne JAMAIS hardcoder du texte dans les composants TSX
+                - Toujours passer par les fichiers content/
+                - Pour les images : telecharger l'URL dans public/images/, mettre a jour le content
 
-               | Item | Type | Fichiers modifies | Status |
-               |------|------|-------------------|--------|
-               | 1    | content | content/hero.ts | OK |
-               | 2    | image | content/about.ts, public/images/profile.jpg | OK |
+             d. Verifie que le TypeScript compile : `npx tsc --noEmit`
+                Si erreur, corrige avant de passer a l'item suivant.
 
-               - Mentionne l'issue source avec "Closes #{issue_number}"
+          4. **Apres tous les items** : lance `npx next build` pour verifier le build complet.
+             - Si le build echoue, tente de corriger (max 3 essais).
+             - Si toujours en echec apres 3 essais, cree un fichier NEEDS_MANUAL_FIX.md.
+
+          5. **Commite tous les changements** avec un message clair listant les items implementes.
+          PROMPT
+
+      - name: Push and create PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          BRANCH="${{ steps.branch.outputs.branch }}"
+
+          # Check if there are changes to commit
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          # Push branch
+          git push origin "$BRANCH"
+
+          # Build PR body
+          PR_BODY="## Retour Client Automatique
+
+          Implémentation automatique des items de l'issue #${ISSUE_NUMBER}.
+
+          Closes #${ISSUE_NUMBER}
+
+          ---
+          *Généré automatiquement par Claude Code*"
+
+          # Create PR
+          gh pr create \
+            --title "Retour #${ISSUE_NUMBER} - $(echo '${{ github.event.issue.title }}' | sed 's/\[Retour #[0-9]*\] //')" \
+            --body "$PR_BODY" \
+            --head "$BRANCH" \
+            --base "$(gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name')"
+
+      - name: Handle build failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue edit "$ISSUE_NUMBER" --add-label "needs-manual-fix"
+          gh issue comment "$ISSUE_NUMBER" --body "⚠️ L'implémentation automatique a échoué. Vérifiez les [logs du workflow](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})."
 
       - name: Notify completion
         if: always()
@@ -90,6 +138,11 @@ jobs:
           ISSUE_URL: ${{ github.event.issue.html_url }}
           REPO_NAME: ${{ github.event.repository.name }}
         run: |
+          if [ -z "$GMAIL_USER" ] || [ -z "$GMAIL_APP_PASSWORD" ]; then
+            echo "Email credentials not configured, skipping notification"
+            exit 0
+          fi
+
           if [ "$JOB_STATUS" = "success" ]; then
             SUBJECT="[ReSite] PR pret - $REPO_NAME"
             BODY="Le retour client a ete traite avec succes.\n\nIssue: $ISSUE_URL\nRepo: $REPO_NAME\n\nVerifiez le PR dans le repo."
@@ -98,7 +151,6 @@ jobs:
             BODY="Erreur lors du traitement du retour client.\n\nIssue: $ISSUE_URL\nRepo: $REPO_NAME\nStatus: $JOB_STATUS\n\nVerifiez les logs GitHub Actions."
           fi
 
-          # Send email via Python (available on ubuntu-latest)
           python3 -c "
           import smtplib
           from email.mime.text import MIMEText
@@ -108,10 +160,10 @@ jobs:
           msg = MIMEMultipart()
           msg['From'] = os.environ['GMAIL_USER']
           msg['To'] = os.environ['NOTIFICATION_EMAIL']
-          msg['Subject'] = '$SUBJECT'
+          msg['Subject'] = '''$SUBJECT'''
           msg['X-Priority'] = '1'
           msg['Importance'] = 'high'
-          msg.attach(MIMEText('$BODY', 'plain'))
+          msg.attach(MIMEText('''$BODY''', 'plain'))
 
           with smtplib.SMTP('smtp.gmail.com', 587) as s:
               s.starttls()

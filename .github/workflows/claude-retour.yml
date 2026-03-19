@@ -42,7 +42,7 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
         run: |
-          claude --print --verbose <<'PROMPT'
+          claude --dangerously-skip-permissions --verbose <<'PROMPT'
           Tu es l'agent d'implementation automatique de retours clients pour WeAreReSite.
 
           ## Issue a traiter

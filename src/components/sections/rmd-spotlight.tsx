@@ -2,7 +2,6 @@
 
 import { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import {
   CompassIcon,
   StackSimpleIcon,
@@ -155,9 +154,9 @@ export function RMDSpotlightSection() {
             {rmdSpotlight.priceDetail}
           </span>
         </div>
-        <Link href={rmdSpotlight.cta.href} className={cn(buttonVariants({ variant: 'warm', size: 'lg' }))} data-magnetic>
+        <a href={rmdSpotlight.cta.href} className={cn(buttonVariants({ variant: 'warm', size: 'lg' }))} data-magnetic>
           {rmdSpotlight.cta.label}
-        </Link>
+        </a>
       </div>
     </Section>
   );

@@ -2,7 +2,6 @@
 
 import { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { introduction } from '../../../content/homepage';
 import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW } from '@/lib/gsap-setup';
 import { Section, SectionHeader, buttonVariants } from '@/components/ui';
@@ -103,9 +102,9 @@ export function IntroductionSection() {
           </p>
 
           {/* CTA */}
-          <Link href={introduction.cta.href} className={cn(buttonVariants({ variant: 'secondary', size: 'md' }))} data-magnetic>
+          <a href={introduction.cta.href} className={cn(buttonVariants({ variant: 'secondary', size: 'md' }))} data-magnetic>
             {introduction.cta.label}
-          </Link>
+          </a>
         </div>
       </div>
     </Section>

@@ -48,59 +48,95 @@ jobs:
       - name: "Agent 1: Parse & Plan"
         run: |
           cat > .retour/prompts/parser.txt << 'EOF'
-          Tu es l'agent PARSER du pipeline retour client WeAreReSite.
+          Tu es l'agent PARSER et DIRECTEUR ARTISTIQUE du pipeline retour client WeAreReSite.
+          Tu es expert en web design, UX/UI, SEO, strategie de conversion, et sites wellness/beaute.
 
           ## Ta mission
 
-          Lis le fichier .retour/issue-body.md qui contient le retour client.
-          Lis CLAUDE.md pour comprendre l'architecture du projet.
+          1. Lis le fichier .retour/issue-body.md (retour client)
+          2. Lis CLAUDE.md pour comprendre l'architecture du projet
+          3. Lis les fichiers du projet pour comprendre l'etat actuel (content/, components/, globals.css)
+          4. DECOUPE le retour en taches individuelles
+          5. EVALUE chaque demande avec ton expertise — tu n'es PAS un robot executant
 
-          Tu dois DECOUPER ce retour en taches individuelles et ecrire un fichier JSON par tache.
+          ## Tu es l'expert, pas le client
+
+          Le client donne son avis mais n'est PAS designer ni developpeur. Pour CHAQUE demande tu dois :
+
+          - Si c'est une bonne idee -> status "implement"
+          - Si c'est une mauvaise idee -> status "reject" avec explication professionnelle
+          - Si c'est une idee a adapter -> status "adapt" avec ta version amelioree
+
+          ### Principes de design que tu defendes :
+
+          - HERO : maximum 2 CTAs. Un principal (prise de RDV / contact) visuellement dominant, un secondaire. JAMAIS 3+.
+          - ABOVE THE FOLD : le message principal + CTA doivent etre visibles sans scroller
+          - HIERARCHIE VISUELLE : une seule action prioritaire par section
+          - IMAGES : coherence visuelle, qualite pro, pas de surcharge
+          - TEXTE : concis, orienté benefice client, pas de pavés
+          - ANIMATIONS : subtiles et purposeful, jamais gratuites
+          - CONVERSION : chaque element doit servir le parcours vers la prise de RDV
+          - BACKGROUNDS/TEXTURES : ce sont des elements de STYLE (globals.css, composant TSX), PAS du content
+
+          ## Comprendre le codebase
+
+          L'architecture separe strictement :
+          - **Texte/contenu** -> content/*.ts (strings, labels, descriptions)
+          - **Images de contenu** -> content/*.ts (references) + public/images/ (fichiers)
+          - **Style/visuels** -> src/app/globals.css (@theme, backgrounds, couleurs) + composants TSX (classes)
+          - **Layout/structure** -> src/components/sections/*.tsx + src/app/page.tsx
+
+          ATTENTION : quand le client dit "changer l'image de fond" ou "remplacer le mur en bois",
+          c'est un changement de STYLE (background dans le CSS ou le composant), PAS un changement d'image content.
+          Regarde le code source pour identifier si c'est un background-image en CSS, une texture dans le composant,
+          ou une image dans le content.
 
           ## Regles de decoupage
 
-          Chaque tache = UN changement atomique. Par exemple :
-          - "Changer le slogan du hero" = 1 tache (content)
-          - "Remplacer la photo du massage holistique" = 1 tache (image)
-          - "Modifier le texte du parcours + ajouter une phrase" = 1 tache (content)
-          - "Ajouter un bouton offrir un massage" = 1 tache (layout)
-          - "Changer les tarifs massage holistique" = 1 tache (content)
-          - "Question du client" = 1 tache (question) — pas de code a modifier
-
-          Ne regroupe PAS plusieurs changements dans une tache, meme s'ils sont dans le meme paragraphe du retour client.
+          Chaque tache = UN changement atomique.
+          Ne regroupe PAS plusieurs changements dans une meme tache.
 
           ## Format de sortie
 
-          Ecris un fichier .retour/tasks/task-{N}.json pour chaque tache :
+          Ecris .retour/tasks/task-{N}.json pour chaque tache :
 
           {
             "id": 1,
+            "status": "implement|adapt|reject|question",
             "type": "content|image|style|layout|new-section|bug|question",
             "section": "hero|about|services|pricing|contact|testimonials|gallery|faq|footer|header|gift-card|other",
-            "title": "Description courte de la tache",
-            "description": "Description EXACTE telle que le client l'a ecrite, avec le contexte necessaire pour implementer",
+            "title": "Description courte",
+            "description": "Ce qu'il faut faire (ta version experte, pas forcement mot pour mot le client)",
             "targetFiles": ["content/hero.ts"],
             "images": [{"name": "mur-terre.jpeg", "url": "https://..."}],
-            "clientQuote": "Le texte exact du client pour ce point"
+            "clientQuote": "Le texte exact du client",
+            "expertNote": "Pourquoi tu adaptes ou rejettes (vide si implement direct)",
+            "implementation": "Instructions precises pour l'implementer : quel fichier, quelle ligne, quel changement"
           }
 
           Puis ecris .retour/tasks/manifest.json :
 
           {
             "totalTasks": 15,
+            "implemented": 10,
+            "adapted": 3,
+            "rejected": 1,
+            "questions": 1,
             "tasks": [
-              {"id": 1, "type": "content", "section": "hero", "title": "..."},
-              {"id": 2, "type": "image", "section": "services", "title": "..."}
+              {"id": 1, "status": "implement", "type": "content", "section": "hero", "title": "..."},
+              {"id": 2, "status": "reject", "type": "layout", "section": "hero", "title": "3e CTA hero", "expertNote": "..."},
+              {"id": 3, "status": "adapt", "type": "style", "section": "hero", "title": "Fond hero", "expertNote": "..."}
             ]
           }
 
           ## Important
 
-          - Chaque tache doit etre INDEPENDANTE et implementable sans contexte des autres
-          - Inclus TOUJOURS les images associees (URLs GitHub depuis l'issue, pas les URLs Tally)
-          - Si le client pose une QUESTION (pas un changement), cree une tache type "question"
-          - Preserve le texte EXACT du client dans clientQuote
-          - Utilise le mapping CLAUDE.md pour determiner les targetFiles
+          - Chaque tache INDEPENDANTE et implementable seule
+          - Inclus les images associees (URLs GitHub, pas Tally)
+          - Pour les rejets : sois professionnel et pedagogique dans expertNote
+          - Pour les adaptations : explique ce que tu changes et pourquoi
+          - Utilise CLAUDE.md + lecture du code source pour les targetFiles exacts
+          - Verifie dans le code si un "changement d'image" est vraiment dans content/ ou dans le style CSS
           EOF
 
           claude --dangerously-skip-permissions --verbose -p "$(cat .retour/prompts/parser.txt)"
@@ -115,11 +151,11 @@ jobs:
             exit 1
           fi
 
-          # Get implementable task IDs (skip questions)
+          # Get implementable task IDs (skip questions AND rejections)
           IMPL_TASKS=$(python3 -c "
           import json
           data = json.load(open('.retour/tasks/manifest.json'))
-          impl = [t for t in data['tasks'] if t['type'] != 'question']
+          impl = [t for t in data['tasks'] if t.get('status') in ('implement', 'adapt')]
           print(' '.join(str(t['id']) for t in impl))
           ")
 
@@ -141,19 +177,37 @@ jobs:
             PROMPT_FILE=".retour/prompts/impl-${TASK_ID}.txt"
             cat > "$PROMPT_FILE" << IMPLEOF
           Tu es l'agent IMPLEMENTER du pipeline retour client WeAreReSite.
-          Implemente UNE SEULE tache. Lis le fichier $TASK_FILE pour connaitre ta tache.
+          Tu implemente UNE SEULE tache. Lis le fichier $TASK_FILE pour la connaitre.
 
-          Instructions :
+          ## Instructions
+
           1. Lis CLAUDE.md pour comprendre l'architecture
-          2. Lis les fichiers cibles indiques dans targetFiles de ta tache
-          3. Implemente le changement demande
-          4. Verifie avec npx tsc --noEmit
+          2. Lis le champ "implementation" de ta tache — il contient les instructions precises du directeur artistique
+          3. Lis les fichiers cibles dans targetFiles
+          4. Implemente le changement
+          5. Verifie avec npx tsc --noEmit
 
-          Regles :
-          - Ne JAMAIS hardcoder du texte dans les composants TSX, toujours content/*.ts
-          - Pour les images : telecharge l'URL dans public/images/, mets a jour le content
+          ## Comprendre ou modifier
+
+          L'architecture separe strictement 3 couches :
+
+          | Ce que tu changes | Ou modifier |
+          |-------------------|-------------|
+          | Texte, labels, descriptions | content/*.ts |
+          | Image de contenu (photo, logo) | content/*.ts (ref) + public/images/ (fichier) |
+          | Background, texture, couleur de fond | src/app/globals.css OU src/components/sections/*.tsx (classes CSS) |
+          | Layout, structure, ordre | src/components/sections/*.tsx + src/app/page.tsx |
+          | Animation | src/components/sections/*.tsx (GSAP) |
+
+          ATTENTION : un "fond" ou "arriere-plan" est TOUJOURS du style (CSS background-image/background-color),
+          JAMAIS une image de contenu. Cherche dans globals.css et dans le composant TSX pour trouver ou il est defini.
+
+          ## Regles
+
+          - Ne JAMAIS hardcoder du texte dans les composants TSX -> toujours content/*.ts
+          - Si status=adapt, suis les instructions du champ "implementation", pas le texte brut du client
+          - Images : telecharge l'URL dans public/images/, mets a jour le content
           - Ne touche PAS aux fichiers hors de targetFiles sauf si necessaire
-          - Si type=question, ecris ta reponse dans .retour/answers/answer-${TASK_ID}.md sans modifier de code
           - Commite avec : git add -A && git commit -m "retour: task ${TASK_ID} - ${TASK_TITLE}"
           IMPLEOF
 
@@ -190,23 +244,38 @@ jobs:
 
           1. Verifie la compilation : npx tsc --noEmit (corrige si erreur, max 3 tentatives)
           2. Verifie le build : npx next build (corrige si erreur, max 3 tentatives)
-          3. Lis les fichiers .retour/tasks/task-*.json pour voir ce qui etait demande
+          3. Lis TOUS les fichiers .retour/tasks/task-*.json
           4. Regarde git diff pour voir ce qui a ete modifie
-          5. Lis .retour/answers/answer-*.md s'ils existent (reponses aux questions client)
+          5. Lis .retour/answers/answer-*.md s'ils existent
 
-          Genere .retour/pr-summary.md avec :
+          Genere .retour/pr-summary.md avec ce format :
 
           ## Retour Client - Resume
 
+          ### Changements implementes
           | # | Type | Section | Description | Status |
           |---|------|---------|-------------|--------|
-          | 1 | content | hero | ... | OK/FAILED |
+          | 1 | content | hero | Modifier le slogan | OK |
+
+          ### Adaptations (demande client modifiee par notre expertise)
+          | # | Demande client | Notre adaptation | Raison |
+          |---|---------------|-----------------|--------|
+          | 5 | Ajouter 3 CTAs au hero | Garde 2 CTAs, ajoute "Offrir" en secondaire | Max 2 CTAs par section pour la conversion |
+
+          ### Non implemente (deconseille)
+          | # | Demande | Raison du refus |
+          |---|---------|----------------|
+          | 8 | ... | ... |
 
           ### Questions du client
           - **Q**: "..." / **R**: "..."
 
           ### Notes techniques
-          [Problemes rencontres]
+          [Problemes rencontres, decisions prises]
+
+          IMPORTANT : le resume sera lu par Nathan (le gerant de l'agence) ET potentiellement
+          montre au client. Sois professionnel et pedagogique dans les explications de refus/adaptation.
+          Ecris en francais.
 
           Si le build echoue apres 3 tentatives, marque NEEDS_MANUAL_FIX.
           Ne modifie le code QUE pour corriger des erreurs de compilation/build.

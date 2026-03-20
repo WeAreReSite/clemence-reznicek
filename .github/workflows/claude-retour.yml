@@ -311,22 +311,32 @@ jobs:
             exit 0
           fi
 
-          git push origin "$BRANCH"
+          git push origin "$BRANCH" --force-with-lease
 
           PR_BODY="Implementation automatique du retour #${ISSUE_NUMBER}."
           if [ -f .retour/pr-summary.md ]; then
             PR_BODY=$(cat .retour/pr-summary.md)
           fi
 
-          gh pr create \
-            --title "Retour #${ISSUE_NUMBER} - $(echo "$ISSUE_TITLE" | sed 's/\[Retour #[0-9]*\] //')" \
-            --body "${PR_BODY}
+          FULL_BODY="${PR_BODY}
 
           ---
           Closes #${ISSUE_NUMBER}
-          *Pipeline multi-agent Claude Code*" \
-            --head "$BRANCH" \
-            --base "$DEFAULT_BRANCH"
+          *Pipeline multi-agent Claude Code*"
+
+          # Check if PR already exists for this branch
+          EXISTING_PR=$(gh pr list --head "$BRANCH" --json number --jq '.[0].number' 2>/dev/null)
+
+          if [ -n "$EXISTING_PR" ]; then
+            echo "PR #$EXISTING_PR already exists, updating..."
+            gh pr edit "$EXISTING_PR" --body "$FULL_BODY"
+          else
+            gh pr create \
+              --title "Retour #${ISSUE_NUMBER} - $(echo "$ISSUE_TITLE" | sed 's/\[Retour #[0-9]*\] //')" \
+              --body "$FULL_BODY" \
+              --head "$BRANCH" \
+              --base "$DEFAULT_BRANCH"
+          fi
 
       - name: Handle failure
         if: failure()

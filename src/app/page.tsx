@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { metadata as siteMetadata } from '../../content/metadata';
 import { getFAQSchema } from '@/lib/schema';
-import Link from 'next/link';
 import { midPageCTA } from '../../content/homepage';
 import {
   HeroSection,
@@ -77,9 +76,9 @@ export default function HomePage() {
         <p className="font-body text-base text-neutral-600 mb-6 max-w-md mx-auto px-5">
           {midPageCTA.description}
         </p>
-        <Link href={midPageCTA.cta.href} className={cn(buttonVariants({ variant: 'warm', size: 'lg' }))}>
+        <a href={midPageCTA.cta.href} className={cn(buttonVariants({ variant: 'warm', size: 'lg' }))}>
           {midPageCTA.cta.label}
-        </Link>
+        </a>
       </div>
 
       {/* 7. RMD Spotlight */}

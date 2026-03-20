@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
-import Link from 'next/link';
 import { StarIcon } from '@phosphor-icons/react/dist/ssr';
 import { testimonialSection } from '../../../content/testimonials';
 import { gsap, ScrollTrigger, EASE_WELLNESS_FLOW, EASE_BREATHE } from '@/lib/gsap-setup';
@@ -154,9 +153,9 @@ export function TestimonialsSection() {
 
       {/* CTA */}
       <div className="text-center">
-        <Link href={testimonialSection.cta.href} className={cn(buttonVariants({ variant: 'warmOnDark', size: 'lg' }))} data-magnetic>
+        <a href={testimonialSection.cta.href} className={cn(buttonVariants({ variant: 'warmOnDark', size: 'lg' }))} data-magnetic>
           {testimonialSection.cta.label}
-        </Link>
+        </a>
       </div>
     </Section>
   );

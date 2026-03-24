@@ -13,6 +13,25 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/soins',
+        destination: '/accompagnements',
+        permanent: true,
+      },
+      {
+        source: '/copie-de-formations',
+        destination: '/formations',
+        permanent: true,
+      },
+      {
+        source: '/bilans',
+        destination: '/accompagnements',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

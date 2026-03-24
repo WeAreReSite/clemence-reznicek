@@ -30,6 +30,11 @@ const nextConfig: NextConfig = {
         destination: '/accompagnements',
         permanent: true,
       },
+      {
+        source: '/copie-de-soins',
+        destination: '/accompagnements',
+        permanent: true,
+      },
     ];
   },
 };
